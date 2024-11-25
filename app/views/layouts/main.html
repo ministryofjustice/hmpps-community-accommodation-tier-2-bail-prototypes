@@ -1,6 +1,39 @@
-{#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
-
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{%- from "moj/components/header/macro.njk" import mojHeader -%}
+
+{% block header %}
+{{ mojHeader({
+  organisationLabel: {
+    text: 'HMPPS',
+    href: '/'
+  },
+  serviceLabel: {
+    text: 'CAS 2 Bail Prototypes',
+    href: '/'
+  },
+  navigation: {
+    label: 'Account navigation',
+    items: [{
+      text: 'Username',
+      href: '#',
+      active: true
+    }, {
+      text: 'Sign out',
+      href: '/'
+    }]
+  }
+
+}) }}
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="assets/application.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="assets/jquery.js"></script>
+  <script src="assets/application.js"></script>
+{% endblock %}
