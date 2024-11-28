@@ -1,0 +1,29 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Enter the person\'s prison number' %}
+
+{% block questions %}
+	{{ govukInput({
+		id: 'lookup',
+		name: 'lookup',
+		value: data['lookup'],
+		classes: 'govuk-input--width-10',
+		label: {
+			html: title,
+			classes: 'govuk-label--l',
+			isPageHeading: true
+		},
+		hint: {
+			html: 'For example, D016821'
+		},
+		spellcheck: false
+	}) }}
+{% endblock %}
+
+{% block buttons %}
+	{{ govukButton({
+		text: 'Search for applicant'
+	}) }}
+{% endblock %}
+
+

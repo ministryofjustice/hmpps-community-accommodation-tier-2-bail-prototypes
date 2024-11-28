@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Hypothesis 2b' %}
+{% set nav = false %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<h1 class="govuk-heading-l">
+				{{ title }}
+			</h1>
+			<p>Overview of feature.</p>
+
+
+
+			{% set version = "1" %}
+			<h2 class="govuk-heading-m">
+				Version {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			{# <p class="govuk-!-margin-bottom-2">Changes:</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Minor copy tweaks.</li>
+			</ul> #}
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+
+
+
+
+
+			{# {% set v1HTML %}
+				{% set version = "1" %}
+				<p>Information about this version</p>
+
+				<p><a href="#0">View the research outputs on Miro</a>.</p>
+
+				{{ govukButton({
+					text: 'View prototype',
+					href: '#0'
+				}) }}
+			{% endset %}
+
+			{{ govukAccordion({
+				id: 'previous',
+				classes: 'govuk-!-margin-top-9',
+				items: [
+					{
+						heading: {
+							html: 'Version 1 <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-2">Researched</strong>'
+						},
+						content: {
+							html: v1HTML
+						}
+					}
+				]
+			}) }} #}
+
+		</div>
+	</div>
+{% endblock %}
+

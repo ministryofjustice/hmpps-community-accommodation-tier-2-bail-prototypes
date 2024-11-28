@@ -1,0 +1,25 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'You\'ve told us there was no bed for Ann Example' %}
+{% set back = false %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			{{ govukPanel({
+				titleHtml: title,
+				classes: 'govuk-!-margin-bottom-9'
+			}) }}
+
+			{{ govukButton({
+				text: 'Return to dashboard',
+				href: './',
+				classes: 'govuk-button--secondary'
+			}) }}
+
+		</div>
+	</div>
+{% endblock %}
+
+{% block pageScripts %}{% endblock %}

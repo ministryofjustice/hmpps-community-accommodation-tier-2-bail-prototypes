@@ -2,5 +2,17 @@
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
+$moj-page-width: 1170px;
 
 @import "node_modules/@ministryofjustice/frontend/moj/all";
+
+@import './components/cards';
+
+
+.govuk-main-wrapper {
+	min-height: 600px;
+}
+
+.moj-header {
+	border-bottom: 0;
+}
