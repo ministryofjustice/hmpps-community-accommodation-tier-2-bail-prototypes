@@ -13,3 +13,15 @@ router.use("/:hypothesis/v:version", (req, res, next) => {
 		return require(`./views/${req.params.hypothesis}/v${req.params.version}/_routes`)(req, res, next)
 	} catch (e) { next() }
 })
+
+router.use('/', (req, res, next) => {
+	// Add a local var if the prototype is running locally
+	if (req.get('host').includes('localhost')) {
+		res.locals.local = true
+
+		// Grab the current URL for the remote prototype link
+		res.locals.currentURL = req.url
+	}
+
+	next()
+})
