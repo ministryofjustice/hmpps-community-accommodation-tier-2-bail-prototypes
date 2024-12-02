@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set title = 'Enter the person\'s prison number' %}
+{% set title = 'Enter the person\'s CRN' %}
 
 {% block questions %}
 	{{ govukInput({
@@ -14,7 +14,7 @@
 			isPageHeading: true
 		},
 		hint: {
-			html: 'For example, D016821'
+			html: 'For example, X12345'
 		},
 		spellcheck: false
 	}) }}
@@ -22,7 +22,7 @@
 
 {% block buttons %}
 	{{ govukButton({
-		text: 'Search for applicant'
+		text: 'Find applicant'
 	}) }}
 {% endblock %}
 

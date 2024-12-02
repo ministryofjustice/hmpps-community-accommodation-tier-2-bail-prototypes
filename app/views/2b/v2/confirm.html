@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Confirm spreadsheet data' %}
+
+{% block questions %}
+	<h1 class="govuk-heading-l">
+		{{title}}
+	</h1>
+
+	{{ govukTable({
+		head: [
+			{
+				html: 'CRN'
+			},
+			{
+				html: 'Requested areas'
+			},
+			{
+				html: 'Family unit required'
+			}
+		],
+		rows: [
+			[
+				{
+					html: 'X12345'
+				},
+				{
+					html: '1st Preston, 2nd Liverpool'
+				},
+				{
+					html: 'No'
+				}
+			],
+			[
+				{
+					html: 'X54321'
+				},
+				{
+					html: 'Anywhere in the NW'
+				},
+				{
+					html: 'Yes'
+				}
+			]
+		]
+	}) }}
+
+	<p>If the data is incorrect you can <a href="#0">upload another file</a>.</p>
+{% endblock %}
+
+{% block buttons %}
+	{{ govukButton({
+		text: 'Submit'
+	}) }}
+{% endblock %}
+
+
+
+

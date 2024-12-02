@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Was a CAS2 family unit required?' %}
+
+{% block questions %}
+	{{ govukRadios({
+		idPrefix: 'family-unit',
+		name: 'family-unit',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Yes',
+				value: 'Yes',
+				checked: checked('family-unit','Yes')
+			},
+			{
+				html: 'No',
+				value: 'No',
+				checked: checked('family-unit','No')
+			}
+		]
+	}) }}
+{% endblock %}
+
+{% block buttons %}
+	{{ govukButton({
+		text: 'Submit'
+	}) }}
+{% endblock %}
+
+
+
+

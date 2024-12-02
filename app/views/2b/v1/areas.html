@@ -1,0 +1,24 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Requested areas' %}
+
+{% block questions %}
+	{{ govukTextarea({
+		name: 'area',
+		id: 'area',
+		value: data['area'],
+		rows: '3',
+		label: {
+			html: title,
+			classes: 'govuk-label--l',
+			isPageHeading: true
+		},
+		hint: {
+			html: '<p class="govuk-hint">For example: &lsquo;1st Preston, 2nd Liverpool&rsquo; or &lsquo;1st Preston, 2nd anywhere in the NW&rsquo;.</p><p class="govuk-hint">If anywhere is requested note the overall preferred CAS2 regions.</p>'
+		}
+	}) }}
+{% endblock %}
+
+
+
+

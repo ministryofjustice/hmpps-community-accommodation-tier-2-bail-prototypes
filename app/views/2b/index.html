@@ -7,10 +7,33 @@
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-two-thirds">
 
-			<h1 class="govuk-heading-l">
+			<h1 class="govuk-heading-l govuk-!-margin-bottom-0">
 				{{ title }}
 			</h1>
-			<p>Overview of feature.</p>
+			{{ govukInsetText({
+				html: '<p>Increase service capacity and reduce the number of people who are held on remand by confidently evidencing and projecting demand for short-term bail accommodation.</p><p><a href="https://vivace1.sharepoint.com/:p:/s/EXTERNAL-C646CAS2BailApplications/EfiHFrc4AldMmVYUYcg_Oz0B9vUpSmh05Zhy0hSH2c7alA?e=ey3iq6&nav=eyJzSWQiOjI2NywiY0lkIjoyNDgwMTAyNzM5fQ">View hypothesis details in Sharepoint</a></p>',
+				classes: 'govuk-!-margin-top-4 govuk-!-margin-bottom-0'
+			}) }}
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+
+
+			{% set version = "2" %}
+			<h2 class="govuk-heading-m">
+				Version {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			<p>Add a process started from the dashboard of the MVP product being built to capture when a bed was unavailable on a per person basis.</p>
+			<p>Utilises a lookup for the person&rsquo;s details and captures extra data based on the current interim Word document solution. Additional data may need capturing in the future, we&rsquo;re starting with what we hope is the minimum requirement.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
 
 
 
@@ -23,10 +46,8 @@
 				}) }}
 			</h2>
 
-			{# <p class="govuk-!-margin-bottom-2">Changes:</p>
-			<ul class="govuk-list govuk-list--bullet">
-				<li>Minor copy tweaks.</li>
-			</ul> #}
+			<p>Add a process started from the dashboard of the MVP product being built to capture when a bed was unavailable on a per person basis.</p>
+			<p>Utilises a lookup for the person&rsquo;s details and captures extra data based on the current interim Word document solution. Additional data may need capturing in the future, we&rsquo;re starting with what we hope is the minimum requirement.</p>
 
 			{{ govukButton({
 				text: 'View prototype',

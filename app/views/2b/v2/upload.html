@@ -1,0 +1,24 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Upload unavailable beds spreadsheet' %}
+
+{% block questions %}
+	{{ govukFileUpload({
+		id: 'upload',
+		name: 'upload',
+		value: data['upload'],
+		label: {
+			html: title,
+			classes: 'govuk-label--l',
+			isPageHeading: true
+		}
+	}) }}
+{% endblock %}
+
+{% block buttons %}
+	{{ govukButton({
+		text: 'Upload'
+	}) }}
+{% endblock %}
+
+

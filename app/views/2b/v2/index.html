@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'CAS-2: Short-Term Accommodation Bail' %}
+{% set back = false %}
+
+{% block content %}
+<style>
+	.card-body {
+		height: 120px
+	}
+</style>
+	<h1 class="govuk-heading-l">
+		{{title}}
+	</h1>
+	<div class="card-container">
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">View your applications</a>
+				</h2>
+				<p>View all of your in progress and submitted CAS-2 applications.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">Start a new application</a>
+				</h2>
+				<p>Start a new CAS-2 application for an applicant.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">View your prison's applications</a>
+				</h2>
+				<p>View recently submitted CAS-2 applications from your prison.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="govuk-section-break govuk-section-break--visible govuk-section-break-- govuk-!-margin-bottom-6">
+
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-three-quarters govuk-grid-column-two-thirds-from-desktop">
+
+			<h2 class="govuk-heading-m">
+				Unavailable beds
+			</h2>
+
+			<p>When NARCO is unable to provide a suitable bed you should keep track of that information in the <a href="#0">unavailable beds template (XLSX, 150KB)</a>.</p>
+			<p>At the end of each week <a href="upload">upload the spreadsheet</a>.</p>
+
+		</div>
+	</div>
+{% endblock %}

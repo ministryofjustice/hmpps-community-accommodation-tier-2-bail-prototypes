@@ -8,21 +8,14 @@ router.get('*', function(req, res, next){
 	next()
 })
 
-router.post('/lookup', function (req, res) {
+router.post('/upload', function (req, res) {
 	res.redirect('confirm');
 })
 
 router.post('/confirm', function (req, res) {
-	res.redirect('areas');
-})
-
-router.post('/areas', function (req, res) {
-	res.redirect('family');
-})
-
-router.post('/family', function (req, res) {
 	res.redirect('submitted');
 })
+
 
 
 // Add your routes above the module.exports line
