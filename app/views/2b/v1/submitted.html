@@ -12,11 +12,18 @@
 				classes: 'govuk-!-margin-bottom-9'
 			}) }}
 
-			{{ govukButton({
-				text: 'Return to dashboard',
-				href: './',
-				classes: 'govuk-button--secondary'
-			}) }}
+			<div class="govuk-button-group">
+				{{ govukButton({
+					text: 'Return to dashboard',
+					href: './'
+				}) }}
+
+				{{ govukButton({
+					text: 'Tell us about another applicant',
+					classes: 'govuk-button--secondary',
+					href: 'lookup'
+				}) }}
+			</div>
 
 		</div>
 	</div>
