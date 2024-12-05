@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'What made the bed ubsuitable?' %}
+
+{% block questions %}
+	{{ govukCheckboxes({
+		idPrefix: 'no-beds',
+		name: 'no-beds',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Applicant&rsquo;s gender',
+				value: 'Applicant&rsquo;s gender',
+				checked: checked('no-beds','Applicant&rsquo;s gender')
+			},
+			{
+				html: 'Applicant&rsquo;s health issues',
+				value: 'Applicant&rsquo;s health issues',
+				checked: checked('no-beds','Applicant&rsquo;s health issues')
+			},
+			{
+				html: 'CAS-2 family unit needed',
+				value: 'CAS-2 family unit needed',
+				checked: checked('no-beds','CAS-2 family unit needed')
+			},
+			{
+				html: 'Location',
+				value: 'Location',
+				checked: checked('no-beds','Location')
+			},
+			{
+				html: 'Transport time',
+				value: 'Transport time',
+				checked: checked('no-beds','Transport time')
+			}
+		]
+	}) }}
+{% endblock %}
+
+{% block buttons %}
+	{{ govukButton({
+		text: 'Submit'
+	}) }}
+{% endblock %}
+
+
+
+
