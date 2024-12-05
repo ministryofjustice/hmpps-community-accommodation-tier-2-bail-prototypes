@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'CAS-2: Short-Term Accommodation Bail' %}
+{% set back = false %}
+
+{% block content %}
+	<h1 class="govuk-heading-l">
+		{{title}}
+	</h1>
+	<div class="card-container">
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">View your applications</a>
+				</h2>
+				<p>View all of your in progress and submitted CAS-2 applications.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">Start a new application</a>
+				</h2>
+				<p>Start a new CAS-2 application for an applicant.</p>
+
+				<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--m">
+
+				<p><a class="govuk-link--no-visited-state" href="lookup">Tell us if you did not apply for your applicant</a></p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">View your prison's applications</a>
+				</h2>
+				<p>View recently submitted CAS-2 applications from your prison.</p>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

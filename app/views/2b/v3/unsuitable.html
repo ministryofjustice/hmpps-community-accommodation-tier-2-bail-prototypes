@@ -1,0 +1,24 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Why was the applicant unsuitable?' %}
+
+{% block questions %}
+	{{ govukTextarea({
+		name: 'unsuitable',
+		id: 'unsuitable',
+		value: data['unsuitable'],
+		label: {
+			html: title,
+			classes: 'govuk-label--l',
+			isPageHeading: true
+		}
+	}) }}
+{% endblock %}
+
+
+
+{% block buttons %}
+	{{ govukButton({
+		text: 'Submit'
+	}) }}
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Confirm Ann Example\'s details' %}
+
+{% block questions %}
+	<h1 class="govuk-heading-l">
+		{{title}}
+	</h1>
+
+	<p class="govuk-hint govuk-!-margin-bottom-6">Imported from NDelius <strong>Thursday 14 November 2024</strong></p>
+
+	{{ govukSummaryList({
+		rows: [
+			{
+				key: {
+					html: 'CRN from NDelius'
+				},
+				value: {
+					html: 'X123456'
+				}
+			},
+			{
+				key: {
+					html: 'Full name'
+				},
+				value: {
+					html: 'Ann Example'
+				}
+			},
+			{
+				key: {
+					html: 'Date of birth'
+				},
+				value: {
+					html: '31/01/2000'
+				}
+			},
+			{
+				key: {
+					html: 'Nationality'
+				},
+				value: {
+					html: 'Not found'
+				}
+			},
+			{
+				key: {
+					html: 'Sex'
+				},
+				value: {
+					html: 'Female'
+				}
+			},
+			{
+				key: {
+					html: 'PNC number'
+				},
+				value: {
+					html: 'Not found'
+				}
+			},
+			{
+				key: {
+					html: 'Alleged index offence'
+				},
+				value: {
+					html: 'Shoplifting'
+				}
+			},
+			{
+				key: {
+					html: 'Status'
+				},
+				value: {
+					html: '<span class="govuk-tag">In Custody</span>'
+				}
+			}
+		]
+	}) }}
+
+	{{ govukWarningText({
+		html: 'If any of these details are missing or wrong, please update NDelius before continuing.'
+	}) }}
+{% endblock %}
+
+
+
+

@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Why did you not make an application?' %}
+
+{% block questions %}
+	{{ govukRadios({
+		idPrefix: 'reason',
+		name: 'reason',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Applicant was unsuitable',
+				value: 'Applicant was unsuitable',
+				checked: checked('reason','Applicant was unsuitable')
+			},
+			{
+				html: 'Circumstantial',
+				value: 'Circumstantial',
+				checked: checked('reason','Circumstantial'),
+				hint: {
+					html: 'For example, the applicant arrived too late'
+				}
+			},
+			{
+				html: 'No suitable beds',
+				value: 'No suitable beds',
+				checked: checked('reason','No suitable beds')
+			},
+			{
+				html: 'Workload, you did not have time',
+				value: 'Workload, you did not have time',
+				checked: checked('reason','Workload, you did not have time')
+			}
+		]
+	}) }}
+{% endblock %}
+
+
+
+

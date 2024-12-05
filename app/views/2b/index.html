@@ -18,6 +18,24 @@
 
 
 
+			{% set version = "3" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			<p>Add a process started from the dashboard of the MVP product being built to capture the reason why a bed wasn&rsquo;t applied for for each applicant.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+
+
 			{% set version = "2" %}
 			<h2 class="govuk-heading-m">
 				Variant {{version}}

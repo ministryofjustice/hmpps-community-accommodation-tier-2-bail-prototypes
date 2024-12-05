@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'You\'ve told us you did not apply for Ann Example' %}
+{% set back = false %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			{{ govukPanel({
+				titleHtml: title,
+				classes: 'govuk-!-margin-bottom-9'
+			}) }}
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+					text: 'Return to dashboard',
+					href: './'
+				}) }}
+
+				{{ govukButton({
+					text: 'Tell us about another applicant',
+					classes: 'govuk-button--secondary',
+					href: 'lookup'
+				}) }}
+			</div>
+
+		</div>
+	</div>
+{% endblock %}
