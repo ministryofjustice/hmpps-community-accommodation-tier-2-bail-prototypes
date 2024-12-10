@@ -15,17 +15,14 @@
 		},
 		items: [
 			{
-				html: 'Applicant was unsuitable',
-				value: 'Applicant was unsuitable',
-				checked: checked('reason','Applicant was unsuitable')
+				html: 'Applicant arrived too late',
+				value: 'Applicant arrived too late',
+				checked: checked('reason','Applicant arrived too late')
 			},
 			{
-				html: 'Circumstantial',
-				value: 'Circumstantial',
-				checked: checked('reason','Circumstantial'),
-				hint: {
-					html: 'For example, the applicant arrived too late'
-				}
+				html: 'Applicant was ineligible or too high risk',
+				value: 'Applicant was unsuitable',
+				checked: checked('reason','Applicant was unsuitable')
 			},
 			{
 				html: 'No suitable beds',
@@ -36,6 +33,14 @@
 				html: 'Workload, you did not have time',
 				value: 'Workload, you did not have time',
 				checked: checked('reason','Workload, you did not have time')
+			},
+			{
+				divider: 'or'
+			},
+			{
+				html: 'Other',
+				value: 'Other',
+				checked: checked('reason','Other')
 			}
 		]
 	}) }}

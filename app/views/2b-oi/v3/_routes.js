@@ -17,7 +17,7 @@ router.post('/confirm', function (req, res) {
 })
 
 router.post('/reason', (req, res) => {
-	if (req.session.data['reason'] == 'Applicant was unsuitable') {
+	if (req.session.data['reason'] == 'Applicant was ineligible or too high risk') {
 		res.redirect('unsuitable');
 	} else if (req.session.data['reason'] == 'No suitable beds') {
 		res.redirect('no-beds');
