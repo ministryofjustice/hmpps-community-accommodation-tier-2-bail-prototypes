@@ -13,6 +13,9 @@
 				isPageHeading: true
 			}
 		},
+		hint: {
+			text: 'Select all that apply'
+		},
 		items: [
 			{
 				html: 'Applicant&rsquo;s gender',
@@ -38,6 +41,14 @@
 				html: 'Transport time',
 				value: 'Transport time',
 				checked: checked('no-beds','Transport time')
+			},
+			{
+				divider: 'or'
+			},
+			{
+				html: 'Other',
+				value: 'Other',
+				checked: checked('no-beds','Other')
 			}
 		]
 	}) }}
