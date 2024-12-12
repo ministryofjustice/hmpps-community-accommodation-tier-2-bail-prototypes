@@ -1,0 +1,173 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Where is more information required?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% call govukFieldset({
+		legend: {
+		html: title,
+		classes: 'govuk-fieldset__legend--l',
+		isPageHeading: true
+		}
+	}) %}
+
+		{% if data['info-needed'].includes('Health needs') %}
+			{{ govukCheckboxes({
+				idPrefix: 'health-needs',
+				name: 'health-needs',
+				fieldset: {
+					legend: {
+						html: 'Health needs',
+						classes: 'govuk-fieldset__legend--m'
+					}
+				},
+				items: [
+					{
+						html: 'Communication needs',
+						value: 'Communication needs',
+						checked: checked('health-needs','Communication needs')
+					},
+					{
+						html: 'Learning difficulties / disabilities',
+						value: 'Learning difficulties / disabilities',
+						checked: checked('health-needs','Learning difficulties / disabilities')
+					},
+					{
+						html: 'Mobility needs',
+						value: 'Mobility needs',
+						checked: checked('health-needs','Mobility needs')
+					},
+					{
+						html: 'Epilepsy',
+						value: 'Epilepsy',
+						checked: checked('health-needs','Epilepsy')
+					},
+					{
+						html: 'Other',
+						value: 'Other',
+						checked: checked('health-needs','Other')
+					}
+				]
+			}) }}
+		{% endif %}
+
+		{% if data['info-needed'].includes('Risk to self') %}
+			{{ govukCheckboxes({
+				idPrefix: 'risk-to-self',
+				name: 'risk-to-self',
+				fieldset: {
+					legend: {
+						html: 'Risk to self',
+						classes: 'govuk-fieldset__legend--m'
+					}
+				},
+				items: [
+					{
+						html: 'Substance or alcohol abuse',
+						value: 'Substance or alcohol abuse',
+						checked: checked('risk-to-self','Substance or alcohol abuse')
+					},
+					{
+						html: 'Mental health',
+						value: 'Mental health',
+						checked: checked('risk-to-self','Mental health')
+					},
+					{
+						html: 'Self-harm and suicide',
+						value: 'Self-harm and suicide',
+						checked: checked('risk-to-self','Self-harm and suicide')
+					},
+					{
+						html: 'Vulnerability from others',
+						value: 'Vulnerability from others',
+						checked: checked('risk-to-self','Vulnerability from others')
+					},
+					{
+						html: 'Exploitation (risk to self)',
+						value: 'Exploitation (risk to self)',
+						checked: checked('risk-to-self','Exploitation (risk to self)')
+					},
+					{
+						html: 'Domestic violence (victim)',
+						value: 'Domestic violence (victim)',
+						checked: checked('risk-to-self','Domestic violence (victim)')
+					},
+					{
+						html: 'Sex work',
+						value: 'Sex work',
+						checked: checked('risk-to-self','Sex work')
+					},
+					{
+						html: 'Media interest',
+						value: 'Media interest',
+						checked: checked('risk-to-self','Media interest')
+					},
+					{
+						html: 'Isolation',
+						value: 'Isolation',
+						checked: checked('risk-to-self','Isolation')
+					}
+				]
+			}) }}
+		{% endif %}
+
+		{% if data['info-needed'].includes('Risk of serious harm') %}
+			{{ govukCheckboxes({
+				idPrefix: 'risk-of-serious-harm',
+				name: 'risk-of-serious-harm',
+				fieldset: {
+					legend: {
+						html: 'Risk of serious harm',
+						classes: 'govuk-fieldset__legend--m'
+					}
+				},
+				items: [
+					{
+						html: 'Communication needs',
+						value: 'Communication needs',
+						checked: checked('risk-of-serious-harm','Communication needs')
+					},
+					{
+						html: 'Learning difficulties / disabilities',
+						value: 'Learning difficulties / disabilities',
+						checked: checked('risk-of-serious-harm','Learning difficulties / disabilities')
+					},
+					{
+						html: 'Mobility needs',
+						value: 'Mobility needs',
+						checked: checked('risk-of-serious-harm','Mobility needs')
+					},
+					{
+						html: 'Epilepsy',
+						value: 'Epilepsy',
+						checked: checked('risk-of-serious-harm','Epilepsy')
+					},
+					{
+						html: 'Other',
+						value: 'Other',
+						checked: checked('risk-of-serious-harm','Other')
+					}
+				]
+			}) }}
+		{% endif %}
+	{% endcall %}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

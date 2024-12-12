@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'What information do you need?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{{ govukCheckboxes({
+		idPrefix: 'info-needed',
+		name: 'info-needed',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Personal information',
+				value: 'Personal information',
+				checked: checked('info-needed','Personal information')
+			},
+			{
+				html: 'Exclusion zones and preferred areas',
+				value: 'Exclusion zones and preferred areas',
+				checked: checked('info-needed','Exclusion zones and preferred areas')
+			},
+			{
+				html: 'Health needs',
+				value: 'Health needs',
+				checked: checked('info-needed','Health needs')
+			},
+			{
+				html: 'Risk to self',
+				value: 'Risk to self',
+				checked: checked('info-needed','Risk to self')
+			},
+			{
+				html: 'Risk of serious harm',
+				value: 'Risk of serious harm',
+				checked: checked('info-needed','Risk of serious harm')
+			},
+			{
+				html: 'Current offences',
+				value: 'Current offences',
+				checked: checked('info-needed','Current offences')
+			},
+			{
+				html: 'Offending history',
+				value: 'Offending history',
+				checked: checked('info-needed','Offending history')
+			},
+			{
+				html: 'HDC licence and CPP details',
+				value: 'HDC licence and CPP details',
+				checked: checked('info-needed','HDC licence and CPP details')
+			},
+			{
+				html: 'Other',
+				value: 'Other',
+				checked: checked('info-needed','Other')
+			}
+		]
+	}) }}
+{% endblock %}
+
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}
