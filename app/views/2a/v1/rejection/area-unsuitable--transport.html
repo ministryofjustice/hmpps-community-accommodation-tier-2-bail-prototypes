@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Unsuitable transport time and cost details' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% call govukFieldset({
+		legend: {
+		html: title,
+		classes: 'govuk-fieldset__legend--l',
+		isPageHeading: true
+		}
+	}) %}
+
+		{{ govukInput({
+			id: 'transport-time',
+			name: 'transport-time',
+			value: data['transport-time'],
+			classes: 'govuk-input--width-4',
+			label: {
+				html: 'What time would they accept?',
+				classes: 'govuk-label--m'
+			}
+		}) }}
+
+		{{ govukRadios({
+			idPrefix: 'transport-services',
+			name: 'transport-services',
+			fieldset: {
+				legend: {
+					html: 'Transport services',
+					classes: 'govuk-fieldset__legend--m'
+				}
+			},
+			items: [
+				{
+					html: 'Yes',
+					value: 'Yes',
+					checked: checked('transport-services','Yes')
+				},
+				{
+					html: 'No',
+					value: 'No',
+					checked: checked('transport-services','No')
+				}
+			]
+		}) }}
+
+	{% endcall %}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}
