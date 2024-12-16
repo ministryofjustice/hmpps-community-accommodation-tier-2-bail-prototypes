@@ -11,6 +11,8 @@ router.get('*', function(req, res, next){
 router.post('/status', (req, res, next) => {
 	if (req.session.data['status'] == 'More information requested') {
 		res.redirect('fei/info-needed');
+	} else if (req.session.data['status'] == 'Referral cancelled') {
+		res.redirect('rejection/reason');
 	} else { next() }
 })
 
@@ -44,6 +46,31 @@ router.post('/fei/info-needed--details', (req, res, next) => {
 router.post('/fei/info-needed--context', (req, res, next) => {
 	res.redirect('note');
 })
+
+
+
+
+
+// Rejection
+
+router.post('/rejection/reason', (req, res, next) => {
+	if (req.session.data['reason'] == 'Too high risk / ineligible') {
+		res.redirect('ineligible');
+	} else if (req.session.data['reason'] == 'No suitable property available') {
+		res.redirect('suitable-property');
+	} else if (req.session.data['reason'] == 'Offer made but area unsuitable') {
+		res.redirect('area-unsuitable');
+	} else if (req.session.data['reason'] == 'Change of circumstances') {
+		res.redirect('circumstances');
+	} else { next() }
+})
+
+
+
+
+
+
+
 
 
 
