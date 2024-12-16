@@ -140,10 +140,10 @@
 
 
 		{# {% if data['risk-of-serious-harm'] %}
-			{% if data['risk-of-serious-harm'].includes('Substance or alcohol abuse') %}
+			{% if data['risk-of-serious-harm'].includes('Exploitation (risk to others)') %}
 				{{ govukCheckboxes({
-					idPrefix: 'substance-abuse',
-					name: 'substance-abuse',
+					idPrefix: 'exploitation',
+					name: 'exploitation',
 					fieldset: {
 						legend: {
 							html: 'Substance or alcohol abuse',
@@ -154,17 +154,17 @@
 						{
 							html: 'Need and severity',
 							value: 'Need and severity',
-							checked: checked('substance-abuse','Need and severity')
+							checked: checked('exploitation','Need and severity')
 						},
 						{
 							html: 'Info on independent living',
 							value: 'Info on independent living',
-							checked: checked('substance-abuse','Info on independent living')
+							checked: checked('exploitation','Info on independent living')
 						},
 						{
 							html: 'Support they have / will require',
 							value: 'Support they have / will require',
-							checked: checked('substance-abuse','Support they have / will require')
+							checked: checked('exploitation','Support they have / will require')
 						}
 					]
 				}) }}

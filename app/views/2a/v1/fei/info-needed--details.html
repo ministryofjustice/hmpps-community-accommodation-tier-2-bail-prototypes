@@ -120,6 +120,7 @@
 			}) }}
 		{% endif %}
 
+
 		{% if data['info-needed'].includes('Risk of serious harm') %}
 			{{ govukCheckboxes({
 				idPrefix: 'risk-of-serious-harm',
@@ -132,24 +133,79 @@
 				},
 				items: [
 					{
-						html: 'Communication needs',
-						value: 'Communication needs',
-						checked: checked('risk-of-serious-harm','Communication needs')
+						html: 'Exploitation (risk to others)',
+						value: 'Exploitation (risk to others)',
+						checked: checked('risk-of-serious-harm','Exploitation (risk to others)')
 					},
 					{
-						html: 'Learning difficulties / disabilities',
-						value: 'Learning difficulties / disabilities',
-						checked: checked('risk-of-serious-harm','Learning difficulties / disabilities')
+						html: 'Domestic violence (perpatrator)',
+						value: 'Domestic violence (perpatrator)',
+						checked: checked('risk-of-serious-harm','Domestic violence (perpatrator)')
 					},
 					{
-						html: 'Mobility needs',
-						value: 'Mobility needs',
-						checked: checked('risk-of-serious-harm','Mobility needs')
+						html: 'Gang involvement',
+						value: 'Gang involvement',
+						checked: checked('risk-of-serious-harm','Gang involvement')
 					},
 					{
-						html: 'Epilepsy',
-						value: 'Epilepsy',
-						checked: checked('risk-of-serious-harm','Epilepsy')
+						html: 'Violent offences',
+						value: 'Violent offences',
+						checked: checked('risk-of-serious-harm','Violent offences')
+					},
+					{
+						html: 'Hate-related attitudes',
+						value: 'Hate-related attitudes',
+						checked: checked('risk-of-serious-harm','Hate-related attitudes')
+					},
+					{
+						html: 'Drug supply offences',
+						value: 'Drug supply offences',
+						checked: checked('risk-of-serious-harm','Drug supply offences')
+					},
+					{
+						html: 'County lines involvement',
+						value: 'County lines involvement',
+						checked: checked('risk-of-serious-harm','County lines involvement')
+					},
+					{
+						html: 'Acquisitive offending',
+						value: 'Acquisitive offending',
+						checked: checked('risk-of-serious-harm','Acquisitive offending')
+					},
+					{
+						html: 'Cuckooing',
+						value: 'Cuckooing',
+						checked: checked('risk-of-serious-harm','Cuckooing')
+					},
+					{
+						html: 'Financial abuse or fraud',
+						value: 'Financial abuse or fraud',
+						checked: checked('risk-of-serious-harm','Financial abuse or fraud')
+					},
+					{
+						html: 'Arson offences',
+						value: 'Arson offences',
+						checked: checked('risk-of-serious-harm','Arson offences')
+					},
+					{
+						html: 'Weapons offences',
+						value: 'Weapons offences',
+						checked: checked('risk-of-serious-harm','Weapons offences')
+					},
+					{
+						html: 'Driving offences',
+						value: 'Driving offences',
+						checked: checked('risk-of-serious-harm','Driving offences')
+					},
+					{
+						html: 'Risk to staff',
+						value: 'Risk to staff',
+						checked: checked('risk-of-serious-harm','Risk to staff')
+					},
+					{
+						html: 'Risk to property / criminal damage',
+						value: 'Risk to property / criminal damage',
+						checked: checked('risk-of-serious-harm','Risk to property / criminal damage')
 					},
 					{
 						html: 'Other',

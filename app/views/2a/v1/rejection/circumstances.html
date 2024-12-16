@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'How have the circumstances changed?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% set other %}
+		{{ govukTextarea({
+			name: 'circumstances-details',
+			id: 'circumstances-details',
+			value: data['circumstances-details'],
+			rows: 2,
+			label: {
+				html: 'Details'
+			}
+		}) }}
+	{% endset -%}
+	{{ govukRadios({
+		idPrefix: 'circumstances',
+		name: 'circumstances',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Own bail accomodation became available',
+				value: 'Own bail accomodation became available',
+				checked: checked('circumstances','Own bail accomodation became available')
+			},
+			{
+				html: 'Other',
+				value: 'Other',
+				checked: checked('circumstances','Other'),
+				conditional: {
+					html: other
+				}
+			}
+		]
+	}) }}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

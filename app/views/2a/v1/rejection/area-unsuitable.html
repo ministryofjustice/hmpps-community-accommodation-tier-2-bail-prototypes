@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'What made the area unsuitable?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% set list = ['Transport time / cost',
+	'Risk to applicant in that area',
+	'Other'] %}
+	{% set options = [] %}
+	{% for i in list %}
+		{% set options = options | push ({
+			'html': i,
+			'value': i,
+			'checked': checked('unsuitable-property',i)
+		}) %}
+	{% endfor %}
+	{{ govukCheckboxes({
+		idPrefix: 'unsuitable-property',
+		name: 'unsuitable-property',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: options
+	}) }}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}
