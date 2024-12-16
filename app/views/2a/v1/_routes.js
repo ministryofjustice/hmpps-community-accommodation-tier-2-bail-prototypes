@@ -58,10 +58,22 @@ router.post('/rejection/reason', (req, res, next) => {
 		res.redirect('ineligible');
 	} else if (req.session.data['reason'] == 'No suitable property available') {
 		res.redirect('suitable-property');
-	} else if (req.session.data['reason'] == 'Offer made but area unsuitable') {
+	} else if (req.session.data['reason'] == 'No suitable area available') {
 		res.redirect('area-unsuitable');
 	} else if (req.session.data['reason'] == 'Change of circumstances') {
 		res.redirect('circumstances');
+	} else { next() }
+})
+
+router.post('/rejection/area-unsuitable', (req, res, next) => {
+	let question = req.session.data['unsuitable-area']
+
+	if (question) {
+		if (question.includes('Transport time / cost')) {
+			res.redirect('area-unsuitable--transport');
+		} else {
+			next();
+		}
 	} else { next() }
 })
 

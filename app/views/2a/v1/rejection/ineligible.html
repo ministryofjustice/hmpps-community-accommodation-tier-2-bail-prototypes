@@ -27,7 +27,8 @@
 				value: data['more-support'],
 				rows: 2,
 				label: {
-					html: 'What extra support would have been needed?'
+					html: 'What extra support would have been needed?',
+					classes: 'govuk-label--s'
 				}
 			}) }}
 		{% endset -%}
@@ -53,35 +54,6 @@
 					conditional: {
 						html: moreSupport
 					}
-				}
-			]
-		}) }}
-
-
-		{{ govukRadios({
-			idPrefix: 'ineligibility-worked-out',
-			name: 'ineligibility-worked-out',
-			fieldset: {
-				legend: {
-					html: 'When was ineligibility worked out?',
-					classes: 'govuk-fieldset__legend--m'
-				}
-			},
-			items: [
-				{
-					html: 'By referrer, before starting',
-					value: 'By referrer, before starting',
-					checked: checked('ineligibility-worked-out','By referrer, before starting')
-				},
-				{
-					html: 'By referrer, after starting',
-					value: 'By referrer, after starting',
-					checked: checked('ineligibility-worked-out','By referrer, after starting')
-				},
-				{
-					html: 'By Nacro, after submitting',
-					value: 'By Nacro, after submitting',
-					checked: checked('ineligibility-worked-out','By Nacro, after submitting')
 				}
 			]
 		}) }}

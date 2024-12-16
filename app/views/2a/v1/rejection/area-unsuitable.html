@@ -20,12 +20,12 @@
 		{% set options = options | push ({
 			'html': i,
 			'value': i,
-			'checked': checked('unsuitable-property',i)
+			'checked': checked('unsuitable-area',i)
 		}) %}
 	{% endfor %}
 	{{ govukCheckboxes({
-		idPrefix: 'unsuitable-property',
-		name: 'unsuitable-property',
+		idPrefix: 'unsuitable-area',
+		name: 'unsuitable-area',
 		fieldset: {
 			legend: {
 				html: title,
