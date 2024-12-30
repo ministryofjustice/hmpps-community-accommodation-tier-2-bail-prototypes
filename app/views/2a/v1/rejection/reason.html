@@ -11,6 +11,14 @@
 			</strong>
 		</p>
 	</div>
+	{% set otherBox %}
+	{{ govukTextarea({
+		name: 'more-support',
+		id: 'more-support',
+		value: data['more-support'],
+		rows: 2
+	}) }}
+	{% endset -%}
 
 	{{ govukRadios({
 		idPrefix: 'reason',
@@ -52,6 +60,14 @@
 				html: 'Not enough information to assess risk',
 				value: 'Not enough information to assess risk',
 				checked: checked('reason', 'Not enough information to assess risk')
+			},
+			{
+				html: 'Other',
+				value: 'Other',
+				checked: checked('reason', 'Other'),
+				conditional: {
+					html: otherBox
+				}
 			}
 		]
 	}) }}
