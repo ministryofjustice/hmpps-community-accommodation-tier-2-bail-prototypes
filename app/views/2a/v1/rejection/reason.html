@@ -11,13 +11,18 @@
 			</strong>
 		</p>
 	</div>
+
 	{% set otherBox %}
-	{{ govukTextarea({
-		name: 'more-support',
-		id: 'more-support',
-		value: data['more-support'],
-		rows: 2
-	}) }}
+		{{ govukTextarea({
+			name: 'other-details',
+			id: 'other-details',
+			value: data['other-details'],
+			rows: 2,
+			label: {
+				html: 'What is the other reason?',
+				classes: 'govuk-label--s'
+			}
+		}) }}
 	{% endset -%}
 
 	{{ govukRadios({
