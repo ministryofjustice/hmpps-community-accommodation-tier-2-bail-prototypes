@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Details of unsuitable property' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% call govukFieldset({
+		legend: {
+		html: title,
+		classes: 'govuk-fieldset__legend--l',
+		isPageHeading: true
+		}
+	}) %}
+
+		{% set list = ['Applicant\'s gender',
+		'Applicant needed a family unit',
+		'Applicant not managable in that property',
+		'Applicant not compatible with other residents',
+		'Other'] %}
+		{% set options = [] %}
+		{% for i in list %}
+			{% set options = options | push ({
+				'html': i,
+				'value': i,
+				'checked': checked('unsuitable-property',i)
+			}) %}
+		{% endfor %}
+		{{ govukCheckboxes({
+			idPrefix: 'unsuitable-property',
+			name: 'unsuitable-property',
+			fieldset: {
+				legend: {
+					html: 'What made the available properties unsuitable',
+					classes: 'govuk-fieldset__legend--m'
+				}
+			},
+			items: options
+		}) }}
+
+
+		{% set list = ['Acquisitive offending',
+		'Arson',
+		'Communication needs',
+		'Cuckooing',
+		'Domestic violence (perpatrator)',
+		'Domestic violence (victim)',
+		'Driving offences',
+		'Drug supply offences',
+		'Epilepsy',
+		'Exploitation (risk to others)',
+		'Exploitation (risk to self)',
+		'Financial abuse or fraud',
+		'Gang involvement',
+		'Hate-related attitudes',
+		'Isolation',
+		'Learning difficulties / disabilities',
+		'Media/public interest',
+		'Mental health',
+		'Mobility needs',
+		'Other ',
+		'Other vulnerability',
+		'Risk to property / criminal damage',
+		'Risk to staff',
+		'Self-harm and suicide',
+		'Sex work',
+		'Substance or alcohol abuse',
+		'Violent offences',
+		'Weapons'] %}
+		{% set options = [] %}
+		{% for i in list %}
+			{% set options = options | push ({
+				'html': i,
+				'value': i,
+				'checked': checked('unsuitable-risk',i)
+			}) %}
+		{% endfor %}
+		{{ govukCheckboxes({
+			idPrefix: 'unsuitable-risk',
+			name: 'unsuitable-risk',
+			fieldset: {
+				legend: {
+					html: 'What risk from the applicant makes the property unsuitable?',
+					classes: 'govuk-fieldset__legend--m'
+				}
+			},
+			items: options
+		}) }}
+
+	{% endcall %}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

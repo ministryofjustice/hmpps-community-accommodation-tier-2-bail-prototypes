@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Why has the referral been cancelled?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% set otherBox %}
+		{{ govukTextarea({
+			name: 'other-details',
+			id: 'other-details',
+			value: data['other-details'],
+			rows: 2,
+			label: {
+				html: 'What is the other reason?',
+				classes: 'govuk-label--s'
+			}
+		}) }}
+	{% endset -%}
+
+	{{ govukRadios({
+		idPrefix: 'reason',
+		name: 'reason',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Too high risk / ineligible',
+				value: 'Too high risk / ineligible',
+				checked: checked('reason','Too high risk / ineligible')
+			},
+			{
+				html: 'No suitable property available',
+				value: 'No suitable property available',
+				checked: checked('reason','No suitable property available')
+			},
+			{
+				html: 'No suitable area available',
+				value: 'No suitable area available',
+				checked: checked('reason','No suitable area available')
+			},
+			{
+				html: 'Change of circumstances',
+				value: 'Change of circumstances',
+				checked: checked('reason','Change of circumstances')
+			},
+			{
+				html: 'Transferred to another prison',
+				value: 'Transferred to another prison',
+				checked: checked('reason','Transferred to another prison')
+			},
+			{
+				html: 'Not enough information to assess risk',
+				value: 'Not enough information to assess risk',
+				checked: checked('reason', 'Not enough information to assess risk')
+			},
+			{
+				html: 'Other',
+				value: 'Other',
+				checked: checked('reason', 'Other'),
+				conditional: {
+					html: otherBox
+				}
+			}
+		]
+	}) }}
+{% endblock %}
+
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

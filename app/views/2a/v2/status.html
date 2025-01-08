@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'What is the latest status of Aadland Bertrand\'s application?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{{ govukRadios({
+		idPrefix: 'status',
+		name: 'status',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'More information requested',
+				value: 'More information requested',
+				checked: checked('status','More information requested')
+			},
+			{
+				html: 'Awaiting decision',
+				value: 'Awaiting decision',
+				checked: checked('status','Awaiting decision')
+			},
+			{
+				html: 'On waiting list',
+				value: 'On waiting list',
+				checked: checked('status','On waiting list')
+			},
+			{
+				html: 'Place offered',
+				value: 'Place offered',
+				checked: checked('status','Place offered')
+			},
+			{
+				html: 'Offer accepted',
+				value: 'Offer accepted',
+				checked: checked('status','Offer accepted')
+			},
+			{
+				html: 'Offer declined or withdrawn',
+				value: 'Offer declined or withdrawn',
+				checked: checked('status','Offer declined or withdrawn')
+			},
+			{
+				html: 'Referral withdrawn',
+				value: 'Referral withdrawn',
+				checked: checked('status','Referral withdrawn')
+			},
+			{
+				html: 'Referral cancelled',
+				value: 'Referral cancelled',
+				checked: checked('status','Referral cancelled')
+			},
+			{
+				html: 'Awaiting arrival',
+				value: 'Awaiting arrival',
+				checked: checked('status','Awaiting arrival')
+			}
+		]
+	}) }}
+{% endblock %}
+
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}
