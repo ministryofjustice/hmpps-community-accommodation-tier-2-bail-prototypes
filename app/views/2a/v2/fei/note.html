@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Add a note for the referrer' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{{ govukTextarea({
+		name: 'note',
+		id: 'note',
+		value: data['note'],
+		rows: '5',
+		label: {
+			html: title,
+			classes: 'govuk-label--l',
+			isPageHeading: true
+		},
+		hint: {
+			html: ''
+		}
+	}) }}
+{% endblock %}
+
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

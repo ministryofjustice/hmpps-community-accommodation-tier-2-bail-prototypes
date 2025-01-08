@@ -18,17 +18,34 @@
 
 
 
+			{% set version = "2" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--orange govuk-!-margin-left-2',
+					text: 'Ready for review'
+				}) }}
+			</h2>
+
+			<p>Moved the note for the referrer inline with each item on further information requests, rather than the last screen of the process in variant 1 or on the dashboard in the current product.</p>
+			<p>The dashboard has been added to this variant too to highlight the suggested change of combining the processes for changing the status and sending a note to the referrer, this may prove to be wrong or a secondary note option might still be needed, but we think it will streamline the process by combining them.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/dashboard'
+			}) }}
+
+
 			{% set version = "1" %}
 			<h2 class="govuk-heading-m">
 				Variant {{version}}
 				{{ govukTag({
-					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
-					text: 'In progress'
+					classes: 'govuk-tag--blue govuk-!-margin-left-2',
+					text: 'Reviewed'
 				}) }}
 			</h2>
 
-			{# <p>Add a process started from the dashboard of the MVP product being built to capture when a bed was unavailable on a per person basis.</p>
-			<p>Utilises a lookup for the person&rsquo;s details and captures extra data based on the current interim Word document solution. Additional data may need capturing in the future, we&rsquo;re starting with what we hope is the minimum requirement.</p> #}
+			<p>Extended the change status journey to capture more structured data. Examples of this across requesting further information and cancelling the application.</p>
 
 			{{ govukButton({
 				text: 'View prototype',
@@ -36,36 +53,6 @@
 			}) }}
 
 
-
-
-
-
-			{# {% set v1HTML %}
-				{% set version = "1" %}
-				<p>Information about this version</p>
-
-				<p><a href="#0">View the research outputs on Miro</a>.</p>
-
-				{{ govukButton({
-					text: 'View prototype',
-					href: '#0'
-				}) }}
-			{% endset %}
-
-			{{ govukAccordion({
-				id: 'previous',
-				classes: 'govuk-!-margin-top-9',
-				items: [
-					{
-						heading: {
-							html: 'Version 1 <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-2">Researched</strong>'
-						},
-						content: {
-							html: v1HTML
-						}
-					}
-				]
-			}) }} #}
 
 		</div>
 	</div>
