@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	<span class="govuk-caption-xl">Applicant details</span>
+<h1 class="govuk-heading-l">Confirm applicant's consent</h1>
+<p class="govuk-body">You need consent from the applicant to apply for CAS-2 accommodation on their behalf.</p>
+<p class="govuk-body">By consenting to submit this application on their behalf, they understand and agree to the terms and conditions below.</p>
+
+<h2 class="govuk-heading-m">Terms and conditions</h2>
+<p class="govuk-body">The applicant understands that this application is for temporary accommodation and support only. </p>
+<p class="govuk-body">They agree that: </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>they are responsible for accepting the accommodation they are matched with, if they are accepted into the service</li>
+	<li>they are responsible for paying for CAS-2 accommodation and support</li>
+	<li>they must leave the accommodation at the end of their Bail Order period and find accommodation to move on to with their support worker’s help</li>
+</ul>
+
+<h2 class="govuk-heading-m">Privacy</h2>
+<p class="govuk-body">The applicant understands that the data they give will be collected and used as set out in the <a href="">privacy policy.</a> </p>
+<p class="govuk-body">They agree to: </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>provide legal and confidential information about themselves, including their address history, offences, health needs, risks to themselves and others </li>
+	<li>their health needs being collected from relevant sources, such as the prison drug and alcohol provider, mental health in-reach team and healthcare team</li>
+	<li>their information being used to assess their suitability to this service and ensure their safety</li>
+</ul>
+<div class="govuk-form-group govuk-!-margin-top-6">
+	<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h2 class="govuk-fieldset__heading">
+			Does the applicant agree to these terms and give consent to apply on their behalf?
+		</h2>
+	  </legend>
+	 
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+		  <label class="govuk-label govuk-radios__label" for="changedName">
+			Yes
+		  </label>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+		  <label class="govuk-label govuk-radios__label" for="changedName-2">
+			No, they do not agree or give consent
+		  </label>
+		</div>
+	  </div>
+	</fieldset>
+  </div>
+  <div class="govuk-form-group govuk-!-margin-top-6">
+	<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h2 class="govuk-fieldset__heading">
+			How did the applicant give consent?
+		</h2>
+	  </legend>
+	 
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+		  <label class="govuk-label govuk-radios__label" for="changedName">
+			Verbally, for example in person or over the phone
+		  </label>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+		  <label class="govuk-label govuk-radios__label" for="changedName-2">
+			Written consent
+		  </label>
+		</div>
+	  </div>
+	</fieldset>
+  </div>
+<div class="govuk-button-group">
+	<a href="independent" class="govuk-button">
+	  Confirm and continue
+	</a>
+	<a class="govuk-link" href="task-list-start">Save and exit</a>
+  </div>
+  </div>
+</div>
+{% endblock %}

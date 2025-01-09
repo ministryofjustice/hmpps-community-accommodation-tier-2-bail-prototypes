@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="health-needs">
+			<div class="govuk-form-group">
+				<span class="govuk-caption-xl">Needs and risks</span>
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Has a Liaison and Diversion Assessment been carried out for this applicant?
+					</h1>
+				  </legend>
+				
+				  <div class="govuk-radios" data-module="govuk-radios">
+					
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+					  <label class="govuk-label govuk-radios__label" for="contact-2">
+					Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="file-upload-1">
+							  Upload a file
+							</label>
+							<div id="signIn-hint" class="govuk-hint">
+								Accepted formats: doc, pdf
+							  </div>
+							<input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+						  </div>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+						<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+						  No
+						</label>
+					  </div>
+				
+				  </div>
+				</fieldset>
+			  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

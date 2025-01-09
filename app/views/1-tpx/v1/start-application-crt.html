@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Apply for Court Bail Community Accommodation Services (CAS-2)</h1>
+<p class="govuk-body">Use this service to apply for temporary accommodation and support on behalf of someone who has been granted bail. </p>
+<p class="govuk-body">You can save your progress and return to the application at any time. </p>
+
+<h2 class="govuk-heading-m">Before you start</h2>
+<p class="govuk-body">You’ll need to create an entry for the applicant on nDelius if they do not have one already.</p>
+
+
+{{ govukDetails({
+  summaryText: "How to create an entry on nDelius",
+  text: ""
+}) }}
+
+<h2 class="govuk-heading-m">Supporting information</h2>
+<p class="govuk-body">To start an application, you’ll need at least the following details about the applicant: </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>their current or last known address</li>
+	<li>information about their case, including the court name, the court hearing date, any known Case Reference Number and onward prison (if applicable)</li>
+	<li>their preferred areas</li>
+	<li>if they need a CAS-2 family unit</li>
+</ul>
+
+<p class="govuk-body">To submit the full application, you’ll also need to enter details on the applicant’s:  </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>offending history</li>
+	<li>solicitor</li>
+	<li>health needs</li>
+	<li>risk of serious harm to themselves or others</li>
+	<li>temporary accommodation funding</li>
+	<li>equality monitoring information</li>
+</ul>
+
+<div class="govuk-inset-text">
+	All questions are mandatory, unless marked as optional.  
+  </div>
+  <div class="govuk-form-group">
+	<fieldset class="govuk-fieldset">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h1 class="govuk-fieldset__heading">
+		  Select how much detail on the applicant you want to provide
+		</h1>
+	  </legend>
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+		  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+			All now
+		  </label>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+		  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+			Some now
+		  </label>
+		</div>
+		
+	
+	  </div>
+	</fieldset>
+
+	<a class="govuk-button govuk-!-margin-top-6" href="eligibility">Start now</a>
+  </div>
+
+  </div>
+</div>
+{% endblock %}

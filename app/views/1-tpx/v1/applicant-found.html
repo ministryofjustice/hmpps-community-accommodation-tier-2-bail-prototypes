@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	<h1 class="govuk-heading-l">Confirm applicant's details</h1>
+	<table class="govuk-table">
+		<caption class="govuk-table__caption govuk-table__caption--m">Applicant details</caption>
+		
+		<tbody class="govuk-table__body">
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Full name</th>
+			<td class="govuk-table__cell">Jane Smith</td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Date of birth</th>
+			<td class="govuk-table__cell">26/09/1995 (29 years old)</td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Nationality</th>
+			<td class="govuk-table__cell">British</td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Immigration status</th>
+			<td class="govuk-table__cell">British citizen</td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Sex</th>
+			<td class="govuk-table__cell">Female</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+	  <details class="govuk-details">
+		<summary class="govuk-details__summary">
+		  <span class="govuk-details__summary-text">
+			If these details are not correct
+		  </span>
+		</summary>
+		<div class="govuk-details__text">
+		  <ul class="govuk-list govuk-list--bullet">
+			<li>check that the NDelius number matches the applicant’s name</li>
+			<li>update the nDelius record with the correct details to continue with this application</li>
+		  </ul>
+		</div>
+	  </details>
+	  <a class="govuk-button govuk-!-margin-top-6" href="task-list-start">Confirm and continue</a>
+	  <p class="govuk-link"><a href="ndelius">Search for a different applicant</a> </p> 
+  </div>
+</div>
+{% endblock %}
