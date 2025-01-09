@@ -17,6 +17,23 @@
 			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
 
+			{% set version = "3" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			<p>Another variant similar to the two below but allowing the user to select applicants from an admission list. This is a flat mockup just meant to be used as a reference for future conversations.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+
 			{% set version = "2" %}
 			<h2 class="govuk-heading-m">
 				Variant {{version}}

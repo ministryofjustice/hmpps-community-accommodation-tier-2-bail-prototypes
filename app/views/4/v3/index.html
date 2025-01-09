@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'CAS-2: Short-Term Accommodation Bail' %}
+{% set back = false %}
+
+{% block content %}
+	<h1 class="govuk-heading-l">
+		{{title}}
+	</h1>
+	<div class="card-container">
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="admission-list">Choose applicant from admissions list</a>
+				</h2>
+				<p>Start a CAS-2 application by choosing an applicant from your admissions list.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">Search for an applicant</a>
+				</h2>
+				<p>Start a CAS-2 application by entering their NOMIS number.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="#0">View your applications</a>
+				</h2>
+				<p>View all of your in progress and submitted CAS-2 applications.</p>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}
