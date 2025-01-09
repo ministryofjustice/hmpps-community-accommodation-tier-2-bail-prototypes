@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Admissions list' %}
+
+{% block content %}
+	<style>
+		.govuk-main-wrapper {position: relative}
+		.prototype-toggle {position: absolute; bottom: 0}
+	</style>
+	<div class='govuk-grid-row'>
+		<div class="govuk-grid-column-full">
+
+			<h1 class="govuk-heading-l">
+				{{title}}
+			</h1>
+
+			{{ govukTable({
+				firstCellIsHeader: true,
+				head: [
+					{html: 'Person'},
+					{html: 'NOMIS reference'},
+					{html: 'Offence'},
+					{html: 'Date submitted'},
+					{html: 'Interested and eligible in court?'} if data['extended'] == 'true',
+					{html: 'Reason for no application'} if data['extended'] == 'true'
+				],
+				rows: [
+					[
+						{html: '<a href="#0">John Smith</a>'},
+						{html: 'A4445DZ'},
+						{html: 'Fraud'},
+						{html: '25 Jan 2024'},
+						{html: 'Interested and eligible'} if data['extended'] == 'true',
+						{html: 'Bed not suitable for health reasons'} if data['extended'] == 'true'
+					],
+					[
+						{html: '<a href="#0">Warren Sutton</a>'},
+						{html: 'A1232DZ'},
+						{html: 'Drunk driving'},
+						{html: '25 Jan 2024'},
+						{html: 'Interested and eligible'} if data['extended'] == 'true',
+						{html: 'No available beds'} if data['extended'] == 'true'
+					],
+					[
+						{html: '<a href="#0">Alan Jones</a>'},
+						{html: 'A4567DZ'},
+						{html: 'Murder'},
+						{html: '9 May 2024'},
+						{html: 'Not interested but eligible'} if data['extended'] == 'true',
+						{html: 'No reason given'} if data['extended'] == 'true'
+					],
+					[
+						{html: '<a href="#0">Jennifer Langley</a>'},
+						{html: 'A1234DZ'},
+						{html: 'Burlary'},
+						{html: '9 May 2024'},
+						{html: 'Not eligible for bail'} if data['extended'] == 'true',
+						{html: 'Not eligible'} if data['extended'] == 'true'
+					]
+				]
+			}) }}
+
+			<p class="prototype-toggle">(
+				{% if data['extended'] == 'true' %}
+					<a class="govuk-link--no-visited-state" href="?extended=false">Show less table data</a>
+				{% else %}
+					<a class="govuk-link--no-visited-state" href="?extended=true">Show more table data</a>
+				{% endif %}
+			)</p>
+
+		</div>
+	</div>
+{% endblock %}
