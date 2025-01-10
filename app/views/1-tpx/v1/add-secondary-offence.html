@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="offence-updated-sec">
+			
+				<span class="govuk-caption-xl">Applicant details</span>
+				<h1 class="govuk-heading-l">Add a secondary offence</h1>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="event-name">
+						Offence title and number
+					</label>
+					<div id="event-name-hint" class="govuk-hint">
+						For example, Stalking O8000
+					  </div>
+					<input class="govuk-input" id="event-name" name="eventName" type="text">
+				  </div>
+
+				 
+				   	
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Offence category
+					  </legend>
+					  <div class="govuk-form-group">
+						<label class="govuk-label" for="sort">
+						  For example, Class E: Burglary
+						</label>
+						<select class="govuk-select" id="sort" name="sort">
+						  <option value="published">Class A: Homicide and related grave offences</option>
+						  <option value="updated" selected>Class B: Offences involving serious violence or damage, and serious
+							drugs offences</option>
+						  <option value="views">Class C: Lesser offences involving violence or damage, and less
+							serious drugs offences</option>
+						  <option value="comments">Class D: Sexual offences, and offences against children</option>
+						  <option value="comments">Class E: Burglary etc</option>
+						  <option value="comments">Class F </option>
+						  <option value="comments">Class G</option>
+						  <option value="comments">Class K</option>
+						  <option value="comments">Class H: Miscellaneous lesser offences</option>
+						  <option value="comments">Class I: Offences against public justice and similar offences</option>
+						  <option value="comments">Class J: Serious sexual offences, offences against children</option>
+						  
+						</select>
+					  </div>
+					  </fieldset>
+					  </div>
+
+					  <div class="govuk-form-group">
+						<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							When did they commit the offence?
+						  </legend>
+						  <div id="passport-issued-hint" class="govuk-hint">
+							For example, 27 3 2007
+						  </div>
+						  <div class="govuk-date-input" id="passport-issued">
+							<div class="govuk-date-input__item">
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+								  Day
+								</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+							  </div>
+							</div>
+							<div class="govuk-date-input__item">
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+								  Month
+								</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+							  </div>
+							</div>
+							<div class="govuk-date-input__item">
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+								  Year
+								</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+							  </div>
+							</div>
+						  </div>
+						</fieldset>
+					  </div>
+
+				
+
+					  <div class="govuk-form-group">
+						<label class="govuk-label govuk-label--m" for="more-detail">
+							Enter details of the offence
+						</label>
+						<div id="event-name-hint" class="govuk-hint">
+							Include:
+							<ul class="govuk-list govuk-list--bullet govuk-hint">
+								<li>area where it happened</li>
+								<li>any damage or injuries caused</li>
+								<li>weapons type</li>
+								<li>motivation for the offence</li>
+
+							</ul>
+						  </div>
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+					  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				 Add secondary offence
+				</button>
+				
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

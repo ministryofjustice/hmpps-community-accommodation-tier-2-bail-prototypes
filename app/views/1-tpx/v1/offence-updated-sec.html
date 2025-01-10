@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="address">
+		<div class="govuk-form-group">
+			<span class="govuk-caption-xl">Applicant details</span>
+			<h1 class="govuk-heading-l">View and add applicant's offences</h1>
+			<p class="govuk-hint">This is needed to assess their eligibility to live in shared accommodation</p>
+			
+			<table class="govuk-table">
+				<caption class="govuk-table__caption govuk-table__caption--m">Primary current offence</caption>
+				<thead class="govuk-table__head">
+				  <tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header">Possession of a Class B drug with intent to Supply (08000)</th>
+					<th scope="col" class="govuk-table__header"></th>
+				  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Category</th>
+					<td class="govuk-table__cell">Class B: Offences involving serious violence or damage, and serious
+						drugs offences</td>
+				  </tr>
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Offence date</th>
+					<td class="govuk-table__cell">6 January 2025</td>
+				  </tr>
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Details</th>
+					<td class="govuk-table__cell">Possession of  large quantity of Class B drug Cannabis with evidence of supplying others in North Blackpool area</td>
+				  </tr>
+				</tbody>
+			  </table>
+
+			  <table class="govuk-table">
+				<caption class="govuk-table__caption govuk-table__caption--m">Secondary offences</caption>
+				<thead class="govuk-table__head">
+				  <tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header">Possession of a Class B drug (08000)</th>
+					<th scope="col" class="govuk-table__header"></th>
+				  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Category</th>
+					<td class="govuk-table__cell">Class H: Miscellaneous lesser offences</td>
+				  </tr>
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Offence date</th>
+					<td class="govuk-table__cell">6 January 2025</td>
+				  </tr>
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Details</th>
+					<td class="govuk-table__cell">Defendant had a quantity of Class B Drug Cannabis on their person when searched at their address</td>
+				  </tr>
+				</tbody>
+			  </table>
+
+			  <p class="govuk-link"> <a href="add-secondary-offence">Add a secondary offence</a></p>
+
+			  <h2 class="govuk-heading-m">Previous convictions</h2>
+			  <p class="govuk-link"> <a href="add-prev-offence">Add a previous conviction</a></p>
+			<div class="govuk-button-group govuk-!-margin-top-8">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}
