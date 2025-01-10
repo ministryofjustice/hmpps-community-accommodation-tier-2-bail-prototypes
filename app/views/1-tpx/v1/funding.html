@@ -1,0 +1,163 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="family-unit">
+			
+				<span class="govuk-caption-xl">CAS-2 funding and area preferences</span>
+				<h1 class="govuk-heading-l">Funding CAS-2 accommodation</h1>
+			
+				  <div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						How will the applicant pay for CAS-2 accommodation and the service charge?
+					  </legend>
+					  <div id="event-name-hint" class="govuk-hint">
+						Applicants may be eligible for help with rent payments if they are in employment.
+					  </div>
+					  <div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+						  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+							Housing benefit and Universal Credit, Disability Living Allowance or Employment & Support Allowance
+						  </label>
+						</div>
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+						  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+							Personal savings, salary, pension
+						  </label>
+						</div>
+					
+					  </div>
+					  </div>
+
+					  	
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						Does the applicant have a National Insurance Number?
+					  </legend>
+					  <div class="govuk-radios" data-module="govuk-radios">
+					
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+						  <label class="govuk-label govuk-radios__label" for="contact-2">
+						Yes
+						  </label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="event-name">
+									Enter the number
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									For example, SF123456X
+								  </div>
+								<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+							  </div>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+							<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+							  No
+							</label>
+						  </div>
+					
+					  </div>
+					  </fieldset>
+					  </div>
+
+					
+
+		
+					  <div class="govuk-form-group">
+						<fieldset class="govuk-fieldset">
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							Is the applicant currently receiving benefits?
+						  </legend>
+						  <div id="event-name-hint" class="govuk-hint">
+							For example, Universal Credit, Personal Independence Payments or Employment & Support Allowance
+						  </div>
+						  <div class="govuk-radios" data-module="govuk-radios">
+						
+							<div class="govuk-radios__item">
+							  <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-4">
+							  <label class="govuk-label govuk-radios__label" for="contact-2">
+							Yes
+							  </label>
+							</div>
+							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+								<div class="govuk-form-group">
+									<fieldset class="govuk-fieldset">
+									  <legend class="govuk-fieldset__legend">
+										Have they received any benefit sanctions in the last 6 months?
+									  </legend>
+									  <div class="govuk-radios" data-module="govuk-radios">
+										<div class="govuk-radios__item">
+										  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+										  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+										Yes
+										  </label>
+										</div>
+										<div class="govuk-radios__item">
+										  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+										  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+											No
+										  </label>
+										</div>
+									
+									  </div>
+									</fieldset>
+								  </div>
+		
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+								<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+								  No
+								</label>
+							  </div>
+						
+						  </div>
+						  </fieldset>
+						  </div>
+	
+
+						  <div class="govuk-form-group">
+							<fieldset class="govuk-fieldset">
+							  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								Is the applicant currently in education or receiving any training?
+							  </legend>
+							  <div class="govuk-radios" data-module="govuk-radios">
+								<div class="govuk-radios__item">
+								  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+								  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+								Yes
+								  </label>
+								</div>
+								<div class="govuk-radios__item">
+								  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+								  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+									No
+								  </label>
+								</div>
+							
+							  </div>
+							</fieldset>
+						  </div>
+
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="risks-source">
+			
+				<span class="govuk-caption-xl">Needs and risks</span>
+				<h1 class="govuk-heading-l">Enter details of their drug supply, gang and county lines involvement risks</h1>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="event-name">
+						What is the name of the gang or county line?
+					</label>
+					<input class="govuk-input" id="event-name" name="eventName" type="text">
+				  </div>
+
+				  <div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="more-detail">
+						What area(s) do they operate in?
+					</label>
+					<div id="event-name-hint" class="govuk-hint">
+						This will be marked as areas to avoid for placement. 
+					  </div>
+					<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+				  </div>
+				  
+			
+					  	
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						Are there any rival gangs or county lines?
+					  </legend>
+					  <div class="govuk-radios" data-module="govuk-radios">
+					
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+						  <label class="govuk-label govuk-radios__label" for="contact-2">
+						Yes
+						  </label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+						  <div class="govuk-form-group">
+							<label class="govuk-label" for="contact-by-phone">
+								Enter the name  and the area(s) they operate in
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+						
+						  </div>
+	
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+							<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+							  No
+							</label>
+						  </div>
+					
+					  </div>
+					  </fieldset>
+					  </div>
+
+					  <div class="govuk-form-group">
+						<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							Who is at risk?
+						  </legend>
+					
+						  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+							  <label class="govuk-label govuk-checkboxes__label" for="waste">
+								Children
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+							  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+								Drug users
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+							  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+								Known adult
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+									General public
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+									Prison staff and residents
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+									Themselves
+								</label>
+							  </div>
+							
+							<div class="govuk-checkboxes__divider">or</div>
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+					  <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+						Other
+					  </label>
+					</div>
+						  </div>
+						</fieldset>
+					  </div>
+
+		
+	
+
+					  <div class="govuk-form-group">
+						<label class="govuk-label govuk-label--m" for="more-detail">
+							Enter any details on any adult safeguarding measures
+						</label>
+						<div id="event-name-hint" class="govuk-hint">
+							For example, if there is an active RO in place or not.
+						  </div>
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+					  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}
