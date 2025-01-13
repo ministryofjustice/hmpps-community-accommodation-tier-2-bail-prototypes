@@ -43,7 +43,7 @@
 		</a>
 	  </li>
 	  <li class="govuk-tabs__list-item">
-		<a class="govuk-tabs__tab" href="#past-week">
+		<a class="govuk-tabs__tab" href="#past-month">
 		  Discarded applications
 		</a>
 	  </li>
@@ -51,7 +51,7 @@
 	 
 	</ul>
 	<div class="govuk-tabs__panel" id="past-day">
-	  <h2 class="govuk-heading-l">In progress applications</h2>
+	  <h2 class="govuk-heading-l">Started applications</h2>
 	  <table class="govuk-table">
 		<thead class="govuk-table__head">
 		  <tr class="govuk-table__row">
@@ -76,7 +76,7 @@
 	  </table>
 	</div>
 	<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-	  <h2 class="govuk-heading-l">Completed applications</h2>
+	  <h2 class="govuk-heading-l">Submitted applications</h2>
 	  <table class="govuk-table">
 		<thead class="govuk-table__head">
 		  <tr class="govuk-table__row">
@@ -100,6 +100,36 @@
 		</tbody>
 	  </table>
 	</div>
+
+	<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+		<h2 class="govuk-heading-l">Discarded applications</h2>
+		<table class="govuk-table">
+		  <thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+			  <th scope="col" class="govuk-table__header">Applicant</th>
+			  <th scope="col" class="govuk-table__header">Application number</th>
+			  <th scope="col" class="govuk-table__header">Application status</th>
+			  <th scope="col" class="govuk-table__header">Discarded reason</th>
+			</tr>
+		  </thead>
+		  <tbody class="govuk-table__body">
+			<tr class="govuk-table__row">
+			  <td class="govuk-table__cell"><a href="#">Kiran Hussain</a></td>
+			  <td class="govuk-table__cell">C2-1554</td>
+			  <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--purple">Discarded</span></td>
+			  <td class="govuk-table__cell">Sent on remand</td>
+			</tr>
+			<tr class="govuk-table__row">
+			  <td class="govuk-table__cell"><a href="#">Josh Fleming</a></td>
+			  <td class="govuk-table__cell">C2-1244</td>
+			  <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--purple">Discarded</span></td>
+			  <td class="govuk-table__cell">Withdrew consent</td>
+			</tr>
+			
+			
+		  </tbody>
+		</table>
+	  </div>
 
 	
   </div>
