@@ -32,266 +32,57 @@
 		}
 	}) %}
 
-		{% if data['health-needs'] %}
-			{% if data['health-needs'].includes('Communication needs') %}
-				{{ govukCheckboxes({
-					idPrefix: 'communication-needs',
-					name: 'communication-needs',
-					fieldset: {
-						legend: {
-							html: 'Communication needs',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Need and severity',
-							value: 'Need and severity',
-							checked: checked('communication-needs','Need and severity'),
-							conditional: {
-								html: noteBox
-							}
-						},
-						{
-							html: 'Info on independent living',
-							value: 'Info on independent living',
-							checked: checked('communication-needs','Info on independent living'),
-							conditional: {
-								html: noteBox
-							}
-						},
-						{
-							html: 'Support they have / will require',
-							value: 'Support they have / will require',
-							checked: checked('communication-needs','Support they have / will require'),
-							conditional: {
-								html: noteBox
-							}
-						}
-					]
-				}) }}
+		{% for category, subcategories in riskCategories() %}
+			{% if data[slugify(category)] %}
+				{% for subcategory, info_types in subcategories %}
+					{% if data[slugify(category)].includes(subcategory) %}
+						{% set items = [] %}
+						{% for info_type, details in info_types %}
+							{% set conditional = noteBox %}
+							{% set detail_length = details | length %}
+							{% if detail_length > 0 %}
+								{% set more = [] %}
+								{% for detail, empty in details %}
+									{% set more = more | push({
+										html: detail,
+										value: detail
+									}) %}
+								{% endfor %}
+								{% set conditional = govukCheckboxes({
+									idPrefix: [slugify(subcategory), slugify(info_type)].join('-'),
+									name: [slugify(subcategory), slugify(info_type)].join('-'),
+									items: more,
+									formGroup: {
+										afterInputs: {html: noteBox}
+									}
+								}) %}
+							{% endif %}
+
+							{% set items = items | push({
+								html: info_type,
+								value: info_type,
+								checked: checked(slugify(subcategory), info_type),
+								conditional: {
+									html: conditional
+								}
+							}) %}
+						{% endfor %}
+
+						{{ govukCheckboxes({
+							idPrefix: slugify(subcategory),
+							name: slugify(subcategory),
+							fieldset: {
+								legend: {
+									html: subcategory,
+									classes: 'govuk-fieldset__legend--m'
+								}
+							},
+							items: items
+						}) }}
+					{% endif %}
+				{% endfor %}
 			{% endif %}
-
-			{% if data['health-needs'].includes('Learning difficulties / disabilities') %}
-				{{ govukCheckboxes({
-					idPrefix: 'learning-difficulties',
-					name: 'learning-difficulties',
-					fieldset: {
-						legend: {
-							html: 'Learning difficulties / disabilities',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Need and effect on everyday life',
-							value: 'Need and effect on everyday life',
-							checked: checked('learning-difficulties','Need and effect on everyday life'),
-							conditional: {
-								html: noteBox
-							}
-						},
-						{
-							html: 'Medication / treatment',
-							value: 'Medication / treatment',
-							checked: checked('learning-difficulties','Medication / treatment'),
-							conditional: {
-								html: noteBox
-							}
-						}
-					]
-				}) }}
-			{% endif %}
-
-			{% if data['health-needs'].includes('Mobility needs') %}
-				{{ govukCheckboxes({
-					idPrefix: 'mobility-needs',
-					name: 'mobility-needs',
-					fieldset: {
-						legend: {
-							html: 'Mobility needs',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Need and effect on everyday life',
-							value: 'Need and effect on everyday life',
-							checked: checked('mobility-needs','Need and effect on everyday life'),
-							conditional: {
-								html: noteBox
-							}
-						},
-						{
-							html: 'Ability to use stairs',
-							value: 'Ability to use stairs',
-							checked: checked('mobility-needs','Ability to use stairs'),
-							conditional: {
-								html: noteBox
-							}
-						},
-						{
-							html: 'Medication / treatment',
-							value: 'Medication / treatment',
-							checked: checked('mobility-needs','Medication / treatment'),
-							conditional: {
-								html: noteBox
-							}
-						}
-					]
-				}) }}
-			{% endif %}
-
-			{% if data['health-needs'].includes('Epilepsy') %}
-				{{ govukCheckboxes({
-					idPrefix: 'epilepsy',
-					name: 'epilepsy',
-					fieldset: {
-						legend: {
-							html: 'Epilepsy',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Frequency / recency of seizures',
-							value: 'Frequency / recency of seizures',
-							checked: checked('epilepsy','Frequency / recency of seizures')
-						},
-						{
-							html: 'When seizures typically occur (day, night, both)',
-							value: 'When seizures typically occur (day, night, both)',
-							checked: checked('epilepsy','When seizures typically occur (day, night, both)')
-						},
-						{
-							html: 'Medication / treatment',
-							value: 'Medication / treatment',
-							checked: checked('epilepsy','Medication / treatment')
-						}
-					]
-				}) }}
-			{% endif %}
-		{% endif %}
-
-
-
-		{# {% if data['risk-of-serious-harm'] %}
-			{% if data['risk-of-serious-harm'].includes('Exploitation (risk to others)') %}
-				{{ govukCheckboxes({
-					idPrefix: 'exploitation',
-					name: 'exploitation',
-					fieldset: {
-						legend: {
-							html: 'Substance or alcohol abuse',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Need and severity',
-							value: 'Need and severity',
-							checked: checked('exploitation','Need and severity')
-						},
-						{
-							html: 'Info on independent living',
-							value: 'Info on independent living',
-							checked: checked('exploitation','Info on independent living')
-						},
-						{
-							html: 'Support they have / will require',
-							value: 'Support they have / will require',
-							checked: checked('exploitation','Support they have / will require')
-						}
-					]
-				}) }}
-			{% endif %}
-
-			{% if data['risk-of-serious-harm'].includes('Learning difficulties / disabilities') %}
-				{{ govukCheckboxes({
-					idPrefix: 'learning-difficulties',
-					name: 'learning-difficulties',
-					fieldset: {
-						legend: {
-							html: 'Learning difficulties / disabilities',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Need and effect on everyday life',
-							value: 'Need and effect on everyday life',
-							checked: checked('learning-difficulties','Need and effect on everyday life')
-						},
-						{
-							html: 'Medication / treatment',
-							value: 'Medication / treatment',
-							checked: checked('learning-difficulties','Medication / treatment')
-						}
-					]
-				}) }}
-			{% endif %}
-
-			{% if data['risk-of-serious-harm'].includes('Mobility needs') %}
-				{{ govukCheckboxes({
-					idPrefix: 'mobility-needs',
-					name: 'mobility-needs',
-					fieldset: {
-						legend: {
-							html: 'Mobility needs',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Need and effect on everyday life',
-							value: 'Need and effect on everyday life',
-							checked: checked('mobility-needs','Need and effect on everyday life')
-						},
-						{
-							html: 'Ability to use stairs',
-							value: 'Ability to use stairs',
-							checked: checked('mobility-needs','Ability to use stairs')
-						},
-						{
-							html: 'Medication / treatment',
-							value: 'Medication / treatment',
-							checked: checked('communication-needs','Medication / treatment')
-						}
-					]
-				}) }}
-			{% endif %}
-
-			{% if data['risk-of-serious-harm'].includes('Epilepsy') %}
-				{{ govukCheckboxes({
-					idPrefix: 'epilepsy',
-					name: 'epilepsy',
-					fieldset: {
-						legend: {
-							html: 'Epilepsy',
-							classes: 'govuk-fieldset__legend--m'
-						}
-					},
-					items: [
-						{
-							html: 'Frequency / recency of seizures',
-							value: 'Frequency / recency of seizures',
-							checked: checked('epilepsy','Frequency / recency of seizures')
-						},
-						{
-							html: 'When seizures typically occur (day, night, both)',
-							value: 'When seizures typically occur (day, night, both)',
-							checked: checked('epilepsy','When seizures typically occur (day, night, both)')
-						},
-						{
-							html: 'Medication / treatment',
-							value: 'Medication / treatment',
-							checked: checked('epilepsy','Medication / treatment')
-						}
-					]
-				}) }}
-			{% endif %}
-		{% endif %} #}
-
+		{% endfor %}
 
 	{% endcall %}
 {% endblock %}
