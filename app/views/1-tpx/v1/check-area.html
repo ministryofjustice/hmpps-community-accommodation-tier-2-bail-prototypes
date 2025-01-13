@@ -62,10 +62,10 @@
 					Preferred area 1
 				  </dt>
 				  <dd class="govuk-summary-list__value">
-					Bolton
+					{{ data['area1'] }}
 				  </dd>
 				  <dd class="govuk-summary-list__actions">
-					<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+					<a class="govuk-link" href="area-preferences">Change<span class="govuk-visually-hidden"> answer</span></a>
 				  </dd>
 				</div>
 			
@@ -74,7 +74,7 @@
 					  Preferred area 2
 					</dt>
 					<dd class="govuk-summary-list__value">
-					 Bury
+						{{ data['area2'] }}
 					</dd>
 					<dd class="govuk-summary-list__actions">
 					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
@@ -85,7 +85,13 @@
 					  Reason for preference
 					</dt>
 					<dd class="govuk-summary-list__value">
-						They lived in the area for six out of the last 12 months, or three out of the last five years (before prison) <br> Their immediate family (parents, children, siblings) has lived in the ares for at least five years
+						<ul class="govuk-list">
+							{% for item in data['reason'] %}
+							  <li>{{ item }}</li>
+							{% else %}
+							  <li>No reasons selected</li>
+							{% endfor %}
+						  </ul>
 					</dd>
 					<dd class="govuk-summary-list__actions">
 					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
@@ -96,7 +102,7 @@
 					 Other preference information
 					</dt>
 					<dd class="govuk-summary-list__value">
-						Any areas around Bolton give or take 20 miles as Jane doesn't drive and relies on public transport
+						{{ data['moreDetailarea'] }}
 					</dd>
 					<dd class="govuk-summary-list__actions">
 					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>

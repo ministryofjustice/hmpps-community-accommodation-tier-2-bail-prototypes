@@ -12,10 +12,10 @@
 			  <a href="communication">Communication needs</a>
 			</li>
 	
-			<li class="moj-side-navigation__item moj-side-navigation__item--active">
+			<li class="moj-side-navigation__item">
 			  <a href="mental-health" aria-current="mental-health">Mental health needs</a>
 			</li>
-			<li class="moj-side-navigation__item">
+			<li class="moj-side-navigation__item moj-side-navigation__item--active">
 				<a href="physical-health" aria-current="mental-health">Physical health needs</a>
 			  </li>
 	
@@ -26,52 +26,34 @@
 	  </div>
 	
 	<div class="govuk-grid-column-two-thirds">
-		<form action="physical-health">
+		<form action="health-source">
 			
 			<span class="govuk-caption-xl">Risks and needs</span>
-				<h1 class="govuk-heading-l">Enter details of their mental health needs</h1>
+				<h1 class="govuk-heading-l">Enter details of their physical health needs</h1>
 				<div class="govuk-form-group">
 					<label class="govuk-label govuk-label--m" for="more-detail">
 						What is the need and its severity?
 					</label>
 					<div id="more-detail-hint" class="govuk-hint">
-						For example, literacy, visual and hearing impairments, or need of an interpreter.
+						Include if they have any mobility needs.
 					  </div>
 					<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
 				  </div>
+		
 				  <div class="govuk-form-group">
-					<fieldset class="govuk-fieldset">
-					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-					Has the applicant been formally diagnosed?
-					  </legend>
-					  <div class="govuk-radios" data-module="govuk-radios">
-						<div class="govuk-radios__item">
-						  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-						  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-							Yes
-						  </label>
-						</div>
-						<div class="govuk-radios__item">
-						  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-						  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-							No, they have not been diagnosed
-						  </label>
-						</div>
-						<div class="govuk-radios__divider">or</div>
-						<div class="govuk-radios__item">
-						  <input class="govuk-radios__input" id="whereDoYouLive-6" name="whereDoYouLive" type="radio" value="abroad">
-						  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
-							No, they are awaiting an assessment
-						  </label>
-						</div>
+					<label class="govuk-label govuk-label--m" for="more-detail">
+						What  support do they need?
+					</label>
+					<div id="more-detail-hint" class="govuk-hint">
+						Include if they can manage stairs and if they have any accommodation needs.
 					  </div>
-					  </div>
-
-					  	
+					<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+				  </div>
+		
 				<div class="govuk-form-group">
 					<fieldset class="govuk-fieldset">
 					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						Do they take any medication for their mental health?
+						Are they currently receiving treatment and medication?
 					  </legend>
 					  <div class="govuk-radios" data-module="govuk-radios">
 					
@@ -122,20 +104,12 @@
 					  </fieldset>
 					  </div>
 
-					  <div class="govuk-form-group">
-						<label class="govuk-label govuk-label--m" for="more-detail">
-							What  support do they need?
-						</label>
-						
-						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
-					  </div>
-					  
-
+					 
 		
 					  <div class="govuk-form-group">
 						<fieldset class="govuk-fieldset">
 						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-							Are they engaged with any community mental health service? 
+							Have they been diagnosed with epilepsy?
 						  </legend>
 						  <div class="govuk-radios" data-module="govuk-radios">
 						
@@ -148,7 +122,7 @@
 							<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
 							  <div class="govuk-form-group">
 								<label class="govuk-label" for="contact-by-phone">
-									Enter the community mental health service
+									Enter details of their last seizure, how frequent they are and when they occur (for example, during the day, during sleep)
 								</label>
 								<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 								
