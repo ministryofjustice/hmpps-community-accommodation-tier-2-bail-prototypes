@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+{% set back = false %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Bail Community Accommodation Service (CAS-2) applications</h1>
+</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<div class="card card--overview">
+			<p class="govuk-heading-l govuk-!-margin-bottom-1" style="color:white;">12</p>
+			<p class="govuk-body" style="color:white;">Applications completed this month</h2>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-quarter">
+		<div class="card card--overview">
+			<p class="govuk-heading-l govuk-!-margin-bottom-1" style="color:white;">9</p>
+			<p class="govuk-body" style="color:white;">Applicants placed in accommodation</p>
+		</div>
+	</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+<a class="govuk-button" href="start-application-crt">Start new application</a>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+	<h2 class="govuk-tabs__title">
+	  Contents
+	</h2>
+	<ul class="govuk-tabs__list">
+	  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+		<a class="govuk-tabs__tab" href="#past-day">
+		 In progress applications
+		</a>
+	  </li>
+	  <li class="govuk-tabs__list-item">
+		<a class="govuk-tabs__tab" href="#past-week">
+		  Completed applications
+		</a>
+	  </li>
+	
+	 
+	</ul>
+	<div class="govuk-tabs__panel" id="past-day">
+	  <h2 class="govuk-heading-l">In progress applications</h2>
+	  <table class="govuk-table">
+		<thead class="govuk-table__head">
+		  <tr class="govuk-table__row">
+			<th scope="col" class="govuk-table__header">Applicant</th>
+			<th scope="col" class="govuk-table__header">Application number</th>
+			<th scope="col" class="govuk-table__header">Date started</th>
+		  </tr>
+		</thead>
+		<tbody class="govuk-table__body">
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="">David Francis</a></td>
+			<td class="govuk-table__cell">C2-7659</td>
+			<td class="govuk-table__cell">6 January 2025</td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="#">Paul Farmer</a></td>
+			<td class="govuk-table__cell">C2-7893</td>
+			<td class="govuk-table__cell">3 January 2025</td>
+		  </tr>
+		
+		</tbody>
+	  </table>
+	</div>
+	<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+	  <h2 class="govuk-heading-l">Completed applications</h2>
+	  <table class="govuk-table">
+		<thead class="govuk-table__head">
+		  <tr class="govuk-table__row">
+			<th scope="col" class="govuk-table__header">Applicant</th>
+			<th scope="col" class="govuk-table__header">Application number</th>
+			<th scope="col" class="govuk-table__header">Application status</th>
+		  </tr>
+		</thead>
+		<tbody class="govuk-table__body">
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="in-progress-pris">Jack Jones</a></td>
+			<td class="govuk-table__cell">C2-7609</td>
+			<td class="govuk-table__cell"><span class="govuk-tag govuk-tag--orange">Rejected</span></td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="#">Mohammed Amir</a></td>
+			<td class="govuk-table__cell">C2-7119</td>
+			<td class="govuk-table__cell"><span class="govuk-tag">Submitted</span></td>
+		  </tr>
+		  
+		</tbody>
+	  </table>
+	</div>
+
+	
+  </div>
+
+  </div>
+</div>
+{% endblock %}
