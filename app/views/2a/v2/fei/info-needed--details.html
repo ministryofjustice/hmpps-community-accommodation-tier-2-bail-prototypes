@@ -20,201 +20,35 @@
 		}
 	}) %}
 
-		{% if data['info-needed'].includes('Health needs') %}
-			{{ govukCheckboxes({
-				idPrefix: 'health-needs',
-				name: 'health-needs',
-				fieldset: {
-					legend: {
-						html: 'Health needs',
-						classes: 'govuk-fieldset__legend--m'
-					}
-				},
-				items: [
-					{
-						html: 'Communication needs',
-						value: 'Communication needs',
-						checked: checked('health-needs','Communication needs')
-					},
-					{
-						html: 'Learning difficulties / disabilities',
-						value: 'Learning difficulties / disabilities',
-						checked: checked('health-needs','Learning difficulties / disabilities')
-					},
-					{
-						html: 'Mobility needs',
-						value: 'Mobility needs',
-						checked: checked('health-needs','Mobility needs')
-					},
-					{
-						html: 'Epilepsy',
-						value: 'Epilepsy',
-						checked: checked('health-needs','Epilepsy')
-					},
-					{
-						html: 'Other',
-						value: 'Other',
-						checked: checked('health-needs','Other')
-					}
-				]
-			}) }}
-		{% endif %}
+		{% for category, subcategories in riskCategories() %}
+			{% if data['info-needed'].includes(category) %}
+				{% set items = [] %}
+				{% for subcategory, info_types in subcategories %}
+					{% set items = items | push({
+						html: subcategory,
+						value: subcategory,
+						checked: checked(slugify(category), subcategory)
+					}) %}
+				{% endfor %}
+				{% set items = items | push({
+					html: 'Other',
+					value: 'Other',
+					checked: checked(slugify(category), 'Other')
+				}) %}
 
-		{% if data['info-needed'].includes('Risk to self') %}
-			{{ govukCheckboxes({
-				idPrefix: 'risk-to-self',
-				name: 'risk-to-self',
-				fieldset: {
-					legend: {
-						html: 'Risk to self',
-						classes: 'govuk-fieldset__legend--m'
-					}
-				},
-				items: [
-					{
-						html: 'Substance or alcohol abuse',
-						value: 'Substance or alcohol abuse',
-						checked: checked('risk-to-self','Substance or alcohol abuse')
+				{{ govukCheckboxes({
+					idPrefix: slugify(category),
+					name: slugify(category),
+					fieldset: {
+						legend: {
+							html: category,
+							classes: 'govuk-fieldset__legend--m'
+						}
 					},
-					{
-						html: 'Mental health',
-						value: 'Mental health',
-						checked: checked('risk-to-self','Mental health')
-					},
-					{
-						html: 'Self-harm and suicide',
-						value: 'Self-harm and suicide',
-						checked: checked('risk-to-self','Self-harm and suicide')
-					},
-					{
-						html: 'Vulnerability from others',
-						value: 'Vulnerability from others',
-						checked: checked('risk-to-self','Vulnerability from others')
-					},
-					{
-						html: 'Exploitation (risk to self)',
-						value: 'Exploitation (risk to self)',
-						checked: checked('risk-to-self','Exploitation (risk to self)')
-					},
-					{
-						html: 'Domestic violence (victim)',
-						value: 'Domestic violence (victim)',
-						checked: checked('risk-to-self','Domestic violence (victim)')
-					},
-					{
-						html: 'Sex work',
-						value: 'Sex work',
-						checked: checked('risk-to-self','Sex work')
-					},
-					{
-						html: 'Media interest',
-						value: 'Media interest',
-						checked: checked('risk-to-self','Media interest')
-					},
-					{
-						html: 'Isolation',
-						value: 'Isolation',
-						checked: checked('risk-to-self','Isolation')
-					}
-				]
-			}) }}
-		{% endif %}
-
-
-		{% if data['info-needed'].includes('Risk of serious harm') %}
-			{{ govukCheckboxes({
-				idPrefix: 'risk-of-serious-harm',
-				name: 'risk-of-serious-harm',
-				fieldset: {
-					legend: {
-						html: 'Risk of serious harm',
-						classes: 'govuk-fieldset__legend--m'
-					}
-				},
-				items: [
-					{
-						html: 'Exploitation (risk to others)',
-						value: 'Exploitation (risk to others)',
-						checked: checked('risk-of-serious-harm','Exploitation (risk to others)')
-					},
-					{
-						html: 'Domestic violence (perpatrator)',
-						value: 'Domestic violence (perpatrator)',
-						checked: checked('risk-of-serious-harm','Domestic violence (perpatrator)')
-					},
-					{
-						html: 'Gang involvement',
-						value: 'Gang involvement',
-						checked: checked('risk-of-serious-harm','Gang involvement')
-					},
-					{
-						html: 'Violent offences',
-						value: 'Violent offences',
-						checked: checked('risk-of-serious-harm','Violent offences')
-					},
-					{
-						html: 'Hate-related attitudes',
-						value: 'Hate-related attitudes',
-						checked: checked('risk-of-serious-harm','Hate-related attitudes')
-					},
-					{
-						html: 'Drug supply offences',
-						value: 'Drug supply offences',
-						checked: checked('risk-of-serious-harm','Drug supply offences')
-					},
-					{
-						html: 'County lines involvement',
-						value: 'County lines involvement',
-						checked: checked('risk-of-serious-harm','County lines involvement')
-					},
-					{
-						html: 'Acquisitive offending',
-						value: 'Acquisitive offending',
-						checked: checked('risk-of-serious-harm','Acquisitive offending')
-					},
-					{
-						html: 'Cuckooing',
-						value: 'Cuckooing',
-						checked: checked('risk-of-serious-harm','Cuckooing')
-					},
-					{
-						html: 'Financial abuse or fraud',
-						value: 'Financial abuse or fraud',
-						checked: checked('risk-of-serious-harm','Financial abuse or fraud')
-					},
-					{
-						html: 'Arson offences',
-						value: 'Arson offences',
-						checked: checked('risk-of-serious-harm','Arson offences')
-					},
-					{
-						html: 'Weapons offences',
-						value: 'Weapons offences',
-						checked: checked('risk-of-serious-harm','Weapons offences')
-					},
-					{
-						html: 'Driving offences',
-						value: 'Driving offences',
-						checked: checked('risk-of-serious-harm','Driving offences')
-					},
-					{
-						html: 'Risk to staff',
-						value: 'Risk to staff',
-						checked: checked('risk-of-serious-harm','Risk to staff')
-					},
-					{
-						html: 'Risk to property / criminal damage',
-						value: 'Risk to property / criminal damage',
-						checked: checked('risk-of-serious-harm','Risk to property / criminal damage')
-					},
-					{
-						html: 'Other',
-						value: 'Other',
-						checked: checked('risk-of-serious-harm','Other')
-					}
-				]
-			}) }}
-		{% endif %}
+					items: items
+				}) }}
+			{% endif %}
+		{% endfor %}
 	{% endcall %}
 {% endblock %}
 

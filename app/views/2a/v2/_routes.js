@@ -1,7 +1,8 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
+const riskCategories = require('../../../data/risks')
 
-router.get('*', function(req, res, next){
+router.get('*', function (req, res, next) {
 	// Change the service name for this whole feature
 	res.locals['serviceName'] = 'Short-Term Accommodation (CAS-2) Bail'
 
@@ -32,15 +33,22 @@ router.post('/fei/info-needed', (req, res, next) => {
 })
 
 router.post('/fei/info-needed--details', (req, res, next) => {
-	let question = req.session.data['health-needs']
-
-	if (question) {
-		if (question.includes('Communication needs') || question.includes('Learning difficulties / disabilities')  || question.includes('Mobility needs') || question.includes('Epilepsy')) {
-			res.redirect('info-needed--context');
+	console.log(req.session.data)
+	const hasContext = Object.keys(riskCategories).find(category => {
+		const slug = category.toLowerCase().replaceAll(/\W/g, '-')
+		const question = req.session.data[slug];
+		if (question) {
+			return Object.keys(riskCategories[category]).find(risk => question.includes(risk)) !== undefined;
 		} else {
-			res.redirect('note');
+			return false;
 		}
-	} else { next() }
+	})
+
+	if (hasContext !== undefined) {
+		res.redirect('info-needed--context');
+	} else {
+		res.redirect('note');
+	}
 })
 
 router.post('/fei/info-needed--context', (req, res, next) => {
