@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="risks-all">
+			<div class="govuk-form-group">
+				<span class="govuk-caption-xl">Needs and risks</span>
+				<h1 class="govuk-label-wrapper">
+				  <label class="govuk-label govuk-label--l" for="more-detail">
+					What source did you use for this information?
+				  </label>
+				</h1>
+				<div id="more-detail-hint" class="govuk-hint">
+					This can include in person interviews, case work, in-reach or healthcare teams.
+					<br>
+					Enter where you got the information on health needs from.
+				</div>
+				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+			  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

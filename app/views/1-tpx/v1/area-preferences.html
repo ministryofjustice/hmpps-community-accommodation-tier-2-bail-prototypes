@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="task-list-complete">
+			<div class="govuk-form-group">
+				<span class="govuk-caption-xl">CAS-2 funding and area preferences</span>
+			<h1 class="govuk-heading-l">What are the applicant’s preferred areas?</h1>
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="event-name">
+					Preferred area 1
+				</label>
+				<div id="event-name-hint" class="govuk-body">
+					Enter the town or city
+				  </div>
+				<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+			  </div>
+
+			  <div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="event-name">
+					Preferred area 2
+				</label>
+				<div id="event-name-hint" class="govuk-body">
+					Enter the town or city
+				  </div>
+				<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Select the reason for preference
+				  </legend>
+				  <div id="waste-hint" class="govuk-hint">
+					Select all that apply
+				  </div>
+				  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+					  <label class="govuk-label govuk-checkboxes__label" for="waste">
+						It is close to the court where the case will be held
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+					  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+						They lived in the area for six out of the last 12 months, or three out of the last five years (before prison)
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+					  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+						Their immediate family (parents, children, siblings) has lived in the ares for at least five years
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+						<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+							They have secured full-time or part-time work
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+						<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+							They have a special reason to live in (for example, they receive specialist healthcare)
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+			Other reasons
+        </label>
+      </div>
+    </div>
+				  </div>
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="more-detail">
+					Enter any other preference information
+				</label>
+				<div id="waste-hint" class="govuk-hint">
+					For example, happy to be placed anywhere
+				  </div>
+				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+			  </div>
+			  
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

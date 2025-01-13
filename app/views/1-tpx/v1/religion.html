@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="other-equality">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+					  What is your religion?
+					</h1>
+				  </legend>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion" name="religion" type="radio" value="none">
+					  <label class="govuk-label govuk-radios__label" for="religion">
+						No religion
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="christian" aria-describedby="religion-2-item-hint">
+					  <label class="govuk-label govuk-radios__label" for="religion-2">
+						Christian
+					  </label>
+					  <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+						Including Church of England, Catholic, Protestant and all other Christian denominations
+					  </div>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-3" name="religion" type="radio" value="buddhist">
+					  <label class="govuk-label govuk-radios__label" for="religion-3">
+						Buddhist
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-4" name="religion" type="radio" value="hindu">
+					  <label class="govuk-label govuk-radios__label" for="religion-4">
+						Hindu
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-5" name="religion" type="radio" value="jewish">
+					  <label class="govuk-label govuk-radios__label" for="religion-5">
+						Jewish
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-6" name="religion" type="radio" value="muslim">
+					  <label class="govuk-label govuk-radios__label" for="religion-6">
+						Muslim
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-7" name="religion" type="radio" value="sikh">
+					  <label class="govuk-label govuk-radios__label" for="religion-7">
+						Sikh
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-8" name="religion" type="radio" value="other" data-aria-controls="conditional-religion-8">
+					  <label class="govuk-label govuk-radios__label" for="religion-8">
+						Any other religion
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-religion-8">
+					  <div class="govuk-form-group">
+						<label class="govuk-label" for="other-description">
+						  What is your religion? (optional)
+						</label>
+						<input class="govuk-input govuk-!-width-one-half" id="other-description" name="otherDescription" type="text">
+					  </div>
+					</div>
+					<div class="govuk-radios__divider">or</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-10" name="religion" type="radio" value="skip">
+					  <label class="govuk-label govuk-radios__label" for="religion-10">
+						Prefer not to say
+					  </label>
+					</div>
+				  </div>
+				</fieldset>
+			  </div>
+			
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

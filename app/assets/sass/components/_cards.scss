@@ -17,6 +17,17 @@
 	margin-bottom: 2em;
 }
 
+.card--overview{
+	border: 3px solid	#000 ;
+	color:white;
+	background-color: #1d70b8;
+	padding-left: 20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:20px;
+	
+}
+
 @include govuk-media-query($from: tablet, $until: desktop, $media-type: screen) {
 	.card {
 		flex-basis: 48%;

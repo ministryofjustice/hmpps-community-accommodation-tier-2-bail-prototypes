@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Hypothesis 1' %}
+{% set nav = false %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+				{{ title }}
+			</h1>
+			{{ govukInsetText({
+				html: '<p>Provide users with an application form that is intuitive, efficient, prevents mistakes, and ​
+					supports users in collecting and providing necessary information required for CAS-2 Bail resulting in quicker decisions being made​
+					
+					​</p>',
+				classes: 'govuk-!-margin-top-4 govuk-!-margin-bottom-0'
+			}) }}
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+
+
+			{% set version = "1" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			{# <p>Add a process started from the dashboard of the MVP product being built to capture when a bed was unavailable on a per person basis.</p>
+			<p>Utilises a lookup for the person&rsquo;s details and captures extra data based on the current interim Word document solution. Additional data may need capturing in the future, we&rsquo;re starting with what we hope is the minimum requirement.</p> #}
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/applications-overview'
+			}) }}
+
+
+
+
+
+
+			{# {% set v1HTML %}
+				{% set version = "1" %}
+				<p>Information about this version</p>
+
+				<p><a href="#0">View the research outputs on Miro</a>.</p>
+
+				{{ govukButton({
+					text: 'View prototype',
+					href: '#0'
+				}) }}
+			{% endset %}
+
+			 #}
+
+		</div>
+	</div>
+{% endblock %}
+

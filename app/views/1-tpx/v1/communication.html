@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+	<div class="govuk-grid-row">
+
+		<div class="govuk-grid-column-one-third">
+	  
+		  <nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="#1" aria-current="location">Communication needs</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="mental-health">Mental health needs</a>
+			  </li>
+	  
+			 
+			</ul>
+		  </nav>
+	  
+		</div>
+	  
+	
+	  
+	<div class="govuk-grid-column-two-thirds">
+		<form action="mental-health">
+			
+				<span class="govuk-caption-xl">Needs and risks</span>
+				<h1 class="govuk-heading-l">Enter details of their communication needs</h1>
+				<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="more-detail">
+						What is the need and its severity?
+					</label>
+					<div id="more-detail-hint" class="govuk-hint">
+						For example, literacy, visual and hearing impairments, or need of an interpreter.
+					  </div>
+					<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+				  </div>
+				  <div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="more-detail">
+						What  support do they need?
+					</label>
+					
+					<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+				  </div>
+			
+			
+				
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}
