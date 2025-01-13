@@ -16,7 +16,7 @@
 				<div id="event-name-hint" class="govuk-body">
 					Enter the town or city
 				  </div>
-				<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+				<input class="govuk-input govuk-input--width-20" id="event-name" name="area1" type="text">
 			  </div>
 
 			  <div class="govuk-form-group">
@@ -26,7 +26,7 @@
 				<div id="event-name-hint" class="govuk-body">
 					Enter the town or city
 				  </div>
-				<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+				<input class="govuk-input govuk-input--width-20" id="event-name" name="area2" type="text">
 			  </div>
 
 			  <div class="govuk-form-group">
@@ -39,39 +39,39 @@
 				  </div>
 				  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-					  <label class="govuk-label govuk-checkboxes__label" for="waste">
+					  <input class="govuk-checkboxes__input" id="waste" name="reason" type="checkbox" value="It is close to the court where the case will be held" >
+					  <label class="govuk-label govuk-checkboxes__label" for="reason1" {{ checked('reason','It is close to the court where the case will be held') }}>
 						It is close to the court where the case will be held
 					  </label>
 					</div>
 					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-					  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+					  <input class="govuk-checkboxes__input" id="waste-2" name="reason" type="checkbox" value="They lived in the area for six out of the last 12 months, or three out of the last five years (before prison)">
+					  <label class="govuk-label govuk-checkboxes__label" for="reason2" {{ checked('reason','They lived in the area for six out of the last 12 months, or three out of the last five years (before prison)') }}>
 						They lived in the area for six out of the last 12 months, or three out of the last five years (before prison)
 					  </label>
 					</div>
 					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-					  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+					  <input class="govuk-checkboxes__input" id="waste-3" name="reason" type="checkbox" value="Their immediate family (parents, children, siblings) has lived in the ares for at least five years">
+					  <label class="govuk-label govuk-checkboxes__label" for="reason3" {{ checked('reason','Their immediate family (parents, children, siblings) has lived in the ares for at least five years') }}>
 						Their immediate family (parents, children, siblings) has lived in the ares for at least five years
 					  </label>
 					</div>
 					<div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+						<input class="govuk-checkboxes__input" id="waste-3" name="reason" type="checkbox" value="They have secured full-time or part-time work">
+						<label class="govuk-label govuk-checkboxes__label" for="reason4" {{ checked('reason','They have secured full-time or part-time work') }}>
 							They have secured full-time or part-time work
 						</label>
 					  </div>
 					  <div class="govuk-checkboxes__item">
-						<input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-						<label class="govuk-label govuk-checkboxes__label" for="waste-3">
+						<input class="govuk-checkboxes__input" id="waste-3" name="reason" type="checkbox" value="They have a special reason to live in">
+						<label class="govuk-label govuk-checkboxes__label" for="reason5" {{ checked('reason','They have a special reason to live in') }}>
 							They have a special reason to live in (for example, they receive specialist healthcare)
 						</label>
 					  </div>
 					  <div class="govuk-checkboxes__divider">or</div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
-        <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+        <input class="govuk-checkboxes__input" id="countries-5" name="reasons" type="checkbox" value="other" data-behaviour="Other reason">
+        <label class="govuk-label govuk-checkboxes__label" for="reasons6" {{ checked('reason','Other reasons') }}>
 			Other reasons
         </label>
       </div>
@@ -87,7 +87,7 @@
 				<div id="waste-hint" class="govuk-hint">
 					For example, happy to be placed anywhere
 				  </div>
-				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+				<textarea class="govuk-textarea" id="more-detail" name="moreDetailarea" rows="5"></textarea>
 			  </div>
 			  
 			  <div class="govuk-button-group govuk-!-margin-top-6">
