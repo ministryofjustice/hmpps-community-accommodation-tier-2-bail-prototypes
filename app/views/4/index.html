@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Hypothesis 4' %}
+{% set nav = false %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+				{{ title }}
+			</h1>
+			{{ govukInsetText({
+				html: '<p>Reusing unsuccessful Court applications can increase efficiency within Prison bail applications, and increase the quality of completing a subsequent application from Prison.</p><p><a href="https://vivace1.sharepoint.com/:p:/s/EXTERNAL-C646CAS2BailApplications/EfiHFrc4AldMmVYUYcg_Oz0B9vUpSmh05Zhy0hSH2c7alA?e=CKTCgS&nav=eyJzSWQiOjI3MCwiY0lkIjo0MTc0NjcwNDMxfQ">View hypothesis details in Sharepoint</a></p>',
+				classes: 'govuk-!-margin-top-4 govuk-!-margin-bottom-0'
+			}) }}
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+
+			{% set version = "3" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			<p>Another variant similar to the two below but allowing the user to select applicants from an admission list. This is a flat mockup just meant to be used as a reference for future conversations.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+
+			{% set version = "2" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			<p>Similar to variant 1 but with incomplete applications as well. This is a flat mockup just meant to be used as a reference for future conversations.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+
+			{% set version = "1" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+			<p>Add an option to the starting dashboard to view previous applications. This is a flat mockup just meant to be used as a reference for future conversations.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+
+
+
+
+
+			{# {% set v1HTML %}
+				{% set version = "1" %}
+				<p>Information about this version</p>
+
+				<p><a href="#0">View the research outputs on Miro</a>.</p>
+
+				{{ govukButton({
+					text: 'View prototype',
+					href: '#0'
+				}) }}
+			{% endset %}
+
+			{{ govukAccordion({
+				id: 'previous',
+				classes: 'govuk-!-margin-top-9',
+				items: [
+					{
+						heading: {
+							html: 'Version 1 <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-2">Researched</strong>'
+						},
+						content: {
+							html: v1HTML
+						}
+					}
+				]
+			}) }} #}
+
+		</div>
+	</div>
+{% endblock %}
+

@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Aadland Bertrand' %}
+
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+
+			<div class="moj-page-header-actions govuk-!-margin-bottom-2">
+				<div class="moj-page-header-actions__title">
+					<h1 class="govuk-heading-xl">{{title}}</h1>
+				</div>
+
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-group moj-button-group--inline">
+
+						<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+							Download as a PDF
+						</button>
+
+						<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+							Change assessment details
+						</button>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="status-box govuk-!-margin-bottom-5">
+				<p class="govuk-!-display-inline">Current status:
+					<strong class="govuk-tag--blue status-box-tag">
+						{{ data['status']  or 'Received' }}
+					</strong>
+				</p>
+			</div>
+
+			<p>This application was submitted on <strong>8 January 2025</strong>.</p>
+			<p>CAS-2 reference number: <strong>12345</strong>.</p>
+			<p>Assessor name: <strong>John Doe</strong>.</p>
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+					text: 'View submitted application',
+					href: '#0'
+				}) }}
+
+				{{ govukButton({
+					text: 'Update application status',
+					classes: 'govuk-button--secondary',
+					href: 'status'
+				}) }}
+			</div>
+
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+			{%- from "moj/components/timeline/macro.njk" import mojTimeline -%}
+
+
+			{{ mojTimeline({
+				items: [
+					{
+						label: {
+							text:  data['status']
+						},
+						datetime: {
+							timestamp: "2025-01-01T13:15:00.000Z",
+							type: "datetime"
+						},
+						byline: {
+							text: "Joe Bloggs"
+						}
+					} if data['status'],
+					{
+						label: {
+							text:  "Application submitted"
+						},
+						datetime: {
+							timestamp: "2025-01-01T13:15:00.000Z",
+							type: "datetime"
+						},
+						byline: {
+							text: "Joe Bloggs"
+						}
+					}
+				] | cleanArray
+			}) }}
+
+		</div>
+	</div>
+{% endblock %}

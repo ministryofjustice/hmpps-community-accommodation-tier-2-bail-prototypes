@@ -1,0 +1,193 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Unsuccessful CAS-2 applications' %}
+{% set back = false %}
+
+{% block content %}
+	<style>
+		.govuk-main-wrapper {position: relative}
+		.prototype-toggle {position: absolute; bottom: 0}
+	</style>
+
+	<div class='govuk-grid-row'>
+		<div class="govuk-grid-column-{{ 'full' if data['ext'] == 'true' else 'three-quarters' }}">
+
+			<h1 class="govuk-heading-l">
+				{{title}}
+			</h1>
+
+			{% set yourApplications %}
+				{{ govukTable({
+					firstCellIsHeader: true,
+					head: [
+						{text: 'Person'},
+						{text: 'Prison number'},
+						{text: 'Case reference number (CRN)'},
+						{text: 'Date submitted'},
+						{html: 'Reason unsuccessful'} if data['ext'] == 'true'
+					],
+					rows: [
+						[
+							{html: '<a href="#0">John Smith</a>'},
+							{html: 'A4445DZ'},
+							{html: 'X55453'},
+							{text: '25 Jan 2024'},
+							{html: 'Nacro deemed ineligible'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Warren Sutton</a>'},
+							{html: 'A1232DZ'},
+							{html: 'X23212'},
+							{text: '25 Jan 2024'},
+							{html: 'Nacro deemed too high risk'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Alan Jones</a>'},
+							{html: 'A4567DZ'},
+							{html: 'X78765'},
+							{text: '9 May 2024'},
+							{html: 'Application not completed in time'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Jennifer Langley</a>'},
+							{html: 'A1234DZ'},
+							{html: 'X45678'},
+							{text: '9 May 2024'},
+							{html: 'Bail not granted'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Susan Francis</a>'},
+							{html: 'A8900DZ'},
+							{html: 'X09800'},
+							{text: '9 May 2024'},
+							{html: 'Applicant withdrew or declined offer'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">John Smith</a>'},
+							{html: 'A4445DZ'},
+							{html: 'X55453'},
+							{text: '25 Jan 2024'},
+							{html: 'Bailee change of circumstances'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Warren Sutton</a>'},
+							{html: 'A1232DZ'},
+							{html: 'X23212'},
+							{text: '25 Jan 2024'},
+							{html: 'Probation withdrew or declined'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Alan Jones</a>'},
+							{html: 'A4567DZ'},
+							{html: 'X78765'},
+							{text: '9 May 2024'},
+							{html: 'Nacro deemed ineligible'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Jennifer Langley</a>'},
+							{html: 'A1234DZ'},
+							{html: 'X45678'},
+							{text: '9 May 2024'},
+							{html: 'Nacro deemed ineligible'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Susan Francis</a>'},
+							{html: 'A8900DZ'},
+							{html: 'X09800'},
+							{text: '9 May 2024'},
+							{html: 'Probation withdrew or declined'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">John Smith</a>'},
+							{html: 'A4545DZ'},
+							{html: 'X56765'},
+							{text: '9 May 2024'},
+							{html: 'Probation withdrew or declined'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Margaret Blake</a>'},
+							{html: 'A8867DZ'},
+							{html: 'X75411'},
+							{text: '9 May 2024'},
+							{html: 'Application not completed in time'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">John Smith</a>'},
+							{html: 'A4445DZ'},
+							{html: 'X55453'},
+							{text: '25 Jan 2024'},
+							{html: 'Applicant withdrew or declined offer'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Warren Sutton</a>'},
+							{html: 'A1232DZ'},
+							{html: 'X23212'},
+							{text: '25 Jan 2024'},
+							{html: 'Application not completed in time'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Alan Jones</a>'},
+							{html: 'A4567DZ'},
+							{html: 'X78765'},
+							{text: '9 May 2024'},
+							{html: 'Bailee change of circumstances'} if data['ext'] == 'true'
+						],
+						[
+							{html: '<a href="#0">Jennifer Langley</a>'},
+							{html: 'A1234DZ'},
+							{html: 'X45678'},
+							{text: '9 May 2024'},
+							{html: 'Applicant withdrew or declined offer'} if data['ext'] == 'true'
+						]
+					]
+				}) }}
+
+				{{ govukPagination({
+					next: {
+						href: '#0'
+					},
+					items: [
+						{
+							number: 1,
+							current: true,
+							href: '#0'
+						},
+						{
+							number: 2,
+							href: '#0'
+						},
+						{
+							number: 3,
+							href: '#0'
+						}
+					]
+				}) }}
+			{% endset %}
+
+			{{ govukTabs({
+				items: [
+					{
+						label: 'Your unsuccessful applications',
+						id: 'your',
+						panel: {
+							html: yourApplications
+						}
+					},
+					{
+						label: 'All unsuccessful applications',
+						id: 'all'
+					}
+				]
+			}) }}
+
+			<p class="prototype-toggle">(
+				{% if data['ext'] == 'true' %}
+					<a class="govuk-link--no-visited-state" href="?ext=false">Show less table data</a>
+				{% else %}
+					<a class="govuk-link--no-visited-state" href="?ext=true">Show more table data</a>
+				{% endif %}
+			)</p>
+
+		</div>
+	</div>
+{% endblock %}
