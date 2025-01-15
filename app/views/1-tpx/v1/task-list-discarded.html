@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<section class="key-details-bar" aria-label="Key details">
+    <div class="key-details-bar__key-details">
+  <div class="key-details-bar__top-block">
+	<span class="govuk-visually-hidden">Application number:</span>
+	<span class=" govuk-caption-l">CS-13955</span>
+	<span class="govuk-visually-hidden">Application for:</span>
+    <h1 class="govuk-heading-l">Jane Smith</h1>
+  </div>
+  <div class="key-details-bar__bottom-block govuk-!-padding-top-0">
+	<ul class="govuk-list">
+		<li>Date of birth: 15/06/1995 (29 years old)</li>
+		<li>Nationality: British</li>
+		<li>Immigration status: British citizen</li>
+		<li>Sex: Female</li>
+	</ul>
+	<p class="govuk-heading-s">Application status: <span class="govuk-tag govuk-tag--grey" style="color:	#282d30;">Discarded</span></p>
+  
+    
+  </div>
+    </div>
+  </section>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		
+
+
+<h2 class="govuk-heading-m govuk-!-margin-top-6">Application history</h2>
+
+<div class="moj-timeline">
+	
+  
+	
+  
+  
+	<div class="moj-timeline__item">
+  
+	  <div class="moj-timeline__header">
+		<h2 class="moj-timeline__title">Application discarded</h2>
+  
+		<p class="moj-timeline__byline">by Josh Clements</p>
+  
+	  </div>
+  
+	  <p class="moj-timeline__date">
+		<time datetime="2019-05-28T10:45:00.000Z">7 January at 10:45am</time>
+	  </p>
+  
+	  <div class="moj-timeline__description">
+		<details class="govuk-details govuk-!-margin-bottom-0">
+		  <summary class="govuk-details__summary">
+			<span class="govuk-details__summary-text">
+			  View discarded reason
+			</span>
+		  </summary>
+		  <div class="govuk-details__text">
+			Applicant was denied bail
+		  </div>
+		</details>
+	  </div>
+  
+	</div>
+  
+
+  
+	<div class="moj-timeline__item">
+  
+	  <div class="moj-timeline__header">
+		<h2 class="moj-timeline__title">Application started</h2>
+  
+		<p class="moj-timeline__byline">by Josh Clements</p>
+  
+	  </div>
+  
+	  <p class="moj-timeline__date">
+		<time datetime="2019-05-21T13:15:00.000Z">6 January 2025 at 1:15pm</time>
+	  </p>
+  
+	
+  
+	</div>
+  </div>
+  
+		</div>
+</div>
+{% endblock %}
