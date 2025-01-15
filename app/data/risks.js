@@ -44,14 +44,14 @@ const riskCategories = {
 			"Referral for community support": {},
 		},
 		"Exploitation (risk to self)": {
-			"Known perpatrator(s)": {},
+			"Known perpetrator(s)": {},
 			"Nature of exploitation": {},
 			"Safeguarding measures / restraining orders": {},
 			"Areas to avoid": {},
 
 		},
 		"Domestic violence (victim)": {
-			"Known perpatrator(s)": {},
+			"Known perpetrator(s)": {},
 			"Details of incidents": {},
 			"Safeguarding measures / restraining orders": {},
 			"Areas to avoid": {},
@@ -85,7 +85,7 @@ const riskCategories = {
 			'Safeguarding measures / Restraining orders': {},
 			'Areas to avoid': {},
 		},
-		'Domestic violence (perpatrator)': {
+		'Domestic violence (perpetrator)': {
 			'Specific risk to others': {
 				'Known victim(s)': {},
 				'Ex- or future partners': {},
