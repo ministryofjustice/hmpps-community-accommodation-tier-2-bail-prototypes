@@ -28,6 +28,25 @@
 	
 }
 
+.card--response{
+	border: 3px solid		#f3f2f1 ;
+	color:#0b0c0c;
+	background-color: 	#f3f2f1;
+	padding-left: 20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:20px;
+	
+}
+.card--request{
+	border: 3px solid		#b1b4b6 ;
+	padding-left: 20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:20px;
+	
+}
+
 @include govuk-media-query($from: tablet, $until: desktop, $media-type: screen) {
 	.card {
 		flex-basis: 48%;
