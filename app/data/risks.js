@@ -19,7 +19,8 @@ const riskCategories = {
 			'Frequency / recency of seizures': {},
 			'When seizures typically occur (day, night, both)': {},
 			'Medication / treatment': {},
-		}
+		},
+		'Other': {},
 	},
 	'Risk to self': {
 		"Substance or alcohol abuse": {
@@ -67,12 +68,7 @@ const riskCategories = {
 			"Current concerns": {},
 			"Areas to avoid": {},
 		},
-		"Isolation": {
-			"Current concerns": {},
-			"Safeguarding measures / restraining orders": {},
-			"Areas to avoid": {},
-			"Support they have / will require": {},
-		}
+		'Other': {},
 	},
 	'Risk of serious harm': {
 		'Exploitation (risk to others)': {
@@ -215,6 +211,7 @@ const riskCategories = {
 			"Details of incidents": {},
 			"If incidents occurred in supported accomodation": {},
 		},
+		'Other': {},
 	}
 }
 

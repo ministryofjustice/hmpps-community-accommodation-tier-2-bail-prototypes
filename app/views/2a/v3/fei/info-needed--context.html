@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'What information is missing or insufficient?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% macro noteBox(idPrefix) %}
+		{{ govukTextarea({
+			name: [idPrefix, 'notes'].join('-'),
+			id: [idPrefix, 'notes'].join('-'),
+			rows: 3,
+			label: {
+				html: 'Add any extra notes for the referrer',
+				classes: 'govuk-label--s'
+			}
+		}) }}
+	{% endmacro -%}
+
+	{% call govukFieldset({
+		legend: {
+		html: title,
+		classes: 'govuk-fieldset__legend--l',
+		isPageHeading: true
+		}
+	}) %}
+
+		{% for category, subcategories in riskCategories() %}
+			{% if data[slugify(category)] %}
+				{% for subcategory, info_types in subcategories %}
+					{% if data[slugify(category)].includes(subcategory) %}
+						{% set items = [] %}
+						{% for info_type, details in info_types %}
+							{% set conditional = "" %}
+							{% set detail_length = details | length %}
+							{% if detail_length > 0 %}
+								{% set more = [] %}
+								{% for detail, empty in details %}
+									{% set more = more | push({
+										html: detail,
+										value: detail
+									}) %}
+								{% endfor %}
+								{% set conditional = govukCheckboxes({
+									idPrefix: [slugify(subcategory), slugify(info_type)].join('-'),
+									name: [slugify(subcategory), slugify(info_type)].join('-'),
+									items: more
+								}) %}
+							{% endif %}
+
+							{% set items = items | push({
+								html: info_type,
+								value: info_type,
+								checked: checked(slugify(subcategory), info_type),
+								conditional: {
+									html: conditional
+								}
+							}) %}
+						{% endfor %}
+
+						{{ govukCheckboxes({
+							idPrefix: slugify(subcategory),
+							name: slugify(subcategory),
+							fieldset: {
+								legend: {
+									html: subcategory,
+									classes: 'govuk-fieldset__legend--m'
+								}
+							},
+							formGroup: {
+								afterInputs: {html: noteBox(slugify(subcategory)) }
+							},
+							items: items
+						}) }}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+
+	{% endcall %}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

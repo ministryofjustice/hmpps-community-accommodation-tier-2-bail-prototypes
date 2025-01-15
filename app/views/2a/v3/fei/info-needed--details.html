@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Where is more information required?' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% call govukFieldset({
+		legend: {
+		html: title,
+		classes: 'govuk-fieldset__legend--l',
+		isPageHeading: true
+		}
+	}) %}
+
+		{% for category, subcategories in riskCategories() %}
+			{% if data['info-needed'].includes(category) %}
+				{% set items = [] %}
+				{% for subcategory, info_types in subcategories %}
+					{% set items = items | push({
+						html: subcategory,
+						value: subcategory,
+						checked: checked(slugify(category), subcategory)
+					}) %}
+				{% endfor %}
+
+				{{ govukCheckboxes({
+					idPrefix: slugify(category),
+					name: slugify(category),
+					fieldset: {
+						legend: {
+							html: category,
+							classes: 'govuk-fieldset__legend--m'
+						}
+					},
+					items: items
+				}) }}
+			{% endif %}
+		{% endfor %}
+	{% endcall %}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

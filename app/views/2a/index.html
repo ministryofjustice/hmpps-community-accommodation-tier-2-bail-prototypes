@@ -16,14 +16,31 @@
 			}) }}
 			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
+			{% set version = "3" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--orange govuk-!-margin-left-2',
+					text: 'Ready for review'
+				}) }}
+			</h2>
+
+			<p>Replaced inline Further Information notes for each detailed piece of information with one box to cover the entirety of each risk category, and clarified that this is optional.</p>
+			<p>Removed "Isolation" from the list of risk categories because none of the users recognised it as a valid category.</p>
+			<p>All of the users highlighted the need for the Dashboard view to show all of the details entered, so we now show the full details of the FIE in the timeline.</p>
+
+			{{ govukButton({
+				text: 'View prototype',
+				href: 'v'+version+'/dashboard'
+			}) }}
 
 
 			{% set version = "2" %}
 			<h2 class="govuk-heading-m">
 				Variant {{version}}
 				{{ govukTag({
-					classes: 'govuk-tag--orange govuk-!-margin-left-2',
-					text: 'Ready for review'
+					classes: 'govuk-tag--green govuk-!-margin-left-2',
+					text: 'Researched'
 				}) }}
 			</h2>
 
@@ -40,8 +57,8 @@
 			<h2 class="govuk-heading-m">
 				Variant {{version}}
 				{{ govukTag({
-					classes: 'govuk-tag--blue govuk-!-margin-left-2',
-					text: 'Reviewed'
+					classes: 'govuk-tag--green govuk-!-margin-left-2',
+					text: 'Researched'
 				}) }}
 			</h2>
 
@@ -57,4 +74,3 @@
 		</div>
 	</div>
 {% endblock %}
-
