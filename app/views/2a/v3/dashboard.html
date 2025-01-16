@@ -57,6 +57,7 @@
 
 			{%- from "moj/components/timeline/macro.njk" import mojTimeline -%}
 
+			{% if data['status'] == 'More information requested' %}
 			{% set statusHtml -%}
 				{% for category in data['info-needed'] %}
 					{% for subcategory in data[slugify(category)] %}
@@ -77,6 +78,26 @@
 					{% endfor %}
 				{% endfor %}
 			{%- endset %}
+			{% endif %}
+
+			{% if data['status'] == 'Referral cancelled' %}
+			{% set statusHtml -%}
+				<ul class="govuk-list govuk-body-s">
+				{% for criteria in data['ineligibility-unmet'] %}
+					<li>Ineligible: {{ criteria }}</li>
+				{% endfor %}
+				{% for category, subcategories in riskCategories() %}
+					{% if data['unmanageable-' + slugify(category)] %}
+						{% for subcategory in data['unmanageable-' + slugify(category)] %}
+							<li>{{ category }}: {{ subcategory }}</li>
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+					<li>Why the risk is unmanageable: {{ data['unmanageable-reason'] }}</li>
+					<li>What could change to make the risk manageable: {{ data['unmanageable-change'] }}</li>
+				</ul>
+			{%- endset %}
+			{% endif %}
 
 			{{ mojTimeline({
 				items: [

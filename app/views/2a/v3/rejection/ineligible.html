@@ -58,13 +58,13 @@
 		{% for subcategory, info_type in subcategories %}
 			{% set options = options | push ({
 				'html': subcategory,
-				'value': slugify(subcategory),
-				'checked': checked('unmanagable',slugify(subcategory))
+				'value': subcategory,
+				'checked': checked('unmanageable', subcategory)
 			}) %}
 		{% endfor %}
 		{{ govukCheckboxes({
-			idPrefix: 'unmanagable',
-			name: 'unmanagable',
+			idPrefix: 'unmanageable-' + slugify(category),
+			name: 'unmanageable-' + slugify(category),
 			fieldset: {
 				legend: {
 					text: category,
