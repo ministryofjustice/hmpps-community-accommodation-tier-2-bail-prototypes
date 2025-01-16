@@ -20,45 +20,6 @@
 		}
 	}) %}
 
-		{% set moreSupport %}
-			{{ govukTextarea({
-				name: 'more-support',
-				id: 'more-support',
-				value: data['more-support'],
-				rows: 2,
-				label: {
-					html: 'What extra support would have been needed?',
-					classes: 'govuk-label--s'
-				}
-			}) }}
-		{% endset -%}
-		{{ govukRadios({
-			idPrefix: 'ineligibility-permanence',
-			name: 'ineligibility-permanence',
-			fieldset: {
-				legend: {
-					html: 'Is ineligibility permanent or circumstantial?',
-					classes: 'govuk-fieldset__legend--m'
-				}
-			},
-			items: [
-				{
-					html: 'Applicant would always be ineligible',
-					value: 'Applicant would always be ineligible',
-					checked: checked('ineligibility-permanence','Applicant would always be ineligible')
-				},
-				{
-					html: 'Applicant may be eligible if more support was available',
-					value: 'Applicant may be eligible if more support was available',
-					checked: checked('ineligibility-permanence','Applicant may be eligible if more support was available'),
-					conditional: {
-						html: moreSupport
-					}
-				}
-			]
-		}) }}
-
-
 		{% set list = ['Sexual offences',
 		'Age',
 		'High risk of serious harm',
@@ -84,41 +45,21 @@
 			items: options
 		}) }}
 
+	{% call govukFieldset({
+		legend: {
+		text: 'What risk is unmanagable?',
+		classes: 'govuk-fieldset__legend--m',
+		isPageHeading: true
+		}
+	}) %}
 
-		{% set list = ['Acquisitive offending',
-		'Arson',
-		'Communication needs',
-		'Cuckooing',
-		'Domestic violence (perpetrator)',
-		'Domestic violence (victim)',
-		'Driving offences',
-		'Drug supply offences',
-		'Epilepsy',
-		'Exploitation (risk to others)',
-		'Exploitation (risk to self)',
-		'Financial abuse or fraud',
-		'Gang involvement',
-		'Hate-related attitudes',
-		'Isolation',
-		'Learning difficulties / disabilities',
-		'Media/public interest',
-		'Mental health',
-		'Mobility needs',
-		'Other ',
-		'Other vulnerability',
-		'Risk to property / criminal damage',
-		'Risk to staff',
-		'Self-harm and suicide',
-		'Sex work',
-		'Substance or alcohol abuse',
-		'Violent offences',
-		'Weapons'] %}
+	{% for category, subcategories in riskCategories() %}
 		{% set options = [] %}
-		{% for i in list %}
+		{% for subcategory, info_type in subcategories %}
 			{% set options = options | push ({
-				'html': i,
-				'value': i,
-				'checked': checked('unmanagable',i)
+				'html': subcategory,
+				'value': slugify(subcategory),
+				'checked': checked('unmanagable',slugify(subcategory))
 			}) %}
 		{% endfor %}
 		{{ govukCheckboxes({
@@ -126,22 +67,36 @@
 			name: 'unmanagable',
 			fieldset: {
 				legend: {
-					html: 'What risk is unmanagable?',
-					classes: 'govuk-fieldset__legend--m'
+					text: category,
+					classes: 'govuk-fieldset__legend--s'
 				}
 			},
 			items: options
 		}) }}
+	{% endfor %}
 
-		{{ govukTextarea({
-			name: 'unmanageable-reason',
-			id: 'unmanageable-reason',
-			value: data['unmanageable-reason'],
-			label: {
-				html: 'Why is this risk unmanagable?',
-				classes: 'govuk-label--m'
-			}
-		}) }}
+	{{ govukTextarea({
+		name: 'unmanageable-reason',
+		id: 'unmanageable-reason',
+		value: data['unmanageable-reason'],
+		rows: 3,
+		label: {
+			html: 'Why is this risk unmanageable?',
+			classes: 'govuk-label--m'
+		}
+	}) }}
+
+	{{ govukTextarea({
+		name: 'unmanageable-change',
+		id: 'unmanageable-change',
+		value: data['unmanageable-change'],
+		rows: 3,
+		label: {
+			html: 'What would need to change for the risk to be manageable?',
+			classes: 'govuk-label--m'
+		}
+	}) }}
+	{% endcall %}
 
 	{% endcall %}
 {% endblock %}
