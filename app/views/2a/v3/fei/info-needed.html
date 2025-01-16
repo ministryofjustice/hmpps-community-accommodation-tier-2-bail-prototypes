@@ -12,6 +12,18 @@
 		</p>
 	</div>
 
+	{% macro getSubcategories(category) -%}
+		{%- set comma = joiner(', ') -%}
+		{%- for subcategory, info_type in riskCategories()[category] -%}
+			{%- if subcategory !== 'Other' -%}
+			{{ comma() }}{{ subcategory | lower }}
+			{%- endif -%}
+		{%- endfor -%}
+	{%- endmacro %}
+
+	{% set healthSubcategories %}{{ getSubcategories('Health needs') }}{% endset %}
+	{% set riskToSelfSubcategories %}{{ getSubcategories('Risk to self') }}{% endset %}
+
 	{{ govukCheckboxes({
 		idPrefix: 'info-needed',
 		name: 'info-needed',
@@ -36,11 +48,17 @@
 			{
 				html: 'Health needs',
 				value: 'Health needs',
+				hint: {
+					text: "Including " + healthSubcategories + "."
+				},
 				checked: checked('info-needed','Health needs')
 			},
 			{
 				html: 'Risk to self',
 				value: 'Risk to self',
+				hint: {
+					text: "Including " + riskToSelfSubcategories + "."
+				},
 				checked: checked('info-needed','Risk to self')
 			},
 			{

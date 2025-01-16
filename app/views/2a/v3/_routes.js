@@ -33,7 +33,6 @@ router.post('/fei/info-needed', (req, res, next) => {
 })
 
 router.post('/fei/info-needed--details', (req, res, next) => {
-	console.log(req.session.data)
 	const hasContext = Object.keys(riskCategories).find(category => {
 		const slug = category.toLowerCase().replaceAll(/\W/g, '-')
 		const question = req.session.data[slug];
