@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Details of risk or ineligibility' %}
+
+
+{% block questions %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Received
+			</strong>
+		</p>
+	</div>
+
+	{% call govukFieldset({
+		legend: {
+		html: title,
+		classes: 'govuk-fieldset__legend--l',
+		isPageHeading: true
+		}
+	}) %}
+
+		{% set list = ['Sexual offences',
+		'Age',
+		'High risk of serious harm',
+		'Breaching immigration law',
+		'No route to public funds'] %}
+		{% set options = [] %}
+		{% for i in list %}
+			{% set options = options | push ({
+				'html': i,
+				'value': i,
+				'checked': checked('ineligibility-unmet',i)
+			}) %}
+		{% endfor %}
+		{{ govukCheckboxes({
+			idPrefix: 'ineligibility-unmet',
+			name: 'ineligibility-unmet',
+			fieldset: {
+				legend: {
+					html: 'What eligibility criteria is unmet?',
+					classes: 'govuk-fieldset__legend--m'
+				}
+			},
+			items: options
+		}) }}
+
+	{% call govukFieldset({
+		legend: {
+		text: 'What risk is unmanagable?',
+		classes: 'govuk-fieldset__legend--m',
+		isPageHeading: true
+		}
+	}) %}
+
+	{% for category, subcategories in riskCategories() %}
+		{% set options = [] %}
+		{% for subcategory, info_type in subcategories %}
+			{% set options = options | push ({
+				'html': subcategory,
+				'value': subcategory,
+				'checked': checked('unmanageable', subcategory)
+			}) %}
+		{% endfor %}
+		{{ govukCheckboxes({
+			idPrefix: 'unmanageable-' + slugify(category),
+			name: 'unmanageable-' + slugify(category),
+			fieldset: {
+				legend: {
+					text: category,
+					classes: 'govuk-fieldset__legend--s'
+				}
+			},
+			items: options
+		}) }}
+	{% endfor %}
+
+	{{ govukTextarea({
+		name: 'unmanageable-reason',
+		id: 'unmanageable-reason',
+		value: data['unmanageable-reason'],
+		rows: 3,
+		label: {
+			html: 'Why is this risk unmanageable?',
+			classes: 'govuk-label--m'
+		}
+	}) }}
+
+	{{ govukTextarea({
+		name: 'unmanageable-change',
+		id: 'unmanageable-change',
+		value: data['unmanageable-change'],
+		rows: 3,
+		label: {
+			html: 'What would need to change for the risk to be manageable?',
+			classes: 'govuk-label--m'
+		}
+	}) }}
+	{% endcall %}
+
+	{% endcall %}
+{% endblock %}
+
+{% block buttons %}
+	<div class="govuk-button-group">
+		{{ govukButton({
+			text: 'Save and continue'
+		}) }}
+
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

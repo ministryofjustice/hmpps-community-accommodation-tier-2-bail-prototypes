@@ -19,7 +19,8 @@ const riskCategories = {
 			'Frequency / recency of seizures': {},
 			'When seizures typically occur (day, night, both)': {},
 			'Medication / treatment': {},
-		}
+		},
+		'Other': {},
 	},
 	'Risk to self': {
 		"Substance or alcohol abuse": {
@@ -44,14 +45,14 @@ const riskCategories = {
 			"Referral for community support": {},
 		},
 		"Exploitation (risk to self)": {
-			"Known perpatrator(s)": {},
+			"Known perpetrator(s)": {},
 			"Nature of exploitation": {},
 			"Safeguarding measures / restraining orders": {},
 			"Areas to avoid": {},
 
 		},
 		"Domestic violence (victim)": {
-			"Known perpatrator(s)": {},
+			"Known perpetrator(s)": {},
 			"Details of incidents": {},
 			"Safeguarding measures / restraining orders": {},
 			"Areas to avoid": {},
@@ -67,12 +68,7 @@ const riskCategories = {
 			"Current concerns": {},
 			"Areas to avoid": {},
 		},
-		"Isolation": {
-			"Current concerns": {},
-			"Safeguarding measures / restraining orders": {},
-			"Areas to avoid": {},
-			"Support they have / will require": {},
-		}
+		'Other': {},
 	},
 	'Risk of serious harm': {
 		'Exploitation (risk to others)': {
@@ -85,7 +81,7 @@ const riskCategories = {
 			'Safeguarding measures / Restraining orders': {},
 			'Areas to avoid': {},
 		},
-		'Domestic violence (perpatrator)': {
+		'Domestic violence (perpetrator)': {
 			'Specific risk to others': {
 				'Known victim(s)': {},
 				'Ex- or future partners': {},
@@ -215,6 +211,7 @@ const riskCategories = {
 			"Details of incidents": {},
 			"If incidents occurred in supported accomodation": {},
 		},
+		'Other': {},
 	}
 }
 

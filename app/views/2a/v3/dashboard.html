@@ -1,0 +1,134 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Aadland Bertrand' %}
+
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+
+			<div class="moj-page-header-actions govuk-!-margin-bottom-2">
+				<div class="moj-page-header-actions__title">
+					<h1 class="govuk-heading-xl">{{title}}</h1>
+				</div>
+
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-group moj-button-group--inline">
+
+						<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+							Download as a PDF
+						</button>
+
+						<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+							Change assessment details
+						</button>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="status-box govuk-!-margin-bottom-5">
+				<p class="govuk-!-display-inline">Current status:
+					<strong class="govuk-tag--blue status-box-tag">
+						{{ data['status']  or 'Received' }}
+					</strong>
+				</p>
+			</div>
+
+			<p>This application was submitted on <strong>8 January 2025</strong>.</p>
+			<p>CAS-2 reference number: <strong>12345</strong>.</p>
+			<p>Assessor name: <strong>John Doe</strong>.</p>
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+					text: 'View submitted application',
+					href: '#0'
+				}) }}
+
+				{{ govukButton({
+					text: 'Update application status',
+					classes: 'govuk-button--secondary',
+					href: 'status'
+				}) }}
+			</div>
+
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+			{%- from "moj/components/timeline/macro.njk" import mojTimeline -%}
+
+			{% if data['status'] == 'More information requested' %}
+			{% set statusHtml -%}
+				{% for category in data['info-needed'] %}
+					{% for subcategory in data[slugify(category)] %}
+						<h5 class="govuk-heading-xs">{{ category }}: {{ subcategory }}</h5>
+						<ul class="govuk-list govuk-body-s">
+						{% for info_type in data[slugify(subcategory)] %}
+							<li>
+								{{ info_type }}
+								{%- if data[[slugify(subcategory), slugify(info_type)].join('-')] -%}
+									: {{ data[[slugify(subcategory), slugify(info_type)].join('-')].join(', ') }}
+								{% endif %}
+							</li>
+						{% endfor %}
+						{% if data[slugify(subcategory) + '-notes'] %}
+							<li>{{ data[slugify(subcategory) + '-notes'] }}</li>
+						{% endif %}
+						</ul>
+					{% endfor %}
+				{% endfor %}
+			{%- endset %}
+			{% endif %}
+
+			{% if data['status'] == 'Referral cancelled' %}
+			{% set statusHtml -%}
+				<ul class="govuk-list govuk-body-s">
+				{% for criteria in data['ineligibility-unmet'] %}
+					<li>Ineligible: {{ criteria }}</li>
+				{% endfor %}
+				{% for category, subcategories in riskCategories() %}
+					{% if data['unmanageable-' + slugify(category)] %}
+						{% for subcategory in data['unmanageable-' + slugify(category)] %}
+							<li>{{ category }}: {{ subcategory }}</li>
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+					<li>Why the risk is unmanageable: {{ data['unmanageable-reason'] }}</li>
+					<li>What could change to make the risk manageable: {{ data['unmanageable-change'] }}</li>
+				</ul>
+			{%- endset %}
+			{% endif %}
+
+			{{ mojTimeline({
+				items: [
+					{
+						label: {
+							text:  data['status']
+						},
+						html: statusHtml,
+						datetime: {
+							timestamp: "2025-01-01T13:15:00.000Z",
+							type: "datetime"
+						},
+						byline: {
+							text: "Joe Bloggs"
+						}
+					} if data['status'],
+					{
+						label: {
+							text:  "Application submitted"
+						},
+						datetime: {
+							timestamp: "2025-01-01T13:15:00.000Z",
+							type: "datetime"
+						},
+						byline: {
+							text: "Joe Bloggs"
+						}
+					}
+				] | cleanArray
+			}) }}
+
+		</div>
+	</div>
+{% endblock %}
