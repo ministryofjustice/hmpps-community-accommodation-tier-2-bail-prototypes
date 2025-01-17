@@ -1,0 +1,419 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<section class="key-details-bar" aria-label="Key details">
+    <div class="key-details-bar__key-details">
+  <div class="key-details-bar__top-block">
+	<span class="govuk-visually-hidden">Application number:</span>
+	<span class=" govuk-caption-l">CS-13115</span>
+	<span class="govuk-visually-hidden">Application for:</span>
+    <h1 class="govuk-heading-l">Jack Jones</h1>
+	<ul class="govuk-list"style="position:absolute; right:500px;">
+		<li>Referrer name: Josh Clements</li>
+		<li>Email: jc@hmpliverpool.gov.uk</li>
+		<li>Contact number: 0151 123 4567</li>
+	</ul>
+	
+  </div>
+  <div class="key-details-bar__bottom-block govuk-!-padding-top-0">
+	<ul class="govuk-list">
+		<li>Prison number: 1953702</li>
+		<li>Institution: HMP Liverpool</li>
+		</ul>
+		<ul class="govuk-list">	
+		<li><strong>Application status:</strong> <span class="govuk-tag govuk-tag--yellow" style="color:	#000;">Assigned</span></li>
+		<li><strong>Assessor:</strong> John Doe</li>
+	</ul>
+<a class="govuk-button govuk-button--inverse" href="application-status-rej" style="color:#1D70B8;">Change application status</a>
+    
+  </div>
+    </div>
+  </section>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+		
+
+
+<h2 class="govuk-heading-l govuk-!-margin-top-6">Application overview</h2>
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+	<ul class="moj-sub-navigation__list">
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" aria-current="page" href="#1">Applicant information</a>
+	  </li>
+  
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" href="risks">Risks and needs</a>
+	  </li>
+  
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" href="funding">CAS-2 funding and preferences</a>
+	  </li>
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" href="history">Application history</a>
+	  </li>
+	</ul>
+  
+  </nav>
+  </div>
+  </div>
+  <div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+  
+  <div class="govuk-summary-card">
+	<div class="govuk-summary-card__title-wrapper">
+	  <h2 class="govuk-summary-card__title">
+		Applicant details
+	  </h2>
+	</div>
+	<div class="govuk-summary-card__content">
+	  <dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Date of birth
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			15/06/1995 (29 years old)
+		  </dd>
+		  
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Nationality
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			British
+		  </dd>
+		  
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Immigration status
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			British citizen
+		  </dd>
+		 
+		</div>
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			 Sex
+			</dt>
+			<dd class="govuk-summary-list__value">
+			  Female
+			</dd>
+		   
+		  </div>
+	
+	  </dl>
+	</div>
+  </div>
+  <div class="govuk-summary-card">
+	<div class="govuk-summary-card__title-wrapper">
+	  <h2 class="govuk-summary-card__title">
+		Other information
+	  </h2>
+	</div>
+	<div class="govuk-summary-card__content">
+	  <dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Does the applicant give their verbal consent to apply for CAS-2?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Yes
+		  </dd>
+		 
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Is the applicant pregnant?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			No
+		  </dd>
+		
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Can the applicant live independently in shared accommodation?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Yes
+		  </dd>
+		 
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Did the applicant have a fixed address before entering custody?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			No
+		  </dd>
+		 
+		</div>
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+				Does the applicant have a mobile phone?
+			</dt>
+			<dd class="govuk-summary-list__value">
+			  Yes, Smart Phone
+			</dd>
+		   
+		  </div>
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+				Applicant mobile number
+			</dt>
+			<dd class="govuk-summary-list__value">
+			 07777777712
+			</dd>
+		   
+		  </div>
+	  </dl>
+	</div>
+  </div>
+  <div class="govuk-summary-card">
+	<div class="govuk-summary-card__title-wrapper">
+	  <h2 class="govuk-summary-card__title">
+		Equality and diversity monitoring
+	  </h2>
+	</div>
+	<div class="govuk-summary-card__content">
+	  <dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Sexual orientation
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Prefer not to say
+		  </dd>
+		
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Is the gender they identify with the same as the sex registered at their birth?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Yes
+		  </dd>
+		
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Ethnic group
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Mixed or multiple ethnic groups - British and Asian
+		  </dd>
+		
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Religion
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Prefers not to say
+		  </dd>
+		 
+		</div>
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			Is the applicant a military veteran?
+			</dt>
+			<dd class="govuk-summary-list__value">
+			No
+			</dd>
+		   
+		  </div>
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+				Is the applicant a care leaver?
+			</dt>
+			<dd class="govuk-summary-list__value">
+			No
+			</dd>
+		   
+		  </div>
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+				Does the applicant have parental or carer responsibilities?
+			</dt>
+			<dd class="govuk-summary-list__value">
+			No
+			</dd>
+		   
+		  </div>
+	  </dl>
+	</div>
+  </div>
+
+  <div class="govuk-summary-card">
+	<div class="govuk-summary-card__title-wrapper">
+	  <h2 class="govuk-summary-card__title">
+		Solicitor, probation and bail hearing information
+	  </h2>
+	</div>
+  <div class="govuk-summary-card__content">
+	<dl class="govuk-summary-list">
+	  <div class="govuk-summary-list__row">
+		<dt class="govuk-summary-list__key">
+		  Solicitor details
+		</dt>
+		<dd class="govuk-summary-list__value">
+		  <ul class="govuk-list">
+			  <li>Steven Gerrard</li>
+			  <li>sg@lawfirm.com</li>
+			  <li>01234 567 89</li>
+			  <li>Stevie G Firm</li>
+			  <li>Firm Road</li>
+			  <li>L1 1AB</li>
+			  </ul>
+		</dd>
+	  
+	  </div>
+	  <div class="govuk-summary-list__row">
+		<dt class="govuk-summary-list__key">
+		  Is the applicant under the supervision of a Probation Service Officer (POM)?
+		</dt>
+		<dd class="govuk-summary-list__value">
+		  No
+		</dd>
+	  
+	  </div>
+	  <div class="govuk-summary-list__row">
+		<dt class="govuk-summary-list__key">
+		  Who will arrange the bail hearing?
+		</dt>
+		<dd class="govuk-summary-list__value">
+		  Legal advisor - They have been consulted about the application
+		</dd>
+	  
+	  </div>
+	  <div class="govuk-summary-list__row">
+		<dt class="govuk-summary-list__key">
+		  Court
+		</dt>
+		<dd class="govuk-summary-list__value">
+		  Sefton Magistrate's court
+		</dd>
+	   
+	  </div>
+	  
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			  When will the bail hearing take place?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+		  18/01/2025
+		  </dd>
+		 
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			  How will the bail hearing be heard?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+		  In court
+		  </dd>
+		 
+		</div>
+	</dl>
+  </div>
+
+
+  </div>
+  <div class="govuk-summary-card">
+	<div class="govuk-summary-card__title-wrapper">
+	  <h2 class="govuk-summary-card__title">
+		Offending history
+	  </h2>
+	</div>
+  <div class="govuk-summary-card__content">
+	<dl class="govuk-summary-list">
+	  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+		<dt class="govuk-summary-list__key">
+			Primary alleged offence
+		</dt>
+		<dd class="govuk-summary-list__value">
+			Possession of Class B drug with intent to supply (08000)
+		</dd>
+	  
+	  </div>
+	  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+		<dt class="govuk-summary-list__key">
+		 Category
+		</dt>
+		<dd class="govuk-summary-list__value">
+			Class B: Offences involving serious violence or damage, and serious drugs offences
+		</dd>
+		</div>
+	    <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+			<dt class="govuk-summary-list__key">
+				Offence date
+			</dt>
+			<dd class="govuk-summary-list__value">
+				6 January 2025
+			</dd>
+		  
+	  </div>
+	  <div class="govuk-summary-list__row">
+		<dt class="govuk-summary-list__key">
+		  Details
+		</dt>
+		<dd class="govuk-summary-list__value">
+			Possession of a large quantity of Class B drug Cannabis with evidence 
+		</dd>
+	  
+	  </div>
+	
+	  
+
+		<div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+		  <dt class="govuk-summary-list__key">
+			Secondary alleged offence
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			  Possession of Class B drug with intent to supply (08000)
+		  </dd>
+		
+		</div>
+		<div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+		  <dt class="govuk-summary-list__key">
+		   Category
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Class H: Miscellaneous lesser offences
+		  </dd>
+		  </div>
+		  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+			  <dt class="govuk-summary-list__key">
+				  Offence date
+			  </dt>
+			  <dd class="govuk-summary-list__value">
+				  6 January 2025
+			  </dd>
+			
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Details
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			  Found in possession of cannabis in Blackpool area 
+		  </dd>
+		
+		</div>
+		
+	</dl>
+  </div>
+</div>
+
+<p class="govuk-link"><a href="">View next section</a></p>
+  </div>
+  
+  
+		</div>
+</div>
+{% endblock %}

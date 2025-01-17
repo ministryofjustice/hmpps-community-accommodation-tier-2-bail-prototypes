@@ -1,0 +1,21 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	
+		<div class="govuk-form-group">
+			<h1 class="govuk-label-wrapper">
+			  <label class="govuk-label govuk-label--l" for="more-detail">
+				What is the reason for rejecting this application?
+			  </label>
+			</h1>
+			
+			<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+		  </div>
+		  <a class="govuk-button govuk-!-margin-top-6" href="task-list-rejected">Reject application</a> 
+  </div>
+</div>
+{% endblock %}
