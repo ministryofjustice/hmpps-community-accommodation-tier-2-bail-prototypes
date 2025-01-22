@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="ethnicity-response/ethnicity-multiple">
+		<div class="govuk-form-group">
+			<span class="govuk-caption-xl">Applicant details</span>
+			<fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					What is the applicant’s ethnic group?
+				</h1>
+			  </legend>
+		
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+				  <label class="govuk-label govuk-radios__label" for="signIn">
+					White
+				  </label>
+				
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+				  <label class="govuk-label govuk-radios__label" for="signIn-2">
+					Mixed or multiple ethnic groups
+				  </label>
+				 
+				</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+					<label class="govuk-label govuk-radios__label" for="signIn-2">
+						Asian or Asian British
+					</label>
+				   
+				  </div>
+				
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+					<label class="govuk-label govuk-radios__label" for="signIn-2">
+						Black, African, Caribbean or Black British
+					</label>
+				   
+				  </div>
+
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+					<label class="govuk-label govuk-radios__label" for="signIn-2">
+						Other ethnic group
+					</label>
+				   
+				  </div>
+			
+	
+    </div>
+			  </div>
+			</fieldset>
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

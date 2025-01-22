@@ -1,0 +1,125 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<section class="key-details-bar" aria-label="Key details">
+    <div class="key-details-bar__key-details">
+  <div class="key-details-bar__top-block">
+	<span class="govuk-visually-hidden">Application number:</span>
+	<span class=" govuk-caption-l">CS-13115</span>
+	<span class="govuk-visually-hidden">Application for:</span>
+    <h1 class="govuk-heading-l">Jack Jones <span class="govuk-tag govuk-tag--purple" style="color:	#000;">Prison application</span></h1>
+	<ul class="govuk-list"style="position:absolute; right:500px;">
+		<li>Referrer name: Josh Clements</li>
+		<li>Email: jc@hmpliverpool.gov.uk</li>
+		<li>Contact number: 0151 123 4567</li>
+	</ul>
+	
+  </div>
+  <div class="key-details-bar__bottom-block govuk-!-padding-top-0">
+	<ul class="govuk-list">
+		<li>Prison number: 1953702</li>
+		<li>Institution: HMP Liverpool</li>
+		<li><strong>Application status:</strong> <span class="govuk-tag govuk-tag--grey" style="color:	#000;">Unassigned</span></li>
+	</ul>
+	<a class="govuk-button govuk-button--inverse " href="application-status" style="color:#1D70B8;">Change application status</a>
+    
+  </div>
+    </div>
+  </section>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+		
+
+
+<h2 class="govuk-heading-l govuk-!-margin-top-6">Application overview</h2>
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+	<ul class="moj-sub-navigation__list">
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link"  href="task-list-unassigned">Applicant information</a>
+	  </li>
+  
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" href="risks">Risks and needs</a>
+	  </li>
+  
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" href="funding">CAS-2 funding and preferences</a>
+	  </li>
+	  <li class="moj-sub-navigation__item">
+		<a class="moj-sub-navigation__link" aria-current="page" href="history">Application history</a>
+	  </li>
+	</ul>
+  
+  </nav>
+  </div>
+  </div>
+  <div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+		
+  
+
+		<div class="moj-timeline">
+	
+  
+	
+  
+		
+		  
+			<div class="moj-timeline__item">
+		
+				<div class="moj-timeline__header">
+				  <h2 class="moj-timeline__title">Application submitted</h2>
+			
+				  <p class="moj-timeline__byline">by Josh Clements</p>
+			
+				</div>
+			
+				<p class="moj-timeline__date">
+				  <time datetime="2019-05-28T10:15:00.000Z">6 January at 3:15pm</time>
+				</p>
+			
+				<div class="moj-timeline__description">
+				  <ul class="moj-timeline__documents">
+					<li class="moj-timeline__document-item">
+					  <a class="govuk-link" href="#">
+						<svg class="moj-timeline__document-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" width="20" height="16">
+						  <path d="M9 7V1.5L14.5 7H9zM2 0C.9 0 0 .9 0 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6l-6-6H2z" />
+						</svg>
+						Download application
+					  </a>
+					</li>
+					
+				  </ul>
+				</div>
+			
+			  </div>
+		  
+			<div class="moj-timeline__item">
+		  
+			  <div class="moj-timeline__header">
+				<h2 class="moj-timeline__title">Application started</h2>
+		  
+				<p class="moj-timeline__byline">by Josh Clements</p>
+		  
+			  </div>
+		  
+			  <p class="moj-timeline__date">
+				<time datetime="2019-05-21T13:15:00.000Z">6 January 2025 at 1:15pm</time>
+			  </p>
+		  
+			
+		  
+			</div>
+		  </div>
+
+
+
+
+  </div>
+  
+  
+		</div>
+</div>
+{% endblock %}

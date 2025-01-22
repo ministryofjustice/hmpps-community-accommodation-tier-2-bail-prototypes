@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	<h1 class="govuk-heading-l">Information request for Jack Jones</h1>
+	<table class="govuk-table">
+		<caption class="govuk-table__caption govuk-table__caption--m">Request from assessor</caption>
+		
+		<tbody class="govuk-table__body">
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Information requested</th>
+			<td class="govuk-table__cell">Health needs</td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<th scope="row" class="govuk-table__header">Note for referrer</th>
+			<td class="govuk-table__cell">Where is Jack’s mental health community support located? No detail was provided about the location, only that he sees somebody.</td>
+		  </tr>
+		
+		 
+		
+		</tbody>
+	  </table>
+	   
+	  <div class="govuk-form-group govuk-!-margin-top-9">
+		<label class="govuk-label govuk-label--m" for="more-detail">
+		 Your response
+		</label>
+		<div id="more-detail-hint" class="govuk-hint">
+			Include as much detail as you can
+		  </div>
+		<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+	  </div>
+	
+	  <a class="govuk-button govuk-!-margin-top-6" href="task-list-sent">Send</a>
+	
+  </div>
+</div>
+{% endblock %}

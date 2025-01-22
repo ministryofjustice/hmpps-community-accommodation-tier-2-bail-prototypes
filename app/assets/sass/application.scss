@@ -9,6 +9,7 @@ $moj-page-width: 1170px;
 @import './components/cards';
 @import './components/status-box';
 @import './components/key-details';
+@import './components/autocomplete';
 
 .govuk-main-wrapper {
 	min-height: 600px;
@@ -17,3 +18,9 @@ $moj-page-width: 1170px;
 .moj-header {
 	border-bottom: 0;
 }
+
+.autocomplete__wrapper * {
+
+	@include govuk-typography-common();
+  
+  }

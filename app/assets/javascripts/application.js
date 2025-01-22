@@ -4,5 +4,17 @@
 //
 
 window.GOVUKPrototypeKit.documentReady(() => {
-  // Add JavaScript here
+  let selectElement = document.querySelector('#offence')
+
+ 
+
+  accessibleAutocomplete.enhanceSelectElement({
+  
+    defaultValue: '',
+  
+    selectElement: selectElement
+  
+  })
+  
+  
 })

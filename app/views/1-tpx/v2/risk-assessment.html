@@ -1,0 +1,300 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="risks-all">
+			<span class="govuk-caption-xl">Risks and needs</span>
+			<h1 class="govuk-heading-l">Provide details of the OASys assessment</h1>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<label class="govuk-fieldset__heading">
+						Is the applicant a risk to any of the following in the community?
+					</label>
+				  </legend>
+				  
+				  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+					  <label class="govuk-label govuk-checkboxes__label" for="contact">
+						Children
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+					  <div class="govuk-form-group">
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+								Very high risk
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							High risk
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								Medium risk
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								Low risk
+							  </label>
+							</div>
+						  </div>
+					  </div>
+					</div>
+				
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact-3">
+						<label class="govuk-label govuk-checkboxes__label" for="contact">
+						  Public
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+						<div class="govuk-form-group">
+						  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation">
+								  Very high risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							  High risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								  Medium risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								  Low risk
+								</label>
+							  </div>
+							</div>
+						</div>
+					  </div>
+					  <div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact-2">
+						<label class="govuk-label govuk-checkboxes__label" for="contact">
+						Known adult
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+						<div class="govuk-form-group">
+						  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation">
+								  Very high risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							  High risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								  Medium risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								  Low risk
+								</label>
+							  </div>
+							</div>
+						</div>
+					  </div>
+				  </div>
+				</fieldset>
+			  </div>
+			
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<label class="govuk-fieldset__heading">
+						Is the applicant a risk to any of the following in custody?
+					</label>
+				  </legend>
+				  
+				  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact-4">
+					  <label class="govuk-label govuk-checkboxes__label" for="contact">
+						Public
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-4">
+					  <div class="govuk-form-group">
+						<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+								Very high risk
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							High risk
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								Medium risk
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+							  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								Low risk
+							  </label>
+							</div>
+						  </div>
+					  </div>
+					</div>
+				
+					<div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact-5">
+						<label class="govuk-label govuk-checkboxes__label" for="contact">
+						Known adult
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-5">
+						<div class="govuk-form-group">
+						  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation">
+								  Very high risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							  High risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								  Medium risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								  Low risk
+								</label>
+							  </div>
+							</div>
+						</div>
+					  </div>
+					  <div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact-6">
+						<label class="govuk-label govuk-checkboxes__label" for="contact">
+						Staff
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-6">
+						<div class="govuk-form-group">
+						  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation">
+								  Very high risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							  High risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								  Medium risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								  Low risk
+								</label>
+							  </div>
+							</div>
+						</div>
+					  </div>
+					  <div class="govuk-checkboxes__item">
+						<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact-7">
+						<label class="govuk-label govuk-checkboxes__label" for="contact">
+						Prisoners
+						</label>
+					  </div>
+					  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-7">
+						<div class="govuk-form-group">
+						  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation">
+								  Very high risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+							  High risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+								  Medium risk
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+								<label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+								  Low risk
+								</label>
+							  </div>
+							</div>
+						</div>
+					  </div>
+				  </div>
+				</fieldset>
+			  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

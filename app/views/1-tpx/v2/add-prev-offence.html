@@ -1,0 +1,138 @@
+{% extends "layouts/main.html" %}
+
+{% block scripts %}
+
+  {{ super() }}
+
+  <script src="/public/javascripts/autocomplete.js"></script>
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		
+		<form action="offence-updated-all">
+			
+				<span class="govuk-caption-xl">Applicant details</span>
+				<h1 class="govuk-heading-l">Add a previous conviction</h1>
+
+				<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+					<div class="govuk-notification-banner__header">
+					  <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+						Important
+					  </h2>
+					</div>
+					<div class="govuk-notification-banner__content">
+					  <p class="govuk-body">
+						You must only include unspent convictions or cautions.
+					
+					  </p>
+					  <p class="govuk-body">
+						<strong>When is a conviction spent?</strong>
+					
+					  </p>
+					  <p class="govuk-body">Most convictions or cautions become ‘spent’ after a specific amount of time. This might be after a few months or years, or straight away.</p>
+					  <p class="govuk-body"><a href="">Check if the applicant's convictions or cautions are spent</a> (opens in a new tab)</p>
+					</div>
+				  </div>
+				  <div class="govuk-form-group">
+				
+					<label class="govuk-label govuk-label--m" for="offence">
+					  Enter conviction
+					</label>
+			  
+				  <select class="govuk-select" id="offence" name="offence"
+					data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+					<option value="" selected disabled>Select an option</option>
+					<option value="Austria">Theft of a motor vehicle (01495)</option>
+					<option value="Belgium">Theft (29586)</option>
+				
+		  
+				  </select>
+				</div>
+					 
+					  <div class="govuk-form-group">
+						<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							When did they commit the offence?
+						  </legend>
+						  <div id="passport-issued-hint" class="govuk-hint">
+							For example, 27 3 2007
+						  </div>
+						  <div class="govuk-date-input" id="passport-issued">
+							<div class="govuk-date-input__item">
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+								  Day
+								</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+							  </div>
+							</div>
+							<div class="govuk-date-input__item">
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+								  Month
+								</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+							  </div>
+							</div>
+							<div class="govuk-date-input__item">
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+								  Year
+								</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+							  </div>
+							</div>
+						  </div>
+						</fieldset>
+					  </div>
+
+
+<div class="govuk-form-group">
+					<label class="govuk-label govuk-label--m" for="event-name">
+						How long was the sentence?
+					</label>
+					<div id="event-name-hint" class="govuk-hint">
+						For example, 6 months
+					  </div>
+					<input class="govuk-input" id="event-name" name="eventName" type="text">
+				  </div>
+				
+
+					  <div class="govuk-form-group">
+						<label class="govuk-label govuk-label--m" for="more-detail">
+							Enter details of the offence
+						</label>
+						<div id="event-name-hint" class="govuk-hint">
+							Include:
+							<ul class="govuk-list govuk-list--bullet govuk-hint">
+								<li>area where it happened</li>
+								<li>any damage or injuries caused</li>
+								<li>weapons type</li>
+								<li>motivation for the offence</li>
+								<li>anyone involved, for example a victim or a fellow offender</li>
+
+							</ul>
+						  </div>
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+					  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				 Add previous conviction
+				</button>
+				
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}
+{% block stylesheets %}
+
+  {{ super() }}
+
+  <link href="/public/css/autocomplete.scss" rel="stylesheet" type="text/css" />
+
+{% endblock %}

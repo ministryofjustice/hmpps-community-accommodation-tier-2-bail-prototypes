@@ -1,0 +1,121 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Check your answers</h1>
+	</div>
+</div>
+	<div class="govuk-grid-row">
+
+		<div class="govuk-grid-column-one-third">
+	  
+		  <nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="check-answers" aria-current="location">Independent living</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="#2">Offending history</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Previous address</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Solicitor information</a>
+			  </li>
+
+
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Equality and diversity monitoring</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Health needs</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Risks to the applicant and others</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Paying for CAS-2</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="#3">Family and dependants</a>
+			  </li>
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="#3">Area preferences</a>
+			  </li>
+			  
+			</ul>
+		  </nav>
+	  
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+				  <dt class="govuk-summary-list__key">
+					Preferred area 1
+				  </dt>
+				  <dd class="govuk-summary-list__value">
+					{{ data['area1'] }}
+				  </dd>
+				  <dd class="govuk-summary-list__actions">
+					<a class="govuk-link" href="area-preferences">Change<span class="govuk-visually-hidden"> answer</span></a>
+				  </dd>
+				</div>
+			
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+					  Preferred area 2
+					</dt>
+					<dd class="govuk-summary-list__value">
+						{{ data['area2'] }}
+					</dd>
+					<dd class="govuk-summary-list__actions">
+					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+					</dd>
+				  </div>
+				  <div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+					  Reason for preference
+					</dt>
+					<dd class="govuk-summary-list__value">
+						<ul class="govuk-list">
+							{% for item in data['reason'] %}
+							  <li>{{ item }}</li>
+							{% else %}
+							  <li>No reasons selected</li>
+							{% endfor %}
+						  </ul>
+					</dd>
+					<dd class="govuk-summary-list__actions">
+					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+					</dd>
+				  </div>
+				  <div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+					 Other preference information
+					</dt>
+					<dd class="govuk-summary-list__value">
+						{{ data['moreDetailarea'] }}
+					</dd>
+					<dd class="govuk-summary-list__actions">
+					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+					</dd>
+				  </div>
+				
+				  <a class="govuk-button govuk-!-margin-top-9" href="sure">Submit application</a>
+			
+		
+			  </dl>
+		</div>
+	  </div>
+	  
+
+</div>
+{% endblock %}

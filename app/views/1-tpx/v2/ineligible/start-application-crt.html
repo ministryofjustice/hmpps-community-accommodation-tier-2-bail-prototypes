@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Apply for Bail Community Accommodation Services (CAS-2)</h1>
+<p class="govuk-body">Use this service to apply for short-term accommodation and support on behalf of someone who has been granted bail.  </p>
+
+
+<h2 class="govuk-heading-m">Before you start</h2>
+<p class="govuk-body">You’ll need to: </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>create an entry for the applicant on nDelius if they do not have one already</li>
+	<li>get consent from the applicant</li>
+</ul>
+
+{{ govukDetails({
+  summaryText: "How to create an entry on nDelius",
+  text: ""
+}) }}
+
+<h2 class="govuk-heading-m">Supporting information</h2>
+<p class="govuk-body">To submit the application, you’ll need: </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>their current or last known address</li>
+	<li>their preferred areas</li>
+	<li>if they need a CAS-2 family unit property</li>
+	<li>offending history</li>
+	<li>solicitor</li>
+	<li>health needs</li>
+	<li>risk of serious harm to themselves or others</li>
+	<li>CAS-2 accommodation funding</li>
+	<li>equality information</li>
+</ul>
+
+<div class="govuk-inset-text">
+	All questions are mandatory, unless marked as optional.  <br> You can save your progress and return to the application at any time.
+  </div>
+
+	<a class="govuk-button govuk-!-margin-top-2" href="eligibility">Start now</a>
+ 
+	<h2 class="govuk-heading-m">
+	Emergency applications
+	</h2>
+	<p class="govuk-body">You must submit an emergency application before 4pm.</p>
+
+  </div>
+</div>
+{% endblock %}
