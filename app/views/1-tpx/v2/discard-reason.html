@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	<form action="task-list-discarded">
+
+		<div class="govuk-form-group">
+			
+			<fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+			
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					What is the reason for discarding the application?
+				</h1>
+			  </legend>
+			  <div id="countries-hint" class="govuk-hint">
+				Select all that apply
+			  </div>
+			  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+				<div class="govuk-checkboxes__item">
+				  <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
+				  <label class="govuk-label govuk-checkboxes__label" for="countries">
+					The applicant has withdrawn their consent
+				  </label>
+				</div>
+				<div class="govuk-checkboxes__item">
+				  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+				  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+					The applicant no longer wants or needs CAS-2 accommodation
+				  </label>
+				</div>
+				<div class="govuk-checkboxes__item">
+				  <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+				  <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+					Bail has been denied
+				  </label>
+				</div>
+				<div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+					<label class="govuk-label govuk-checkboxes__label" for="countries-3">
+						There is no availability in the applicant’s preferred areas
+					</label>
+				  </div>
+				  <div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+					<label class="govuk-label govuk-checkboxes__label" for="countries-3">
+						The applicant has been remanded in custody
+					</label>
+				  </div>
+				  <div class="govuk-checkboxes__item">
+					<input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+					<label class="govuk-label govuk-checkboxes__label" for="countries-3">
+						Application started by mistake
+					</label>
+				  </div>
+				<div class="govuk-checkboxes__divider">or</div>
+				<div class="govuk-checkboxes__item">
+				  <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+				  <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+					Other
+				  </label>
+				</div>
+			  </div>
+			</fieldset>
+		  </div>
+
+		  <div class="govuk-button-group govuk-!-margin-top-6">
+			<button type="submit" class="govuk-button" data-module="govuk-button">
+			 Save and continue
+			</button>
+			<a class="govuk-link" href="#">Cancel</a>
+		  </div>
+		</form>
+
+
+  </div>
+</div>
+{% endblock %}

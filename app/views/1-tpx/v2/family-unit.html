@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="support-preference">
+			<div class="govuk-form-group">
+				<span class="govuk-caption-xl">CAS-2 funding and area preferences</span>
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Is the applicant applying for a family unit property?
+					</h1>
+				  </legend>
+				  <div id="event-name-hint" class="govuk-hint">
+					They can request this if they need accommodation for themselves and any dependants such as children or other family members. 
+				  </div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+					  <label class="govuk-label govuk-radios__label" for="contact-2">
+					Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+						<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+							No, they are not applying for a family unit property
+						</label>
+					  </div>
+				
+				  </div>
+				</fieldset>
+			  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

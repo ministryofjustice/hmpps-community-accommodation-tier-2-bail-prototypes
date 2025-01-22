@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="task-list-complete">
+			<div class="govuk-form-group">
+				<span class="govuk-caption-xl">CAS-2 funding and area preferences</span>
+			<h1 class="govuk-heading-l">Add any exclusion zones (Optional)</h1>
+			<p class="govuk-hint">Areas the applicant must not enter. For example, any exclusion areas from restraining orders.</p>
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="event-name">
+					Enter an exclusion zone
+				</label>
+				
+				<input class="govuk-input govuk-input--width-20" id="event-name" name="area1" type="text">
+			  </div>
+
+			
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Select the reason for exclusion
+				  </legend>
+				  <div id="waste-hint" class="govuk-hint">
+					Select all that apply
+				  </div>
+				  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="waste" name="reason" type="checkbox" value="known" >
+					  <label class="govuk-label govuk-checkboxes__label" for="reason1" >
+						Risk to known adult
+					</div>
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="waste-2" name="reason" type="checkbox" value="children">
+					  <label class="govuk-label govuk-checkboxes__label" for="reason2">
+						Risk to children
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="waste-3" name="reason" type="checkbox" value="gang">
+					  <label class="govuk-label govuk-checkboxes__label" for="reason3">
+						Gang affiliation
+					  </label>
+					</div>
+				
+					
+					  <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-5" name="reasons" type="checkbox" value="other" data-behaviour="Other reason">
+        <label class="govuk-label govuk-checkboxes__label" for="reasons6">
+			Other reason
+        </label>
+      </div>
+    </div>
+				  </div>
+				</fieldset>
+			  </div>
+
+			 
+			  
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<a class="govuk-button govuk-button--secondary" href="#">Add another exclusion zone</a>
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

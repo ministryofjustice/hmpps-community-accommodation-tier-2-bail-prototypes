@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set title = 'Hypothesis 1' %}
+{% set title = 'Hypothesis 1 and 5' %}
 {% set nav = false %}
 
 {% block content %}
@@ -12,7 +12,7 @@
 			</h1>
 			{{ govukInsetText({
 				html: '<p>Provide users with an application form that is intuitive, efficient, prevents mistakes, and ​
-					supports users in collecting and providing necessary information required for CAS-2 Bail resulting in quicker decisions being made​
+					supports users in collecting and providing necessary information required for CAS-2 Bail resulting in quicker decisions being made​. Visualises what accommodation provider Nacro will see when they receive the form.
 					
 					​</p>',
 				classes: 'govuk-!-margin-top-4 govuk-!-margin-bottom-0'
@@ -20,8 +20,7 @@
 			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
 
 
-
-			{% set version = "1" %}
+			{% set version = "2" %}
 			<h2 class="govuk-heading-m">
 				Variant {{version}}
 				{{ govukTag({
@@ -30,8 +29,32 @@
 				}) }}
 			</h2>
 
-			{# <p>Digital form for referrers to create a CAS-2 application for short term bail accommodation</p>
-			<p>Nacro's equivalent output screens</p> #}
+		
+			<p>Key iterations to interactions, wording and guidance after 1st round. Including adding in OASys assessment, changing open text to checklists, matching Nacro wording and making some questions optional</p>
+			<p>Adding dashboard to Nacro view and exposing FIE timeline elements</p>
+
+
+			{{ govukButton({
+				text: 'View referrer prototype',
+				href: 'v'+version+'/applications-overview'
+			}) }}
+
+			{{ govukButton({
+				text: 'View Nacro prototype',
+				href: 'v'+version+'/nacro/applications-overview'
+			}) }}
+<hr>
+			{% set version = "1" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--green govuk-!-margin-left-2',
+					text: 'Tested'
+				}) }}
+			</h2>
+
+			<p>Digital form for referrers to create a CAS-2 application for short term bail accommodation</p>
+			<p>Includes Nacro's equivalent output screens</p>
 
 			{{ govukButton({
 				text: 'View referrer prototype',
