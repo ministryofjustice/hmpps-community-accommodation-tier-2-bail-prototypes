@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="address">
+		<div class="govuk-form-group">
+			<span class="govuk-caption-xl">Applicant details</span>
+			<h1 class="govuk-heading-l">View and edit probation and bail application details</h1>
+
+			<table class="govuk-table">
+				<caption class="govuk-table__caption govuk-table__caption--m">Probation </caption>
+				<thead class="govuk-table__head">
+				  <tr class="govuk-table__row">
+					<th scope="col" class="govuk-table__header">Probation order</th>
+					<td class="govuk-table__cell">Supervision default</td>
+				  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+				
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Probation Service Officer</th>
+					<td class="govuk-table__cell">John Smith</td>
+				  </tr>
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Phone</th>
+					<td class="govuk-table__cell">0791234560</td>
+				  </tr>
+				  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Email address</th>
+					<td class="govuk-table__cell">john.smith@hmp.gov.uk</td>
+				  </tr>
+				  
+				</tbody>
+			  </table>
+			  <p class="govuk-link"> <a href="probation">Edit details</a></p>
+			  
+
+			  
+
+			  <h2 class="govuk-heading-m">Bail hearing</h2>
+			  <p class="govuk-link"> <a href="bail-details">Add details</a></p>
+			<div class="govuk-button-group govuk-!-margin-top-8">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}
