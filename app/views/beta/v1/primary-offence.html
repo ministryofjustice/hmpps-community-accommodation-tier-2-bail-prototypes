@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Applicant's alleged offences</h1>
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active ">
+				<a href="communication">Add alleged offences</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="mental-health" aria-current="mental-health">Community supervision and current offences</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="physical-health" aria-current="mental-health">Previous convictions</a>
+				</li>
+	  
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<form action="add-secondary-offence">
+		<div class="govuk-form-group">
+			<p class="govuk-hint">This is needed to assess their eligibility to live in shared accommodation</p>
+		
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">
+				Possession with intent to supply a class A drug
+				  </h2>
+				  <ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> alleged offence</span></a>
+					</li></ul>
+				</div>
+				<div class="govuk-summary-card__content">
+				  <dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+						Date of alleged offence
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						6 January 2025
+					  </dd>
+					
+					</div>
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+					Offence details
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						Possession of large quantity of Class B drug Cannabis with evidence of supplying others in North Blackpool area
+					  </dd>
+					  
+					</div>
+
+				  </dl>
+				</div>
+			  </div>
+			
+	
+			 <a class="govuk-button govuk-button--secondary"href="add-secondary-offence">Add another alleged offence</a></p>
+
+
+			<div class="govuk-button-group govuk-!-margin-top-8">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

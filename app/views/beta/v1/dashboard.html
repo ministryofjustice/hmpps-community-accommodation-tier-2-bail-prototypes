@@ -1,0 +1,135 @@
+{% extends "layouts/main.html" %}
+{% set back = true %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Your Bail Community Accommodation Service (CAS-2) applications</h1>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+
+
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+	<h2 class="govuk-tabs__title">
+	  Contents
+	</h2>
+	<ul class="govuk-tabs__list">
+	  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+		<a class="govuk-tabs__tab" href="#past-day">
+	In progress 
+		</a>
+	  </li>
+	  <li class="govuk-tabs__list-item">
+		<a class="govuk-tabs__tab" href="#past-week">
+		  Submitted 
+		</a>
+	  </li>
+	  <li class="govuk-tabs__list-item">
+		<a class="govuk-tabs__tab" href="#past-month">
+		  Discarded or withdrawn
+		</a>
+	  </li>
+	
+	 
+	</ul>
+	<div class="govuk-tabs__panel" id="past-day">
+	  <h2 class="govuk-heading-m">In progress</h2>
+	  <table class="govuk-table">
+		<thead class="govuk-table__head">
+		  <tr class="govuk-table__row">
+			<th scope="col" class="govuk-table__header">Applicant</th>
+			<th scope="col" class="govuk-table__header">Application type</th>
+			<th scope="col" class="govuk-table__header">Case reference number</th>
+			<th scope="col" class="govuk-table__header">Date started</th>
+			<th scope="col" class="govuk-table__header">Action</th>
+		  </tr>
+		</thead>
+		<tbody class="govuk-table__body">
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="">David Francis</a></td>
+			<td class="govuk-table__cell">Court</td>
+			<td class="govuk-table__cell">C2-7659</td>
+			<td class="govuk-table__cell">10 February 2025</td>
+			<td class="govuk-table__cell"><a href="">Discard</a></td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="">Paul Farmer</a></td>
+			<td class="govuk-table__cell">Court</td>
+			<td class="govuk-table__cell">C2-7659</td>
+			<td class="govuk-table__cell">6 February 2025</td>
+			<td class="govuk-table__cell"><a href="">Discard</a></td>
+		  </tr>
+		
+		</tbody>
+	  </table>
+	</div>
+	<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+	  <h2 class="govuk-heading-m">Submitted</h2>
+	  <table class="govuk-table">
+		<thead class="govuk-table__head">
+		  <tr class="govuk-table__row">
+			<th scope="col" class="govuk-table__header">Applicant</th>
+			<th scope="col" class="govuk-table__header">Application type</th>
+			<th scope="col" class="govuk-table__header">Case reference number</th>
+			<th scope="col" class="govuk-table__header">Application status</th>
+			<th scope="col" class="govuk-table__header">Action</th>
+		  </tr>
+		</thead>
+		<tbody class="govuk-table__body">
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="task-list-submitted">Jack Jones</a></td>
+			<td class="govuk-table__cell">Court</td>
+			<td class="govuk-table__cell">C2-7119</td>
+			<td class="govuk-table__cell"><span class="govuk-tag govuk-tag--orange">More information required</span></td>
+			<td class="govuk-table__cell"><a href="">Withdraw</a></td>
+		  </tr>
+		  <tr class="govuk-table__row">
+			<td class="govuk-table__cell"><a href="#">Mohammed Amir</a></td>
+			<td class="govuk-table__cell">Court</td>
+			<td class="govuk-table__cell">C2-7119</td>
+			<td class="govuk-table__cell"><span class="govuk-tag">Submitted</span></td>
+			<td class="govuk-table__cell"><a href="">Withdraw</a></td>
+		  </tr>
+		  
+		</tbody>
+	  </table>
+	</div>
+
+	<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+		<h2 class="govuk-heading-m">Discarded or withdrawn</h2>
+		<table class="govuk-table">
+		  <thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+			  <th scope="col" class="govuk-table__header">Applicant</th>
+			  <th scope="col" class="govuk-table__header">Application number</th>
+		
+			</tr>
+		  </thead>
+		  <tbody class="govuk-table__body">
+			<tr class="govuk-table__row">
+			  <td class="govuk-table__cell"><a href="#">Kiran Hussain</a></td>
+			  <td class="govuk-table__cell">C2-1554</td>
+			
+			</tr>
+			<tr class="govuk-table__row">
+			  <td class="govuk-table__cell"><a href="#">Josh Fleming</a></td>
+			  <td class="govuk-table__cell">C2-1244</td>
+			
+			</tr>
+			
+			
+		  </tbody>
+		</table>
+	  </div>
+
+	
+  </div>
+
+  </div>
+</div>
+{% endblock %}

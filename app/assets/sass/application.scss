@@ -24,3 +24,8 @@ $moj-page-width: 1170px;
 	@include govuk-typography-common();
   
   }
+
+  .blue-border {
+    background-color: #eaf4f9;
+    border-color: #2b8cc4;
+}

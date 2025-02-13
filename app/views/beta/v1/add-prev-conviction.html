@@ -1,0 +1,154 @@
+{% extends "layouts/main.html" %}
+{% block scripts %}
+
+  {{ super() }}
+
+  <script src="/public/javascripts/autocomplete.js"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add applicant's previous convictions</h1>
+		
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+		  <ul class="moj-side-navigation__list">
+			<li class="moj-side-navigation__item ">
+			  <a href="communication">Add alleged offences</a>
+			</li>
+	
+			<li class="moj-side-navigation__item">
+			  <a href="mental-health" aria-current="mental-health">Community supervision and current offences</a>
+			</li>
+			<li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="physical-health" aria-current="mental-health">Previous convictions</a>
+			  </li>
+	
+		   
+		  </ul>
+		</nav>
+	
+	  </div>
+
+
+
+		
+			<div class="govuk-grid-column-one-half">
+				<form action="all-prev-conviction">
+					
+					<div class="govuk-inset-text blue-border">
+						<h2 class="govuk-heading-s">
+						  Important
+						</h2>
+					  
+				  
+						<p class="govuk-body">
+							You must only include unspent convictions or cautions. 
+							<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								  <span class="govuk-details__summary-text">
+									When is a conviction spent
+								  </span>
+								</summary>
+								<div class="govuk-details__text">
+									<p class="govuk-body">
+										Most convictions or cautions become ‘spent’ after a specific amount of time. This might be after a few months or years, or straight away.
+									</p>
+									<p class="govuk-body">
+										<a href="">Check if the applicant’s convictions or cautions are spent</a> (opens in a new tab).
+									</p>
+								</div>
+							  </details>
+
+							  <details class="govuk-details">
+								<summary class="govuk-details__summary">
+								  <span class="govuk-details__summary-text">
+									What offences are relevant?
+								  </span>
+								</summary>
+								<div class="govuk-details__text">
+									Includes stalking, harassment, weapons, firearms, arson, domestic abuse, hate related or drug related offences which impact an individual living in shared accommodation.
+								</div>
+							  </details>
+						</p>
+				
+		
+					</div>
+				
+						
+						<div class="govuk-form-group">
+						
+							  <label class="govuk-label govuk-label--m" for="offence">
+								Offence group name
+							  </label>
+						
+							<select class="govuk-select" id="offence" name="offence"
+							  data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+							  <option value="" selected disabled>Select an option</option>
+							  <option value="Austria">Possession of a Class A drug (09011)</option>
+							  <option value="Belgium">Possession of a Class B drug (09012)</option>
+							  <option value="Bulgaria">Possession of a Class C drug (14944)</option>
+							  <option value="Croatia">Possession of a firearm (14843)</option>
+							  <option value="Republic of Cyprus">Possession of an offensive weapon (04259)</option>
+							  <option value="Czech Republic">Possession of a Class A or B drug with intent to supply (01119)</option>
+					
+							</select>
+						  </div>
+							   
+	
+							  <div class="govuk-form-group">
+								<label class="govuk-label  govuk-label--m" for="width-2">
+								  Number of offences
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									The number of the same offence type
+								  </div>
+								<input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text">
+							  </div>
+							  <div class="govuk-form-group">
+								<label class="govuk-label  govuk-label--m" for="event-name">
+								  Sentence type
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									For example, 1 custodial and 1 suspended
+								  </div>
+								<input class="govuk-input" id="event-name" name="eventName" type="text">
+							  </div>
+		
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-label--m" for="more-detail">
+									Enter details of the offence
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									Include:
+									<ul class="govuk-list govuk-list--bullet govuk-hint">
+										<li>area where it happened</li>
+										<li>any damage or injuries caused</li>
+										<li>weapons type</li>
+										<li>motivation for the offence</li>
+										<li>anyone involved, for example a victim or a fellow offender</li>
+		
+									</ul>
+								  </div>
+								<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+							  </div>
+
+							  
+					  <div class="govuk-button-group govuk-!-margin-top-6">
+						<button type="submit" class="govuk-button" data-module="govuk-button">
+						 Save and continue
+						</button>
+						<p><a class="govuk-link" href="dashboard">Save and exit</a></p>
+					  </div>
+				</form>
+		
+
+  </div>
+</div>
+{% endblock %}

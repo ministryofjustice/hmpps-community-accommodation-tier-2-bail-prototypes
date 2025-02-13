@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Confirm applicant's consent</h1>
+<p class="govuk-body">You need verbal consent from the applicant to apply for CAS-2 accommodation on their behalf.</p>
+
+
+
+
+<p class="govuk-body">Check that they understand: </p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>that CAS-2 provides short-term housing and weekly support</li>
+	<li>they are responsible for paying for CAS-2 short-term accommodation and support</li>
+	<li>what will be in the application form, including legal and confidential information about address history, offences, risks to themselves and others and health needs</li>
+<li>how and why their data will be collected and used by reading the <a href="">privacy notice (opens in new tab)</a> </li>
+	<li>their health needs will be collected from relevant sources, such as the prison drug and alcohol provider, mental health in-reach team and healthcare team</li>
+	<li>their information will be used to assess their suitability and ensure their safety</li>
+	<li> they must leave the CAS-2 accommodation at the end of their Bail order period, and find accommodation to move on to with their support worker's help
+	
+</ul>
+<div class="govuk-form-group govuk-!-margin-top-6">
+	<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h2 class="govuk-fieldset__heading">
+			Does the applicant give their verbal consent to apply for CAS-2?
+		</h2>
+	  </legend>
+	 
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+		  <label class="govuk-label govuk-radios__label" for="changedName">
+			Yes
+		  </label>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+		  <label class="govuk-label govuk-radios__label" for="changedName-2">
+			No, they do not give verbal consent
+		  </label>
+		</div>
+	  </div>
+	</fieldset>
+  </div>
+
+<div class="govuk-button-group">
+	<a href="task-list-start" class="govuk-button">
+	  Confirm and continue
+	</a>
+	<p class="govuk-link"><a href="#">Save and exit</a> </p> 
+  </div>
+  </div>
+</div>
+{% endblock %}
