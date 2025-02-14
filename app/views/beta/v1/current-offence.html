@@ -33,12 +33,11 @@
 	<div class="govuk-grid-column-two-thirds">
 		<form action="prev-conviction">
 		<div class="govuk-form-group">
-			<p class="govuk-hint">This is needed to assess their eligibility to live in shared accommodation</p>
-		
+			
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 				  <h2 class="govuk-summary-card__title">
-			Theft
+			Possession of a controlled substance
 				  </h2>
 				  <ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action">
@@ -61,7 +60,7 @@
 					  Sentence length
 						</dt>
 						<dd class="govuk-summary-list__value">
-						  6 months
+					{{data['sentence1']}}
 						
 					  </div>
 					<div class="govuk-summary-list__row">
@@ -69,7 +68,7 @@
 					Offence details
 					  </dt>
 					  <dd class="govuk-summary-list__value">
-						Theft of approx £30 of goods from named supermarket in South Blackpool
+						{{data['current-offence']}}
 					  </dd>
 					  
 					</div>
@@ -78,7 +77,15 @@
 					  Outstanding charges
 						</dt>
 						<dd class="govuk-summary-list__value">
-						  No
+						  Yes
+						
+					  </div>
+					  <div class="govuk-summary-list__row">
+						<dt class="govuk-summary-list__key">
+					  Outstanding charges details
+						</dt>
+						<dd class="govuk-summary-list__value">
+						 {{data['outstanding']}}
 						
 					  </div>
 

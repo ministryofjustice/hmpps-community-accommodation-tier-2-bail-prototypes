@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Hate-related attitudes</h1>
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="gangs" aria-current="mental-health">Drug supply, gang affiliation and county lines</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="violence" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="attitudes" aria-current="mental-health">Hate-related attitudes</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living with others</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Risks to staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+			
+				Are there any past or present concerns related to the applicant’s hate attitudes?
+				
+			  </legend>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+					Yes
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+					No
+				  </label>
+				</div>
+			
+			  </div>
+			</fieldset>
+		  </div>
+	
+	
+
+		<div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="shared-living">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-health">Save and exit</a></p>
+		  </div>
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}
