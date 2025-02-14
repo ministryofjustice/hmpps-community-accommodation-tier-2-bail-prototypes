@@ -1,0 +1,115 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Enter the applicant’s communication and language needs</h1>
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item ">
+				<a href="liaison">Liaison and Diversion assessment</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="health-answers" aria-current="Health answers">Providing health needs information</a>
+			  </li>
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				  <a href="communication" aria-current="mental-health">Communication and language</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="learning" aria-current="mental-health">Learning difficulties and neurodiversity</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="brain" aria-current="mental-health">Brain injury</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="physical" aria-current="mental-health">Physical and mobility</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="substance" aria-current="mental-health">Substance misuse</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="mental-health" aria-current="mental-health">Mental health</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="other" aria-current="mental-health">Other health needs</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<form action="learning">
+		
+			<div class="govuk-form-group">
+
+				  <label class="govuk-label govuk-label--m" for="more-detail">
+					What is the need and its severity?
+				  </label>
+			
+				<div id="more-detail-hint" class="govuk-hint">
+					For example, any literacy, visual and hearing impairments, or need of an interpreter.
+				</div>
+				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+			  </div>
+
+			  <div class="govuk-form-group">
+
+				<label class="govuk-label govuk-label--m" for="more-detail">
+					What support do they need?
+				</label>
+		  
+			  <div id="more-detail-hint" class="govuk-hint">
+				Include any support they have already or will need. For example, any support they need to see, hear, speak or understand. 
+			  </div>
+			  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+			</div>
+
+
+			<div class="govuk-form-group">
+
+				<label class="govuk-label govuk-label--m" for="more-detail">
+					Who might be impacted by this?
+				</label>
+		  
+			  <div id="more-detail-hint" class="govuk-hint">
+				Enter any information about those who might be at risk, such as children, any known victim or the general public.
+			  </div>
+			  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+			</div>
+
+			<div class="govuk-form-group">
+
+				<label class="govuk-label govuk-label--m" for="more-detail">
+					How are they currently presenting?
+				</label>
+			  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+			</div>
+
+
+
+			
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

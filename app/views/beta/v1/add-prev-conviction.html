@@ -20,14 +20,14 @@
 		<nav class="moj-side-navigation" aria-label="Side navigation">
 		  <ul class="moj-side-navigation__list">
 			<li class="moj-side-navigation__item ">
-			  <a href="communication">Add alleged offences</a>
+			  <a href="secondary-offence">Add alleged offences</a>
 			</li>
 	
 			<li class="moj-side-navigation__item">
-			  <a href="mental-health" aria-current="mental-health">Community supervision and current offences</a>
+			  <a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
 			</li>
 			<li class="moj-side-navigation__item moj-side-navigation__item--active">
-				<a href="physical-health" aria-current="mental-health">Previous convictions</a>
+				<a href="add-prev-conviction" aria-current="mental-health">Previous convictions</a>
 			  </li>
 	
 		   
@@ -39,7 +39,7 @@
 
 
 		
-			<div class="govuk-grid-column-one-half">
+			<div class="govuk-grid-column-two-thirds">
 				<form action="all-prev-conviction">
 					
 					<div class="govuk-inset-text blue-border">
@@ -49,7 +49,24 @@
 					  
 				  
 						<p class="govuk-body">
-							You must only include unspent convictions or cautions. 
+							You must only include unspent convictions or cautions.</p>
+
+							<h3 class="govuk-heading-s">
+								Which convictions to include
+							  </h2>
+							  <p class="govuk-body">
+								Include only convictions or cautions related to: </p>
+							<ul class="govuk-list govuk-list--bullet">
+								<li>arson</li>
+								<li>domestic abuse</li>
+								<li>hate or drug related</li>
+								<li>stalking and harassment</li>
+								<li>weapons and firearms</li>
+							</ul>
+							<p class="govuk-body">
+								This is because they are relevant to living in shared accommodation.
+							</p>
+							
 							<details class="govuk-details">
 								<summary class="govuk-details__summary">
 								  <span class="govuk-details__summary-text">
@@ -65,18 +82,8 @@
 									</p>
 								</div>
 							  </details>
-
-							  <details class="govuk-details">
-								<summary class="govuk-details__summary">
-								  <span class="govuk-details__summary-text">
-									What offences are relevant?
-								  </span>
-								</summary>
-								<div class="govuk-details__text">
-									Includes stalking, harassment, weapons, firearms, arson, domestic abuse, hate related or drug related offences which impact an individual living in shared accommodation.
-								</div>
-							  </details>
-						</p>
+		
+					
 				
 		
 					</div>
@@ -85,18 +92,20 @@
 						<div class="govuk-form-group">
 						
 							  <label class="govuk-label govuk-label--m" for="offence">
-								Offence group name
+								What type of unspent conviction does the applicant have?
 							  </label>
-						
+							  <div id="event-name-hint" class="govuk-hint">
+								For example, domestic abuse
+							  </div>
 							<select class="govuk-select" id="offence" name="offence"
 							  data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
 							  <option value="" selected disabled>Select an option</option>
-							  <option value="Austria">Possession of a Class A drug (09011)</option>
-							  <option value="Belgium">Possession of a Class B drug (09012)</option>
-							  <option value="Bulgaria">Possession of a Class C drug (14944)</option>
-							  <option value="Croatia">Possession of a firearm (14843)</option>
-							  <option value="Republic of Cyprus">Possession of an offensive weapon (04259)</option>
-							  <option value="Czech Republic">Possession of a Class A or B drug with intent to supply (01119)</option>
+							  <option value="Austria">Domestic abuse</option>
+							  <option value="Belgium">Arson</option>
+							  <option value="Bulgaria">Hate related</option>
+							  <option value="Croatia">Drug related</option>
+							  <option value="Republic of Cyprus">Stalking or harassment</option>
+							  <option value="Czech Republic">Weapons or firearms</option>
 					
 							</select>
 						  </div>
@@ -104,16 +113,16 @@
 	
 							  <div class="govuk-form-group">
 								<label class="govuk-label  govuk-label--m" for="width-2">
-								  Number of offences
+									How many convictions does the applicant have of the same type?
 								</label>
 								<div id="event-name-hint" class="govuk-hint">
-									The number of the same offence type
+									For example, three unspent convictions in domestic abuse
 								  </div>
 								<input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text">
 							  </div>
 							  <div class="govuk-form-group">
 								<label class="govuk-label  govuk-label--m" for="event-name">
-								  Sentence type
+									What type of the sentence did the applicant get?
 								</label>
 								<div id="event-name-hint" class="govuk-hint">
 									For example, 1 custodial and 1 suspended
@@ -136,7 +145,7 @@
 		
 									</ul>
 								  </div>
-								<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+								<textarea class="govuk-textarea" id="more-detail" name="prev-conviction" rows="5"></textarea>
 							  </div>
 
 							  

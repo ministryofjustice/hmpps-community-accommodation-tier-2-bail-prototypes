@@ -20,14 +20,14 @@
 		<nav class="moj-side-navigation" aria-label="Side navigation">
 		  <ul class="moj-side-navigation__list">
 			<li class="moj-side-navigation__item moj-side-navigation__item--active ">
-			  <a href="communication">Add alleged offences</a>
+			  <a href="add-primary-offence">Add alleged offences</a>
 			</li>
 	
 			<li class="moj-side-navigation__item">
-			  <a href="mental-health" aria-current="mental-health">Community supervision and current offences</a>
+			  <a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
 			</li>
 			<li class="moj-side-navigation__item">
-				<a href="physical-health" aria-current="mental-health">Previous convictions</a>
+				<a href="add-prev-conviction" aria-current="mental-health">Previous convictions</a>
 			  </li>
 	
 		   
@@ -53,7 +53,9 @@
 							  <label class="govuk-label govuk-label--m" for="offence">
 								Enter alleged offence
 							  </label>
-						
+							  <div id="passport-issued-hint" class="govuk-hint">
+								For example, possession of class A drugs.
+							  </div>
 							<select class="govuk-select" id="offence" name="offence"
 							  data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
 							  <option value="" selected disabled>Select an option</option>
@@ -75,7 +77,7 @@
 									When did they commit the offence?
 								  </legend>
 								  <div id="passport-issued-hint" class="govuk-hint">
-									For example, 27 3 2007
+									For example, 27 3 2024
 								  </div>
 								  <div class="govuk-date-input" id="passport-issued">
 									<div class="govuk-date-input__item">
@@ -123,7 +125,7 @@
 		
 									</ul>
 								  </div>
-								<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+								<textarea class="govuk-textarea" id="more-detail" name="secondary-offence" rows="5"></textarea>
 							  </div>
 					  <div class="govuk-button-group govuk-!-margin-top-6">
 						<button type="submit" class="govuk-button" data-module="govuk-button">

@@ -5,6 +5,7 @@
 $moj-page-width: 1170px;
 
 @import "node_modules/@ministryofjustice/frontend/moj/all";
+@import "node_modules/nhsuk-frontend/packages/nhsuk";
 
 @import './components/cards';
 @import './components/status-box';

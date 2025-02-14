@@ -20,14 +20,14 @@
 		<nav class="moj-side-navigation" aria-label="Side navigation">
 		  <ul class="moj-side-navigation__list">
 			<li class="moj-side-navigation__item ">
-			  <a href="communication">Add alleged offences</a>
+			  <a href="secondary-offence">Add alleged offences</a>
 			</li>
 	
 			<li class="moj-side-navigation__item moj-side-navigation__item--active">
-			  <a href="mental-health" aria-current="mental-health">Community supervision and current offences</a>
+			  <a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
 			</li>
 			<li class="moj-side-navigation__item">
-				<a href="physical-health" aria-current="mental-health">Previous convictions</a>
+				<a href="add-prev-conviction" aria-current="mental-health">Previous convictions</a>
 			  </li>
 	
 		   
@@ -41,25 +41,25 @@
 		<form action="current-offence">
 		<div class="govuk-form-group">
 		
-		
-			<div class="govuk-grid-column-two-thirds">
-				<form action="offence-updated-sec">
-					
-					
-				
+			<div class="govuk-inset-text">
+				This refers to the offence(s) for which the applicant is currently serving a sentence under probation conditions.
+			  </div>
 						
 						<div class="govuk-form-group">
 						
 							  <label class="govuk-label govuk-label--m" for="offence">
 								Enter current offence
 							  </label>
-						
+							  <div id="passport-issued-hint" class="govuk-hint">
+								For example, possession of class A drugs.
+							  </div>
 							<select class="govuk-select" id="offence" name="offence"
 							  data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
 							  <option value="" selected disabled>Select an option</option>
 							  <option value="Austria">Possession of a Class A drug (09011)</option>
 							  <option value="Belgium">Possession of a Class B drug (09012)</option>
 							  <option value="Bulgaria">Possession of a Class C drug (14944)</option>
+							  <option value="Croatia">Possession of a controlled substance (12843)</option>
 							  <option value="Croatia">Possession of a firearm (14843)</option>
 							  <option value="Republic of Cyprus">Possession of an offensive weapon (04259)</option>
 							  <option value="Czech Republic">Possession of a Class A or B drug with intent to supply (01119)</option>
@@ -75,7 +75,7 @@
 									When did they commit the offence?
 								  </legend>
 								  <div id="passport-issued-hint" class="govuk-hint">
-									For example, 27 3 2007
+									For example, 27 3 2023
 								  </div>
 								  <div class="govuk-date-input" id="passport-issued">
 									<div class="govuk-date-input__item">
@@ -113,7 +113,7 @@
 								<div id="event-name-hint" class="govuk-hint">
 									For example, 6 months
 								  </div>
-								<input class="govuk-input" id="event-name" name="eventName" type="text">
+								<input class="govuk-input" id="event-name" name="sentence1" type="text">
 							  </div>
 		
 							  <div class="govuk-form-group">
@@ -131,7 +131,7 @@
 		
 									</ul>
 								  </div>
-								<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+								<textarea class="govuk-textarea" id="more-detail" name="current-offence" rows="5"></textarea>
 							  </div>
 
 							  <div class="govuk-form-group">
@@ -167,7 +167,7 @@
 					
 												</ul>
 											  </div>
-											<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+											<textarea class="govuk-textarea" id="more-detail" name="outstanding" rows="5"></textarea>
 										  </div>
 									</div>
 								
