@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add additional concerns</h1>
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="gangs" aria-current="mental-health">Drug supply, gang affiliation and county lines</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="violence" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="attitudes" aria-current="mental-health">Hate-related attitudes</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living with others</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Risks to staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+	<h2 class="govuk-heading-m">Applicant’s additional concerns</h2>
+	<div class="govuk-inset-text">
+		Additional concerns include other categories that might impact staff, known adults, children or the applicant.
+	  </div>
+	
+	  <dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Concern type
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Weapons
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Details of concern
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+		Jane was convicted of possession of a baseball bat in 2019. She said to be carrying it to protect her from rival gang members, although there was no evidence she used it.
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Who is impacted by the concern?
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Potentially other residents or staff
+		  </dd>
+		</div>
+		
+	  </dl>
+<a class="govuk-button govuk-button--secondary" href="add-additional">Add additional concern</a>
+		<div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="sources">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-health">Save and exit</a></p>
+		  </div>
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}

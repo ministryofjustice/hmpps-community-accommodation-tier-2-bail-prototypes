@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Digital form' %}
+{% set nav = false %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+
+			<h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+				{{ title }}
+			</h1>
+			{{ govukInsetText({
+				html: '<p>Testing assumptions around timings, risk factor information, health needs and capturing unspent convictions
+					​</p>',
+				classes: 'govuk-!-margin-top-4 govuk-!-margin-bottom-0'
+			}) }}
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+
+			{% set version = "1" %}
+			<h2 class="govuk-heading-m">
+				Variant {{version}}
+				{{ govukTag({
+					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+					text: 'In progress'
+				}) }}
+			</h2>
+
+		
+			<p>Joining MVP and Alpha successful designs</p>
+			
+
+
+			{{ govukButton({
+				text: 'View referrer prototype',
+				href: 'v'+version+'/'
+			}) }}
+
+			{{ govukButton({
+				text: 'View Nacro prototype',
+				href: '#'
+			}) }}
+<hr>
+	
+
+
+
+
+
+
+		</div>
+	</div>
+{% endblock %}
+
