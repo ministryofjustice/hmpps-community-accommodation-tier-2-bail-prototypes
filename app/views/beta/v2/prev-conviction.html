@@ -1,0 +1,120 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Applicant's previous unspent conviction details</h1>
+		
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+		  <ul class="moj-side-navigation__list">
+			<li class="moj-side-navigation__item ">
+			  <a href="secondary-offence">Add alleged offences</a>
+			</li>
+	
+			<li class="moj-side-navigation__item">
+			  <a href="current-offence" aria-current="mental-health">Community supervision and current offences</a>
+			</li>
+			<li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="add-prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
+			  </li>
+	
+		   
+		  </ul>
+		</nav>
+	
+	  </div>
+
+	<div class="govuk-grid-column-two-thirds">
+		
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				<h2 class="govuk-fieldset__heading">
+					Does the applicant have any previous unspent convictions?
+				</h2>
+			  </legend>
+			  <div class="govuk-inset-text blue-border">
+				<h2 class="govuk-heading-s">
+				  Important
+				</h2>
+			  
+		  
+				<p class="govuk-body">
+					You must only include unspent convictions or cautions related to: </p>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>arson</li>
+						<li>domestic abuse</li>
+						<li>hate or drug related</li>
+						<li>stalking and harassment</li>
+						<li>weapons and firearms</li>
+					</ul>
+					<p class="govuk-body">
+						This is because they are relevant to living in shared accommodation.
+					</p>
+					
+					<details class="govuk-details">
+						<summary class="govuk-details__summary">
+						  <span class="govuk-details__summary-text">
+							When is a conviction spent
+						  </span>
+						</summary>
+						<div class="govuk-details__text">
+							<p class="govuk-body">
+								Most convictions or cautions become ‘spent’ after a specific amount of time. This might be after a few months or years, or straight away.
+							</p>
+							<p class="govuk-body">
+								<a href="">Check if the applicant’s convictions or cautions are spent</a> (opens in a new tab).
+							</p>
+						</div>
+					  </details>
+
+			
+		
+
+			</div>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="court">
+				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+					Yes and it is from one of the relevant categories 
+				  </label>
+				  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+					Such as stalking, harassment, weapons, firearms, arson, domestic abuse, hate related or drug related offences
+				  </div>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="prison">
+				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+					Yes and it is not from one of the relevant categories 
+				  </label>
+				  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+					For example, a theft offence with no violence would not be relevant to them living in shared accommodation
+				  </div>
+				</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="prison">
+					<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+					  No, they do not have any previous unspent convictions
+					</label>
+				  </div>
+			
+				<div class="govuk-button-group govuk-!-margin-top-6">
+					<a class="govuk-button" href="add-prev-conviction">Save and continue</a>
+					<p><a class="govuk-link" href="task-list-start">Save and exit</a></p>
+				  </div>
+				
+			  </div>
+			</fieldset>
+		  </div>
+
+
+
+  </div>
+</div>
+{% endblock %}

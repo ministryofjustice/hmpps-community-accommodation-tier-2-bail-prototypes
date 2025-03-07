@@ -22,8 +22,8 @@
 			<h2 class="govuk-heading-m">
 				Variant {{version}}
 				{{ govukTag({
-					classes: 'govuk-tag--yellow govuk-!-margin-left-2',
-					text: 'In progress'
+					classes: 'govuk-tag--purple govuk-!-margin-left-2',
+					text: 'Tested'
 				}) }}
 			</h2>
 
@@ -37,12 +37,32 @@
 				href: 'v'+version+'/'
 			}) }}
 
-			{{ govukButton({
-				text: 'View Nacro prototype',
-				href: '#'
-			}) }}
 <hr>
 	
+{% set version = "2" %}
+<h2 class="govuk-heading-m">
+	Variant {{version}}
+	{{ govukTag({
+		classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+		text: 'In progress'
+	}) }}
+</h2>
+
+
+<p>Signed off referrer MVP end-to-end form</p>
+
+
+
+{{ govukButton({
+	text: 'View referrer prototype',
+	href: 'v'+version+'/'
+}) }}
+
+{{ govukButton({
+	text: 'View Nacro prototype',
+	href: '#'
+}) }}
+<hr>
 
 
 

@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Apply for short-term accommodation (CAS 2) for bail' %}
+{% set back = false %}
+
+{% block content %}
+	<h1 class="govuk-heading-l">
+		{{title}}
+	</h1>
+	<div class="card-container">
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="dashboard">View and action your applications</a>
+				</h2>
+				<p>You can:</p>
+				<ul class="govuk-list govuk-list--bullet">
+					<li>continue editing or discard any applications you have started</li>
+					<li>view the status of any applications you have submitted</li>
+					<li>check if there are any request for information that you need to action</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h2 class="govuk-heading-s">
+					<a class="govuk-link--no-visited-state" href="application-type">Start a new application</a>
+				</h2>
+				<p>You can save your progress and return to the application at any time.</p>
+			</div>
+		</div>
+
+	
+	</div>
+{% endblock %}

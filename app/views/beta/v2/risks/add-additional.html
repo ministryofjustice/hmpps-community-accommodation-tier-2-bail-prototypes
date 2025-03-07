@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add an additional concern</h1>
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="gangs" aria-current="mental-health">Drug supply, gang affiliation and county lines</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="violence" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="attitudes" aria-current="mental-health">Hate-related attitudes</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living with others</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Risks to staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<form action="additional-concern">
+		<div class="govuk-form-group">
+			<label class="govuk-label govuk-label--m" for="select">
+			  What is the nature of the concern?
+			</label>
+			<div id="location-hint" class="govuk-hint">
+				For example, weapons
+			  </div>
+			<select class="govuk-select" id="sort" name="sort">
+			  <option value="published">Acquisitive offending</option>
+			  <option value="updated">Criminal damage</option>
+			  <option value="views">Cuckooing</option>
+			  <option value="comments">Exploitation: linked to unpaid labour, modern slavery, human trafficking and cuckooing</option>
+			  <option value="comments">Financial abuse and fraud</option>
+			  <option value="comments">Isolation: linked to confinement as a part of modern slavery, trafficking,  forced labour</option>
+			  <option value="comments">Media or public interest</option>
+			  <option value="comments">Previous sex work</option>
+			  <option value="comments" selected>Weapons</option>
+			</select>
+		  </div>
+
+		  <div class="govuk-form-group">
+
+			<label class="govuk-label govuk-label--m" for="more-detail">
+				Provide details about concern
+			</label>
+	  
+		  <div id="more-detail-hint" class="govuk-hint">
+		Include:
+			<ul class="govuk-list govuk-list--bullet govuk-hint">
+				<li>what has happened and when, including incident reports </li>
+				<li>safeguarding concerns or support needed</li>
+				<li>anything else that might be useful for assessors to know</li>
+				<li>any location information</li>
+			
+			</ul>
+		  </div>
+		  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+		</div>
+
+		<div class="govuk-form-group">
+
+			<label class="govuk-label govuk-label--m" for="more-detail">
+				Who might be impacted by this concern?
+			</label>
+	  
+		  <div id="more-detail-hint" class="govuk-hint">
+		Include:
+			<ul class="govuk-list govuk-list--bullet govuk-hint">
+				<li>details about any victims or co-defendants </li>
+				<li>if the risk impacts staff, other prisoners or children</li>
+				<li>if the applicant is at risk</li>
+			
+			
+			</ul>
+		  </div>
+		  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+		</div>
+<div class="govuk-button-group govuk-!-margin-top-6">
+			<button class="govuk-button" type="submit">Save and continue</button>
+			<p><a class="govuk-link" href="task-list-health">Save and exit</a></p>
+		  </div>
+		</form>
+	  </div>
+  </div>
+</div>
+{% endblock %}

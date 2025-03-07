@@ -1,0 +1,163 @@
+{% extends "layouts/main.html" %}
+{% block scripts %}
+
+  {{ super() }}
+
+  <script src="/public/javascripts/autocomplete.js"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add applicant's previous unspent convictions</h1>
+		
+		</div>
+		</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+		  <ul class="moj-side-navigation__list">
+			<li class="moj-side-navigation__item ">
+			  <a href="secondary-offence">Add alleged offences</a>
+			</li>
+	
+			<li class="moj-side-navigation__item">
+			  <a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
+			</li>
+			<li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="add-prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
+			  </li>
+	
+		   
+		  </ul>
+		</nav>
+	
+	  </div>
+
+
+
+		
+			<div class="govuk-grid-column-two-thirds">
+				<form action="all-prev-conviction">
+					
+					<div class="govuk-inset-text blue-border">
+						<h2 class="govuk-heading-s">
+						  Important
+						</h2>
+					  
+				  
+						<p class="govuk-body">
+							You must only include unspent convictions or cautions.</p>
+
+							<h3 class="govuk-heading-s">
+								Which convictions to include
+							  </h2>
+							  <p class="govuk-body">
+								Include only convictions or cautions related to: </p>
+							<ul class="govuk-list govuk-list--bullet">
+								<li>arson</li>
+								<li>domestic abuse</li>
+								<li>hate or drug related</li>
+								<li>stalking and harassment</li>
+								<li>weapons and firearms</li>
+							</ul>
+							<p class="govuk-body">
+								They are the most relevant to living in shared accommodation.
+							</p>
+							
+							<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								  <span class="govuk-details__summary-text">
+									When is a conviction spent
+								  </span>
+								</summary>
+								<div class="govuk-details__text">
+									<p class="govuk-body">
+										Most convictions or cautions become ‘spent’ after a specific amount of time. This might be after a few months or years, or straight away.
+									</p>
+									<p class="govuk-body">
+										<a href="">Check if the applicant’s convictions or cautions are spent</a> (opens in a new tab).
+									</p>
+								</div>
+							  </details>
+		
+					
+				
+		
+					</div>
+				
+						
+						<div class="govuk-form-group">
+						
+							  <label class="govuk-label govuk-label--m" for="offence">
+								What type of unspent conviction does the applicant have?
+							  </label>
+							  <div id="event-name-hint" class="govuk-hint">
+								For example, domestic abuse
+							  </div>
+							<select class="govuk-select" id="offence" name="offence"
+							  data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+							  <option value="" selected disabled>Select an option</option>
+							  <option value="Austria">Domestic abuse</option>
+							  <option value="Belgium">Arson</option>
+							  <option value="Bulgaria">Hate related</option>
+							  <option value="Croatia">Drug related</option>
+							  <option value="Republic of Cyprus">Stalking or harassment</option>
+							  <option value="Czech Republic">Weapons or firearms</option>
+					
+							</select>
+						  </div>
+							   
+	
+							  <div class="govuk-form-group">
+								<label class="govuk-label  govuk-label--m" for="width-2">
+									How many convictions does the applicant have of the same type?
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									For example, three unspent convictions in domestic abuse
+								  </div>
+								<input class="govuk-input govuk-input--width-2" id="event-name" name="eventName" type="text">
+							  </div>
+							  <div class="govuk-form-group">
+								<label class="govuk-label  govuk-label--m" for="event-name">
+									What type of sentence did the applicant get?
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									For example, 1 custodial and 1 suspended
+								  </div>
+								<input class="govuk-input" id="event-name" name="eventName" type="text">
+							  </div>
+		
+							  <div class="govuk-form-group">
+								<label class="govuk-label govuk-label--m" for="more-detail">
+									Enter details of the conviction
+								</label>
+								<div id="event-name-hint" class="govuk-hint">
+									Include:
+									<ul class="govuk-list govuk-list--bullet govuk-hint">
+										<li>area where it happened</li>
+										<li>any damage or injuries caused</li>
+										<li>weapons type</li>
+										<li>motivation for the offence</li>
+										<li>anyone involved, for example a victim or a fellow offender</li>
+		
+									</ul>
+								  </div>
+								<textarea class="govuk-textarea" id="more-detail" name="prev-conviction" rows="5"></textarea>
+							  </div>
+
+							  
+					  <div class="govuk-button-group govuk-!-margin-top-6">
+						<button type="submit" class="govuk-button" data-module="govuk-button">
+						 Save and continue
+						</button>
+						<p><a class="govuk-link" href="dashboard">Save and exit</a></p>
+					  </div>
+				</form>
+		
+
+  </div>
+</div>
+{% endblock %}
