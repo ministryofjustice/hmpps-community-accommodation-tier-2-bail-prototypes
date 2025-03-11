@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					What is Jane Smith’s immigration status?
+				</h1>
+				<div id="event-name-hint" class="govuk-hint">
+					Select the status that best describes the applicant.</div>
+			  </legend>
+			  <label class="govuk-label" for="sort">
+				Select immigration status
+			  </label>
+			  <select class="govuk-select" id="sort" name="sort">
+				<option value="published">UK citizen</option>
+				<option value="updated">Leave to remain</option>
+				<option value="views">Indefinite leave to remain</option>
+				<option value="comments">Discretionary leave to remain</option>
+				<option value="published">EEA national</option>
+				<option value="updated">Refugee</option>
+				<option value="views">Asylum seeker awaiting decision</option>
+				<option value="comments">Spouse or partner sponsorship</option>
+				<option value="published">Work visa</option>
+				<option value="updated">Student visa</option>
+				<option value="views">Not known</option>
+				
+			  </select>
+		  </div>
+		  <div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="gender-identity">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-start">Exit without saving</a></p>
+		  </div>
+</div>
+</div>
+{% endblock %}

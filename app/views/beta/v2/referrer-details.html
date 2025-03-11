@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	<h1 class="govuk-heading-l">Confirm your details</h1>
+	<p class="govuk-hint">These are the details of the person completing the application on behalf of the applicant.</p>
+	<dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Name
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Josh Clements
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Email address
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			jc@hmpps.gov.uk
+		  </dd>
+		</div>
+		
+	
+	  </dl>
+
+
+	  <div class="govuk-warning-text">
+		<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+		<strong class="govuk-warning-text__text">
+		  <span class="govuk-visually-hidden">Important</span>
+		  If any of these details are wrong, contact the CAS-2 team with the correct details when you submit the application.
+		</strong>
+	  </div>
+	  <div class="govuk-button-group govuk-!-margin-top-6">
+	  <a class="govuk-button govuk-!-margin-top-6" href="job-title">Confirm and continue</a>
+	  <p class="govuk-link"><a href="task-list-start.html">Exit without saving</a> </p> 
+	</div>
+  </div>
+</div>
+{% endblock %}

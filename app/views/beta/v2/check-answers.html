@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+<section class="key-details-bar" aria-label="Key details">
+    <div class="key-details-bar__key-details">
+  <div class="key-details-bar__top-block">
+	<span class="govuk-visually-hidden">Application number:</span>
+	<span class=" govuk-caption-l">CS-13955</span>
+	<span class="govuk-visually-hidden">Application for:</span>
+    <h1 class="govuk-heading-l">Jane Smith <span class="govuk-tag govuk-tag--purple" style="color:	#000;">Court application</span></h1>
+  </div>
+  <div class="key-details-bar__bottom-block govuk-!-padding-top-0">
+	<ul class="govuk-list">
+		<li>CRN: X698226</li>
+		<li>Date of birth: 15/06/1995</li>
+		<li>Nationality: British</li>
+		<li>Immigration status: British citizen</li>
+		<li>Sex: Female</li>
+	</ul>
+	<p class="govuk-heading-s">Application status: <span class="govuk-tag govuk-tag--yellow" style="color:	#594d00;">In progress</span></p>
+	
+    
+  </div>
+    </div>
+  </section>
+<div class="govuk-grid-row">
+
+		<div class="govuk-grid-column-one-third">
+			<nav class="govuk-!-margin-top-6" aria-label="Side navigation">
+				<h2 class="govuk-body-s">Contents</h2>
+				<ul class="govuk-list govuk-body-s">
+					
+					<li><a href="&">Confirm eligibility</a></li>
+				</ul>				
+			
+			</nav>
+			</div>
+	<div class="govuk-grid-column-two-thirds">
+		
+
+
+<h2 class="govuk-heading-l govuk-!-margin-top-6">Your answers</h2>
+
+	<div class="govuk-form-group">
+		<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+		  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+			<h2 class="govuk-fieldset__heading">
+				Confirm your answers
+			</h2>
+		  </legend>
+		
+		  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+			<div class="govuk-checkboxes__item">
+			  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+			  <label class="govuk-label govuk-checkboxes__label" for="waste">
+				I confirm to the best of my knowledge, the information provided in this referral is accurate and, where required, it has been verified by all relevant prison departments.
+			  </label>
+			</div>
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<a class="govuk-button" href="task-list-complete">
+				  Save and continue
+				</a>
+				<a class="govuk-link" href="task-list-bail">Exit without saving</a>
+			  </div>
+  </div>
+</div>
+{% endblock %}

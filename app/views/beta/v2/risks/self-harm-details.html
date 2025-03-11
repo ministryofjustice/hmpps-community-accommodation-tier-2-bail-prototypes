@@ -1,0 +1,202 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
+				<li class="moj-side-navigation__item">
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Concerns of self-harm and suicide for Jane Smith</h1>
+		<form action="acct">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Has the applicant self-harmed or attempted suicide in the past?
+				
+				  </legend>
+				  <div id="changedName-hint" class="govuk-hint">
+					This includes any incidents prior to being held in custody. 
+				  </div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="attempted" name="attempted" type="radio" value="yes" data-aria-controls="conditional-attempted">
+					  <label class="govuk-label govuk-radios__label" for="attempted">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-attempted">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details including frequency and severity of self harm or suicide attempts and methods used
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="attempted-2" name="attempted" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="attempted-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Based on the information you have, are there any current concerns of self-harm or suicide?
+				
+				  </legend>
+				  <div id="changedName-hint" class="govuk-hint">
+					This includes any concerns whilst being held in custody.
+				  </div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="current" name="current" type="radio" value="yes" data-aria-controls="conditional-current">
+					  <label class="govuk-label govuk-radios__label" for="current">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter the details of any current concerns
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="current-2" name="current" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="current-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Does the applicant have any specific triggers related to self-harm or suicide?
+				  </legend>
+				
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="triggers" name="triggers" type="radio" value="yes" data-aria-controls="conditional-triggers">
+					  <label class="govuk-label govuk-radios__label" for="triggers">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-triggers">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details about situations, topics or other triggers that might cause concern
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="triggers-2" name="triggers" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="triggers-2">
+						  No
+						</label>
+					  </div>
+				
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="triggers1" name="triggers" type="radio" value="yes" data-aria-controls="conditional-triggers1">
+						<label class="govuk-label govuk-radios__label" for="current1">
+					Not known
+						</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-triggers1">
+						  <div class="govuk-form-group">
+							  <label class="govuk-label govuk-label--s" for="more-detail">
+								Enter the reason why it is not known
+							  </label>
+							  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+							</div>
+					  </div>
+				  
+			
+				</fieldset>
+			  </div>
+
+		
+
+			<div class="govuk-form-group">
+
+				<label class="govuk-label govuk-label--m" for="more-detail">
+					How are they currently presenting? (optional)
+				</label>
+		  
+		
+			  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+			</div>
+
+
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="task-list-health">Exit without saving</a>
+			  </div>
+		</form>
+
+		  
+		
+	
+
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,234 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="liaison">Liaison and Diversion assessment</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="health-answers" aria-current="Health answers">Provide health needs information</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="substance-details" aria-current="mental-health">Substance use</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="physical-details" aria-current="mental-health">Physical and mobility</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="mental-health" aria-current="mental-health">Mental health</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="communication-details" aria-current="mental-health">Communication and language</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="learning-details" aria-current="mental-health">Learning difficulties and neurodiversity</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="brain" aria-current="mental-health">Brain injury</a>
+				  </li>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="other" aria-current="mental-health">Other health needs</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Other health needs for Jane Smith</h1>
+		<div class="govuk-hint">These could be any other health needs that are relevant to the support the applicant might need when living in shared accommodation.</div>
+		<form action="sources">
+		
+		
+			<div class="govuk-form-group govuk-!-margin-top-6">
+				<fieldset class="govuk-fieldset">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Are they managing any long term health conditions?
+				  </legend>
+				 <div class="govuk-hint">For example arthritis, diabetes or high blood pressure.</div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="issues" name="needs" type="radio" value="email" data-aria-controls="conditional-needs">
+						<label class="govuk-label govuk-radios__label" for="needs">
+							Yes
+						</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-needs">
+						<div class="govuk-form-group">
+						  <label class="govuk-label govuk-label--s" for="contact-by-email">
+							Enter details of their condition, including any support they have already or will need and if they have a formal diagnosis
+						  </label>
+					
+						  <textarea class="govuk-textarea" id="more-detail" name="needs-other" rows="5" aria-describedby="more-detail-hint"></textarea>
+						</div>
+					  </div>
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="needs-1" name="needs" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="needs-1">
+						 No
+						</label>
+					  </div>
+
+				  
+				  </div>
+				  </div>
+		
+
+
+
+
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Do they experience seizures or epilepsy?
+				
+				  </legend>
+				
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="substitute" name="substitute" type="radio" value="email" data-aria-controls="conditional-substitute">
+					  <label class="govuk-label govuk-radios__label" for="substitute">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-substitute">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="contact-by-email">
+								Enter details of their last episode, how frequent they are and any treatment
+							</label>
+					  
+							<textarea class="govuk-textarea" id="more-detail" name="support-ph" rows="5" aria-describedby="more-detail-hint"></textarea>
+						  </div>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="substitute-2" name="substitute" type="radio" value="no">
+					  <label class="govuk-label govuk-radios__label" for="substitute-2">
+						No
+					  </label>
+					</div>
+					
+			
+				</fieldset>
+			  </div>
+
+
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Have they experienced a stroke?
+				  </legend>
+				  
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="stairs" name="stairs" type="radio" value="yes">
+					  <label class="govuk-label govuk-radios__label" for="stairs">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="stairs-2" name="stairs" type="radio" value="no">
+					  <label class="govuk-label govuk-radios__label" for="stairs-2">
+						No
+					  </label>
+					</div>
+				
+				
+				  </div>
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Are they currently receiving regular treatment for cancer?
+				  </legend>
+				  
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="regular" name="regular" type="radio" value="yes">
+					  <label class="govuk-label govuk-radios__label" for="regular">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="regular-2" name="regular" type="radio" value="no">
+					  <label class="govuk-label govuk-radios__label" for="regular-2">
+						No
+					  </label>
+					</div>
+				
+				
+				  </div>
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Do they have any other health needs?
+				
+				  </legend>
+				<div class="govuk-hint"><p>For example, any nut allergies or the need to have a private bathroom. </p>
+			
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="independent-2" name="independent" type="radio" value="yes" data-aria-controls="conditional-independent">
+						<label class="govuk-label govuk-radios__label" for="independent-2">
+					Yes
+						</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-independent">
+						  <div class="govuk-form-group">
+							  <label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details of their other health needs
+							  </label>
+							  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+							</div>
+					  </div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="independent" name="independent" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="independent">
+						No
+						</label>
+					  </div>
+					
+				  
+			
+				</fieldset>
+			  </div>
+
+
+		
+
+	
+
+
+			
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<p><a class="govuk-link" href="task-list-offence">Exit without saving</a></p>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

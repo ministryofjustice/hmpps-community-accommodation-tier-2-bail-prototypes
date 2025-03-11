@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item ">
+				<a href="add-alleged-offence">Current alleged offences</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="community-supervision" aria-current="mental-health">Probation supervision</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
+				</li>
+	  
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+	<div class="govuk-grid-column-two-thirds">
+
+
+<div class="govuk-form-group govuk-!-margin-top-6">
+	<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+		<h1 class="govuk-fieldset__heading">
+			Who is Jane Smith's Community Probation Practitioner (CPP)?
+		</h1>
+	  </legend>
+	  <div class="govuk-form-group">
+		<label class="govuk-label" for="event-name">
+		  Full name
+		</label>
+		<input class="govuk-input" id="event-name" name="eventName" type="text">
+	  </div>
+	  <div class="govuk-form-group">
+		<label class="govuk-label" for="event-name">
+		  Probation region
+		</label>
+		<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+	  </div>
+	  <div class="govuk-form-group">
+		<label class="govuk-label" for="event-name">
+		`Email address
+		</label>
+		<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+	  </div>
+	  <div class="govuk-form-group">
+		<label class="govuk-label" for="event-name">
+		  UK phone number
+		</label>
+		<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+	  </div>
+	</fieldset>
+  </div>
+
+<div class="govuk-button-group">
+	<a href="oasys" class="govuk-button">
+	  Save and continue
+	</a>
+	<p class="govuk-link"><a href="task-list-funding">Exit without saving</a> </p> 
+  </div>
+  </div>
+</div>
+{% endblock %}

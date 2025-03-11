@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Confirm Jane Smith is eligible for short-term accommodation (CAS2) for bail</h1>
+
+<div class="govuk-inset-text blue-border">
+
+
+	  <p class="govuk-body">
+		To apply for To apply for short-term accommodation (CAS2) for bail, the applicant must:
+	  </p>
+	  <p class="govuk-body">
+		<strong>Be:</strong>
+	  </p>
+	  <ul class="govuk-list govuk-list--bullet">
+		<li>18 years old or older</li>
+		<li>able to live independently in shared accommodation</li>
+		</ul>
+		<p class="govuk-body">
+			<strong>Not:</strong>
+		  </p>
+		<ul class="govuk-list govuk-list--bullet">
+		<li>be currently charged with, or have any past convictions or cautions, or current allegations of any sexual offences in Schedule 3 of the Sexual Offences Act 2003</li>
+		<li>have breached immigration law (other than overstaying an approved period of leave to enter or remain in the UK)</li>
+		<li>have the ‘no recourse to public funds’ (NRPF) condition applied to their permission to enter or stay in the UK</li>
+		<li>be assessed as at high or very high risk of serious harm on OASys (Offender Assessment System)</li>
+		
+	  </ul>
+
+
+  </div>
+
+  <div class="govuk-form-group">
+	<fieldset class="govuk-fieldset">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h2 class="govuk-fieldset__heading">
+		  Is the applicant eligible for this service?
+		</h1>
+	  </legend>
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+		  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+			Yes, they are
+		  </label>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+		  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+			No, they are not
+		  </label>
+		</div>
+		
+	
+	  </div>
+	</fieldset>
+
+	<div class="govuk-button-group govuk-!-margin-top-6">
+		<a class="govuk-button" href="consent">Save and continue</a>
+		<p><a class="govuk-link" href="dashboard">Exit without saving</a></p>
+	  </div>
+	
+  </div>
+
+  </div>
+</div>
+{% endblock %}

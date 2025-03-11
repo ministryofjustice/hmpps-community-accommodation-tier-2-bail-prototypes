@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					Equality questions for Jane Smith
+				</h1>
+			  </legend>
+			  <div id="event-name-hint" class="govuk-hint">
+				These questions are optional. The CAS-2 team uses equality data to understand who uses this service. <br>
+				The answers will not affect the application.
+			</div>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="haveSolicitor" name="haveSolicitor" type="radio" value="yes">
+				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+					Yes, answer the equality questions (takes two minutes)
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="haveSolicitor-2" name="haveSolicitor" type="radio" value="no">
+				  <label class="govuk-label govuk-radios__label" for="haveSolicitor-2">
+					No, skip the equality questions
+				  </label>
+				</div>
+			
+		
+			  </div>
+			</fieldset>
+		  </div>
+
+		  <details class="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				Why we ask equality questions
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				The CAS-2 team use equality data to understand the demographics of people applying for Bail Community Accommodation Services (CAS-2). This data is included in an annual equalities report.
+			</div>
+		  </details>
+
+		  <div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="task-list-personal">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-start">Exit without saving</a></p>
+		  </div>
+</div>
+</div>
+{% endblock %}

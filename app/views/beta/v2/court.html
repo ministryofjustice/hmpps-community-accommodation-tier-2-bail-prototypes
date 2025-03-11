@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="hearing-heard">
+			<div class="govuk-form-group">
+		
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						What’s the name of the court where Jane Smith’s bail hearing will take place?
+					</h1>
+				  </legend>
+				  <div id="more-detail-hint" class="govuk-hint">
+					For example, Manchester Crown Court.
+					</div>
+		
+				  <input class="govuk-input" id="event-name" name="eventName" type="text">
+				</fieldset>
+			  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="task-list-risks">Exit without saving</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,233 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
+				<li class="moj-side-navigation__item">
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Concerns related to Jane Smith living in the community</h1>
+		<div class="govuk-hint"><p>This can include any behaviours that might impact any of the following groups:  </p>
+			<ul class="govuk-hint govuk-list govuk-list--bullet">
+				<li>victims</li>
+				<li>known adults</li>
+				<li>children</li>
+				<li>other residents of shared accommodation</li>
+				<li>members of the LGBTQ+ community</li>
+				<li>the public</li>
+				<li>specific ethnic minorities or religious groups </li>
+			</ul>
+			<p>This list is not exhaustive. </p>
+		</div>
+		<form action="risk-management">
+	
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Has the applicant had any convictions or behaviours noted related to aggression or hate towards others in the past?
+				  </legend>
+				  <div id="more-detail-hint" class="govuk-hint">
+					This includes any incidents prior to being held in custody. 
+					</div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="past" name="past" type="radio" value="yes" data-aria-controls="conditional-past">
+					  <label class="govuk-label govuk-radios__label" for="past">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-past">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details, including if they have a history of bullying, intimidation or controlling behaviour
+							</label>
+							<div id="more-detail-hint" class="govuk-hint">
+								This includes any discrimination or abuse based on identity. For example, ethnicity, religion or sexuality.
+								</div>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="past-2" name="past" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="past-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Based on the information you have, has the applicant ever been a victim of violence, bullying, or intimidation from others?
+				  </legend>
+				
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="current" name="current" type="radio" value="yes" data-aria-controls="conditional-current">
+					  <label class="govuk-label govuk-radios__label" for="current">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details, including any vulnerabilities that might make them a target for harm
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="current-2" name="current" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="current-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Are there any other concerns with the applicant living in the community?
+				  </legend>
+				  <div id="more-detail-hint" class="govuk-hint">
+					This includes any concerns whilst being held in custody.
+					</div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="vulnerable" name="vulnerable" type="radio" value="yes" data-aria-controls="conditional-vulnerable">
+					  <label class="govuk-label govuk-radios__label" for="vulnerable">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vulnerable">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter the details of any current concerns
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="vulnerable-2" name="vulnerable" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="vulnerable-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Has a Cell Sharing Risk Assessment (CSRA) been done? 
+				  </legend>
+				
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="CSRA" name="CSRA" type="radio" value="yes" data-aria-controls="conditional-CSRA">
+					  <label class="govuk-label govuk-radios__label" for="CSRA">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-CSRA">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter any concerns around the applicant sharing communal areas with other residents 
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="CSRA-2" name="CSRA" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="CSRA-2">
+						  No
+						</label>
+					  </div>
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="CSRA-3" name="CSRA" type="radio" value="no custody">
+						<label class="govuk-label govuk-radios__label" for="CSRA-3">
+							No, the applicant is not in prison custody
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+
+
+			
+
+
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+		  
+		
+	
+
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}

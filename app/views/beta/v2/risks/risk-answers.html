@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm" aria-current="Health answers">ACCT notes</a>
+			  </li>
+				<li class="moj-side-navigation__item">
+					<a href="violence" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living-details" aria-current="mental-health">Living in the community</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Add information about concerns to Jane Smith and others</h1>
+
+		<p class="govuk-body">We will now ask you to provide information about any concerns relevant to the applicant and others. For example, details of any:  </p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>past and present concerns</li>
+			<li>safeguarding measures</li>
+			<li>triggers</li>
+
+		</ul>
+		<p class="govuk-body">This information helps understand their needs while in shared accommodation.</p>
+	
+		<div class="govuk-inset-text blue-border">
+			<p><strong>You are expected to:</strong></p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>use information available from any relevant systems you have access to</li>
+				<li>identify risk factors in support of information about the applicant’s current and historic circumstances </li>
+			</ul>
+		</div>
+
+	
+		  <details class="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				Sources you might use to add information about risk factors
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				You can use any of the sources below, along with adding any information the applicant discloses to you:
+
+				<ul class="govuk-list govuk-list--bullet">
+					<li>current or previous OASys OASys that may present a current concern in CAS2</li>
+					<li>Common Platform </li>
+					<li>Liaison and Diversion service</li>
+					<li>national probation database (nDelius)</li>
+					<li>open or inactive ACCTs (for prison applicants)</li>
+					<li>Police National Computer (PNC)</li>
+					<li>Prison National Offender Management Information System (p-NOMIS)</li>
+					<li>Prisoner Escort Record (PER) form</li>
+					
+				</ul>
+
+		
+				
+			</div>
+		  </details>
+
+		<div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="self-harm-details">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-health">Save and exit</a></p>
+		  </div>
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}

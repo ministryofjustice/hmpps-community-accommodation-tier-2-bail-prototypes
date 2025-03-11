@@ -1,0 +1,124 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
+				<li class="moj-side-navigation__item">
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					Are there any additional past or present concerns related to the applicant?
+				</h1>
+			  </legend>
+	<div class="govuk-inset-text blue-border">
+		<h2 class="govuk-heading-s">
+		  Important
+		</h2>
+	  
+			  <p class="govuk-body">
+				These include other categories that might impact staff, known adults, children or the applicant, such as:  </p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>acquisitive offending</li>
+				<li>driving-related offences</li>
+				<li>drug supply and county lines involvement</li>
+				<li>exploitation (such as unpaid labour, modern slavery, human trafficking or cuckooing)</li>
+				<li>financial abuse or fraud</li>
+				<li>media and public relations</li>
+				<li>sex work</li>
+				<li>stalking and harassment</li>
+			
+			</ul>
+			<p class="govuk-body">
+				This is because they are relevant to living in shared accommodation.
+			</p>
+			
+		
+
+	
+
+
+	</div>
+
+	<div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="current" name="current" type="radio" value="yes" data-aria-controls="conditional-current">
+		  <label class="govuk-label govuk-radios__label" for="current">
+			Yes
+		  </label>
+		</div>
+		<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current">
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="more-detail">
+					Enter the details of any additional concerns
+				</label>
+				<div class="govuk-hint"><p>Include: </p>
+					<ul class="govuk-hint govuk-list govuk-list--bullet">
+						<li>what has happened and when, including incident reports</li>
+						<li>safeguarding concerns or support needed</li>
+						<li>anything else that might be useful for assessors to know</li>
+						<li>any location information</li>
+						<li>who may be impacted by this concern</li>
+					
+					</ul>
+			
+				</div>
+				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+			  </div>
+		</div>
+	
+		<div class="govuk-radios__item">
+			<input class="govuk-radios__input" id="current-2" name="current" type="radio" value="no">
+			<label class="govuk-label govuk-radios__label" for="current-2">
+				No, they do not have any previous additional concerns
+			</label>
+		  </div>
+
+		<div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="sources">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-health">Exit without saving</a></p>
+		  </div>
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}

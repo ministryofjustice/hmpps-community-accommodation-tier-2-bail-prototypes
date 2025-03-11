@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active ">
+				<a href="area-preference-1">First preferred area</a>
+			  </li>
+	   
+			  <li class="moj-side-navigation__item">
+				<a href="area-preference-2" aria-current="Health answers">Second preferred area</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="area-preference-other" aria-current="Health answers">Other area preferences</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="exclusion" aria-current="mental-health">Exclusion zones</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="gangs" aria-current="exclusion zone">Gang affiliation</a>
+				  </li>
+				<li class="moj-side-navigation__item ">
+					<a href="family-unit" aria-current="mental-health">Family accommodation</a>
+				  </li>
+				 
+				
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+	<div class="govuk-grid-column-two-thirds">
+	<h1 class="govuk-heading-l">First preferred area for Jane Smith</h1>
+	<div class="govuk-inset-text blue-border">
+		<p class="govuk-body">Accommodation staff will use this information to help match applicants to the most suitable available rooms.</p>
+		<p class="govuk-body">You need to provide a reason for the applicant’s preference.</p>
+		<details class="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				What the reasons for their preference could be
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+			    The reasons the applicant might prefer an area could include:
+				<ul class="govuk-list govuk-list--bullet">
+					<li>it is close to the court where the case will be held</li>
+					<li>they lived in the area for six out of the last 12 months, or three out of the last five years (prior to custody)</li>
+					<li>their immediate family (parents, children, siblings) has lived in the area for at least five years</li>
+					<li>their employment is in that area</li>
+					<li>they have a special reason to live in (for example, they receive specialist healthcare)</li>
+				</ul>
+			</div>
+		  </details>
+	</div>
+	<div class="govuk-form-group">
+		<label class="govuk-label govuk-label--m" for="event-name">
+			First preferred area
+		</label>
+		<div id="event-name-hint" class="govuk-hint">
+			Specify a town, city or region
+		  </div>
+		<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+	  </div>
+
+	  <div class="govuk-form-group">
+		<label class="govuk-label govuk-label--m" for="more-detail">
+			Reason for first preference
+		</label>
+		<div id="event-name-hint" class="govuk-hint">
+			Include a reason why the applicant prefers this area
+		  </div>
+		<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+	  </div>
+	  <div class="govuk-button-group govuk-!-margin-top-6">
+		<a class="govuk-button" href="area-preference-2">Save and continue</a>
+		<p><a class="govuk-link" href="task-list-personal">Exit without saving</a></p>
+	  </div>
+</div>
+{% endblock %}

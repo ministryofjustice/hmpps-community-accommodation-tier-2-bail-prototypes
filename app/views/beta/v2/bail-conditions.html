@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					Are there any non-standard bail conditions being considered? 
+				</h1>
+			  </legend>
+			  <div id="more-detail-hint" class="govuk-hint">
+				These can include any restrictions such as curfews or limitations on contact with specific individuals. 
+				</div>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="past" name="past" type="radio" value="yes" data-aria-controls="conditional-condition">
+				  <label class="govuk-label govuk-radios__label" for="past">
+					Yes
+				  </label>
+				</div>
+				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-condition">
+					<div class="govuk-form-group">
+						<label class="govuk-label govuk-label--s" for="more-detail">
+							Enter details of any non-standard conditions being considered
+						</label>
+						
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+					  </div>
+				</div>
+			
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="past-2" name="past" type="radio" value="no">
+					<label class="govuk-label govuk-radios__label" for="past-2">
+					  No
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="past-3" name="past" type="radio" value="no">
+					<label class="govuk-label govuk-radios__label" for="past-3">
+						I do not know
+					</label>
+				  </div>
+			
+		
+			  </div>
+			</fieldset>
+		  </div>
+		  <div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="bail-hearing">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-risks">Exit without saving</a></p>
+		  </div>
+</div>
+</div>
+{% endblock %}

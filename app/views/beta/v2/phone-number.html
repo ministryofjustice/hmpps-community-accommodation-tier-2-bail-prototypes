@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-form-group">
+			<h1 class="govuk-label-wrapper">
+			  <label class="govuk-label govuk-label--l" for="event-name">
+				What is your phone number?
+			  </label>
+			</h1>
+			<div id="event-name-hint" class="govuk-hint">
+				This will be used for any communication from the accommodation supplier.</div>
+			<input class="govuk-input govuk-!-margin-top-6" id="event-name" name="eventName" type="text">
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<a class="govuk-button" href="location">Save and continue</a>
+				<p><a class="govuk-link" href="task-list-start">Exit without saving</a></p>
+			  </div>
+			
+		</div>
+	
+
+
+  </div>
+</div>
+{% endblock %}
