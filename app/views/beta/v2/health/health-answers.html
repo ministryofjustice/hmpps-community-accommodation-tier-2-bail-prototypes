@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Provide information about the applicant’s health needs</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -17,26 +13,26 @@
 				<a href="liaison">Liaison and Diversion assessment</a>
 			  </li>
 	  
-			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active" >
 				<a href="health-answers" aria-current="Health answers">Provide health needs information</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
-				  <a href="communication" aria-current="mental-health">Communication and language</a>
+				<a href="substance-details" aria-current="mental-health">Substance use</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="physical-details" aria-current="mental-health">Physical and mobility</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="mental-health" aria-current="mental-health">Mental health</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="communication-details" aria-current="mental-health">Communication and language</a>
 				</li>
 				<li class="moj-side-navigation__item">
-					<a href="learning" aria-current="mental-health">Learning difficulties and neurodiversity</a>
+					<a href="learning-details" aria-current="mental-health">Learning difficulties and neurodiversity</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="brain" aria-current="mental-health">Brain injury</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="physical" aria-current="mental-health">Physical and mobility</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="substance" aria-current="mental-health">Substance misuse</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="mental-health" aria-current="mental-health">Mental health</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="other" aria-current="mental-health">Other health needs</a>
@@ -52,8 +48,15 @@
 
 
 	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Provide information about Jane Smith’s health needs</h1>
+		<p class="govuk-body">We will now ask you to provide information about any health needs that affect the applicant. For example, details of: </p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li>their needs</li>
+			<li>the type of support they need</li>
+			<li>any diagnosis and treatment</li>
+			<li>how they are presenting during your interactions with them</li>
+		</ul>
 		
-		<p class="govuk-body">We will now ask you to provide information about any health needs that affect the applicant.</p>
 		<div class="govuk-inset-text blue-border">
 			<h2 class="govuk-heading-s">
 			  Important
@@ -66,52 +69,52 @@
 			</p>
 			<ul class="govuk-list govuk-list--bullet">
 				<li>cause delays in processing the application </li>
-				<li>impact the applicant’s quality of life while in shared accommodation.</li>
+				<li>may impact the applicant’s quality of life while in shared accommodation.</li>
 			</ul>
-			<details class="govuk-details">
-				<summary class="govuk-details__summary">
-				  <span class="govuk-details__summary-text">
-					Where to find information about the applicant’s health needs
-				  </span>
-				</summary>
-				<div class="govuk-details__text">
-					You might use any of the methods below, along with asking the applicant. 
-
-					<h2 class="govuk-heading-s">Check other systems</h2>
-					<p class="govuk-body">
-						You might find some of this information in the:
-		
-					</p>
-					<ul class="govuk-list govuk-list--bullet">
-						<li>Common Platform </li>
-						<li>national probation database (nDelius)</li>
-						<li>Police National Computer (PNC)</li>
-						<li>Prison National Offender Management Information System (p-NOMIS)</li>
-						<li>Prisoner Escort Record (PER) form</li>
-						
-					</ul>
-
-					<h2 class="govuk-heading-s">Get in touch with other services</h2>
-					<p class="govuk-body">
-						You can speak to the following people:
-		
-					</p>
-					<ul class="govuk-list govuk-list--bullet">
-						<li>healthcare team </li>
-						<li>substance/drugs team</li>
-						<li>substance misuse agency</li>
-						<li>mental health team</li>
-						<li>adult social care</li>
-						<li>Nelson trust</li>
-					
-				</div>
-			  </details>
+	
 
 		</div>
+		<details class="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				Where to find information about the applicant’s health needs
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				<p class="govuk-body">	You might use any of the methods below, along with asking the applicant. </p>
 
+				<h3 class="govuk-heading-s">Check other systems</h2>
+				<p class="govuk-body">
+					You might find some of this information in the:
+	
+				</p>
+				<ul class="govuk-list govuk-list--bullet">
+					<li>Common Platform </li>
+					<li>national probation database (nDelius)</li>
+					<li>Police National Computer (PNC)</li>
+					<li>Prison National Offender Management Information System (p-NOMIS)</li>
+					<li>Prisoner Escort Record (PER) form</li>
+					
+				</ul>
+
+				<h3 class="govuk-heading-s">Get in touch with other services</h2>
+				<p class="govuk-body">
+					You can speak to the following people:
+	
+				</p>
+				<ul class="govuk-list govuk-list--bullet">
+					<li>healthcare team </li>
+					<li>community or custody substance misuse team</li>
+					<li>substance use agency</li>
+					<li>mental health team</li>
+					<li>adult social care</li>
+					
+				
+			</div>
+		  </details>
 		<div class="govuk-button-group govuk-!-margin-top-6">
-			<a class="govuk-button" href="communication">Save and continue</a>
-			<p><a class="govuk-link" href="task-list-offence">Save and exit</a></p>
+			<a class="govuk-button" href="substance-details">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-offence">Exit without saving</a></p>
 		  </div>
 		
 	  </div>

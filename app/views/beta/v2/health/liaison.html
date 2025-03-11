@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Liaison and Diversion assessment</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -21,22 +17,22 @@
 				<a href="health-answers" aria-current="Health answers">Provide health needs information</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
-				  <a href="communication" aria-current="mental-health">Communication and language</a>
+				<a href="substance-details" aria-current="mental-health">Substance use</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="physical-details" aria-current="mental-health">Physical and mobility</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="mental-health" aria-current="mental-health">Mental health</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="communication-details" aria-current="mental-health">Communication and language</a>
 				</li>
 				<li class="moj-side-navigation__item">
-					<a href="learning" aria-current="mental-health">Learning difficulties and neurodiversity</a>
+					<a href="learning-details" aria-current="mental-health">Learning difficulties and neurodiversity</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="brain" aria-current="mental-health">Brain injury</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="physical" aria-current="mental-health">Physical and mobility</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="substance" aria-current="mental-health">Substance misuse</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="mental-health" aria-current="mental-health">Mental health</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="other" aria-current="mental-health">Other health needs</a>
@@ -55,10 +51,10 @@
 		<form action="health-answers">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-					<h2 class="govuk-fieldset__heading">
-						Has a Liaison and Diversion Assessment been carried out for this applicant?
-					</h2>
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Has a Liaison and Diversion Assessment been carried out for Jane Smith?
+					</h1>
 				  </legend>
 				  <p class="govuk-hint">This may have been carried out by the police or in court if the applicant has any mental health issues, learning disabilities, substance misuse problems, or other vulnerabilities. </p>
 				  <div class="govuk-radios" data-module="govuk-radios">
@@ -79,7 +75,7 @@
 					  <div class="govuk-radios__item">
 						<input class="govuk-radios__input" id="religion-10" name="religion" type="radio" value="skip">
 						<label class="govuk-label govuk-radios__label" for="religion-10">
-						  I don't know
+						  I do not know
 						</label>
 					  </div>
 				  </div>
