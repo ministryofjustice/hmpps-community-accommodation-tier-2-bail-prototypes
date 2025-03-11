@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Recent OASys risk assessment</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -14,14 +10,14 @@
 		<nav class="moj-side-navigation" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 			  <li class="moj-side-navigation__item ">
-				<a href="add-primary-offence">Add alleged offences</a>
+				<a href="add-alleged-offence">Current alleged offences</a>
 			  </li>
 	  
 			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
-				<a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
+				<a href="community-supervision" aria-current="mental-health">Probation supervision</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
-				  <a href="prev-conviction" aria-current="mental-health">Previous convictions</a>
+				  <a href="prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
 				</li>
 	  
 			 
@@ -33,12 +29,19 @@
 
 		<div class="govuk-form-group">
 			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+			  <h1><legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 			
 				Has an OASys risk assessment been done in the last two years?
 			
 			  </legend>
-			
+			</h1>
+			<div class="govuk-inset-text blue-border">
+				You must consult the Community Probation Practitioner on this application. They might:
+				<ul class="govuk-list govuk-list--bullet">
+					<li>decide to not support bail and oppose it</li>
+					<li>need to update the OASys risk assessment following the current alleged offence </li>
+				</ul>
+				</div>
 			  <div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
 				  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
@@ -49,8 +52,8 @@
 				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
 					<div class="govuk-form-group">
 						<fieldset class="govuk-fieldset">
-						  <legend class="govuk-fieldset__legend">
-							Has OASys been updated by a Prison Offender Manager (POM) since the alleged offence took place?
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							Has OASys been updated by a Community Probation Practitioner (CPP) since the alleged offence took place?
 						  </legend>
 						  <div class="govuk-radios" data-module="govuk-radios">
 							<div class="govuk-radios__item">
@@ -83,7 +86,7 @@
 		  </div>
 
 <div class="govuk-button-group">
-	<a href="probation" class="govuk-button">
+	<a href="prev-conviction" class="govuk-button">
 	  Save and continue
 	</a>
 	<p class="govuk-link"><a href="#">Save and exit</a> </p> 

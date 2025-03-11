@@ -8,12 +8,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Add applicant's alleged offences</h1>
-		
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -24,7 +19,7 @@
 			</li>
 	
 			<li class="moj-side-navigation__item">
-			  <a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
+			  <a href="community-supervision" aria-current="mental-health">Probation supervision</a>
 			</li>
 			<li class="moj-side-navigation__item">
 				<a href="add-prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
@@ -43,97 +38,125 @@
 		
 		
 			<div class="govuk-grid-column-two-thirds">
-				<form action="offence-updated-sec">
+				<div data-module="moj-add-another">
+
+					<h1 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Add Jane Smith’s current alleged offences</h1>
+				  
+					<form method="post">
+				  
+					  <fieldset class="govuk-fieldset moj-add-another__item">
+				  
 					
-					
-				
-						
+				  
 						<div class="govuk-form-group">
-						
-							  <label class="govuk-label govuk-label--m" for="offence">
-								Enter alleged offence
-							  </label>
-							  <div id="passport-issued-hint" class="govuk-hint">
-								For example, possession of class A drugs.
-							  </div>
-							<select class="govuk-select" id="offence" name="offence"
-							  data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
-							  <option value="" selected disabled>Select an option</option>
-							  <option value="Austria">Possession of a Class A drug (09011)</option>
-							  <option value="Belgium">Possession of a Class B drug (09012)</option>
-							  <option value="Bulgaria">Possession of a Class C drug (14944)</option>
-							  <option value="Croatia">Possession of a firearm (14843)</option>
-							  <option value="Republic of Cyprus">Possession of an offensive weapon (04259)</option>
-							  <option value="Czech Republic">Possession of a Class A or B drug with intent to supply (01119)</option>
-					
-							</select>
+						  <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
+							Current alleged offence name
+						  </label>
+						  <div id="date-of-birth-hint" class="govuk-hint">
+							For example, Theft
 						  </div>
-							   
+						  <input class="govuk-input" id="person[0][first_name]" name="person[0][first_name]" type="text" data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
+				  
+						</div>
+				  
 					
-		
-							  <div class="govuk-form-group">
-								<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-								  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-									When did they commit the offence?
-								  </legend>
-								  <div id="passport-issued-hint" class="govuk-hint">
-									For example, 27 3 2024
-								  </div>
-								  <div class="govuk-date-input" id="passport-issued">
-									<div class="govuk-date-input__item">
-									  <div class="govuk-form-group">
-										<label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-										  Day
-										</label>
-										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="prim-day" type="text" inputmode="numeric">
-									  </div>
-									</div>
-									<div class="govuk-date-input__item">
-									  <div class="govuk-form-group">
-										<label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-										  Month
-										</label>
-										<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="prim-mon" type="text" inputmode="numeric">
-									  </div>
-									</div>
-									<div class="govuk-date-input__item">
-									  <div class="govuk-form-group">
-										<label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-										  Year
-										</label>
-										<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="prim-year" type="text" inputmode="numeric">
-									  </div>
-									</div>
-								  </div>
-								</fieldset>
+				  
+						<div class="govuk-form-group">
+				  
+						  <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+				  
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+				  
+								When did the alleged offence take place?
+				  
+							</legend>
+				  
+							<div id="date-of-birth-hint" class="govuk-hint">
+							  For example, 27 3 2024
+							</div>
+				  
+							<div class="govuk-date-input" id="date-of-birth">
+				  
+							  <div class="govuk-date-input__item">
+								<div class="govuk-form-group">
+								  <label class="govuk-label govuk-date-input__label" for="person[0][dob][day]">
+									Day
+								  </label>
+				  
+								  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="person[0][dob][day]" name="person[0][dob][day]" type="text" inputmode="numeric" data-name="person[%index%][dob][day]" data-id="person[%index%][dob][day]">
+				  
+								</div>
 							  </div>
-		
-						
-		
-							  <div class="govuk-form-group">
-								<label class="govuk-label govuk-label--m" for="more-detail">
-									Enter details of the alleged offence
-								</label>
-								<div id="event-name-hint" class="govuk-hint">
-									Include:
-									<ul class="govuk-list govuk-list--bullet govuk-hint">
-										<li>area where it happened</li>
-										<li>any damage or injuries caused</li>
-										<li>weapons type</li>
-										<li>motivation for the offence</li>
-										<li>anyone involved, for example a victim or a fellow offender</li>
-		
-									</ul>
-								  </div>
-								<textarea class="govuk-textarea" id="more-detail" name="primary-offence" rows="5"></textarea>
+				  
+							  <div class="govuk-date-input__item">
+								<div class="govuk-form-group">
+								  <label class="govuk-label govuk-date-input__label" for="person[0][dob][month]">
+									Month
+								  </label>
+				  
+								  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="person[0][dob][month]" name="person[0][dob][month]" type="text" inputmode="numeric" data-name="person[%index%][dob][month]" data-id="person[%index%][dob][month]">
+				  
+								</div>
 							  </div>
+				  
+							  <div class="govuk-date-input__item">
+								<div class="govuk-form-group">
+								  <label class="govuk-label govuk-date-input__label" for="person[0][dob][year]">
+									Year
+								  </label>
+				  
+								  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="person[0][dob][year]" name="person[0][dob][year]" type="text" inputmode="numeric" data-name="person[%index%][dob][year]" data-id="person[%index%][dob][year]">
+				  
+								</div>
+							  </div>
+				  
+							</div>
+				  
+						  </fieldset>
+				  
+						</div>
+				  
+					  </fieldset>
+				  
+					  <div class="moj-button-action govuk-!-margin-top-6">
+				  
+						<button type="submit" class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">
+						  Add another alleged offence
+						</button>
+				  
+					  </div>
+
+					  <div class="govuk-form-group govuk-!-margin-top-8">
+						<label class="govuk-label govuk-label--m" for="more-detail">
+							Provide a summary of the allegations
+						</label>
+						<div id="event-name-hint" class="govuk-hint">
+							Include:
+							<ul class="govuk-list govuk-list--bullet govuk-hint">
+								<li>what is alleged to have happened (excluding names and other sensitive information)</li>
+								<li>who was involved (for example, domestic violence victim or public)</li>
+								<li>the location where it happened (excluding addresses)</li>
+								<li>any damage or injuries caused (including severity or extent)</li>
+								<li>motivation of the alleged offences</li>
+
+							</ul>
+						  </div>
+						<textarea class="govuk-textarea" id="more-detail" name="primary-offence" rows="5"></textarea>
+					  </div>
+				  
 					  <div class="govuk-button-group govuk-!-margin-top-6">
 						<button type="submit" class="govuk-button" data-module="govuk-button">
 						 Save and continue
 						</button>
 						<p><a class="govuk-link" href="dashboard">Save and exit</a></p>
 					  </div>
-				</form>
+			
+					</form>
+				  
+				  </div>
+		
+							
+					
 		
 
   </div>

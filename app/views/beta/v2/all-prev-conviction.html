@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Applicant's previous conviction details</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -14,14 +10,14 @@
 		<nav class="moj-side-navigation" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 			  <li class="moj-side-navigation__item ">
-				<a href="secondary-offence">Add alleged offences</a>
+				<a href="add-alleged-offence">Current alleged offences</a>
 			  </li>
 	  
-			  <li class="moj-side-navigation__item">
-				<a href="current-offence" aria-current="mental-health">Community supervision and current offences</a>
-			  </li>
 			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
-				  <a href="add-prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
+				<a href="community-supervision" aria-current="mental-health">Probation supervision</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
 				</li>
 	  
 			 
@@ -31,13 +27,14 @@
 
 
 	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">View and add Jane Smith’s previous unspent convictions</h1>
 		<form action="task-list-offence">
 		<div class="govuk-form-group">
 			
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 				  <h2 class="govuk-summary-card__title">
-		Weapons or firearms
+	Violence
 				  </h2>
 				  <ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action">
@@ -48,27 +45,27 @@
 				  <dl class="govuk-summary-list">
 					<div class="govuk-summary-list__row">
 					  <dt class="govuk-summary-list__key">
-						Number of offences
+						Number of convictions of the same type
 					  </dt>
 					  <dd class="govuk-summary-list__value">
-						1
+						2
 					  </dd>
 					
 					</div>
 					<div class="govuk-summary-list__row">
 						<dt class="govuk-summary-list__key">
-					  Sentence type
+					  Are they currently serving a sentence for these convictions?
 						</dt>
 						<dd class="govuk-summary-list__value">
-						 Custodial
+						No
 						
 					  </div>
 					<div class="govuk-summary-list__row">
 					  <dt class="govuk-summary-list__key">
-					Offence details
+						Are there any safeguarding details to add about these convictions?
 					  </dt>
 					  <dd class="govuk-summary-list__value">
-						Possession of a baseball bat in property with evidence to suggest use for intimidation and protection as part of removal from gang affiliation 
+						{{data['safeguarding']}}
 					  </dd>
 					  
 					</div>
@@ -81,10 +78,10 @@
 			
 			
 	
-			 <a class="govuk-button govuk-button--secondary"href="#">Add another previous conviction</a></p>
+			 <a class="govuk-button govuk-button--secondary"href="#">Add another unspent conviction type</a></p>
 
 
-			<div class="govuk-button-group govuk-!-margin-top-8">
+			<div class="govuk-button-group govuk-!-margin-top-4">
 				<button type="submit" class="govuk-button" data-module="govuk-button">
 				  Save and continue
 				</button>

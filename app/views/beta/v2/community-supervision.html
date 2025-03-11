@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Community supervision details</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -14,11 +10,11 @@
 		<nav class="moj-side-navigation" aria-label="Side navigation">
 			<ul class="moj-side-navigation__list">
 			  <li class="moj-side-navigation__item ">
-				<a href="secondary-offence">Add alleged offences</a>
+				<a href="add-alleged-offence">Current alleged offences</a>
 			  </li>
 	  
 			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
-				<a href="community-supervision" aria-current="mental-health">Community supervision and current offences</a>
+				<a href="community-supervision" aria-current="mental-health">Probation supervision</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
 				  <a href="prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
@@ -34,12 +30,12 @@
 
 <div class="govuk-form-group govuk-!-margin-top-6">
 	<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
-	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-		<h2 class="govuk-fieldset__heading">
-			Is the applicant currently supervised by probation?
-		</h2>
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+		<h1 class="govuk-fieldset__heading">
+			Is Jane Smith currently supervised by probation?
+		</h1>
 	  </legend>
-	 
+	 <div class="govuk-hint">This includes if they are currently serving a community order or other non-custodial sentence.</div>
 	  <div class="govuk-radios" data-module="govuk-radios">
 		<div class="govuk-radios__item">
 		  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
@@ -58,10 +54,10 @@
   </div>
 
 <div class="govuk-button-group">
-	<a href="oasys" class="govuk-button">
+	<a href="probation" class="govuk-button">
 	  Save and continue
 	</a>
-	<p class="govuk-link"><a href="#">Save and exit</a> </p> 
+	<p class="govuk-link"><a href="task-list-funding">Exit without saving</a> </p> 
   </div>
   </div>
 </div>
