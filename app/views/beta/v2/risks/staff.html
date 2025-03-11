@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Risks to staff</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -18,22 +14,20 @@
 			  </li>
 	  
 			  <li class="moj-side-navigation__item">
-				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
-				  <a href="gangs" aria-current="mental-health">Drug supply, gang affiliation and county lines</a>
-				</li>
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
 				<li class="moj-side-navigation__item">
-					<a href="violence" aria-current="mental-health">Violence and arson</a>
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
 				  </li>
+				
 				  <li class="moj-side-navigation__item">
-					<a href="attitudes" aria-current="mental-health">Hate-related attitudes</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="shared-living" aria-current="mental-health">Living with others</a>
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
 				  </li>
 				  <li class="moj-side-navigation__item moj-side-navigation__item--active">
-					<a href="staff" aria-current="mental-health">Risks to staff</a>
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="additional" aria-current="mental-health">Additional concerns</a>
@@ -49,37 +43,115 @@
 
 
 	<div class="govuk-grid-column-two-thirds">
-		<div class="govuk-form-group">
-			<fieldset class="govuk-fieldset">
-			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-			
-				Are there any past or present concerns related to the safety of staff?
-				
-			  </legend>
-			  <div class="govuk-radios" data-module="govuk-radios">
-				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-					Yes
-				  </label>
-				</div>
-				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-					No
-				  </label>
-				</div>
-			
-			  </div>
-			</fieldset>
-		  </div>
+		<h1 class="govuk-heading-l">Concerns related to the safety of staff</h1>
+		<div class="govuk-hint"><p>Consider concerns towards:   </p>
+			<ul class="govuk-hint govuk-list govuk-list--bullet">
+				<li>support and housing staff</li>
+				<li>probation workers</li>
+				<li>accommodation staff</li>
+				<li>police staff</li>
+				<li>custody staff</li>
 	
+			</ul>
+	
+		</div>
+		<form action="additional">
 	
 
-		<div class="govuk-button-group govuk-!-margin-top-6">
-			<a class="govuk-button" href="additional">Save and continue</a>
-			<p><a class="govuk-link" href="task-list-health">Save and exit</a></p>
-		  </div>
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Has the applicant posed a risk to the safety of any staff in the past?
+				  </legend>
+				  <div id="more-detail-hint" class="govuk-hint">
+					This includes any incidents prior to being held in custody. 
+					</div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="past" name="past" type="radio" value="yes" data-aria-controls="conditional-past">
+					  <label class="govuk-label govuk-radios__label" for="past">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-past">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details including a summary of the incidents, when they happened and any outcomes
+							</label>
+							
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="past-2" name="past" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="past-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				
+					Based on the information you have, are there any current concerns on the safety of any staff?
+				  </legend>
+				  <div id="more-detail-hint" class="govuk-hint">
+					This includes any incidents prior to being held in custody. 
+					</div>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="current" name="current" type="radio" value="yes" data-aria-controls="conditional-current">
+					  <label class="govuk-label govuk-radios__label" for="current">
+						Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details, including any vulnerabilities that might make them a target for harm
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="current-2" name="current" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="current-2">
+						  No
+						</label>
+					  </div>
+					  
+			
+				</fieldset>
+			  </div>
+
+	
+		
+
+
+
+			
+
+
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+		  
+		
+	
+
 		
 	  </div>
   </div>

@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+				  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="risk-answers">Add information about risks</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
+			  </li>
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
+				<li class="moj-side-navigation__item">
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="additional" aria-current="mental-health">Additional concerns</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+	  <div class="govuk-grid-column-two-thirds">
+	  <h1 class="govuk-heading-l">
+		Assessment, Care in Custody and Teamwork (ACCT) notes for Jane Smith
+	</h1>
+
+	<div class="govuk-inset-text blue-border">An ACCT is a tailored plan to support someone in prison at risk of self harm or suicide.</div>
+		<form action="violence-details">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Does the applicant have any ACCT notes?
+				  </legend>
+				 
+				  <div class="govuk-radios" data-module="govuk-radios">
+					
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+					  <label class="govuk-label govuk-radios__label" for="contact-2">
+					Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+						<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+						  No
+						</label>
+					  </div>
+					  <div class="govuk-radios__divider">or</div>
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="religion-10" name="religion" type="radio" value="skip">
+						<label class="govuk-label govuk-radios__label" for="religion-10">
+							No, the applicant is not in prison custody
+						</label>
+					  </div>
+				  </div>
+				</fieldset>
+			  </div>
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="task-list-health">Exit without saving</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

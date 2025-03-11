@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Concerns information sources</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -18,22 +14,20 @@
 			  </li>
 	  
 			  <li class="moj-side-navigation__item">
-				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
-				  <a href="gangs" aria-current="mental-health">Drug supply, gang affiliation and county lines</a>
-				</li>
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
 				<li class="moj-side-navigation__item">
-					<a href="violence" aria-current="mental-health">Violence and arson</a>
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
-					<a href="attitudes" aria-current="mental-health">Hate-related attitudes</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="shared-living" aria-current="mental-health">Living with others</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="staff" aria-current="mental-health">Risks to staff</a>
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="additional" aria-current="mental-health">Additional concerns</a>
@@ -49,75 +43,74 @@
 
 
 	<div class="govuk-grid-column-two-thirds">
-		<div class="govuk-form-group">
-			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-		
-				  Where did you get the information on concerns from?
-		
-			  </legend>
-			  
-			  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-		  
-				  <div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
-					  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
-						  In person interview with applicant
-					  </label>
-					</div>
-					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
-					  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
-						  PNomis
-					  </label>
-					</div>
-					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
-					  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
-						  Healthcare teams such as drugs team
-					  </label>
-					</div>
-					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
-					  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
-						  Case work
-					  </label>
-					</div>
-					<div class="govuk-checkboxes__item">
-					  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
-					  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
-						  NDelius
-					  </label>
-					</div>
-				<div class="govuk-checkboxes__item">
-				  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-				  <label class="govuk-label govuk-checkboxes__label" for="contact">
-					Other
-				  </label>
-				</div>
-				<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
-				  <div class="govuk-form-group">
-					<label class="govuk-label" for="contact-by-email">
-					Enter other sources (optional)
-					</label>
-					<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
-					</div>
-				  </div>
+		<form action="../task-list-risks">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					Where did you get the information on concerns about Jane Smith from?
 			
-				
+				  </legend>
+				  
+				  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 			  
+					  <div class="govuk-checkboxes__item">
+						  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+						  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+							  In person interview with applicant
+						  </label>
+						</div>
+						<div class="govuk-checkboxes__item">
+						  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+						  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+							Prison National Offender Management Information System (p-NOMIS)
+						  </label>
+						</div>
+						<div class="govuk-checkboxes__item">
+						  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+						  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+							Healthcare teams
+						  </label>
+						</div>
+						<div class="govuk-checkboxes__item">
+						  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+						  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+							  Case work
+						  </label>
+						</div>
+						<div class="govuk-checkboxes__item">
+						  <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+						  <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+							National probation database (nDelius)
+						  </label>
+						</div>
+					<div class="govuk-checkboxes__item">
+					  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+					  <label class="govuk-label govuk-checkboxes__label" for="contact">
+						Other
+					  </label>
+					</div>
+					<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+					  <div class="govuk-form-group">
+						<label class="govuk-label" for="contact-by-email">
+						Enter other sources (optional)
+						</label>
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						</div>
+					  </div>
+				
+					
+				  
+				  </div>
+				</fieldset>
 			  </div>
-			</fieldset>
-		  </div>
-	
-	
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="task-list-risks">Exit without saving</a>
+			  </div>
+		</form>
 
-		<div class="govuk-button-group govuk-!-margin-top-6">
-			<a class="govuk-button" href="../task-list-risks">Save and continue</a>
-			<p><a class="govuk-link" href="task-list-health">Save and exit</a></p>
-		  </div>
-		
-	  </div>
   </div>
 </div>
 {% endblock %}

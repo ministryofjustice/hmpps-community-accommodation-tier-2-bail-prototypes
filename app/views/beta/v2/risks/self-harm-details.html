@@ -2,11 +2,7 @@
 
 
 {% block content %}
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">Enter details about any concerns of self-harm and suicide</h1>
-		</div>
-		</div>
+
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-one-third">
 	  
@@ -18,22 +14,20 @@
 			  </li>
 	  
 			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
-				<a href="self-harm" aria-current="Health answers">Self-harm and suicide</a>
+				<a href="self-harm-details" aria-current="Health answers">Self-harm and suicide</a>
 			  </li>
 			  <li class="moj-side-navigation__item">
-				  <a href="gangs" aria-current="mental-health">Drug supply, gang affiliation and county lines</a>
-				</li>
+				<a href="acct" aria-current="Health answers">ACCT notes</a>
+			  </li>
 				<li class="moj-side-navigation__item">
-					<a href="violence" aria-current="mental-health">Violence and arson</a>
+					<a href="violence-details" aria-current="mental-health">Violence and arson</a>
+				  </li>
+				
+				  <li class="moj-side-navigation__item">
+					<a href="shared-living" aria-current="mental-health">Living in the community</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
-					<a href="attitudes" aria-current="mental-health">Hate-related attitudes</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="shared-living" aria-current="mental-health">Living with others</a>
-				  </li>
-				  <li class="moj-side-navigation__item">
-					<a href="staff" aria-current="mental-health">Risks to staff</a>
+					<a href="staff" aria-current="mental-health">Safety of staff</a>
 				  </li>
 				  <li class="moj-side-navigation__item">
 					<a href="additional" aria-current="mental-health">Additional concerns</a>
@@ -49,8 +43,8 @@
 
 
 	<div class="govuk-grid-column-two-thirds">
-		
-		<form action="gangs">
+		<h1 class="govuk-heading-l">Concerns of self-harm and suicide for Jane Smith</h1>
+		<form action="acct">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -70,8 +64,8 @@
 					</div>
 					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-attempted">
 						<div class="govuk-form-group">
-							<label class="govuk-label" for="more-detail">
-								Enter details of any incidents including the methods used
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details including frequency and severity of self harm or suicide attempts and methods used
 							</label>
 							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
 						  </div>
@@ -92,7 +86,7 @@
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 				
-					Are there any current concerns of self-harm or suicide?
+					Based on the information you have, are there any current concerns of self-harm or suicide?
 				
 				  </legend>
 				  <div id="changedName-hint" class="govuk-hint">
@@ -107,8 +101,8 @@
 					</div>
 					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current">
 						<div class="govuk-form-group">
-							<label class="govuk-label" for="more-detail">
-								Enter details about frequency and severity of self harm or suicide attempts
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter the details of any current concerns
 							</label>
 							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
 						  </div>
@@ -130,52 +124,57 @@
 				<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 				
-					Has a referral been made for support in the community?
-				
+					Does the applicant have any specific triggers related to self-harm or suicide?
 				  </legend>
 				
 				  <div class="govuk-radios" data-module="govuk-radios">
 					<div class="govuk-radios__item">
-					  <input class="govuk-radios__input" id="engagedMH" name="engagedMH" type="radio" value="yes">
-					  <label class="govuk-label govuk-radios__label" for="engagedMH">
+					  <input class="govuk-radios__input" id="triggers" name="triggers" type="radio" value="yes" data-aria-controls="conditional-triggers">
+					  <label class="govuk-label govuk-radios__label" for="triggers">
 						Yes
 					  </label>
 					</div>
+					<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-triggers">
+						<div class="govuk-form-group">
+							<label class="govuk-label govuk-label--s" for="more-detail">
+								Enter details about situations, topics or other triggers that might cause concern
+							</label>
+							<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						  </div>
+					</div>
 				
 					<div class="govuk-radios__item">
-					  <input class="govuk-radios__input" id="engagedMH-2" name="engagedMH" type="radio" value="awaiting">
-					  <label class="govuk-label govuk-radios__label" for="engagedMH-2">
-						A referral is required but has yet to be made
-					  </label>
-					</div>
-					<div class="govuk-radios__item">
-						<input class="govuk-radios__input" id="engagedMH-3" name="engagedMH" type="radio" value="no">
-						<label class="govuk-label govuk-radios__label" for="engagedMH-3">
-							It is not required
+						<input class="govuk-radios__input" id="triggers-2" name="triggers" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="triggers-2">
+						  No
 						</label>
 					  </div>
-					  
+				
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="triggers1" name="triggers" type="radio" value="yes" data-aria-controls="conditional-triggers1">
+						<label class="govuk-label govuk-radios__label" for="current1">
+					Not known
+						</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-triggers1">
+						  <div class="govuk-form-group">
+							  <label class="govuk-label govuk-label--s" for="more-detail">
+								Enter the reason why it is not known
+							  </label>
+							  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+							</div>
+					  </div>
+				  
 			
 				</fieldset>
 			  </div>
 
-			  <div class="govuk-form-group">
-
-				<label class="govuk-label govuk-label--m" for="more-detail">
-					Enter Assessment, Care in Custody and Teamwork (ACCT) notes (optional)
-				</label>
-		  
-			  <div id="more-detail-hint" class="govuk-hint">
-				An Assessment, Care in Custody and Teamwork (ACCT) is a tailored plan to support someone in prison at risk of self harm or suicide.
-			  </div>
-			  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-			</div>
-
+		
 
 			<div class="govuk-form-group">
 
 				<label class="govuk-label govuk-label--m" for="more-detail">
-					How are they currently presenting?
+					How are they currently presenting? (optional)
 				</label>
 		  
 		
@@ -188,7 +187,7 @@
 				<button type="submit" class="govuk-button" data-module="govuk-button">
 				  Save and continue
 				</button>
-				<a class="govuk-link" href="#">Save and exit</a>
+				<a class="govuk-link" href="task-list-health">Exit without saving</a>
 			  </div>
 		</form>
 
