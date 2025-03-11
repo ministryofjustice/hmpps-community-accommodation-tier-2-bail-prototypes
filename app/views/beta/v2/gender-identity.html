@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="pregnant">
+		<div class="govuk-form-group">
+			
+			<fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+					Is the gender Jane Smith identifies with the same as the sex registered at their birth?
+				</h1>
+			  </legend>
+			  <div id="event-name-hint" class="govuk-hint">
+				This information helps make sure the applicant can be placed in appropriate accommodation.</div>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+				  <label class="govuk-label govuk-radios__label" for="signIn">
+					Yes
+				  </label>
+				
+				</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+					<label class="govuk-label govuk-radios__label" for="contact">
+					  No
+					</label>
+				  </div>
+				  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+					  <div class="govuk-form-group">
+						  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+						
+							<div class="govuk-form-group">
+								<label class="govuk-label" for="event-name">
+									What is their gender identity? (optional)
+								</label>
+								<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+							  </div>
+						  </fieldset>
+						</div>
+				  </div>
+				<div class="govuk-radios__divider">or</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+					<label class="govuk-label govuk-radios__label" for="signIn-2">
+						Prefers not to say
+					</label>
+				   
+				  </div>
+		
+	
+    </div>
+			  </div>
+			</fieldset>
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

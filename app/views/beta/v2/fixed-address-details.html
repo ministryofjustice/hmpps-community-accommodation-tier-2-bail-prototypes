@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="equality-start">
+		
+			
+			<fieldset class="govuk-fieldset">
+			    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Enter Jane Smith’s last fixed address
+					</h1>
+				  </legend>
+				<div class="govuk-form-group">
+				  <label class="govuk-label" for="address-line-1">
+					Address line 1
+				  </label>
+				  <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+				</div>
+				<div class="govuk-form-group">
+				  <label class="govuk-label" for="address-line-2">
+					Address line 2 (optional)
+				  </label>
+				  <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+				</div>
+				<div class="govuk-form-group">
+				  <label class="govuk-label" for="address-town">
+					Town or city
+				  </label>
+				  <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+				</div>
+				<div class="govuk-form-group">
+				  <label class="govuk-label" for="address-county">
+					County (optional)
+				  </label>
+				  <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+				</div>
+				<div class="govuk-form-group">
+				  <label class="govuk-label" for="address-postcode">
+					Postcode
+				  </label>
+				  <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+				</div>
+			  </fieldset>
+
+
+			  <div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					<label class="govuk-fieldset__heading">
+						Which of the following best describes their living situation at the address?
+					</label>
+				  </legend>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+					  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+						Living on their own in a rented or owned property (house, flat, trailer, etc)
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+					  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+						Living in a rented or owned property with other people
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+					  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+						Living in supported accommodation
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+					  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+						Living in shared accommodation
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+						<label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+							Temporarily staying with a relative or friend
+						</label>
+					  </div>
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+						<label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+							Living in temporary accommodation
+						</label>
+					  </div>
+					<div class="govuk-radios__divider">or</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+						<label class="govuk-label govuk-radios__label" for="contact">
+						  Other
+						</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+						  <div class="govuk-form-group">
+							  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+							
+								<div class="govuk-form-group">
+									<label class="govuk-label" for="event-name">
+										Enter details
+									</label>
+									<input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+								  </div>
+							  </fieldset>
+							</div>
+					  </div>
+				  </div>
+				</fieldset>
+			  </div>
+
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="#">Save and exit</a>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}
