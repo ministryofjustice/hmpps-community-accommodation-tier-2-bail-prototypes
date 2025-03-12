@@ -118,3 +118,33 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 		  res.redirect('/beta/v2/task-list-offence');
 		}
 	  });
+
+	     //ACCT route
+	router.post('/beta/v2/risks/acct-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const acct = req.session.data['acct'];
+		
+		// Check whether the variable matches a condition
+		if (acct === 'yes') {
+		  // Send user to next page
+		  res.redirect('/beta/v2/risks/add-acct');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v2/risks/violence-details');
+		}
+	  });
+
+	       //Bail
+	router.post('/beta/v2/bail-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const bail = req.session.data['bail'];
+		
+		// Check whether the variable matches a condition
+		if (bail === 'yes') {
+		  // Send user to next page
+		  res.redirect('/beta/v2/court');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v2/task-list-bail');
+		}
+	  });
