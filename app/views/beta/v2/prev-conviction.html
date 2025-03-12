@@ -79,6 +79,7 @@
 		
 
 			</div>
+			<form action="conviction-answer" method="post">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -86,22 +87,22 @@
 					</legend>
 			  <div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="court">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+				  <input class="govuk-radios__input" id="conviction" name="conviction" type="radio" value="relevant">
+				  <label class="govuk-label govuk-radios__label" for="conviction">
 					Yes and it is from one of the relevant categories 
 				  </label>
 				
 				</div>
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="prison">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+				  <input class="govuk-radios__input" id="conviction-2" name="conviction" type="radio" value="irrelevant">
+				  <label class="govuk-label govuk-radios__label" for="conviction-2">
 					Yes and it is not from one of the relevant categories 
 				  </label>
 				
 				</div>
 				<div class="govuk-radios__item">
-					<input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="prison">
-					<label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+					<input class="govuk-radios__input" id="conviction-3" name="conviction" type="radio" value="no">
+					<label class="govuk-label govuk-radios__label" for="conviction-3">
 					  No, they do not have any previous unspent convictions
 					</label>
 				  </div>
@@ -109,10 +110,10 @@
 
 
 				<div class="govuk-button-group govuk-!-margin-top-6">
-					<a class="govuk-button" href="add-prev-conviction">Confirm and continue</a>
+					<button class="govuk-button" type="submit" data-module="govuk-button">Save and continue</button>
 					<p><a class="govuk-link" href="task-list-funding">Exit without saving</a></p>
 				  </div>
-				
+				  <form action="oasys-answer" method="post">
 			  </div>
 			</fieldset>
 		  </div>

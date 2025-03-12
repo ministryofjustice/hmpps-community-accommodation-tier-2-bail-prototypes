@@ -103,3 +103,18 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 		  res.redirect('/beta/v2/prev-conviction');
 		}
 	  });
+
+	   //Conviction route
+	router.post('/beta/v2/conviction-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const conviction = req.session.data['conviction'];
+		
+		// Check whether the variable matches a condition
+		if (conviction === 'relevant') {
+		  // Send user to next page
+		  res.redirect('/beta/v2/add-prev-conviction');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v2/task-list-offence');
+		}
+	  });
