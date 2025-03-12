@@ -33,7 +33,7 @@
 
 
   </div>
-
+<form action="eligibility-answer" method="post">
   <div class="govuk-form-group">
 	<fieldset class="govuk-fieldset">
 	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -43,14 +43,14 @@
 	  </legend>
 	  <div class="govuk-radios" data-module="govuk-radios">
 		<div class="govuk-radios__item">
-		  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-		  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+		  <input class="govuk-radios__input" id="eligibility" name="eligibility" type="radio" value="yes">
+		  <label class="govuk-label govuk-radios__label" for="eligibility">
 			Yes, they are
 		  </label>
 		</div>
 		<div class="govuk-radios__item">
-		  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-		  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+		  <input class="govuk-radios__input" id="eligibility-2" name="eligibility" type="radio" value="no">
+		  <label class="govuk-label govuk-radios__label" for="eligibility-2">
 			No, they are not
 		  </label>
 		</div>
@@ -60,12 +60,13 @@
 	</fieldset>
 
 	<div class="govuk-button-group govuk-!-margin-top-6">
-		<a class="govuk-button" href="consent">Save and continue</a>
+		<button class="govuk-button" type="submit" data-module="govuk-button">Save and continue</button>
+	
 		<p><a class="govuk-link" href="dashboard">Exit without saving</a></p>
 	  </div>
 	
   </div>
-
+</form>
   </div>
 </div>
 {% endblock %}

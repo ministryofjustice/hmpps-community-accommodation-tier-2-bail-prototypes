@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-panel govuk-panel--confirmation" style="background-color: #D4351C;" >
+			<h1 class="govuk-panel__title">
+				Jane Smith has not given their consent
+			</h1>
+			
+		  </div>
+
+	<p class="govuk-body">Jane Smith has not given their consent so you cannot apply for short-term accommodation (CAS2) for bail on their behalf.</p>
+		  
+		
+		  <div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="dashboard">Go back to applications dashboard</a>
+			<a class="govuk-button govuk-button--secondary" href="consent">Change previous answer</a>
+		  </div>
+  </div>
+</div>
+{% endblock %}

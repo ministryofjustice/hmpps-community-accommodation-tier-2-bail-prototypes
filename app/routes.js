@@ -25,3 +25,36 @@ router.use('/', (req, res, next) => {
 
 	next()
 })
+
+
+
+// Eligibility route
+router.post('/beta/v2/eligibility-answer', (req, res) => {
+	// Make a variable and give it the value from 'know-nhs-number'
+	const eligibility = req.session.data['eligibility'];
+	
+	// Check whether the variable matches a condition
+	if (eligibility === 'no') {
+	  // Send user to next page
+	  res.redirect('/beta/v2/ineligible');
+	} else {
+	  // Send user to ineligible page
+	  res.redirect('/beta/v2/consent');
+	}
+  });
+  
+
+  // Consent route
+router.post('/beta/v2/consent-answer', (req, res) => {
+	// Make a variable and give it the value from 'know-nhs-number'
+	const eligibility = req.session.data['consent'];
+	
+	// Check whether the variable matches a condition
+	if (eligibility === 'no') {
+	  // Send user to next page
+	  res.redirect('/beta/v2/ineligible-consent');
+	} else {
+	  // Send user to ineligible page
+	  res.redirect('/beta/v2/task-list-start');
+	}
+  });
