@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+	<h1 class="govuk-heading-l">Confirm applicant's details</h1>
+	<dl class="govuk-summary-list">
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Full name
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Jane Smith
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Date of birth
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			24 June 1979
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Nationality
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			British
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Sex
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Female
+		  </dd>
+		</div>
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			  Prison number
+			</dt>
+			<dd class="govuk-summary-list__value">
+				A5270DZ
+			</dd>
+		  </div>
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			 Prison
+			</dt>
+			<dd class="govuk-summary-list__value">
+			 HMP Styal
+			</dd>
+		  </div>
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			 PNC number
+			</dt>
+			<dd class="govuk-summary-list__value">
+			 Not found
+			</dd>
+		  </div>
+	
+	
+		<div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+				CRN from nDelius
+			</dt>
+			<dd class="govuk-summary-list__value">
+				X698226
+			</dd>
+		  </div>
+	
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+			 Status
+			</dt>
+			<dd class="govuk-summary-list__value">
+			 <span class="govuk-tag govuk-tag--purple">In prison</span></dd>
+		  </div>
+	  </dl>
+
+
+	  <div class="govuk-warning-text">
+		<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+		<strong class="govuk-warning-text__text">
+		  <span class="govuk-visually-hidden">Important</span>
+		  If any of these details are missing or wrong, please update NDelius before continuing
+		</strong>
+	  </div>
+	  <div class="govuk-button-group govuk-!-margin-top-6">
+	  <a class="govuk-button govuk-!-margin-top-6" href="eligibility">Confirm and continue</a>
+	  <p class="govuk-link"><a href="ndelius">Search for a different applicant</a> </p> 
+	</div>
+  </div>
+</div>
+{% endblock %}

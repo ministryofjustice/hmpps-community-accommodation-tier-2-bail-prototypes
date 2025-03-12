@@ -5,7 +5,7 @@
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
-		
+		<form action="type-answer" method="post">
 		<div class="govuk-form-group">
 			<fieldset class="govuk-fieldset">
 			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -15,20 +15,22 @@
 			  </legend>
 			  <div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="court">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+				  <input class="govuk-radios__input" id="type" name="type" type="radio" value="court">
+				  <label class="govuk-label govuk-radios__label" for="type">
 					Court
 				  </label>
 				</div>
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="prison">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+				  <input class="govuk-radios__input" id="type-2" name="type" type="radio" value="prison">
+				  <label class="govuk-label govuk-radios__label" for="type2">
 					Prison
 				  </label>
 				</div>
 			
 				<div class="govuk-button-group govuk-!-margin-top-6">
-					<a class="govuk-button" href="start">Save and continue</a>
+					<button type="submit" class="govuk-button" data-module="govuk-button">
+						Save and continue
+					  </button>
 					<p><a class="govuk-link" href="dashboard">Exit without saving</a></p>
 				  </div>
 				
@@ -36,7 +38,7 @@
 			</fieldset>
 		  </div>
 
-
+		</form>
 
   </div>
 </div>
