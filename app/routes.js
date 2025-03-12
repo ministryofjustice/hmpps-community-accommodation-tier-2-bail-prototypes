@@ -178,3 +178,13 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 		  res.redirect('/beta/v2/task-list-personal');
 		}
 	  });
+
+	  router.post('/beta/v2/id-answer', function(request, response) {
+
+		var exports = request.session.data['id-docs']
+		if (exports.includes("None of these options")){
+			response.redirect("/beta/v2/alt-id")
+		} else {
+			response.redirect("/beta/v2/task-list-funding")
+		}
+	})
