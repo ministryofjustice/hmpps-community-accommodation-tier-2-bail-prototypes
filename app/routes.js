@@ -148,3 +148,18 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 		  res.redirect('/beta/v2/task-list-bail');
 		}
 	  });
+
+	  	       //Prison application
+	router.post('/beta/v2/type-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const type = req.session.data['type'];
+		
+		// Check whether the variable matches a condition
+		if (type === 'court') {
+		  // Send user to next page
+		  res.redirect('/beta/v2/start');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v2/start-prison');
+		}
+	  });
