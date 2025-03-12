@@ -6,6 +6,7 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 		<div class="govuk-form-group">
+			<form action="equality-answer" method="post">
 			<fieldset class="govuk-fieldset">
 			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 				<h1 class="govuk-fieldset__heading">
@@ -18,14 +19,14 @@
 			</div>
 			  <div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="haveSolicitor" name="haveSolicitor" type="radio" value="yes">
-				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+				  <input class="govuk-radios__input" id="skip" name="skip" type="radio" value="yes">
+				  <label class="govuk-label govuk-radios__label" for="skip">
 					Yes, answer the equality questions (takes two minutes)
 				  </label>
 				</div>
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="haveSolicitor-2" name="haveSolicitor" type="radio" value="no">
-				  <label class="govuk-label govuk-radios__label" for="haveSolicitor-2">
+				  <input class="govuk-radios__input" id="skip-2" name="skip" type="radio" value="no">
+				  <label class="govuk-label govuk-radios__label" for="skip-2">
 					No, skip the equality questions
 				  </label>
 				</div>
@@ -47,9 +48,12 @@
 		  </details>
 
 		  <div class="govuk-button-group govuk-!-margin-top-6">
-			<a class="govuk-button" href="task-list-personal">Save and continue</a>
+			<button type="submit" class="govuk-button" data-module="govuk-button">
+				Save and continue
+			  </button>
 			<p><a class="govuk-link" href="task-list-start">Exit without saving</a></p>
 		  </div>
+		</form>
 </div>
 </div>
 {% endblock %}

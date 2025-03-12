@@ -163,3 +163,18 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 		  res.redirect('/beta/v2/start-prison');
 		}
 	  });
+
+	  	  	       //Skip equality questions
+	router.post('/beta/v2/equality-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const skip = req.session.data['skip'];
+		
+		// Check whether the variable matches a condition
+		if (skip === 'yes') {
+		  // Send user to next page
+		  res.redirect('/beta/v2/equality/disability');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v2/task-list-personal');
+		}
+	  });
