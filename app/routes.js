@@ -59,6 +59,7 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 	}
   });
 
+  //Fixed address
   router.post('/beta/v2/address-answer', (req, res) => {
 	// Make a variable and give it the value from 'know-nhs-number'
 	const address = req.session.data['address'];
@@ -72,3 +73,33 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 	  res.redirect('/beta/v2/fixed-address-details');
 	}
   });
+
+  //Probation supervision route
+  router.post('/beta/v2/probation-answer', (req, res) => {
+	// Make a variable and give it the value from 'know-nhs-number'
+	const probation = req.session.data['probation'];
+	
+	// Check whether the variable matches a condition
+	if (probation === 'no') {
+	  // Send user to next page
+	  res.redirect('/beta/v2/prev-conviction');
+	} else {
+	  // Send user to ineligible page
+	  res.redirect('/beta/v2/probation');
+	}
+  });
+
+    //OASys route
+	router.post('/beta/v2/oasys-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const oasys = req.session.data['oasys'];
+		
+		// Check whether the variable matches a condition
+		if (oasys === 'yes') {
+		  // Send user to next page
+		  res.redirect('/beta/v2/oasys-new');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v2/prev-conviction');
+		}
+	  });

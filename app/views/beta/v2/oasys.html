@@ -42,14 +42,16 @@
 					<li>need to update the OASys risk assessment following the current alleged offence </li>
 				</ul>
 				</div>
+				<form action="oasys-answer" method="post">
 			  <div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-				  <label class="govuk-label govuk-radios__label" for="contact">
+				  <input class="govuk-radios__input" id="choice-1" name="choice" type="radio" value="email" data-aria-controls="conditional-choice">
+				  <label class="govuk-label govuk-radios__label" for="choice-1">
 					Yes
 				  </label>
 				</div>
-				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+			
+				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-choice">
 					<div class="govuk-form-group">
 						<fieldset class="govuk-fieldset">
 						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -57,14 +59,14 @@
 						  </legend>
 						  <div class="govuk-radios" data-module="govuk-radios">
 							<div class="govuk-radios__item">
-							  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-							  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+							  <input class="govuk-radios__input" id="oasys" name="oasys" type="radio" value="yes">
+							  <label class="govuk-label govuk-radios__label" for="oasys">
 								Yes
 							  </label>
 							</div>
 							<div class="govuk-radios__item">
-							  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-							  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+							  <input class="govuk-radios__input" id="oasys-2" name="oasys" type="radio" value="no">
+							  <label class="govuk-label govuk-radios__label" for="oasys-2">
 								No
 							  </label>
 							</div>
@@ -75,8 +77,8 @@
 					  </div>
 				</div>
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
-				  <label class="govuk-label govuk-radios__label" for="contact-2">
+				  <input class="govuk-radios__input" id="choice-2" name="choice" type="radio" value="phone">
+				  <label class="govuk-label govuk-radios__label" for="choice-2">
 					No
 				  </label>
 				</div>
@@ -86,11 +88,10 @@
 		  </div>
 
 <div class="govuk-button-group">
-	<a href="prev-conviction" class="govuk-button">
-	  Save and continue
-	</a>
+	<button class="govuk-button" type="submit" data-module="govuk-button">Save and continue</button>
 	<p class="govuk-link"><a href="task-list-funding">Exit without saving</a> </p> 
   </div>
+</form>
   </div>
 </div>
 {% endblock %}
