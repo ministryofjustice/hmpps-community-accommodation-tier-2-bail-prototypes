@@ -47,10 +47,10 @@ router.post('/beta/v2/eligibility-answer', (req, res) => {
   // Consent route
 router.post('/beta/v2/consent-answer', (req, res) => {
 	// Make a variable and give it the value from 'know-nhs-number'
-	const eligibility = req.session.data['consent'];
+	const consent = req.session.data['consent'];
 	
 	// Check whether the variable matches a condition
-	if (eligibility === 'no') {
+	if (consent === 'no') {
 	  // Send user to next page
 	  res.redirect('/beta/v2/ineligible-consent');
 	} else {
