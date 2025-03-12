@@ -5,7 +5,7 @@
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
-		<form action="fixed-address-details">
+		<form action="address-answer" method="post">
 		<div class="govuk-form-group">
 	
 			<fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
@@ -17,15 +17,15 @@
 		
 			  <div class="govuk-radios" data-module="govuk-radios">
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-				  <label class="govuk-label govuk-radios__label" for="signIn">
+				  <input class="govuk-radios__input" id="address" name="address" type="radio" value="yes" aria-describedby="signIn-item-hint">
+				  <label class="govuk-label govuk-radios__label" for="address">
 				Yes
 				  </label>
 				
 				</div>
 				<div class="govuk-radios__item">
-				  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-				  <label class="govuk-label govuk-radios__label" for="signIn-2">
+				  <input class="govuk-radios__input" id="address-2" name="address" type="radio" value="no" aria-describedby="signIn-2-item-hint">
+				  <label class="govuk-label govuk-radios__label" for="address-2">
 					No, they did not
 				  </label>
 				 
@@ -37,7 +37,7 @@
 				<button type="submit" class="govuk-button" data-module="govuk-button">
 				  Save and continue
 				</button>
-				<a class="govuk-link" href="#">Save and exit</a>
+				<a class="govuk-link" href="task-list-start">Exit without saving</a>
 			  </div>
 		  </div>
 		</form>

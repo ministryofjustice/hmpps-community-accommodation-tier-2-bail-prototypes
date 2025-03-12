@@ -58,3 +58,17 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 	  res.redirect('/beta/v2/task-list-start');
 	}
   });
+
+  router.post('/beta/v2/address-answer', (req, res) => {
+	// Make a variable and give it the value from 'know-nhs-number'
+	const address = req.session.data['address'];
+	
+	// Check whether the variable matches a condition
+	if (address === 'no') {
+	  // Send user to next page
+	  res.redirect('/beta/v2/no-fixed-address');
+	} else {
+	  // Send user to ineligible page
+	  res.redirect('/beta/v2/fixed-address-details');
+	}
+  });
