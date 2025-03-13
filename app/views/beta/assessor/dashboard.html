@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Jane Smith' %}
+
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+
+			<div class="moj-page-header-actions govuk-!-margin-bottom-2">
+				<div class="moj-page-header-actions__title">
+					<h1 class="govuk-heading-xl">{{title}}</h1>
+				</div>
+
+				<div class="moj-button-menu" data-module="moj-button-menu" data-button-text="Actions">
+
+				<a class="govuk-button  moj-button-menu__item govuk-button--secondary" href="assessor">Add assessment details</a>
+				<a class="govuk-button  moj-button-menu__item govuk-button--secondary">
+					Download application as PDF
+					</a>
+				
+				  
+				  </div>
+
+			</div>
+
+			<div class="status-box govuk-!-margin-bottom-5">
+				<p class="govuk-!-display-inline">Current status:
+					<strong class="govuk-tag--blue status-box-tag">
+						{{ data['status']  or 'Received' }}
+					</strong>
+				</p>
+			</div>
+			<p>Application type: <strong>Court bail</strong></p>
+			<p>This application was submitted on <strong>8 March 2025</strong></p>
+			<p>CAS-2 reference number: <strong>Not added yet</strong></p>
+			<p>Assessor name: <strong>Not added yet</strong></p>
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+					text: 'View submitted application',
+					href: 'submitted-application'
+				}) }}
+
+				{{ govukButton({
+					text: 'Update application status',
+					classes: 'govuk-button--secondary',
+					href: 'status'
+				}) }}
+			</div>
+</div>
+</div>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-three-quarters">
+			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+			<h2 class="govuk-heading-l">Application history</h2>
+			<div class="govuk-form-group">
+				<h3 class="govuk-label-wrapper">
+				  <label class="govuk-label govuk-label--m" for="more-detail">
+					Add a note for the referrer
+				  </label>
+				</h3>
+				<div id="more-detail-hint" class="govuk-hint">
+				 Use this text box to ask for or provide more information. Anything you add and save will appear on the application history
+				</div>
+				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+			  </div>
+
+			{%- from "moj/components/timeline/macro.njk" import mojTimeline -%}
+
+			{% if data['status'] == 'More information requested' %}
+			{% set statusHtml -%}
+				{% for category in data['info-needed'] %}
+					{% for subcategory in data[slugify(category)] %}
+						<h5 class="govuk-heading-xs">{{ category }}: {{ subcategory }}</h5>
+						<ul class="govuk-list govuk-body-s">
+						{% for info_type in data[slugify(subcategory)] %}
+							<li>
+								{{ info_type }}
+								{%- if data[[slugify(subcategory), slugify(info_type)].join('-')] -%}
+									: {{ data[[slugify(subcategory), slugify(info_type)].join('-')].join(', ') }}
+								{% endif %}
+							</li>
+						{% endfor %}
+						{% if data[slugify(subcategory) + '-notes'] %}
+							<li>{{ data[slugify(subcategory) + '-notes'] }}</li>
+						{% endif %}
+						</ul>
+					{% endfor %}
+				{% endfor %}
+			{%- endset %}
+			{% endif %}
+
+			{% if data['status'] == 'Referral cancelled' %}
+			{% set statusHtml -%}
+				<ul class="govuk-list govuk-body-s">
+				{% for criteria in data['ineligibility-unmet'] %}
+					<li>Ineligible: {{ criteria }}</li>
+				{% endfor %}
+				{% for category, subcategories in riskCategories() %}
+					{% if data['unmanageable-' + slugify(category)] %}
+						{% for subcategory in data['unmanageable-' + slugify(category)] %}
+							<li>{{ category }}: {{ subcategory }}</li>
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+					<li>Why the risk is unmanageable: {{ data['unmanageable-reason'] }}</li>
+					<li>What could change to make the risk manageable: {{ data['unmanageable-change'] }}</li>
+				</ul>
+			{%- endset %}
+			{% endif %}
+
+			{{ mojTimeline({
+				items: [
+					{
+						label: {
+							text:  data['status']
+						},
+						html: statusHtml,
+						datetime: {
+							timestamp: "2025-01-01T13:15:00.000Z",
+							type: "datetime"
+						},
+						byline: {
+							text: "Joe Bloggs"
+						}
+					} if data['status'],
+					{
+						label: {
+							text:  "Application submitted"
+						},
+						datetime: {
+							timestamp: "2025-01-01T13:15:00.000Z",
+							type: "datetime"
+						},
+						byline: {
+							text: "Joe Bloggs"
+						}
+					}
+				] | cleanArray
+			}) }}
+
+		</div>
+	</div>
+{% endblock %}
