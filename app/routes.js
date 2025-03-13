@@ -188,3 +188,18 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 			response.redirect("/beta/v2/task-list-funding")
 		}
 	})
+
+		  	  	      //Solicitor skip
+						   router.post('/beta/v2/solicitor-answer', (req, res) => {
+							// Make a variable and give it the value from 'know-nhs-number'
+							const solicitor = req.session.data['haveSolicitor'];
+							
+							// Check whether the variable matches a condition
+							if (solicitor === 'yes') {
+							  // Send user to next page
+							  res.redirect('/beta/v2/solicitor-details');
+							} else {
+							  // Send user to ineligible page
+							  res.redirect('/beta/v2/task-list-before');
+							}
+						  });
