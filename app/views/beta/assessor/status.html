@@ -2,8 +2,7 @@
 
 {% set title = 'What is the latest status of Jane Smith\'s application?' %}
 
-
-{% block questions %}
+{% block content %}
 	<div class="status-box govuk-!-margin-bottom-5">
 		<p class="govuk-!-display-inline">Current status:
 			<strong class="govuk-tag--blue status-box-tag">
@@ -11,75 +10,84 @@
 			</strong>
 		</p>
 	</div>
+<form action="status-check" method="post">
+	<div class="govuk-form-group">
+		<fieldset class="govuk-fieldset">
+		  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+			<h1 class="govuk-fieldset__heading">
+			  Where do you live?
+			</h1>
+		  </legend>
+		  <div class="govuk-radios" data-module="govuk-radios">
+			<div class="govuk-radios__item">
+			  <input class="govuk-radios__input" id="state-1" name="state" type="radio" value="info-needed">
+			  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+				More information requested
+			  </label>
+			</div>
+			<div class="govuk-radios__item">
+			  <input class="govuk-radios__input" id="state-2" name="state" type="radio" value="decision">
+			  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+				Awaiting decision
+			  </label>
+			</div>
+			<div class="govuk-radios__item">
+			  <input class="govuk-radios__input" id="state-3" name="state" type="radio" value="waiting-list">
+			  <label class="govuk-label govuk-radios__label" for="state-3">
+				On waiting list
+			  </label>
+			</div>
+			<div class="govuk-radios__item">
+			  <input class="govuk-radios__input" id="state-4" name="state" type="radio" value="offered">
+			  <label class="govuk-label govuk-radios__label" for="state-4">
+				Place offered
+			  </label>
+			</div>
+	
+			<div class="govuk-radios__item">
+				<input class="govuk-radios__input" id="state-5" name="state" type="radio" value="offer-accepted">
+				<label class="govuk-label govuk-radios__label" for="state-5">
+				  Offer accepted
+				</label>
+			  </div>
+			  <div class="govuk-radios__item">
+				<input class="govuk-radios__input" id="state-6" name="state" type="radio" value="offer-declined">
+				<label class="govuk-label govuk-radios__label" for="state-6">
+				Offer declined or withdrawn
+				</label>
+			  </div>
+			  <div class="govuk-radios__item">
+				<input class="govuk-radios__input" id="state-7" name="state" type="radio" value="withdrawn">
+				<label class="govuk-label govuk-radios__label" for="state-8">
+				Referral withdrawn
+				</label>
+			  </div>
+			  <div class="govuk-radios__item">
+				<input class="govuk-radios__input" id="state-8" name="state" type="radio" value="cancelled">
+				<label class="govuk-label govuk-radios__label" for="state-8">
+				Referral cancelled
+				</label>
+			  </div>
+			  <div class="govuk-radios__item">
+				<input class="govuk-radios__input" id="state-9" name="state" type="radio" value="arrival">
+				<label class="govuk-label govuk-radios__label" for="state-9">
+				Awaiting arrival
+				</label>
+			  </div>
+		  </div>
+		</fieldset>
+	  </div>
 
-	{{ govukRadios({
-		idPrefix: 'status',
-		name: 'status',
-		fieldset: {
-			legend: {
-				html: title,
-				classes: 'govuk-fieldset__legend--l',
-				isPageHeading: true
-			}
-		},
-		items: [
-			{
-				html: 'More information requested',
-				value: 'More information requested',
-				checked: checked('status','More information requested')
-			},
-			{
-				html: 'Awaiting decision',
-				value: 'Awaiting decision',
-				checked: checked('status','Awaiting decision')
-			},
-			{
-				html: 'On waiting list',
-				value: 'On waiting list',
-				checked: checked('status','On waiting list')
-			},
-			{
-				html: 'Place offered',
-				value: 'Place offered',
-				checked: checked('status','Place offered')
-			},
-			{
-				html: 'Offer accepted',
-				value: 'Offer accepted',
-				checked: checked('status','Offer accepted')
-			},
-			{
-				html: 'Offer declined or withdrawn',
-				value: 'Offer declined or withdrawn',
-				checked: checked('status','Offer declined or withdrawn')
-			},
-			{
-				html: 'Referral withdrawn',
-				value: 'Referral withdrawn',
-				checked: checked('status','Referral withdrawn')
-			},
-			{
-				html: 'Referral cancelled',
-				value: 'Referral cancelled',
-				checked: checked('status','Referral cancelled')
-			},
-			{
-				html: 'Awaiting arrival',
-				value: 'Awaiting arrival',
-				checked: checked('status','Awaiting arrival')
-			}
-		]
-	}) }}
-{% endblock %}
 
 
-{% block buttons %}
+
+
+
 	<div class="govuk-button-group">
-		{{ govukButton({
-			text: 'Save and continue',
-			href: 'info-needed'
-		}) }}
-
+		<button type="submit" class="govuk-button" data-module="govuk-button">
+			Save and continue
+		  </button>
+	</form>
 		<a class="govuk-link" href="#0">Back to application overview</a>
 	</div>
 {% endblock %}
