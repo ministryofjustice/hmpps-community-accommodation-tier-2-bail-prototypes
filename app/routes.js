@@ -209,19 +209,22 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 		const state = req.session.data['state'];
 								
 	// Check whether the variable matches a condition
-	if (state === 'info-needed') {
+	if (state === 'More information requested') {
 		  // Send user to next page
 	  res.redirect('/beta/assessor/info-needed');
-	} else if (state === 'withdrawn') {
+	} else if (state === 'Referral withdrawn') {
 		res.redirect('/beta/assessor/withdraw-reason')
 	
-	} else if (state === 'cancelled') {
+	} else if (state === 'Referral cancelled') {
 	// Send user to ineligible page
 	 res.redirect('/beta/assessor/cancelled-reason');
-		} else if (state ==='offer-declined') {
+		} else if (state ==='Offer declined or withdrawn') {
 			res.redirect('/beta/assessor/declined-reason')
 		} else {
 				res.redirect('/beta/assessor/dashboard-awaiting')
 		}
 	  });
 	
+
+
+	  

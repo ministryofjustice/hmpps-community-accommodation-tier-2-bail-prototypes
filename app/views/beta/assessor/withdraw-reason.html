@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set title = 'What information do you need?' %}
+{% set title = 'Why was the referral withdrawn?' %}
 
 
 {% block content %}
@@ -28,59 +28,38 @@
 		},
 		items: [
 			{
-				html: 'Personal information',
-				value: 'Personal information',
-				checked: checked('info-needed','Personal information')
+				html: 'Governor – decided unsuitable',
+				value: 'Governor – decided unsuitable',
+				checked: checked('withdraw','Governor – decided unsuitable')
 			},
 
 			{
-				html: 'Exclusion zones and preferred areas',
-				value: 'Exclusion zones and preferred areas',
-				checked: checked('info-needed','Exclusion zones and preferred areas')
+				html: 'Governor – chosen alternative accommodation ​',
+				value: 'Governor – chosen alternative accommodation ​',
+				checked: checked('withdraw','Governor – chosen alternative accommodation ​')
 			},
 
 			{
-				html: 'Funding & ID',
-				value: 'Funding & ID',
-				checked: checked('info-needed','Funding & ID')
+				html: 'Governor – other',
+				value: 'Governor – other',
+				checked: checked('withdraw','Governor – other')
 			},
 		
 			{
-				html: 'Health needs',
-				value: 'Health needs',
-				hint: {
-					text: "Including communication, learning difficulties and neurodiversity, mental health, physical health and mobility, brain injury, substance use and other health needs"
-				},
-				checked: checked('info-needed','Health needs')
+				html: 'Withdrawn by referrer',
+				value: 'Withdrawn by referrer',
+				checked: checked('withdraw','Withdrawn by referrer')
 			},
 			{
-				html: 'Concerns to the applicant and others',
-				value: 'Concerns to the applicant and others',
-				hint: {
-					text: "Including self-harm and suicide, violence and arson, living in the community, risk management arrangements, safety of staff and additional concerns"
-				},
-				checked: checked('info-needed','Concerns to the applicant and others')
+				html: 'Applicant transferred to another prison',
+				value: 'Applicant transferred to another prison',
+				checked: checked('withdraw','Applicant transferred to another prison')
 			},
 		
 			{
-				html: 'Alleged offences',
-				value: 'Alleged offences',
-				checked: checked('info-needed','Alleged offences')
-			},
-			{
-				html: 'Previous convictions',
-				value: 'Previous convictions',
-				checked: checked('info-needed','Previous convictions')
-			},
-			{
-				html: 'Bail information',
-				value: 'Bail information',
-				checked: checked('info-needed','Bail information')
-			},
-			{
-				html: 'Other',
-				value: 'Other',
-				checked: checked('info-needed','Other')
+				html: 'Applicant was denied bail',
+				value: 'Applicant was denied bail',
+				checked: checked('withdraw','Applicant was denied bail')
 			}
 		]
 	}) }}
