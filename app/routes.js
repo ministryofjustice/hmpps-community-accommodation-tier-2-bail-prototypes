@@ -203,3 +203,28 @@ router.post('/beta/v2/consent-answer', (req, res) => {
 							  res.redirect('/beta/v2/task-list-before');
 							}
 						  });
+  //Status routes
+  router.post('/beta/assessor/status-check', (req, res) => {
+	// Make a variable and give it the value from 'know-nhs-number'
+		const state = req.session.data['state'];
+								
+	// Check whether the variable matches a condition
+	if (state === 'More information requested') {
+		  // Send user to next page
+	  res.redirect('/beta/assessor/info-needed');
+	} else if (state === 'Referral withdrawn') {
+		res.redirect('/beta/assessor/withdraw-reason')
+	
+	} else if (state === 'Referral cancelled') {
+	// Send user to ineligible page
+	 res.redirect('/beta/assessor/cancelled-reason');
+		} else if (state ==='Offer declined or withdrawn') {
+			res.redirect('/beta/assessor/declined-reason')
+		} else {
+				res.redirect('/beta/assessor/dashboard-awaiting')
+		}
+	  });
+	
+
+
+	  

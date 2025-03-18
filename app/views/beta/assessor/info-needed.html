@@ -3,7 +3,7 @@
 {% set title = 'What information do you need?' %}
 
 
-{% block questions %}
+{% block content %}
 	<div class="status-box govuk-!-margin-bottom-5">
 		<p class="govuk-!-display-inline">Current status:
 			<strong class="govuk-tag--blue status-box-tag">
@@ -12,21 +12,13 @@
 		</p>
 	</div>
 
-	{% macro getSubcategories(category) -%}
-		{%- set comma = joiner(', ') -%}
-		{%- for subcategory, info_type in riskCategories()[category] -%}
-			{%- if subcategory !== 'Other' -%}
-			{{ comma() }}{{ subcategory | lower }}
-			{%- endif -%}
-		{%- endfor -%}
-	{%- endmacro %}
+	
 
-	{% set healthSubcategories %}{{ getSubcategories('Health needs') }}{% endset %}
-	{% set riskToSelfSubcategories %}{{ getSubcategories('Risk to self') }}{% endset %}
 
+	<form action="dashboard-more-info" method="post">
 	{{ govukCheckboxes({
-		idPrefix: 'info-needed',
-		name: 'info-needed',
+		idPrefix: 'info',
+		name: 'info',
 		fieldset: {
 			legend: {
 				html: title,
@@ -40,46 +32,50 @@
 				value: 'Personal information',
 				checked: checked('info-needed','Personal information')
 			},
+
 			{
 				html: 'Exclusion zones and preferred areas',
 				value: 'Exclusion zones and preferred areas',
 				checked: checked('info-needed','Exclusion zones and preferred areas')
 			},
+
+			{
+				html: 'Funding & ID',
+				value: 'Funding & ID',
+				checked: checked('info-needed','Funding & ID')
+			},
+		
 			{
 				html: 'Health needs',
 				value: 'Health needs',
 				hint: {
-					text: "Including " + healthSubcategories + "."
+					text: "Including communication, learning difficulties and neurodiversity, mental health, physical health and mobility, brain injury, substance use and other health needs"
 				},
 				checked: checked('info-needed','Health needs')
 			},
 			{
-				html: 'Risk to self',
-				value: 'Risk to self',
+				html: 'Concerns to the applicant and others',
+				value: 'Concerns to the applicant and others',
 				hint: {
-					text: "Including " + riskToSelfSubcategories + "."
+					text: "Including self-harm and suicide, violence and arson, living in the community, risk management arrangements, safety of staff and additional concerns"
 				},
-				checked: checked('info-needed','Risk to self')
+				checked: checked('info-needed','Concerns to the applicant and others')
+			},
+		
+			{
+				html: 'Alleged offences',
+				value: 'Alleged offences',
+				checked: checked('info-needed','Alleged offences')
 			},
 			{
-				html: 'Risk of serious harm',
-				value: 'Risk of serious harm',
-				checked: checked('info-needed','Risk of serious harm')
+				html: 'Previous convictions',
+				value: 'Previous convictions',
+				checked: checked('info-needed','Previous convictions')
 			},
 			{
-				html: 'Current offences',
-				value: 'Current offences',
-				checked: checked('info-needed','Current offences')
-			},
-			{
-				html: 'Offending history',
-				value: 'Offending history',
-				checked: checked('info-needed','Offending history')
-			},
-			{
-				html: 'HDC licence and CPP details',
-				value: 'HDC licence and CPP details',
-				checked: checked('info-needed','HDC licence and CPP details')
+				html: 'Bail information',
+				value: 'Bail information',
+				checked: checked('info-needed','Bail information')
 			},
 			{
 				html: 'Other',
@@ -88,16 +84,15 @@
 			}
 		]
 	}) }}
-{% endblock %}
 
 
-{% block buttons %}
+
+
 	<div class="govuk-button-group">
-		{{ govukButton({
-			text: 'Save and continue',
-			href: 'dashboard-more-info'
-		}) }}
-
+		<button type="submit" class="govuk-button" data-module="govuk-button">
+			Save and continue
+		  </button>
+	</form>
 		<a class="govuk-link" href="#0">Back to application overview</a>
 	</div>
 {% endblock %}

@@ -117,7 +117,7 @@
 				<div class="moj-timeline__item">
 			  
 					<div class="moj-timeline__header">
-					  <h2 class="moj-timeline__title">More information requested</h2>
+					  <h2 class="moj-timeline__title">Referral withdrawn</h2>
 				
 					  <p class="moj-timeline__byline">by Nacro Assessor</p>
 				
@@ -129,9 +129,8 @@
 				
 					<div class="moj-timeline__description">
 						<ul>
-							{% for value in data['info'] %}
-							<li>{{ value }}</li>
-						  {% endfor %}	
+							{{data['withdraw']}}
+						
 						</ul>
 					</div>
 				  </div>

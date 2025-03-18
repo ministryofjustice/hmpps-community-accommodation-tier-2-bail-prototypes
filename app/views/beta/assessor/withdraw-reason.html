@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Why was the referral withdrawn?' %}
+
+
+{% block content %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Awaiting decision
+			</strong>
+		</p>
+	</div>
+
+	
+
+
+	<form action="dashboard-withdraw" method="post">
+	{{ govukCheckboxes({
+		idPrefix: 'withdraw',
+		name: 'withdraw',
+		fieldset: {
+			legend: {
+				html: title,
+				classes: 'govuk-fieldset__legend--l',
+				isPageHeading: true
+			}
+		},
+		items: [
+			{
+				html: 'Governor – decided unsuitable',
+				value: 'Governor – decided unsuitable',
+				checked: checked('withdraw','Governor – decided unsuitable')
+			},
+
+			{
+				html: 'Governor – chosen alternative accommodation ​',
+				value: 'Governor – chosen alternative accommodation ​',
+				checked: checked('withdraw','Governor – chosen alternative accommodation ​')
+			},
+
+			{
+				html: 'Governor – other',
+				value: 'Governor – other',
+				checked: checked('withdraw','Governor – other')
+			},
+		
+			{
+				html: 'Withdrawn by referrer',
+				value: 'Withdrawn by referrer',
+				checked: checked('withdraw','Withdrawn by referrer')
+			},
+			{
+				html: 'Applicant transferred to another prison',
+				value: 'Applicant transferred to another prison',
+				checked: checked('withdraw','Applicant transferred to another prison')
+			},
+		
+			{
+				html: 'Applicant was denied bail',
+				value: 'Applicant was denied bail',
+				checked: checked('withdraw','Applicant was denied bail')
+			}
+		]
+	}) }}
+
+
+
+
+	<div class="govuk-button-group">
+		<button type="submit" class="govuk-button" data-module="govuk-button">
+			Save and continue
+		  </button>
+	</form>
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}

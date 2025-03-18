@@ -1,0 +1,107 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Why was the referral cancelled?' %}
+
+
+{% block content %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Awaiting decision
+			</strong>
+		</p>
+	</div>
+
+	
+
+
+	<form action="dashboard-cancel" method="post">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+				 {{title}}
+				</h1>
+			  </legend>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="cancel" name="cancel" type="radio" value="Applicant eligible but assessed as high risk by Nacro">
+				  <label class="govuk-label govuk-radios__label" for="cancel">
+					Applicant eligible but assessed as high risk by Nacro
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="cancel-2" name="cancel" type="radio" value="Applicant not eligible - no recourse to public funds">
+				  <label class="govuk-label govuk-radios__label" for="cancel-2">
+					Applicant not eligible - other
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="cancel-3" name="cancel" type="radio" value="Applicant not eligible - no recourse to public funds">
+				  <label class="govuk-label govuk-radios__label" for="cancel-3">
+					Applicant not eligible - no recourse to public funds
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="cancel-4" name="cancel" type="radio" value="No suitable property available - female only">
+				  <label class="govuk-label govuk-radios__label" for="cancel-4">
+					No suitable property available - female only
+				  </label>
+				</div>
+
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="cancel-5" name="cancel" type="radio" value="No suitable property available - adapted property / health needs">
+					<label class="govuk-label govuk-radios__label" for="cancel-5">
+						No suitable property available - adapted property / health needs
+					</label>
+				  </div>
+
+
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="cancel-6" name="cancel" type="radio" value="No suitable property available - concerns to the applicant or others">
+					<label class="govuk-label govuk-radios__label" for="cancel-6">
+						No suitable property available - concerns to the applicant or others
+					</label>
+				  </div>
+
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="cancel-7" name="cancel" type="radio" value="No property available at all">
+					<label class="govuk-label govuk-radios__label" for="cancel-7">
+						No property available at all
+					</label>
+				  </div>
+
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="cancel-8" name="cancel" type="radio" value="Referrer did not respond to assessor's notes">
+					<label class="govuk-label govuk-radios__label" for="cancel-8">
+						Referrer did not respond to assessor's notes
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="cancel-9" name="whereDoYouLive" type="radio" value="Applicant transferred to another prison">
+					<label class="govuk-label govuk-radios__label" for="cancel-9">
+						Applicant transferred to another prison
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="cancel-10" name="cancel" type="radio" value="Submitted by mistake">
+					<label class="govuk-label govuk-radios__label" for="cancel-10">
+						Submitted by mistake
+					</label>
+				  </div>
+			  </div>
+			</fieldset>
+		  </div>
+
+	
+
+
+
+	<div class="govuk-button-group">
+		<button type="submit" class="govuk-button" data-module="govuk-button">
+			Save and continue
+		  </button>
+	</form>
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}
