@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Why was the referral cancelled?' %}
+
+
+{% block content %}
+	<div class="status-box govuk-!-margin-bottom-5">
+		<p class="govuk-!-display-inline">Current status:
+			<strong class="govuk-tag--blue status-box-tag">
+				Awaiting decision
+			</strong>
+		</p>
+	</div>
+
+	
+
+
+	<form action="dashboard-declined" method="post">
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+				 {{title}}
+				</h1>
+			  </legend>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="decline" name="decline" type="radio" value="Applicant considers area unsuitable">
+				  <label class="govuk-label govuk-radios__label" for="decline">
+					Applicant considers area unsuitable
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="decline-2" name="decline" type="radio" value="Applicant considers property unsuitable for their needs">
+				  <label class="govuk-label govuk-radios__label" for="decline-2">
+					Applicant considers property unsuitable for their needs
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="decline-3" name="decline" type="radio" value="Applicant's circumstances have changed">
+				  <label class="govuk-label govuk-radios__label" for="decline-3">
+					Applicant's circumstances have changed
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="decline-4" name="decline" type="radio" value="Applicant rehoused by another landlord">
+				  <label class="govuk-label govuk-radios__label" for="decline-4">
+					Applicant rehoused by another landlord
+				  </label>
+				</div>
+
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="decline-5" name="decline" type="radio" value="Applicant did not respond to offer">
+					<label class="govuk-label govuk-radios__label" for="decline-5">
+						Applicant did not respond to offer
+					</label>
+				  </div>
+
+
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="decline-6" name="decline" type="radio" value="Offer withdrawn by Nacro">
+					<label class="govuk-label govuk-radios__label" for="decline-6">
+						Offer withdrawn by Nacro 
+					</label>
+				  </div>
+			  </div>
+			</fieldset>
+		  </div>
+
+	
+
+
+
+	<div class="govuk-button-group">
+		<button type="submit" class="govuk-button" data-module="govuk-button">
+			Save and continue
+		  </button>
+	</form>
+		<a class="govuk-link" href="#0">Back to application overview</a>
+	</div>
+{% endblock %}
