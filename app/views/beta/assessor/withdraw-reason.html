@@ -16,63 +16,77 @@
 
 
 	<form action="dashboard-withdraw" method="post">
-	{{ govukCheckboxes({
-		idPrefix: 'withdraw',
-		name: 'withdraw',
-		fieldset: {
-			legend: {
-				html: title,
-				classes: 'govuk-fieldset__legend--l',
-				isPageHeading: true
-			}
-		},
-		items: [
-			{
-				html: 'Referrer decided unsuitable',
-				value: 'Referrer decided unsuitable',
-				checked: checked('withdraw','Referrer decided unsuitable')
-			},
 
-			{
-				html: 'Solicitor decided unsuitable ​',
-				value: 'Solicitor decided unsuitable ​',
-				checked: checked('withdraw','Solicitor decided unsuitable ​')
-			},
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+				<h1 class="govuk-fieldset__heading">
+				 {{title}}
+				</h1>
+			  </legend>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="withdraw" name="withdraw" type="radio" value="Referrer decided unsuitable">
+				  <label class="govuk-label govuk-radios__label" for="withdraw">
+					Referrer decided unsuitable
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="withdraw-2" name="withdraw" type="radio" value="Solicitor decided unsuitable">
+				  <label class="govuk-label govuk-radios__label" for="withdraw-2">
+					Solicitor decided unsuitable
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="withdraw-3" name="withdraw" type="radio" value="Sentencer decided unsuitable">
+				  <label class="govuk-label govuk-radios__label" for="withdraw-3">
+					Sentencer decided unsuitable
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="withdraw-4" name="withdraw" type="radio" value="Applicant transferred to another prison">
+				  <label class="govuk-label govuk-radios__label" for="withdraw-4">
+					Applicant transferred to another prison
+				  </label>
+				</div>
 
-			{
-				html: 'Sentencer decided unsuitable',
-				value: 'Sentencer decided unsuitable',
-				checked: checked('withdraw','Sentencer decided unsuitable')
-			},
-		
-			{
-				html: 'Applicant transferred to another prison',
-				value: 'Applicant transferred to another prison',
-				checked: checked('withdraw','Applicant transferred to another prison')
-			},
-		
-			{
-				html: 'Applicant was denied bail',
-				value: 'Applicant was denied bail',
-				checked: checked('withdraw','Applicant was denied bail')
-			},
-			{
-				html: 'Applicant was given custodial sentence',
-				value: 'Applicant was given custodial sentence',
-				checked: checked('withdraw','Applicant was given custodial sentence')
-			},
-			{
-				html: 'Applicant was bailed to non CAS2 accommodation',
-				value: 'Applicant was bailed to non CAS2 accommodation',
-				checked: checked('withdraw','Applicant was bailed to non CAS2 accommodation')
-			},
-			{
-				html: 'Applicant's sentencing hearing is too soon',
-				value: 'Applicant's sentencing hearing is too soon',
-				checked: checked('withdraw','Applicant's sentencing hearing is too soon')
-			},
-		]
-	}) }}
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="withdraw-5" name="withdraw" type="radio" value="Applicant was given community sentence">
+					<label class="govuk-label govuk-radios__label" for="withdraw-5">
+						Applicant was given community sentence
+					</label>
+				  </div>
+
+
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="withdraw-6" name="withdraw" type="radio" value="Applicant was given custodial sentence">
+					<label class="govuk-label govuk-radios__label" for="withdraw-6">
+						Applicant was given custodial sentence
+					</label>
+				  </div>
+
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="withdraw-7" name="withdraw" type="radio" value="Applicant was denied bail">
+					<label class="govuk-label govuk-radios__label" for="withdraw-7">
+						Applicant was denied bail
+					</label>
+				  </div>
+
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="withdraw-8" name="withdraw" type="radio" value="Applicant was bailed to non CAS2 accommodation">
+					<label class="govuk-label govuk-radios__label" for="withdraw-8">
+						Applicant was bailed to non CAS2 accommodation
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="withdraw-10" name="withdraw" type="radio" value="Applicant's sentencing hearing is too soon">
+					<label class="govuk-label govuk-radios__label" for="withdraw-10">
+						Applicant's sentencing hearing is too soon
+					</label>
+				  </div>
+			  </div>
+			</fieldset>
+		  </div>
 
 
 
