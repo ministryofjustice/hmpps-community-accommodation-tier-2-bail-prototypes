@@ -27,7 +27,7 @@
 			<div class="status-box govuk-!-margin-bottom-5">
 				<p class="govuk-!-display-inline">Current status:
 					<strong class="govuk-tag--blue status-box-tag">
-						{{ data['status']  or 'Awaiting decision' }}
+						{{ data['state']  or 'More informationr requested' }}
 					</strong>
 				</p>
 			</div>
@@ -53,7 +53,7 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-three-quarters">
 			<hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
-<form action="dashboard-note">
+<form action="dashboard-note" method="post">
 			<h2 class="govuk-heading-l">Application history</h2>
 			<div class="govuk-form-group">
 				<h3 class="govuk-label-wrapper">
