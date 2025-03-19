@@ -56,6 +56,8 @@
 
 			<h2 class="govuk-heading-l">Application history</h2>
 			<div class="govuk-form-group">
+				<form action="dashboard-note" method="post">
+
 				<h3 class="govuk-label-wrapper">
 				  <label class="govuk-label govuk-label--m" for="more-detail">
 					Add a note for the referrer
@@ -66,8 +68,8 @@
 				</div>
 				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
 			  </div>
-			  <a class="govuk-button" href="dashboard-note">Submit</a>
-
+			<button class="govuk-button" type="submit" data-module="govuk-button">
+			</form>
 			{%- from "moj/components/timeline/macro.njk" import mojTimeline -%}
 
 			{% if data['status'] == 'More information requested' %}
@@ -113,6 +115,28 @@
 			{% endif %}
 
 			<div class="moj-timeline">
+
+				<div class="moj-timeline__item">
+			  
+					<div class="moj-timeline__header">
+					  <h2 class="moj-timeline__title">Note</h2>
+				
+					  <p class="moj-timeline__byline">by Nacro Assessor</p>
+				
+					</div>
+				
+					<p class="moj-timeline__date">
+					  <time datetime="2019-05-28T10:45:00.000Z">9 March 2025 at 4:00pm</time>
+					</p>
+				
+					<div class="moj-timeline__description">
+						<ul>
+							{{ data['note']  or 'Withdrawn because applicant transferred to another institution' }}
+						
+						</ul>
+					</div>
+				  </div>
+			
 	
 				<div class="moj-timeline__item">
 			  

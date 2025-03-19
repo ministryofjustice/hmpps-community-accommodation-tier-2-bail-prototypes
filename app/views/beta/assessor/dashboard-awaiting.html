@@ -64,7 +64,7 @@
 				<div id="more-detail-hint" class="govuk-hint">
 				 Use this text box to ask for or provide more information. Anything you add and save will appear on the application history
 				</div>
-				<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+				<textarea class="govuk-textarea" id="note" name="note" rows="8" aria-describedby="more-detail-hint"></textarea>
 			  </div>
 			  <a class="govuk-button">Submit</a>
 
@@ -114,7 +114,24 @@
 
 			<div class="moj-timeline">
 	
-		
+				<div class="moj-timeline__item">
+			  
+					<div class="moj-timeline__header">
+					  <h2 class="moj-timeline__title">Note added</h2>
+				
+					  <p class="moj-timeline__byline">by Nacro Assessor</p>
+				
+					</div>
+				
+					<p class="moj-timeline__date">
+					  <time datetime="2019-05-28T10:45:00.000Z">9 March 2025 at 3:00pm</time>
+					</p>
+					<div class="moj-timeline__description">
+						{{ data['note']  or 'Can you provide more information about the ADHD treatment plan Jane has please' }}
+					</div>
+			  
+				  </div>
+				
 			
 			  
 				<div class="moj-timeline__item">
