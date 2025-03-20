@@ -6,7 +6,7 @@
 	<div class="status-box govuk-!-margin-bottom-5">
 		<p class="govuk-!-display-inline">Current status:
 			<strong class="govuk-tag--blue status-box-tag">
-				Awaiting decision
+				{{ data['state']  or 'Received' }}
 			</strong>
 		</p>
 	</div>
