@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Confirm you have Ben Dormund's consent</h1>
+<p class="govuk-body"> Before you submit the application, you must confirm Ben Dormund agrees to the application and what they must do.</p>
+
+
+    <h2 class="govuk-heading-s">
+      What they must agree to for the application
+    </h2>
+
+    <p class="govuk-body">They must understand that:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the application includes personal, private and legal information about them</li>
+      <li>information about their health will be collected from services involved in their care - for example, drug and alcohol teams</li>
+      <li>their information will be used to decide if the accommodation is safe and suitable for them</li>
+      <li>
+        their data will be collected and used as explained in the 
+        <a href="#" target="_blank" rel="noopener noreferrer" class="govuk-link">
+          privacy notice (opens in a new tab)
+        </a>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-s">
+      What they must agree to if they move into the accommodation
+    </h2>
+
+    <p class="govuk-body">They must understand that:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the accommodation is short-term and includes weekly support</li>
+      <li>they must pay for the accommodation themselves or using public funds like benefits</li>
+      <li>they must leave the accommodation when their licence period or bail order ends</li>
+      <li>they must find somewhere to live after they leave, with help from their support worker</li>
+    </ul>
+
+    <h2 class="govuk-heading-s">
+      How to get consent
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Read or share this information with them.</li>
+      <li>Check they understand each point.</li>
+      <li>Ask them if they agree to the application and what they must do.</li>
+      <li>They must clearly say yes to give consent.</li>
+    </ul>
+
+	<p class="govuk-body">You can add the date they gave consent now or later in the application.</p>
+
+<form action="consent-answer" method="post">
+<div class="govuk-form-group govuk-!-margin-top-6">
+	<fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h2 class="govuk-fieldset__heading">
+			Do you want to add the date Ben Dormund gave consent now?
+		</h2>
+	  </legend>
+	 
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="consent" name="consent" type="radio" value="yes" data-aria-controls="conditional-contact">
+		  <label class="govuk-label govuk-radios__label" for="consent">
+			Yes
+		  </label>
+		</div>
+		<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+					Date of consent
+				  </legend>
+				  <div id="passport-issued-hint" class="govuk-hint">
+					For example, 27 2 2025
+				  </div>
+				  <div class="govuk-date-input" id="passport-issued">
+					<div class="govuk-date-input__item">
+					  <div class="govuk-form-group">
+						<label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+						  Day
+						</label>
+						<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+					  </div>
+					</div>
+					<div class="govuk-date-input__item">
+					  <div class="govuk-form-group">
+						<label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+						  Month
+						</label>
+						<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+					  </div>
+					</div>
+					<div class="govuk-date-input__item">
+					  <div class="govuk-form-group">
+						<label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+						  Year
+						</label>
+						<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+					  </div>
+					</div>
+				  </div>
+				</fieldset>
+			  </div>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="consent-2" name="consent" type="radio" value="no">
+		  <label class="govuk-label govuk-radios__label">
+		No, I'll add it later
+		  </label>
+		</div>
+
+		
+	  </div>
+	</fieldset>
+  </div>
+
+<div class="govuk-button-group">
+	<button class="govuk-button" type="submit" data-module="govuk-button">Confirm and continue</button>
+	
+	<p class="govuk-link"><a href="dashboard">Exit without saving</a> </p> 
+  </div>
+</form>
+  </div>
+</div>
+{% endblock %}

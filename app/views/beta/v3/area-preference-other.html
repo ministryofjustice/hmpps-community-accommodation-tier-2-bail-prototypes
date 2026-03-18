@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item ">
+				<a href="area-preference-1">First preferred area</a>
+			  </li>
+	   
+			  <li class="moj-side-navigation__item">
+				<a href="area-preference-2" aria-current="second preference">Second preferred area</a>
+			  </li>
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="area-preference-other" aria-current="other preference">Other area preferences</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="exclusion" aria-current="mental-health">Exclusion zones</a>
+				</li>
+				<li class="moj-side-navigation__item">
+					<a href="gangs" aria-current="exclusion zone">Gang affiliation</a>
+				  </li>
+				<li class="moj-side-navigation__item ">
+					<a href="family-unit" aria-current="mental-health">Family accommodation</a>
+				  </li>
+				 
+				
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+	<div class="govuk-grid-column-two-thirds">
+	<h1 class="govuk-heading-l">Other area preferences for Jane Smith</h1>
+	<div class="govuk-inset-text blue-border">
+		<p class="govuk-body">Accommodation staff will use this information to help match applicants to the most suitable available rooms.</p>
+		
+
+	</div>
+
+
+	  <div class="govuk-form-group">
+		<label class="govuk-label govuk-label--m" for="more-detail">
+			Enter any other preference information
+		</label>
+		<div id="event-name-hint" class="govuk-hint">
+			For example, the applicant is happy to be placed anywhere. Include a reason for any preferences.
+		  </div>
+		<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+	  </div>
+	  <div class="govuk-button-group govuk-!-margin-top-6">
+		<a class="govuk-button" href="exclusion">Save and continue</a>
+		<p><a class="govuk-link" href="task-list-personal">Exit without saving</a></p>
+	  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="care">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+			
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+					<h1 class="govuk-fieldset__heading">
+						Is Jane Smith a military veteran?
+					</h1>
+				  </legend>
+				  <div class="govuk-radios" data-module="govuk-radios">
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion" name="religion" type="radio" value="none">
+					  <label class="govuk-label govuk-radios__label" for="religion">
+				Yes
+					  </label>
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="christian" aria-describedby="religion-2-item-hint">
+					  <label class="govuk-label govuk-radios__label" for="religion-2">
+					No
+					  </label>
+					 
+					</div>
+					<div class="govuk-radios__item">
+					  <input class="govuk-radios__input" id="religion-3" name="religion" type="radio" value="buddhist">
+					  <label class="govuk-label govuk-radios__label" for="religion-3">
+					Prefer not to say
+					  </label>
+					</div>
+					
+					
+					
+					
+					
+				
+					
+				  </div>
+				</fieldset>
+			  </div>
+			
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="../task-list-personal">Exit without saving</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

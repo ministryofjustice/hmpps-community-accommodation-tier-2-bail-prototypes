@@ -1,0 +1,215 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item ">
+				<a href="liaison">Liaison and Diversion assessment</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="health-answers" aria-current="Health answers">Provide health needs information</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="substance-details" aria-current="mental-health">Substance use</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="physical-details" aria-current="mental-health">Physical and mobility</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="mental-health" aria-current="mental-health">Mental health</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="communication-details" aria-current="mental-health">Communication and language</a>
+				</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="learning-details" aria-current="mental-health">Learning difficulties and neurodiversity</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="brain" aria-current="mental-health">Brain injury</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="other" aria-current="mental-health">Other health needs</a>
+				  </li>
+				  <li class="moj-side-navigation__item">
+					<a href="sources" aria-current="mental-health">Information sources</a>
+				  </li>
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Learning difficulties and neurodiversity needs details for Jane Smith</h1>
+		<div class="govuk-hint"><p>Neurodiversity covers Autism, ADHD, ADD, Dyslexia, Dyscalculia and Dyspraxia.</p>
+		<p>This can overlap with learning difficulties. For example, they might find it hard to understand or remember information, read or write, or interact with others.</p></div>
+		<form action="brain">
+		
+		
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+					Do they have any needs relating to learning difficulties or neurodiversity?
+				  </legend>
+				 
+				  <div class="govuk-radios" data-module="govuk-radios">
+				
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="issues" name="issues" type="radio" value="email" data-aria-controls="conditional-issues">
+						<label class="govuk-label govuk-radios__label" for="issues">
+							Yes
+						</label>
+					  </div>
+					  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-issues">
+						<div class="govuk-form-group">
+						  <label class="govuk-label govuk-label--s" for="contact-by-email">
+							Enter details of their needs, including if they have a formal diagnosis
+						  </label>
+						 
+						  <textarea class="govuk-textarea" id="more-detail" name="needs-learning" rows="5" aria-describedby="more-detail-hint"></textarea>
+						</div>
+					  </div>
+					  <div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="issues-1" name="issues" type="radio" value="no">
+						<label class="govuk-label govuk-radios__label" for="issues-1">
+						 No
+						</label>
+					  </div>
+
+				  
+				  </div>
+				  </div>
+		
+
+
+
+
+
+
+				  <div class="govuk-form-group">
+					<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						Do they need any support as a result of this?
+					
+					  </legend>
+					
+					  <div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="support" name="support" type="radio" value="email" data-aria-controls="conditional-support">
+						  <label class="govuk-label govuk-radios__label" for="support">
+							Yes
+						  </label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-support">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="contact-by-email">
+									Enter details of the type of support needed, including any support they have already or will need
+								</label>
+								<div class="govuk-hint"></div>
+						  
+								<textarea class="govuk-textarea" id="more-detail" name="support-learning" rows="5" aria-describedby="more-detail-hint"></textarea>
+							  </div>
+						</div>
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="support-2" name="support" type="radio" value="no">
+						  <label class="govuk-label govuk-radios__label" for="support-2">
+							No
+						  </label>
+						</div>
+						
+				
+					</fieldset>
+				  </div>
+			
+			
+				  <div class="govuk-form-group">
+					<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						Do they receive any treatment for this?
+					
+					  </legend>
+					
+					  <div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="substitute" name="substitute" type="radio" value="email" data-aria-controls="conditional-substitute">
+						  <label class="govuk-label govuk-radios__label" for="substitute">
+							Yes
+						  </label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-substitute">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="contact-by-email">
+									Enter details about their treatment
+								</label>
+								<div class="govuk-hint">Include if they have their medication and if they can manage it in the community.</div>
+						  
+								<textarea class="govuk-textarea" id="more-detail" name="treatment-learning" rows="5" aria-describedby="more-detail-hint"></textarea>
+							  </div>
+						</div>
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="substitute-2" name="substitute" type="radio" value="no">
+						  <label class="govuk-label govuk-radios__label" for="substitute-2">
+							No
+						  </label>
+						</div>
+						
+				
+					</fieldset>
+				  </div>
+
+				  <div class="govuk-form-group">
+					<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+					  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						Are they vulnerable as a result of this?
+					
+					  </legend>
+					
+					  <div class="govuk-radios" data-module="govuk-radios">
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="vulnerable" name="vulnerable" type="radio" value="email" data-aria-controls="conditional-vulnerable">
+						  <label class="govuk-label govuk-radios__label" for="vulnerable">
+							Yes
+						  </label>
+						</div>
+						<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-vulnerable">
+							<div class="govuk-form-group">
+								<label class="govuk-label govuk-label--s" for="contact-by-email">
+									Enter details of how they might be vulnerable
+								</label>
+							
+								<textarea class="govuk-textarea" id="more-detail" name="vulnerable-learning" rows="5" aria-describedby="more-detail-hint"></textarea>
+							  </div>
+						</div>
+						<div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="vulnerable-2" name="vulnerable" type="radio" value="no">
+						  <label class="govuk-label govuk-radios__label" for="vulnerable-2">
+							No
+						  </label>
+						</div>
+						
+				
+					</fieldset>
+				  </div>
+	
+
+
+			
+			  <div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<p><a class="govuk-link" href="task-list-offence">Exit without saving</a></p>
+			  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

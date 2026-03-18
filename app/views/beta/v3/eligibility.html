@@ -1,0 +1,99 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Check Ben Dormund is eligible to apply</h1>
+
+<div class="govuk-inset-text blue-border">
+
+
+	  <p class="govuk-body">
+		The applicant <strong>must meet all the following eligibility criteria: </strong>
+	  </p>
+	  <p class="govuk-body">
+		<strong>Age</strong>
+	  </p>
+	  <p>The applicant must:</p>
+	  <ul class="govuk-list govuk-list--bullet">
+		<li>be 18 years old or older</li>
+		</ul>
+
+		<p class="govuk-body">
+		<strong>Risk</strong>
+	  </p>
+	  <p>The applicant must:</p>
+	  <ul class="govuk-list govuk-list--bullet">
+		<li>be assessed as low or medium risk</li>
+		</ul>
+
+		<p class="govuk-body">
+		<strong>Sentence of 4 years or more</strong>
+	  </p>
+	  <p>The applicant must <strong>not</strong>:</p>
+	  <ul class="govuk-list govuk-list--bullet">
+		<li>be currently serving a sentence of 4 years or more about any offence</li>
+		</ul>
+
+		<p class="govuk-body">
+			<strong>Sexual offences</strong>
+		  </p>
+		   <p>These are offences listed in Schedule 3 of the <a href="#" class="govuk-link">Sexual Offences Act 2003</a>.</p>
+		    <p>The applicant must <strong>not</strong>:</p>
+		<ul class="govuk-list govuk-list--bullet">
+		<li>have any current allegations of sexual offences</li>
+		<li>be currently charged with any sexual offences</li>
+		<li> have any past convictions or cautions for sexual offences</li>
+	  </ul>
+
+	  <p class="govuk-body">
+			<strong>Immigration status</strong>
+		  </p>
+		    <p>The applicant must <strong>not</strong>:</p>
+		<ul class="govuk-list govuk-list--bullet">
+		<li>have broken any UK immigration laws, except for overstaying permission to enter or stay in the UK</li>
+		<li>have a ‘no recourse to public funds’ condition</li>
+	  </ul>
+
+
+
+  </div>
+<form action="eligibility-answer" method="post">
+  <div class="govuk-form-group">
+	<fieldset class="govuk-fieldset">
+	  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+		<h2 class="govuk-fieldset__heading">
+		  Is the applicant eligible?
+		</h1>
+	  </legend>
+	  <div class="govuk-radios" data-module="govuk-radios">
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="eligibility" name="eligibility" type="radio" value="yes">
+		  <label class="govuk-label govuk-radios__label" for="eligibility">
+			Yes, they are
+		  </label>
+		</div>
+		<div class="govuk-radios__item">
+		  <input class="govuk-radios__input" id="eligibility-2" name="eligibility" type="radio" value="no">
+		  <label class="govuk-label govuk-radios__label" for="eligibility-2">
+			No, they are not
+		  </label>
+		</div>
+		
+	
+	  </div>
+	</fieldset>
+
+	<div class="govuk-button-group govuk-!-margin-top-6">
+		<button class="govuk-button" type="submit" data-module="govuk-button">Confirm and continue</button>
+	
+		<p><a class="govuk-link" href="dashboard">Exit without saving</a></p>
+	  </div>
+	
+  </div>
+</form>
+  </div>
+</div>
+{% endblock %}
