@@ -1,0 +1,122 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form>
+			 <h1 class="govuk-heading-l">
+    Ben Dormund's dates 
+  </h1>
+
+  <!-- HDC eligibility date -->
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="hdc-eligibility-hint">
+      
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        What is Ben Dormunds's licence end date?
+      </legend>
+
+      <div id="hdc-eligibility-hint" class="govuk-hint">
+        For example, 27 3 2023
+      </div>
+
+      <div class="govuk-date-input" id="hdc-eligibility-date">
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="hdc-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                   id="hdc-day" name="hdc-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="hdc-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                   id="hdc-month" name="hdc-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="hdc-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                   id="hdc-year" name="hdc-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- Conditional release date -->
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="crd-hint">
+      
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        What is Ben Dormund's conditional release date?
+      </legend>
+
+      <div id="crd-hint" class="govuk-hint">
+        For example, 27 3 2023
+      </div>
+
+      <div class="govuk-date-input" id="crd-date">
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="crd-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                   id="crd-day" name="crd-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="crd-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                   id="crd-month" name="crd-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="crd-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                   id="crd-year" name="crd-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+		
+				
+
+			
+
+			 <div class="govuk-button-group govuk-!-margin-top-6">
+				<a class="govuk-button" href="task-list-start.html">Save and continue</a>
+				<p><a class="govuk-link" href="dashboard">Exit without saving</a></p>
+			  </div>
+			
+		</form>
+
+  </div>
+</div>
+{% endblock %}

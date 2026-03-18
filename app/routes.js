@@ -258,7 +258,7 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 	  res.redirect('/beta/v3/ineligible-consent');
 	} else {
 	  // Send user to ineligible page
-	  res.redirect('/beta/v3/task-list-start');
+	  res.redirect('/beta/v3/license');
 	}
   });
 
@@ -397,20 +397,6 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 		}
 	  });
 
-	//    //Phone number route 
-	// router.post('/beta/v3/phone-number-pp', (req, res) => {
-	// 	// Make a variable and give it the value from 'know-nhs-number'
-	// 	const type = req.session.data['pp'];
-		
-	// 	// Check whether the variable matches a condition
-	// 	if (type === 'true') {
-	// 	  // Send user to next page
-	// 	  res.redirect('/beta/v3/task-list-before');
-	// 	} else {
-	// 	  // Send user to ineligible page
-	// 	  res.redirect('/beta/v3/job-title');
-	// 	}
-	//   });
 
 	  	  	       //Skip equality questions
 	router.post('/beta/v3/equality-answer', (req, res) => {
