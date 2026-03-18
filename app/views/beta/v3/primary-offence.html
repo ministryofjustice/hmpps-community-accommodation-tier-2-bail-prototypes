@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<form action="community-supervision">
+			<h1 class="govuk-heading-l">View Jane Smith’s alleged offences</h1>
+		<div class="govuk-form-group">
+			
+			<div class="govuk-summary-card">
+				<div class="govuk-summary-card__title-wrapper">
+				  <h2 class="govuk-summary-card__title">
+			Alleged offences
+				  </h2>
+				  <ul class="govuk-summary-card__actions">
+					<li class="govuk-summary-card__action">
+					  <a class="govuk-link" href="#">Remove<span class="govuk-visually-hidden"> alleged offence</span></a>
+					</li></ul>
+				</div>
+				<div class="govuk-summary-card__content">
+				  <dl class="govuk-summary-list">
+					{% for x in data.person %}
+					<div class="govuk-summary-list__row">
+						
+					  <dt class="govuk-summary-list__key">
+					Alleged offence
+					  </dt>
+					 
+					  <dd class="govuk-summary-list__value">
+					
+						<p> {{ x ['first_name'] }}</p>
+						
+					  </dd>
+					  </div>
+					  <div class="govuk-summary-list__row">
+						
+						<dt class="govuk-summary-list__key">
+					Date alleged offence took place
+						</dt>
+					   
+						<dd class="govuk-summary-list__value">
+					  
+						  <p>
+		
+							05 3 2025</p>
+						  
+						</dd>
+					  
+					
+					</div>
+					{% endfor %}
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+					Offence details
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						{{data['primary-offence']}}
+					  </dd>
+					  
+					</div>
+
+				  </dl>
+				</div>
+			  </div>
+			
+	
+			
+
+
+			<div class="govuk-button-group govuk-!-margin-top-8">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="task-list-funding">Exit without saving</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

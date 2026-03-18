@@ -1,0 +1,23 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">Are you sure you want to submit the application?</h1>
+<div class="govuk-inset-text blue-border">
+	<p>Any incomplete or inaccurate information will cause delays in processing the application.</p>
+	<p>Make sure you are happy with the information you have entered as you will not be able to make any changes after you submit it. </p>
+</div>
+<div class="govuk-button-group govuk-!-margin-top-6">
+	<a class="govuk-button" href="confirmation">
+	 Yes, I am sure
+	</a>
+	<a class="govuk-link" href="task-list-complete">Go back to edit application</a>
+  </div>
+  </div>
+</div>
+{% endblock %}

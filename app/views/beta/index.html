@@ -42,8 +42,8 @@
 <h2 class="govuk-heading-m">
 	Variant {{version}}
 	{{ govukTag({
-		classes: 'govuk-tag--yellow govuk-!-margin-left-2',
-		text: 'In progress'
+		classes: 'govuk-tag--purple govuk-!-margin-left-2',
+		text: 'Tested'
 	}) }}
 </h2>
 
@@ -54,7 +54,7 @@
 
 {{ govukButton({
 	text: 'View referrer prototype',
-	href: 'v'+version+'/'
+	href: 'v2/'
 }) }}
 
 {{ govukButton({
@@ -62,6 +62,19 @@
 	href: 'assessor/dashboard'
 }) }}
 <hr>
+
+<h2 class="govuk-heading-m">
+	ISR New journey
+	{{ govukTag({
+		classes: 'govuk-tag--yellow govuk-!-margin-left-2',
+		text: 'In progress'
+	}) }}
+</h2>
+
+{{ govukButton({
+	text: 'View referrer prototype',
+	href: 'v3/'
+}) }}
 
 
 

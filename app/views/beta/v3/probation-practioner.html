@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form method="post" action="are-they-pp" novalidate>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="practitioner-hint">
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        Are you Ben Dormunds's community probation practitioner?
+      </legend>
+
+      <div class="govuk-radios">
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="practitioner-yes" name="isCommunityPractitioner" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="practitioner-yes">
+            Yes
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="practitioner-no" name="isCommunityPractitioner" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="practitioner-no">
+            No
+          </label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+  <button type="submit" class="govuk-button">
+    Continue
+  </button>
+
+</form>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="sexual-orientation">
+			<h1 class="govuk-heading-l">Sex and gender identity</h1>
+			<div class="govuk-form-group">
+			  <fieldset class="govuk-fieldset">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				  What is Jane Smith's sex?
+				</legend>
+				<div class="govuk-radios" data-module="govuk-radios">
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="sex" name="sex" type="radio" value="female">
+					<label class="govuk-label govuk-radios__label" for="sex">
+					  Female
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="sex-2" name="sex" type="radio" value="male">
+					<label class="govuk-label govuk-radios__label" for="sex-2">
+					  Male
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="sex-3" name="sex" type="radio" value="skip">
+					<label class="govuk-label govuk-radios__label" for="sex-3">
+					  Prefer not to say
+					</label>
+				  </div>
+				</div>
+			  </fieldset>
+			</div>
+			<div class="govuk-form-group">
+			  <fieldset class="govuk-fieldset">
+				<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+				  Is the gender Jane Smith identifies with the same as the sex registered at birth?
+				</legend>
+				<div class="govuk-radios" data-module="govuk-radios">
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="genderIdentity" name="genderIdentity" type="radio" value="yes">
+					<label class="govuk-label govuk-radios__label" for="genderIdentity">
+					  Yes
+					</label>
+				  </div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="genderIdentity-2" name="genderIdentity" type="radio" value="no" data-aria-controls="conditional-genderIdentity-2">
+					<label class="govuk-label govuk-radios__label" for="genderIdentity-2">
+					  No
+					</label>
+				  </div>
+				  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-genderIdentity-2">
+					<div class="govuk-form-group">
+					  <label class="govuk-label" for="gender-description">
+						What is their gender identity? (optional)
+					  </label>
+					  <input class="govuk-input govuk-!-width-one-half" id="gender-description" name="genderDescription" type="text">
+					</div>
+				  </div>
+				  <div class="govuk-radios__divider">or</div>
+				  <div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="genderIdentity-3" name="genderIdentity" type="radio" value="skip">
+					<label class="govuk-label govuk-radios__label" for="genderIdentity-3">
+					  Prefer not to say
+					</label>
+				  </div>
+				</div>
+			  </fieldset>
+			</div>
+	
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+				<button type="submit" class="govuk-button" data-module="govuk-button">
+				  Save and continue
+				</button>
+				<a class="govuk-link" href="../task-list-personal">Exit without saving</a>
+			  </div>
+		  </div>
+		</form>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-panel govuk-panel--confirmation">
+			<h1 class="govuk-panel__title">
+				Application submitted
+			</h1>
+			
+			<div class="govuk-panel__body">
+			<strong>Application number:</strong> HDJ2123F<br>
+			<strong> Applicant name:</strong> Jane Smith
+			</div>
+		  </div>
+
+		  <p class="govuk-body">Thank you for submitting the application. It is now with the Nacro Referral and Contact Centre.</p>
+		  <h2 class="govuk-heading-m">What happens next</h2>
+		  <ol class="govuk-list govuk-list--number">
+			<li>An assessor will check the application for completeness. </li>
+			<li>They might get in touch with you for more clarity on some of the answers provided.  </li>
+			<li>After you provide the requested information, the assessor will review the application for completeness.</li>
+			<li>Once they have a fully completed application, they will make a decision within one hour. In some cases, it may take longer. . </li>
+			<li>You’ll receive an email confirming the decision. </li>
+			<li>You can also check the status of the application on your dashboard.</li>
+		  </ol>
+
+		  <h2 class="govuk-heading-s">If the application is rejected</h2>
+		  <p class="govuk-body">TThe applicant can appeal the decision within 10 working days. The decision letter will include details on how to appeal.   </p>
+
+		  <p class="govuk-link"><a href="dashboard">Return to applications dashboard</a></p>
+  </div>
+</div>
+{% endblock %}

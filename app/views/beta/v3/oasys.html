@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item ">
+				<a href="add-alleged-offence">Current alleged offences</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="community-supervision" aria-current="mental-health">Probation supervision</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="prev-conviction" aria-current="mental-health">Previous unspent convictions</a>
+				</li>
+	  
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+	<div class="govuk-grid-column-two-thirds">
+
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+			  <h1><legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+			
+				Has an OASys risk assessment been done in the last two years?
+			
+			  </legend>
+			</h1>
+			<div class="govuk-inset-text blue-border">
+				You must consult the Community Probation Practitioner on this application. They might:
+				<ul class="govuk-list govuk-list--bullet">
+					<li>decide to not support bail and oppose it</li>
+					<li>need to update the OASys risk assessment following the current alleged offence </li>
+				</ul>
+				</div>
+				<form action="oasys-answer" method="post">
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="choice-1" name="choice" type="radio" value="email" data-aria-controls="conditional-choice">
+				  <label class="govuk-label govuk-radios__label" for="choice-1">
+					Yes
+				  </label>
+				</div>
+			
+				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-choice">
+					<div class="govuk-form-group">
+						<fieldset class="govuk-fieldset">
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+							Has OASys been updated by a Community Probation Practitioner (CPP) since the alleged offence took place?
+						  </legend>
+						  <div class="govuk-radios" data-module="govuk-radios">
+							<div class="govuk-radios__item">
+							  <input class="govuk-radios__input" id="oasys" name="oasys" type="radio" value="yes">
+							  <label class="govuk-label govuk-radios__label" for="oasys">
+								Yes
+							  </label>
+							</div>
+							<div class="govuk-radios__item">
+							  <input class="govuk-radios__input" id="oasys-2" name="oasys" type="radio" value="no">
+							  <label class="govuk-label govuk-radios__label" for="oasys-2">
+								No
+							  </label>
+							</div>
+						
+						
+						  </div>
+						</fieldset>
+					  </div>
+				</div>
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="choice-2" name="choice" type="radio" value="phone">
+				  <label class="govuk-label govuk-radios__label" for="choice-2">
+					No
+				  </label>
+				</div>
+				
+		
+			</fieldset>
+		  </div>
+
+<div class="govuk-button-group">
+	<button class="govuk-button" type="submit" data-module="govuk-button">Save and continue</button>
+	<p class="govuk-link"><a href="task-list-funding">Exit without saving</a> </p> 
+  </div>
+</form>
+  </div>
+</div>
+{% endblock %}

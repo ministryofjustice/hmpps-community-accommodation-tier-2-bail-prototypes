@@ -1,0 +1,148 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-third">
+	  
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item ">
+				<a href="area-preference-1">First preferred area</a>
+			  </li>
+	   
+			  <li class="moj-side-navigation__item">
+				<a href="area-preference-2" aria-current="second preference">Second preferred area</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				<a href="area-preference-other" aria-current="Health answers">Other area preferences</a>
+			  </li>
+			  <li class="moj-side-navigation__item">
+				  <a href="exclusion" aria-current="mental-health">Exclusion zones</a>
+				</li>
+				<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<a href="gangs" aria-current="gang affilation">Gang affiliation</a>
+				  </li>
+				<li class="moj-side-navigation__item ">
+					<a href="family-unit" aria-current="mental-health">Family accommodation</a>
+				  </li>
+				 
+				
+			 
+			</ul>
+		  </nav>
+	  </div>
+
+
+
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">Gang affiliation details for Jane Smith</h1>
+		<div class="govuk-form-group">
+			<fieldset class="govuk-fieldset">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+			
+				Does Jane Smith have any gang affiliations?
+				
+			  </legend>
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="current-1" name="current-1" type="radio" value="yes" data-aria-controls="conditional-current-1">
+				  <label class="govuk-label govuk-radios__label" for="current-1">
+					Yes
+				  </label>
+				</div>
+				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current-1">
+					<div class="govuk-form-group">
+						<label class="govuk-label govuk-label--s" for="more-detail">
+							Enter details of the gang, including its names, the areas it operates in and the nature of their involvement
+						</label>
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+					  </div>
+				</div>
+			
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+				  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+					No
+				  </label>
+				</div>
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="current-3" name="current-1" type="radio" value="yes" data-aria-controls="conditional-current-3">
+					<label class="govuk-label govuk-radios__label" for="current-3">
+					 Not known
+					</label>
+				  </div>
+				  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current-3">
+					  <div class="govuk-form-group">
+						  <label class="govuk-label govuk-label--s" for="more-detail">
+							Enter the reason why it is not known
+						  </label>
+						  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						</div>
+				  </div>
+			  
+			  </div>
+			</fieldset>
+		  </div>
+	
+
+		  <div class="govuk-form-group">
+			<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+			
+				Are there any rival gangs or county lines?
+			  </legend>
+			
+			  <div class="govuk-radios" data-module="govuk-radios">
+				<div class="govuk-radios__item">
+				  <input class="govuk-radios__input" id="current" name="current" type="radio" value="yes" data-aria-controls="conditional-current">
+				  <label class="govuk-label govuk-radios__label" for="current">
+					Yes
+				  </label>
+				</div>
+				<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current">
+					<div class="govuk-form-group">
+						<label class="govuk-label govuk-label--s" for="more-detail">
+							Enter the name  and the area(s) they operate in (optional)
+						</label>
+						<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+					  </div>
+				</div>
+			
+				<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="current-2" name="current" type="radio" value="no">
+					<label class="govuk-label govuk-radios__label" for="current-2">
+					  No
+					</label>
+				  </div>
+			
+			  	<div class="govuk-radios__item">
+					<input class="govuk-radios__input" id="current1" name="current" type="radio" value="yes" data-aria-controls="conditional-current1">
+					<label class="govuk-label govuk-radios__label" for="current1">
+				Not known
+					</label>
+				  </div>
+				  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current1">
+					  <div class="govuk-form-group">
+						  <label class="govuk-label govuk-label--s" for="more-detail">
+							Enter the reason why it is not known
+						  </label>
+						  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+						</div>
+				  </div>
+			  
+		
+			</fieldset>
+		  </div>
+	
+
+		<div class="govuk-button-group govuk-!-margin-top-6">
+			<a class="govuk-button" href="family-unit">Save and continue</a>
+			<p><a class="govuk-link" href="task-list-personal">Save and exit</a></p>
+		  </div>
+		
+	  </div>
+  </div>
+</div>
+{% endblock %}
