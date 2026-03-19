@@ -1,0 +1,176 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+ <div class="govuk-grid-row govuk-!-margin-bottom-8">
+    <div class="govuk-grid-column-full">
+
+      <!-- <span class="govuk-caption-m">RoSH for Ben Dormund</span> -->
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Risk management arrangements for Ben Dormund</h1>
+      <a href="rosh-import-display" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19">View Ben Dormund's RoSH summary</a>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+      {{ mojSideNavigation({
+        label: 'Side navigation',
+        items: [
+          {
+            text: 'Risk to others',
+            href: 'rosh-to-others.html'
+          },
+          {
+            text: 'Risk management arrangements',
+            href: 'rosh-arrangements.html',
+                active: true
+          },
+          {
+            text: 'Cell share information',
+            href: 'rosh-cell-share.html'
+          },
+          {
+            text: 'Additional risk information',
+            href: 'rosh-additional-info.html'
+          }
+        ]
+      }) }}
+
+    </div>
+
+   
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="" method="post">
+
+        
+         <p class="govuk-body">You should check with Ben Dormund's Community Probation Practitioner (CPP), also known as Community Offender Manager (COM), for up-to-date risk management arrangements.
+          </p>
+        
+         <p class="govuk-body"> You can also check the 'Risk Management Plan' section in OASys.</p>
+
+         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+         <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Is Ben Dormund  subject to any of these multi-agency risk management arrangements upon release?
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  Multi-Agency Public Protection Arrangements (MAPPA)
+                </label>
+                
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    {{ govukTextarea({
+                    name: "mappa-details",
+                    id: "mappa-details",
+                    rows: '8',
+                    label: {
+                      text: "Provide MAPPA details",
+                      classes: "govuk-label--s",
+                      isPageHeading: false
+                    },
+                    hint: {
+                      text: "Specify whether the MAPPA is Category 2 or Category 3. Include lead contact details where possible."
+                    }
+                  }) }}
+        
+        
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                  Multi-Agency Risk Assessment Conference (MARAC)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                
+                    {{ govukTextarea({
+                      name: "marac-details",
+                      id: "marac-details",
+                      rows: '8',
+                      label: {
+                        text: "Provide MARAC details",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                      },
+                      hint: {
+                        text: "Include lead contact details where possible."
+                      }
+                    }) }}
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+                <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                  Integrated Offender Management (IOM)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    {{ govukTextarea({
+                      name: "iom-details",
+                      id: "iom-details",
+                      rows: '8',
+                      label: {
+                        text: "Provide IOM details",
+                        classes: "govuk-label--s",
+                        isPageHeading: false
+                      },
+                      hint: {
+                        text: "Include lead contact details where possible."
+                      }
+                    }) }}
+                  </div>
+                </div>
+              </div>
+                    <div class="govuk-checkboxes__divider">or</div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+                      <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                        No, this person does not have risk management arrangements
+                        </label>
+                </div>
+          </fieldset>
+        </div>
+
+
+      <div class="govuk-button-group">
+          <a class="govuk-button govuk-!-margin-top-6" href="rosh-cell-share.html">Save and continue</a>
+        <p class="govuk-link"><a href="task-list-offence">Back to task list</a> </p> 
+        </div>
+
+
+      </form>
+
+    </div>
+    
+  </div>
+    
+  </div>
+
+
+
+  </div>
+</div>
+{% endblock %}

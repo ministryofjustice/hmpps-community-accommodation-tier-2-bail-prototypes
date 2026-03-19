@@ -1,0 +1,90 @@
+
+{% macro roshWidget(roshSummary) %}
+
+    {% macro getOverallRiskLevelClass(level) %}
+        {% if level == 'VERY_HIGH' or level == 'Very high' %}
+        rosh-widget--very-high
+        {% elif level == 'HIGH' or level == 'High' %}
+        rosh-widget--high
+        {% elif level == 'MEDIUM' or level == 'Medium' %}
+        rosh-widget--medium
+        {% elif level == 'LOW' or level == 'Low' %}
+        rosh-widget--low
+    {% endif %}
+    {% endmacro %}
+
+    {% macro getRiskLevelText(level) %}
+        {% if level == 'VERY_HIGH' or level == 'Very high' %}
+        Very high
+        {% elif level == 'HIGH' or level == 'High' %}
+        High
+        {% elif level == 'MEDIUM' or level == 'Medium' %}
+        Medium
+        {% elif level == 'LOW' or level == 'Low' %}
+        Low
+    {% endif %}
+    {% endmacro %}
+
+    {% macro getRiskLevelClass(level) %}
+        {% if level == 'VERY_HIGH' or level == 'Very high' %}
+        rosh-widget__risk--very-high
+        {% elif level == 'HIGH' or level == 'High' %}
+        rosh-widget__risk--high
+        {% elif level == 'MEDIUM' or level == 'Medium' %}
+        rosh-widget__risk--medium
+        {% elif level == 'LOW' or level == 'Low' %}
+        rosh-widget__risk--low
+    {% endif %}
+    {% endmacro %}
+
+    {% macro renderRiskTable(label, riskData) %}
+        {% if riskData %}
+            <table class="govuk-table rosh-widget__table">
+                <caption class="govuk-visually-hidden">Risk of serious harm in {{ label }}</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">Risk to</th>
+                        <th class="govuk-table__header">{{ label }}</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    {% for key, value in riskData %}
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header">{{ key }}</th>
+                            <td class="govuk-table__cell {{ getRiskLevelClass(value) }}">{{ getRiskLevelText(value) | default("No data") }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    {% endmacro %}
+
+    {% if roshSummary and roshSummary.hasBeenCompleted %}
+        <aside class="rosh-widget {{ getOverallRiskLevelClass(roshSummary.overallRisk) }}" aria-label="Risk of serious harm summary">
+            <h3 class="govuk-heading-m">
+                <strong>{{ getRiskLevelText(roshSummary.overallRisk) | upper }}</strong> RoSH</h3>
+            <p class="govuk-body-m govuk-!-margin-bottom-1">Risk of serious harm</p>
+            <p class="govuk-hint govuk-body-m">Last updated: {{ roshSummary.lastUpdated | default("Not known") }}</p>
+
+            {{ renderRiskTable("Community", roshSummary.riskInCommunity) }}
+            {{ renderRiskTable("Custody", roshSummary.riskInCustody) }}
+        </aside>
+    {% elif roshSummary and not roshSummary.hasBeenCompleted %}
+        <aside class="rosh-widget rosh-widget--unknown" aria-label="Risk of serious harm summary">
+            <h3 class="govuk-heading-m">
+                <strong>UNKNOWN LEVEL</strong> RoSH</h3>
+            <p class="govuk-body-m govuk-!-margin-bottom-1">Risk of serious harm</p>
+            <p class="govuk-hint govuk-body-m">A RoSH summary has not been completed for this individual. Check OASys for this
+        person's current assessment status.</p>
+        </aside>
+    {% else %}
+        <aside class="rosh-widget" aria-label="Risk of serious harm summary">
+            <h3 class="govuk-heading-m">
+                <strong>UNKNOWN LEVEL</strong> RoSH</h3>
+            <p class="govuk-body-m govuk-!-margin-bottom-1">Risk of serious harm</p>
+            <p class="govuk-hint govuk-body-m">Something went wrong. We are unable to show RoSH information at this time. Try
+        again later.</p>
+        </aside>
+    {% endif %}
+
+{% endmacro %}
