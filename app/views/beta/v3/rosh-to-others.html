@@ -1,0 +1,171 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+ <div class="govuk-grid-row govuk-!-margin-bottom-8">
+    <div class="govuk-grid-column-full">
+
+      <!-- <span class="govuk-caption-m">RoSH for Ben Dormund</span> -->
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Risk to others for Ben Dormund</h1>
+      <a href="rosh-import-display" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19">View Ben Dormund's RoSH summary</a>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+      {{ mojSideNavigation({
+        label: 'Side navigation',
+        items: [
+          {
+            text: 'Risk to others',
+            href: 'rosh-to-others.html',
+            active: true
+          },
+          {
+            text: 'Risk management arrangements',
+            href: 'rosh-arrangements.html'
+          },
+          {
+            text: 'Cell share information',
+            href: 'rosh-cell-share.html'
+          },
+          {
+            text: 'Additional risk information',
+            href: 'rosh-additional-info.html'
+          }
+        ]
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="" method="post">
+
+        <!-- <h2 class="govuk-heading-m govuk-!-margin-bottom-2">About the risk</h2> -->
+        <div class="oasys-update govuk-!-margin-bottom-6">
+          <p class="govuk-!-margin-bottom-1">Imported from OASys on<strong> 26 January 2023</strong>, last updated on<strong> 09 January 2023</strong></p>
+        </div>
+
+
+        <!---------------------------- Who is at risk ---------------------------->
+
+          <label class="govuk-label govuk-label--m" for="whoIsAtRisk">
+            Who is at risk?
+          </label>
+
+          
+          
+          <div id="whoIsAtRisk-hint" class="govuk-hint">
+            <p class="govuk-body">The risk to children, the public, known adults or staff.</p>
+              <p class="govuk-body">You should include:</p>
+            
+              <ul class="govuk-list govuk-list--bullet">
+                <li>full names of anyone at risk, if known and currently at risk</li>
+                <li>their relationship to the applicant where appropriate, their location, or state if this is not known</li>
+              </ul>
+            
+              <p class="govuk-body">For example: “The applicant's ex-partner, Tina Hopkins, is considered at risk. They live with their mother in Lewes.”</p>
+          </div>
+
+
+        {{ govukTextarea({
+          name: "oasys-textarea",
+          id: "oasys-textarea",
+          rows: "10",
+          value: "[R10.1] IN CUSTODY
+
+          KNOWN ADULTS:
+          Such as Ms Elaine Underhill and any of the victims of the index offence if they are placed close to Mr Smith cell.
+
+          CHILDREN:
+          Simon Smith, Roger Smith, Lindy Smith"
+        }) }}
+
+        <!---------------------------- Nature of risk ---------------------------->
+
+         <label class="govuk-label govuk-label--m" for="natureOfRisk">
+          What is the nature of the risk?
+        </label>
+
+        
+        
+        <div id="natureOfRisk-hint" class="govuk-hint">
+          <p class="govuk-body">The property supplier needs to know</p>
+          
+            <ul class="govuk-list govuk-list--bullet">
+              <li>what the type of risk is for children, the public, known adults or staff, for example physical or psychological abuse</li>
+              <li>details of the last incident, if known</li>
+              <li>factors that could increase the risk</li>
+              <li>if social services or domestic abuse agencies have been involved</li>
+              <li>if there are any safeguarding measures in place</li>
+            </ul>
+          
+            <p class="govuk-body">
+              For example: “Current or ex-partners: psychological and physical abuse when the applicant has been drinking alcohol.
+              Domestic abuse services have never been involved. The applicant has been abstinent and will continue to engage with
+              drug and alcohol services.”
+            </p>
+        </div>
+
+
+        {{ govukTextarea({
+          name: "oasys-textarea",
+          id: "oasys-textarea",
+          rows: "10",
+          value: "[R10.2] IN CUSTODY:
+
+          KNOWN ADULTS:
+          Intimidation, threats of violence, use of weapons or boiling water, physical education and violent assault, long term psychological impact as a result of Mr Smith violent behaviour. This harm may be cause in the course of physical altercation due to seeking revenge or holding grudges..."
+         }) }}
+
+
+        <!-- {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+        {{ govukWarningText({
+          text: "Any live risks must be documented. Any changes you make here won’t be written back into OASys.",
+          iconFallbackText: "Warning"
+        }) }} -->
+
+        {{ govukInsetText({
+          text: "If the OASys record is out of date, you should update the record in OASys too."
+        }) }}
+
+        <!-- Answer options for question -->
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          name: "oasys-edit",
+          fieldset: {
+          },
+          items: [
+            {
+              value: "up-to-date",
+              id: "up-to-date",
+              text: "I confirm this information is relevant and up to date."
+            }
+          ]
+        }) }}
+
+        <div class="govuk-button-group">
+            <a class="govuk-button govuk-!-margin-top-6" href="rosh-arrangements.html">Save and continue</a>
+          <p class="govuk-link"><a href="task-list-offence">Back to task list</a> </p> 
+          </div>
+
+
+      </form>
+
+    </div>
+    
+  </div>
+
+
+
+  </div>
+</div>
+{% endblock %}
