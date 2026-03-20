@@ -12,7 +12,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="referral-type-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Why do they need CAS2 accommodation?
+              Is this a bail application?
             </h1>
           </legend>
 
@@ -21,51 +21,21 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="referral-bail" name="referralType" type="radio" value="bail">
               <label class="govuk-label govuk-radios__label" for="referral-bail">
-                Bail
+               Yes, Court or Prison Bail
               </label>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="referral-homeless-crd" name="referralType" type="radio" value="homeless-crd">
               <label class="govuk-label govuk-radios__label" for="referral-homeless-crd">
-                Homeless at conditional release date (HCRD)
+                No, another type of application
               </label>
+			  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+         	 including Intensive supervision courts, risk of recall and move on from Approved premises
+       		 </div>
             </div>
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-homeless-ftr" name="referralType" type="radio" value="homeless-ftr">
-              <label class="govuk-label govuk-radios__label" for="referral-homeless-ftr">
-                Homeless at end of fixed‑term recall
-              </label>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-alternative-accommodation" name="referralType" type="radio" value="alternative-accommodation">
-              <label class="govuk-label govuk-radios__label" for="referral-alternative-accommodation">
-               Alternative to custodial recall (ATCR)
-              </label>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-leaving-premises" name="referralType" type="radio" value="leaving-premises">
-              <label class="govuk-label govuk-radios__label" for="referral-leaving-premises">
-                Referral from Approved Premises
-              </label>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-rarr" name="referralType" type="radio" value="rarr">
-              <label class="govuk-label govuk-radios__label" for="referral-rarr">
-                Risk Assessed Recall Review (RARR)
-              </label>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-isc" name="referralType" type="radio" value="isc">
-              <label class="govuk-label govuk-radios__label" for="referral-isc">
-                Intensive supervision courts (ISC)
-              </label>
-            </div>
+           
 
           </div>
         </fieldset>
