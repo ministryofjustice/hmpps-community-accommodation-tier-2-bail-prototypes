@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+  <div class="govuk-width-container">
+
+    <form action="isr-type-detail-answer" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="referral-type-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Why does Ben Dormund need CAS2 accommodation?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios" data-module="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-homeless-crd" name="referralType" type="radio" value="homeless-crd">
+              <label class="govuk-label govuk-radios__label" for="referral-homeless-crd">
+                Homeless at conditional release date (HCRD)
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-homeless-ftr" name="referralType" type="radio" value="homeless-ftr">
+              <label class="govuk-label govuk-radios__label" for="referral-homeless-ftr">
+                Homeless at end of fixed‑term recall
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-alternative-accommodation" name="referralType" type="radio" value="alternative-accommodation">
+              <label class="govuk-label govuk-radios__label" for="referral-alternative-accommodation">
+               Alternative to custodial recall (ATCR)
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-leaving-premises" name="referralType" type="radio" value="leaving-premises">
+              <label class="govuk-label govuk-radios__label" for="referral-leaving-premises">
+                Referral from Approved Premises
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-rarr" name="referralType" type="radio" value="rarr">
+              <label class="govuk-label govuk-radios__label" for="referral-rarr">
+                Risk Assessed Recall Review (RARR)
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-isc" name="referralType" type="radio" value="isc">
+              <label class="govuk-label govuk-radios__label" for="referral-isc">
+                Intensive supervision courts (ISC)
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+     
+<div class="govuk-button-group">
+	<button class="govuk-button" type="submit" data-module="govuk-button">Confirm and continue</button>
+	
+	<p class="govuk-link"><a href="dashboard">Exit without saving</a> </p> 
+  </div>
+
+    </form>
+  </div>
+
+{% endblock %}

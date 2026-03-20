@@ -258,7 +258,7 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 	  res.redirect('/beta/v3/ineligible-consent');
 	} else {
 	  // Send user to ineligible page
-	  res.redirect('/beta/v3/license');
+	  res.redirect('/beta/v3/isr-type');
 	}
   });
 
@@ -381,6 +381,22 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 		  res.redirect('/beta/v3/start-isr');
 		}
 	  });
+
+	      	       //ISR type
+	router.post('/beta/v3/isr-type-detail-answer', (req, res) => {
+		// Make a variable and give it the value from 'know-nhs-number'
+		const type = req.session.data['referralType'];
+		
+		// Check whether the variable matches a condition
+		if (type === 'leaving-premises' || type === 'rarr') {
+		  // Send user to next page
+		  res.redirect('/beta/v3/license');
+		} else {
+		  // Send user to ineligible page
+		  res.redirect('/beta/v3/recall-risk');
+		}
+	  });
+
 
 	       //Are they the community practitioner?
 	router.post('/beta/v3/are-they-pp', (req, res) => {

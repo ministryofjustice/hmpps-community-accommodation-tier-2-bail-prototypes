@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+  <form method="post" novalidate>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="recall-hint">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          Is Ben Dormund at risk of recall because they have nowhere suitable to live?
+        </legend>
+
+        <div id="recall-hint" class="govuk-hint">
+          Emergency referrals must be made before 4pm
+        </div>
+
+        <div class="govuk-radios" data-module="govuk-radios">
+
+          <!-- YES -->
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input"
+                   id="recall-yes"
+                   name="recallRisk"
+                   type="radio"
+                   value="yes"
+                   data-aria-controls="conditional-recall-yes">
+            <label class="govuk-label govuk-radios__label" for="recall-yes">
+              Yes
+            </label>
+          </div>
+
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+               id="conditional-recall-yes">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="recall-details">
+                Provide details
+              </label>
+              <textarea class="govuk-textarea"
+                        id="recall-details"
+                        name="recallDetails"
+                        rows="5"></textarea>
+            </div>
+
+          </div>
+
+          <!-- NO -->
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input"
+                   id="recall-no"
+                   name="recallRisk"
+                   type="radio"
+                   value="no">
+            <label class="govuk-label govuk-radios__label" for="recall-no">
+              No
+            </label>
+          </div>
+
+        </div>
+
+      </fieldset>
+    </div>
+
+
+			<div class="govuk-button-group govuk-!-margin-top-6">
+
+				<a class="govuk-button" href="license">Save and continue</a>
+				<p><a class="govuk-link" href="dashboard">Exit without saving</a></p>
+
+			  </div>
+			
+  </form>
+ </div>
+ </div>
+
+
+
+	
+
+
+
+{% endblock %}
