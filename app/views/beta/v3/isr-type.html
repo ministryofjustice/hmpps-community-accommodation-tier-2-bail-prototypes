@@ -3,8 +3,8 @@
 
 {% block content %}
 
-
-  <div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
     <form action="isr-type-detail-answer" method="post">
 
@@ -17,6 +17,16 @@
           </legend>
 
           <div class="govuk-radios" data-module="govuk-radios">
+
+            
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-alternative-accommodation" name="referralType" type="radio" value="alternative-accommodation">
+              <label class="govuk-label govuk-radios__label" for="referral-alternative-accommodation">
+               Alternative to custodial recall (ATCR)
+              </label>
+            </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="referral-homeless-crd" name="referralType" type="radio" value="homeless-crd">
@@ -33,18 +43,12 @@
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-alternative-accommodation" name="referralType" type="radio" value="alternative-accommodation">
-              <label class="govuk-label govuk-radios__label" for="referral-alternative-accommodation">
-               Alternative to custodial recall (ATCR)
+              <input class="govuk-radios__input" id="referral-isc" name="referralType" type="radio" value="isc">
+              <label class="govuk-label govuk-radios__label" for="referral-isc">
+                Intensive supervision courts (ISC)
               </label>
             </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-leaving-premises" name="referralType" type="radio" value="leaving-premises">
-              <label class="govuk-label govuk-radios__label" for="referral-leaving-premises">
-                Referral from Approved Premises
-              </label>
-            </div>
+            
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="referral-rarr" name="referralType" type="radio" value="rarr">
@@ -54,9 +58,9 @@
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="referral-isc" name="referralType" type="radio" value="isc">
-              <label class="govuk-label govuk-radios__label" for="referral-isc">
-                Intensive supervision courts (ISC)
+              <input class="govuk-radios__input" id="referral-leaving-premises" name="referralType" type="radio" value="leaving-premises">
+              <label class="govuk-label govuk-radios__label" for="referral-leaving-premises">
+                Referral from Approved Premises
               </label>
             </div>
 
@@ -72,6 +76,7 @@
   </div>
 
     </form>
+    </div>
   </div>
 
 {% endblock %}

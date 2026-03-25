@@ -3,8 +3,8 @@
 
 {% block content %}
 
-
-  <div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
     <form action="isr-type-answer" method="post">
 
@@ -12,7 +12,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="referral-type-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Is this a bail application?
+             Which type of application do you want to make?
             </h1>
           </legend>
 
@@ -21,17 +21,20 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="referral-bail" name="referralType" type="radio" value="bail">
               <label class="govuk-label govuk-radios__label" for="referral-bail">
-               Yes, Court or Prison Bail
+               Bail
               </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+         	Applicant is seeking court or prison bail.
+       		 </div>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="referral-homeless-crd" name="referralType" type="radio" value="homeless-crd">
               <label class="govuk-label govuk-radios__label" for="referral-homeless-crd">
-                No, another type of application
+                A different type of application
               </label>
 			  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-         	 including Intensive supervision courts, risk of recall and move on from Approved premises
+         	Applicant is being released, recalled,or leaving an approved premises with no suitable accommodation.
        		 </div>
             </div>
 
@@ -46,6 +49,7 @@
       </button>
 
     </form>
+    </div>
   </div>
 
 {% endblock %}

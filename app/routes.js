@@ -375,7 +375,7 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 		// Check whether the variable matches a condition
 		if (type === 'bail') {
 		  // Send user to next page
-		  res.redirect('/beta/v3/start-prison');
+		  res.redirect('/beta/v2/start-prison');
 		} else {
 		  // Send user to ineligible page
 		  res.redirect('/beta/v3/start-isr');
