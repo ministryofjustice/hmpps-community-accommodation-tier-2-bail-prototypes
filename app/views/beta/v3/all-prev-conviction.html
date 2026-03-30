@@ -11,14 +11,14 @@
 
 
 	<div class="govuk-grid-column-two-thirds">
-		<h1 class="govuk-heading-l">View and add Jane Smith’s previous unspent convictions</h1>
+		<h1 class="govuk-heading-l">View and add Ben Dormund’s previous unspent convictions</h1>
 		<form action="task-list-offence">
 		<div class="govuk-form-group">
 			
 			<div class="govuk-summary-card">
 				<div class="govuk-summary-card__title-wrapper">
 				  <h2 class="govuk-summary-card__title">
-	Violence
+				Violence
 				  </h2>
 				  <ul class="govuk-summary-card__actions">
 					<li class="govuk-summary-card__action">
@@ -44,9 +44,18 @@
 						No
 						
 					  </div>
+					  <div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+						What were the convictions and when did they happen?
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						{{data['convictionDetails']}}
+					  </dd>
+					  
+					</div>
 					<div class="govuk-summary-list__row">
 					  <dt class="govuk-summary-list__key">
-						Are there any safeguarding details to add about these convictions?
+						Are there any other details about these convictions to add??
 					  </dt>
 					  <dd class="govuk-summary-list__value">
 						{{data['safeguarding']}}
@@ -69,7 +78,7 @@
 				<button type="submit" class="govuk-button" data-module="govuk-button">
 				  Save and continue
 				</button>
-				<p class="govuk-link"><a href="task-list-offences">Exit without saving</a> </p> 
+				<p class="govuk-link"><a href="task-list-offences">Back to tasklist</a> </p> 
 			  </div>
 		  </div>
 		</form>

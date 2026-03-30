@@ -11,7 +11,11 @@
 			<fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
 			  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 				<h1 class="govuk-fieldset__heading">
-					Did Ben Dormund have a fixed address before entering custody?
+					{% if data['location'] == 'community' %}
+						Does Ben Dormund have a fixed address?
+					{% else %}
+						Did Ben Dormund have a fixed address before entering custody?
+					{% endif %}
 				</h1>
 			  </legend>
 		
@@ -26,7 +30,7 @@
 				<div class="govuk-radios__item">
 				  <input class="govuk-radios__input" id="address-2" name="address" type="radio" value="no" aria-describedby="signIn-2-item-hint">
 				  <label class="govuk-label govuk-radios__label" for="address-2">
-					No, they did not
+					No
 				  </label>
 				 
 				</div>
