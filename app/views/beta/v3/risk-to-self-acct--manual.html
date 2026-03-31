@@ -1,0 +1,148 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <h1 class="govuk-heading-l">Add an ACCT entry for Ben Dormund</h1>
+      <p class="govuk-body">An Assessment, Care in Custody and Teamwork (ACCT) is a tailored plan to support someone in prison at risk of self harm or suicide.</p>
+
+      <hr class="govuk-section-break govuk-section-break--m">
+
+      <form class="form" action="risk-to-self-acct" method="post">
+
+        <!------------------------ Start date ------------------------>
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "acct-start-date",
+          namePrefix: "acct-start-date",
+          hint: {
+            text: "For example, 22 4 2023"
+          },
+          fieldset: {
+            legend: {
+              text: "When was the ACCT created?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          }
+        }) }}
+
+        <!------------------------ End date ------------------------>
+        {% set acctEndDateHTML %}
+
+          {{ govukDateInput({
+            id: "acct-end-date",
+            namePrefix: "acct-end-date",
+            hint: {
+              text: "For example, 22 4 2023"
+            },
+            fieldset: {
+              legend: {
+                text: "When was the ACCT closed?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--s"
+              }
+            }
+          }) }}
+
+        {% endset -%}
+
+        {{ govukRadios({
+          name: "acct-end-radio",
+          fieldset: {
+            legend: {
+              text: "Is the ACCT ongoing?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No",
+            conditional: {
+              html: acctEndDateHTML
+            }
+          }
+          ]
+        }) }}
+
+        <!------------------------ Referring institution ------------------------>
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "acct-referring-institution",
+          name: "acct-referring-institution",
+          label: {
+            text: "Referring institution",
+            classes: "govuk-label--m"
+          },
+            hint: {
+            text: "Where the applicant was based at the time the ACCT was created"
+          },
+          items: [
+            {
+              value: "choose",
+              text: "Choose location",
+              selected: true
+            },
+            {
+              value: "HMPPS Leeds",
+              text: "HMPPS Leeds"
+            },
+            {
+              value: "HMPPS Sheffield",
+              text: "HMPPS Sheffield"
+            },
+            {
+              value: "HMPPS London",
+              text: "HMPPS London"
+            }
+          ]
+        }) }}
+
+        <!------------------------ Details ------------------------>
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+          id: "acct-detail",
+          name: "acct-detail",
+          rows: "10",
+          label: {
+            text: "Details about the ACCT",
+            classes: "govuk-label--m",
+            isPageHeading: false
+          }
+        }) }}
+
+        <div class="moj-button-action">
+          {{ govukButton({
+            text: 'Save and add another',
+            classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+          }) }}
+        </div>
+
+        {{ govukButton({
+          text: "Save and add ACCT note"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+
+{% block content %}
+
+
+          
+  <div class="govuk-grid-row" id="vulnerability">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Ben Dormund's ACCT notes</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-one-third">
+      <nav class="moj-side-navigation">
+    <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="risk-to-self-vulnerability">Vulnerability</a>
+        </li>
+      
+        <li class="moj-side-navigation__item">
+          <a href="risk-to-self-current-and-previous-risk" aria-current="location">Current and previous risk</a>
+        </li>
+      
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="risk-to-self-acct">ACCT</a>
+        </li>
+      </ul>
+  </nav>
+
+    </div>
+
+   
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="" method="post">
+
+        <p class="govuk-body">An Assessment, Care in Custody and Teamwork (ACCT) is a tailored plan to support someone in prison at risk of self harm or suicide.</p>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <!------------------------ User entered ------------------------>
+        {% set startIsoDate %}{{ data | isoDateFromDateInput("acct-start-date") | govukDate }}{% endset %}
+        {% set endIsoDate %}{{ data | isoDateFromDateInput("acct-end-date") | govukDate }}{% endset %}
+        {% set refInstitution %}{{ data['acct-referring-institution'] }}{% endset %}
+        {% set detailedInfo %}{{ data['acct-detail'] }}{% endset %}
+        
+        {% if endIsoDate == 'Invalid DateTime' %}
+          {% set endIsoDate = 'Ongoing' %}
+        {% endif %}
+
+        {% if startIsoDate and refInstitution and detailedInfo %}
+          <div class="govuk-summary-card prison-info">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+                {% if startIsoDate and endIsoDate %}
+                  {{ startIsoDate }} - {{ endIsoDate }}
+                {% endif %}
+              </h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="#">
+                    Remove<span class="govuk-visually-hidden"> ACCT note</span>
+                  </a>
+                </li>
+                <li class="govuk-summary-card__action">
+                  <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> ACCT note</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Referring institution:
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ refInstitution }}
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Details:
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ detailedInfo }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        {% else %}
+          <p class="govuk-body govuk-!-font-weight-bold">No ACCT notes have been added.</p>
+        {% endif %}
+
+       
+        {{ govukButton({
+          text: "Add an ACCT note",
+          classes: "govuk-button--secondary",
+          href: "risk-to-self-acct--manual"
+        }) }}
+
+        <br>
+
+        <div class="govuk-button-group">
+
+          {{ govukButton({
+            text: "Save and continue",
+            href: "risk-to-self-other-info"
+          }) }}
+    
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+{% endblock %}

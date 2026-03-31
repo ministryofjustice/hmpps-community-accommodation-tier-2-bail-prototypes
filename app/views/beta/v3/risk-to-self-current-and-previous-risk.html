@@ -1,0 +1,175 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+          
+  <div class="govuk-grid-row" id="vulnerability">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Ben Dormund's previous and current risks</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-4">
+    <div class="govuk-grid-column-one-third">
+      <nav class="moj-side-navigation">
+    <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="risk-to-self-vulnerability">Vulnerability</a>
+        </li>
+      
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="risk-to-self-current-and-previous-risk" aria-current="location">Current and previous risk</a>
+        </li>
+      
+        <li class="moj-side-navigation__item">
+          <a href="risk-to-self-acct">ACCT</a>
+        </li>
+      </ul>
+  </nav>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+      
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="/applications/f7819e0f-a275-478f-945d-396016693bfe/tasks/risk-to-self/pages/current-and-previous-risk?_method=PUT" method="post" autocomplete="off">
+        <input type="hidden" name="_csrf" value="0a6386b45559e2f138fe5e5b475306265dca4773e0e189b437be4a9903556962e1f4bc6b4d27f13f8695f9d756637e3d07fde0630adfbfe8375fbf92b4421708db3beb06a925d6c43dfe0b27766d286096ed6d2cbe47ae4d1c4ebab231ded4fc4063ce53e365effb86f4095d0a1d46a51f7ea198837a9ff156ab6a1648668ed4">
+
+        
+
+  
+
+
+
+        
+  
+    
+    
+
+  <p class="date-of-import">Imported from OASys on <strong>28 November 2023</strong>
+  </p>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="currentAndPreviousRiskDetail">
+    Describe Aadland Bertrand's current and previous issues and needs related to self harm and suicide
+  </label>
+
+  
+  
+  <div id="currentAndPreviousRiskDetail-hint" class="govuk-hint">
+    <p class="govuk-hint">If known, provide details including:</p>
+    
+      <ul class="govuk-list govuk-list--bullet govuk-hint">
+        <li>
+            whether they are assessed as being at imminent risk of self harm or suicide and require ongoing monitoring to reduce the risk
+          </li>
+        <li>
+            methods of self harm
+          </li>
+        <li>
+            methods of attempted suicide
+          </li>
+        <li>
+            the last recent incident of self harm or suicide&nbsp;
+          </li>
+        <li>
+            how often self harming or suicide attempts happens
+          </li>
+        <li>
+            how severe their self harming or suicide attempts are. For example, if an incident required an emergency response
+          </li>
+        <li>
+            triggers for self harm or suicide attempts
+          </li>
+        <li>
+            signs of increased risk for self harm or suicide attempts
+          </li>
+      </ul>
+    
+      <p class="govuk-hint">Remove sensitive information, such as names and addresses.</p>
+  </div>
+
+
+
+  <textarea class="govuk-textarea" id="currentAndPreviousRiskDetail" name="currentAndPreviousRiskDetail" rows="5" aria-describedby="currentAndPreviousRiskDetail-hint">[R8.1.1] Review 06.10.21:
+
+        There have been numerous ACCTs opened since 2013 and every subsequent year he has been in custody.  In 2021...
+
+[R8.1.4] Review 06.10.21:
+
+        There have been numerous ACCTs opened since 2013 and every subsequent year he has been in custody.  In 2021 there...</textarea>
+
+</div>
+
+
+
+  
+    <div class="govuk-inset-text">
+  If you have noticed information in OASys is out of date, you should tell the person responsible for updating OASys.
+</div>
+
+  
+
+  
+
+
+
+
+<div class="govuk-form-group">
+
+  <div class="govuk-checkboxes" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
+    
+    
+      
+  
+  
+    
+    
+    
+    
+    
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="confirmation" name="confirmation" type="checkbox" value="confirmed">
+      <label class="govuk-label govuk-checkboxes__label" for="confirmation">
+        I confirm this information is relevant and up to date.
+      </label>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+         <div class="govuk-button-group">
+      <div class="govuk-button-group">
+          <a class="govuk-button govuk-!-margin-top-6" href="risk-to-self-acct">Save and continue</a>
+        <p class="govuk-link"><a href="task-list-offence">Back to task list</a> </p> 
+    </div>
+        
+      </form>
+    </div>
+  </div>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
