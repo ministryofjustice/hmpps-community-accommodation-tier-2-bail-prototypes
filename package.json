@@ -2,8 +2,7 @@
   "scripts": {
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start",
-    "postinstall": "patch-package"
+    "start": "govuk-prototype-kit start"
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
@@ -16,8 +15,5 @@
   },
   "overrides": {
     "sass": "1.77.6"
-  },
-  "devDependencies": {
-    "patch-package": "^8.0.1"
   }
 }
