@@ -45,8 +45,8 @@
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <!------------------------ User entered ------------------------>
-        {% set startIsoDate %}{{ data | isoDateFromDateInput("acct-start-date") | govukDate }}{% endset %}
-        {% set endIsoDate %}{{ data | isoDateFromDateInput("acct-end-date") | govukDate }}{% endset %}
+        {% set startIsoDate %}{{ data['acct-start-date'] }}{% endset %}
+        {% set endIsoDate %}{{ data['acct-end-date'] }}{% endset %}
         {% set refInstitution %}{{ data['acct-referring-institution'] }}{% endset %}
         {% set detailedInfo %}{{ data['acct-detail'] }}{% endset %}
         

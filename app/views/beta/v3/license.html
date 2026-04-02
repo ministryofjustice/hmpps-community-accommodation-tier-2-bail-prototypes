@@ -10,15 +10,14 @@
     Ben Dormund's license
   </h1>
 
-  {% if data['referralType'] != 'rarr' %}
-
+ 
 
   <!-- Conditional release date -->
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" role="group" aria-describedby="crd-hint">
       
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        What is Ben Dormund's licensce start date/conditional release date?
+        What is Ben Dormund's license start date/conditional release date?
       </legend>
 
       <div id="crd-hint" class="govuk-hint">
@@ -108,9 +107,10 @@
       </div>
     </fieldset>
   </div>
+  
+ {% if data['referralType'] != 'rarr' %}
 
-	{% endif %}
-		
+<!-- 	
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="pss-end-date-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -169,7 +169,7 @@
               </div>
             </div>
           </fieldset>
-        </div>
+        </div> -->
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="hdc-expiry-date-hint">
@@ -232,7 +232,8 @@
           </fieldset>
         </div>
 		
-				
+				{% endif %}
+		
 
 			
 
