@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
+    <form action="" method="post" validate>
+
+      {% set hdcConditionsHTML %}
+
+        {{ govukTextarea({
+          name: "hdc-conditions-detail",
+          id: "hdc-conditions-detail",
+          rows: "12",
+          label: {
+            text: "Describe the conditions",
+            classes: "govuk-label--m"
+          }
+        }) }}
+        
+      {% endset -%}
+
+      {{ govukRadios({
+        name: "hdc-conditions",
+        fieldset: {
+          legend: {
+            text: "Does Ben Dormond have any civil/criminal orders or non-standard licence conditions?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Non-standard licence conditions may also be in nDelius."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes",
+            conditional: {
+              html: hdcConditionsHTML
+            }
+          },
+          {
+            value: "no",
+            text: "No"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "na",
+            text: "I don't know"
+          }
+        ]
+      }) }}
+
+      <div class="govuk-button-group govuk-!-margin-top-7">
+
+        {{ govukButton({
+          text: "Save and complete",
+          href: "task-list-risks"
+        }) }}
+
+        <a href="task-list-risks" class="govuk-link govuk-link--no-visited-state">Back to tasklist</a>
+
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
