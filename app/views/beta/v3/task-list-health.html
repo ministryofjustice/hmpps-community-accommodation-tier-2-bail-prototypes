@@ -3,7 +3,23 @@
 
 {% block content %}
   <h1 class="govuk-heading-xl">Apply for CAS2</h1>
-	  <p class="govuk-body"><strong>Homeless at End of Fixed-Term Recall</strong></p>
+    <p class="govuk-body"><strong>Application type:</strong>
+    {% if data['referralType'] == 'alternative-accommodation' %}
+      Alternative to custodial recall (ATCR)
+    {% elif data['referralType'] == 'homeless-crd' %}
+      Homeless at conditional release date (HCRD)
+    {% elif data['referralType'] == 'homeless-ftr' %}
+      Homeless at end of fixed-term recall
+    {% elif data['referralType'] == 'isc' %}
+      Intensive supervision courts (ISC)
+    {% elif data['referralType'] == 'rarr' %}
+      Risk Assessed Recall Review (RARR)
+    {% elif data['referralType'] == 'leaving-premises' %}
+      Referral from Approved Premises
+    {% else %}
+      Type of application not selected
+    {% endif %}
+    </p>
 
       <div class="govuk-!-margin-bottom-4">
         <p class="govuk-body govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-1">
@@ -47,7 +63,7 @@
         </li>
         <li class="govuk-task-list__item">
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-body govuk-task-list__link" href="license" aria-describedby="before-license-status">License dates</a>
+            <a class="govuk-link govuk-body govuk-task-list__link" href="{% if data['referralType'] == 'isc' or data['referralType'] == 'rarr' %}licence-dates-needed{% else %}license{% endif %}" aria-describedby="before-license-status">Licence dates</a>
           </div>
           <div class="govuk-task-list__status" id="before-license-status">Completed</div>
         </li>
@@ -119,7 +135,7 @@
         </li>
         <li class="govuk-task-list__item">
 		          <div class="govuk-task-list__name-and-hint">
-		            <a class="govuk-link govuk-task-list__link" href="license-conditions.html" aria-describedby="license-conditions-status">Add licence conditions</a>
+		            <a class="govuk-link govuk-task-list__link" href="license-conditions.html" aria-describedby="license-conditions-status">Add orders and licence conditions</a>
 		          </div>
 		          <div class="govuk-task-list__status" id="prev-conviction-status"><strong class="govuk-tag govuk-tag--grey">Not started</strong></div>
 		        </li>
