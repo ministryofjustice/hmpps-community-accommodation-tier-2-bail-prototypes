@@ -15,7 +15,7 @@
           id: "hdc-conditions-detail",
           rows: "12",
           label: {
-            text: "Describe the conditions",
+            text: "Provide details of the orders",
             classes: "govuk-label--m"
           }
         }) }}
@@ -26,13 +26,13 @@
         name: "hdc-conditions",
         fieldset: {
           legend: {
-            text: "Does Ben Dormond have any non-standard licence conditions?",
+            text: "Is Ben Dormond subject to any civil or criminal orders?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         hint: {
-          text: "Non-standard licence conditions may also be in nDelius."
+          text: "For example: Non-Molestation Order, Occupation Order, Stalking Protection Order (SPO), Sexual Harm Prevention Order (SHPO) or Criminal Behaviour Order (CBO)."
         },
         items: [
           {
@@ -60,10 +60,10 @@
 
         {{ govukButton({
           text: "Save and continue",
-          href: "orders"
+          href: "task-list-risks"
         }) }}
 
-        <a href="task-list-risks.html" class="govuk-link govuk-link--no-visited-state">Back to tasklist</a>
+        <a href="task-list-risks" class="govuk-link govuk-link--no-visited-state">Back to tasklist</a>
 
       </div>
 

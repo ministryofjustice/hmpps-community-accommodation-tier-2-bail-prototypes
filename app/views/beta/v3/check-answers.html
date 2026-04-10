@@ -42,6 +42,19 @@
 		Download as a PDF
 		</button>
 
+		{% if data['user'] == 'assessor' %}
+		<div class="govuk-button-group govuk-!-margin-bottom-0">
+      
+    
+			
+			<a href="/assess/applications/e8dad190-03a7-4589-9765-b094bd2f6689/update-status" role="button" draggable="false" class="govuk-button--secondary govuk-button govuk-!-margin-bottom-0 application-summary-panel__update-status-button" data-module="govuk-button" data-govuk-button-init="">
+			Update application status
+			</a>
+
+  
+		</div>
+		{% endif %}
+
 		
     </div>
   </div>
@@ -54,6 +67,8 @@
 					
 					<li><a href="#confirm-eligibility">Confirm eligibility</a></li>
 					<li><a href="#confirm-consent">Confirm consent to apply</a></li>
+					<li><a href="#type-of-application">Type of application</a></li>
+					<li><a href="#licence-dates">Licence dates</a></li>
 					<li><a href="#add-referrer-details">Add referrer details</a></li>
 					<li><a href="#add-personal-details">Add personal details</a></li>
 					<li><a href="#add-address-history">Add address history</a></li>
@@ -62,6 +77,7 @@
 					<li><a href="#confirm-funding-and-id">Confirm funding and ID</a></li>
 					<li><a href="#add-current-offences">Add current offences</a></li>
 					<li><a href="#add-previous-unspent-convictions">Add previous unspent convictions</a></li>
+					<li><a href="#add-licence-conditions">Add licence conditions</a></li>
 					<li><a href="#add-health-needs">Add health needs</a></li>
 					<li><a href="#add-risk-to-self-information">Add risk to self information</a></li>
 					<li><a href="#add-risk-of-serious-harm-(rosh)-information">Add risk of serious harm (RoSH) information</a></li>
@@ -93,7 +109,7 @@
           Application type
         </dt>
         <dd class="govuk-summary-list__value">
-         Homeless at the end of conditional release date
+         Alternative to custodial recall (ATCR)
         </dd>
         
       </div>
@@ -208,7 +224,7 @@
 			  <dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
 				  <dt class="govuk-summary-list__key">
-					Is the applicant for this service?
+					Is the applicant eligible for this service?
 
 				  </dt>
 				  <dd class="govuk-summary-list__value">
@@ -234,7 +250,7 @@
 			  <dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
 				  <dt class="govuk-summary-list__key">
-					Has Jane Smith given their verbal consent to apply for short-term accommodation (CAS2) for bail?
+					Has Ben Dormund  given their verbal consent to apply for short-term accommodation (CAS2) for bail?
 
 
 				  </dt>
@@ -262,6 +278,100 @@
 			  </dl>
 			</div>
 		  </div>
+
+		  	<!-- application type  -->
+		  <div class="govuk-summary-card" id="type-of-application">
+			<div class="govuk-summary-card__title-wrapper">
+			  <h2 class="govuk-summary-card__title">
+				Application Type
+			  </h2>
+			</div>
+			<div class="govuk-summary-card__content">
+			  <dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+				  <dt class="govuk-summary-list__key">
+					Type
+
+
+				  </dt>
+				  <dd class="govuk-summary-list__value">
+					Alternative to custodial recall (ATCR)
+				  </dd>
+				  <dd class="govuk-summary-list__actions">
+					<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent answer</span></a>
+				  </dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+						Is Ben Dormund at risk of recall due to loss of accommodation post-release including HDC in the community?
+  
+  
+					</dt>
+					<dd class="govuk-summary-list__value">
+						Yes <br>
+						Risk of recall as no longer able to stay with family.
+					</dd>
+					<dd class="govuk-summary-list__actions">
+					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent date</span></a>
+					</dd>
+				  </div>
+		
+			  </dl>
+			</div>
+		  </div>
+
+		  	<!-- application type  -->
+		  <div class="govuk-summary-card" id="licence-dates">
+			<div class="govuk-summary-card__title-wrapper">
+			  <h2 class="govuk-summary-card__title">
+				Licence dates
+			  </h2>
+			</div>
+			<div class="govuk-summary-card__content">
+			  <dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+				  <dt class="govuk-summary-list__key">
+					Licence start date
+
+
+				  </dt>
+				  <dd class="govuk-summary-list__value">
+					01 Jan 2026
+				  </dd>
+				  <dd class="govuk-summary-list__actions">
+					<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> licence start date</span></a>
+				  </dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+						Licence end date
+  
+					</dt>
+					<dd class="govuk-summary-list__value">
+						03 Feb 2028
+					</dd>
+					<dd class="govuk-summary-list__actions">
+					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent date</span></a>
+					</dd>
+				  </div>
+				  <div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+						HDC Expiry date?
+  
+					</dt>
+					<dd class="govuk-summary-list__value">
+						Yes <br>
+						04 March 2026
+					</dd>
+					<dd class="govuk-summary-list__actions">
+					  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent date</span></a>
+					</dd>
+				  </div>
+		
+			  </dl>
+			</div>
+		  </div>
+		  
 <!--Referrer-->
 		  <div class="govuk-summary-card" id="add-referrer-details">
 			<div class="govuk-summary-card__title-wrapper">
@@ -424,7 +534,7 @@
 			  <dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
 				  <dt class="govuk-summary-list__key">
-					Where is Jane Smith being held in custody?
+					Where is Ben Dormund  being held in custody?
 
 
 				  </dt>
@@ -438,7 +548,7 @@
 		
 				  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
 					<dt class="govuk-summary-list__key">
-						Does Jane Smith have a working mobile phone?
+						Does Ben Dormund  have a working mobile phone?
   
 					</dt>
 					<dd class="govuk-summary-list__value">
@@ -473,7 +583,7 @@
 				  </div>
 				  <div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">
-						What is Jane Smith’s immigration status?
+						What is Ben Dormund ’s immigration status?
   
 					</dt>
 					<dd class="govuk-summary-list__value">
@@ -485,7 +595,7 @@
 				  </div>
 				  <div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">
-						Is the gender Jane Smith identifies with the same as the sex registered at their birth?
+						Is the gender Ben Dormund  identifies with the same as the sex registered at their birth?
   
 					</dt>
 					<dd class="govuk-summary-list__value">
@@ -497,7 +607,7 @@
 				  </div>
 				  <div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">
-						Is Jane Smith pregnant?
+						Is Ben Dormund  pregnant?
   
 					</dt>
 					<dd class="govuk-summary-list__value">
@@ -523,7 +633,7 @@
 	  <dl class="govuk-summary-list">
 		<div class="govuk-summary-list__row">
 		  <dt class="govuk-summary-list__key">
-			Did Jane Smith have a fixed address before being held in custody?
+			Does Ben Dormund have a fixed address?
 
 
 		  </dt>
@@ -592,7 +702,7 @@
 	  <dl class="govuk-summary-list">
 		<div class="govuk-summary-list__row">
 		  <dt class="govuk-summary-list__key">
-			Equality questions for Jane Smith
+			Equality questions for Ben Dormund 
 
 		  </dt>
 		  <dd class="govuk-summary-list__value">
@@ -679,7 +789,7 @@
 		  </div>
 		  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
 			<dt class="govuk-summary-list__key">
-				Are there any exclusion zones or areas where Jane Smith should not be placed?
+				Are there any exclusion zones or areas where Ben Dormund  should not be placed?
 			</dt>
 			<dd class="govuk-summary-list__value">
 				Yes 
@@ -694,7 +804,7 @@
 
 			</dt>
 			<dd class="govuk-summary-list__value">
-				Jane Smith has to avoid North Preston area as she has a restraining order in place from a Ms Weston 
+				Ben Dormund  has to avoid North Preston area as she has a restraining order in place from a Ms Weston 
 			</dd>
 			<dd class="govuk-summary-list__actions">
 			  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent date</span></a>
@@ -702,7 +812,7 @@
 		  </div>
 		  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
 			<dt class="govuk-summary-list__key">
-				Does Jane Smith have any gang affiliations?
+				Does Ben Dormund  have any gang affiliations?
 
 			</dt>
 			<dd class="govuk-summary-list__value">
@@ -751,7 +861,7 @@ She is concerned about being on remand with any other members of the gang she pr
 		  </div>
 		  <div class="govuk-summary-list__row">
 			<dt class="govuk-summary-list__key">
-				Is Jane Smith applying for a family unit property?
+				Is Ben Dormund  applying for a family unit property?
 			</dt>
 			<dd class="govuk-summary-list__value">
 				No, they are not applying for a family unit property
@@ -776,7 +886,7 @@ She is concerned about being on remand with any other members of the gang she pr
 	  <dl class="govuk-summary-list">
 		<div class="govuk-summary-list__row govuk-summary-list__row--no-border">
 		  <dt class="govuk-summary-list__key">
-			How will Jane Smith pay for their accommodation and the service charge?
+			How will Ben Dormund  pay for their accommodation and the service charge?
 
 
 		  </dt>
@@ -790,7 +900,7 @@ She is concerned about being on remand with any other members of the gang she pr
 
 		  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
 			<dt class="govuk-summary-list__key">
-				Does Jane Smith have a National Insurance number?
+				Does Ben Dormund  have a National Insurance number?
 			</dt>
 			<dd class="govuk-summary-list__value">
 				They’re not sure, or they do not know the number
@@ -801,7 +911,7 @@ She is concerned about being on remand with any other members of the gang she pr
 		  </div>
 		  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
 			<dt class="govuk-summary-list__key">
-				Is Jane Smith currently receiving benefits?
+				Is Ben Dormund  currently receiving benefits?
 			</dt>
 			<dd class="govuk-summary-list__value">
 				Yes
@@ -824,7 +934,7 @@ She is concerned about being on remand with any other members of the gang she pr
 		  </div>
 		  <div class="govuk-summary-list__row">
 			<dt class="govuk-summary-list__key">
-				What identity document (ID) does Jane Smith have?
+				What identity document (ID) does Ben Dormund  have?
 
 			</dt>
 			<dd class="govuk-summary-list__value">
@@ -903,7 +1013,7 @@ She is concerned about being on remand with any other members of the gang she pr
 	  <dl class="govuk-summary-list">
 		<div class="govuk-summary-list__row">
 		  <dt class="govuk-summary-list__key">
-			Is Jane Smith currently supervised by probation?
+			Is Ben Dormund  currently supervised by probation?
 
 		  </dt>
 		  <dd class="govuk-summary-list__value">
@@ -995,7 +1105,7 @@ She is concerned about being on remand with any other members of the gang she pr
 	  <dl class="govuk-summary-list">
 		<div class="govuk-summary-list__row">
 		  <dt class="govuk-summary-list__key">
-			Does Jane Smith have any previous unspent convictions?
+			Does Ben Dormund  have any previous unspent convictions?
 
 		  </dt>
 		  <dd class="govuk-summary-list__value">
@@ -1068,17 +1178,17 @@ She is concerned about being on remand with any other members of the gang she pr
 	</div>
   </div>
 
-  <div class="govuk-summary-card" id="add-previous-unspent-convictions">
+  <div class="govuk-summary-card" id="add-licence-conditions">
 	<div class="govuk-summary-card__title-wrapper">
 	  <h2 class="govuk-summary-card__title">
-		Add license conditions
+		Add licence conditions
 	  </h2>
 	</div>
 	<div class="govuk-summary-card__content">
 	  <dl class="govuk-summary-list">
 		<div class="govuk-summary-list__row">
 		  <dt class="govuk-summary-list__key">
-			Does Jane Smith have any orders or license conditions?
+			Does Ben Dormund any non-standard license conditions?
 
 		  </dt>
 		  <dd class="govuk-summary-list__value">
@@ -1089,12 +1199,37 @@ She is concerned about being on remand with any other members of the gang she pr
 		  </dd>
 		</div>
 
-		  <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+		  <div class="govuk-summary-list__row ">
 			<dt class="govuk-summary-list__key">
-				Order or license details
+				Conditions details
 			</dt>
 			<dd class="govuk-summary-list__value">
-				Curfew is 8pm
+				Mandatory drug testing
+			</dd>
+			<dd class="govuk-summary-list__actions">
+			  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent date</span></a>
+			</dd>
+		  </div>
+
+		  <div class="govuk-summary-list__row">
+		  <dt class="govuk-summary-list__key">
+			Is Ben Dormund subject to any civil or criminal orders?
+
+		  </dt>
+		  <dd class="govuk-summary-list__value">
+			Yes
+		  </dd>
+		  <dd class="govuk-summary-list__actions">
+			<a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent answer</span></a>
+		  </dd>
+		</div>
+
+		  <div class="govuk-summary-list__row">
+			<dt class="govuk-summary-list__key">
+				Order details
+			</dt>
+			<dd class="govuk-summary-list__value">
+				Restraining order in place for Ms Joanne Weston who was the victim of the assault in 2024.
 			</dd>
 			<dd class="govuk-summary-list__actions">
 			  <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> consent date</span></a>

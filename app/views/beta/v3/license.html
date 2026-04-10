@@ -7,7 +7,7 @@
 	<div class="govuk-grid-column-two-thirds">
 		<form>
 			 <h1 class="govuk-heading-l">
-    Ben Dormund's license
+    Ben Dormund's licence
   </h1>
 
  
@@ -17,7 +17,7 @@
     <fieldset class="govuk-fieldset" role="group" aria-describedby="crd-hint">
       
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        What is Ben Dormund's license start date/conditional release date?
+        What is Ben Dormund's licence start date?
       </legend>
 
       <div id="crd-hint" class="govuk-hint">
@@ -60,7 +60,7 @@
     </fieldset>
   </div>
 
-  <!-- HDC eligibility date -->
+  <!-- Licence end date -->
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" role="group" aria-describedby="hdc-eligibility-hint">
       
@@ -108,68 +108,8 @@
     </fieldset>
   </div>
   
- {% if data['referralType'] != 'rarr' %}
+ {% if data['referralType'] == 'alternative-accommodation' %}
 
-<!-- 	
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="pss-end-date-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Does Ben Dormund have a post-sentence supervision end date?
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="pss-end-date" name="pss-end-date" type="radio" value="yes" data-aria-controls="conditional-pss-end-date">
-                <label class="govuk-label govuk-radios__label" for="pss-end-date">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-pss-end-date">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" role="group" aria-describedby="pss-end-date-value-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                     Post-sentence supervision end date
-                    </legend>
-                    <div id="pss-end-date-value-hint" class="govuk-hint">
-                      For example, 27 3 2023
-                    </div>
-                    <div class="govuk-date-input" id="pss-end-date-value">
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="pss-end-date-day">
-                            Day
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="pss-end-date-day" name="pss-end-date-day" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="pss-end-date-month">
-                            Month
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="pss-end-date-month" name="pss-end-date-month" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                      <div class="govuk-date-input__item">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="pss-end-date-year">
-                            Year
-                          </label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="pss-end-date-year" name="pss-end-date-year" type="text" inputmode="numeric">
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="pss-end-date-2" name="pss-end-date" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="pss-end-date-2">
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div> -->
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="hdc-expiry-date-hint">

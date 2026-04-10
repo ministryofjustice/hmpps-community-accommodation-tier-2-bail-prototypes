@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+
+        
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="licence-dates-answer" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="licence-dates-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+
+            {% if data['referralType'] == 'rarr' %}
+              <h1 class="govuk-fieldset__heading">
+                Do you know the licence start and end dates for Ben Dormund?
+              </h1>
+              {% else %}
+              <h1 class="govuk-fieldset__heading">
+                Is Ben Dormund on license for a different offence?
+              </h1>
+            {% endif %}
+            </legend>
+
+            <div class="govuk-radios govuk-radios--large" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="know-licence-dates" name="knowLicenceDates" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="know-licence-dates">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-not-know-licence-dates" name="knowLicenceDates" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="do-not-know-licence-dates">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+         Continue
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+		
+
+			
+
+			
+{% endblock %}
