@@ -369,7 +369,7 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 
 	    	       //ISR type
 	router.post('/beta/v3/isr-type-answer', (req, res) => {
-		// Make a variable and give it the value from 'know-nhs-number'
+		
 		const type = req.session.data['referralType'];
 		
 		// Check whether the variable matches a condition
@@ -384,25 +384,25 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 
 	      	       //ISR type
 	router.post('/beta/v3/isr-type-detail-answer', (req, res) => {
-		// Make a variable and give it the value from 'know-nhs-number'
+
 		const type = req.session.data['referralType'];
 		
 		// Check whether the variable matches a condition
-		if (type === 'leaving-premises') {
+		if (type === 'alternative-accommodation') {
 		  // Send user to next page
-		  res.redirect('/beta/v3/license');
-		} else if (type === 'rarr' || type === 'isc') {
+		  res.redirect('/beta/v3/recall-risk');
+		} else if (type === 'isc') {
 		  // Send user to next page
 		  res.redirect('/beta/v3/licence-dates-needed');
 		} else {
 		  // Send user to ineligible page
-		  res.redirect('/beta/v3/recall-risk');
+		  res.redirect('/beta/v3/license');
 		}
 	  });
 
 	  	      	       //licence dates needed
 	router.post('/beta/v3/licence-dates-answer', (req, res) => { 
-		// Make a variable and give it the value from 'know-nhs-number'
+		
 		const type = req.session.data['knowLicenceDates'];
 		
 		// Check whether the variable matches a condition
