@@ -388,10 +388,7 @@ router.post('/beta/v3/consent-answer', (req, res) => {
 		const type = req.session.data['referralType'];
 		
 		// Check whether the variable matches a condition
-		if (type === 'alternative-accommodation') {
-		  // Send user to next page
-		  res.redirect('/beta/v3/recall-risk');
-		} else if (type === 'isc') {
+		if (type === 'isc') {
 		  // Send user to next page
 		  res.redirect('/beta/v3/licence-dates-needed');
 		} else {
