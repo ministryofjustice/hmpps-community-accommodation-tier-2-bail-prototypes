@@ -48,15 +48,9 @@
         </li>
         <li class="govuk-task-list__item">
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-body govuk-task-list__link" href="isr-type" aria-describedby="before-type-status">Type of application</a>
+            <a class="govuk-link govuk-body govuk-task-list__link" href="isr-type" aria-describedby="before-type-status">Type of application and licence dates</a>
           </div>
           <div class="govuk-task-list__status" id="before-type-status">Completed</div>
-        </li>
-        <li class="govuk-task-list__item">
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-body govuk-task-list__link" href="{% if data['referralType'] == 'isc' or data['referralType'] == 'rarr' %}licence-dates-needed{% else %}license{% endif %}" aria-describedby="before-license-status">Licence dates</a>
-          </div>
-          <div class="govuk-task-list__status" id="before-license-status">Completed</div>
         </li>
         <li class="govuk-task-list__item">
           <div class="govuk-task-list__name-and-hint">
@@ -71,7 +65,7 @@
 
         <li class="govuk-task-list__item">
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-body govuk-task-list__link" href="institution" aria-describedby="task-list-bail-status-1-add-personal-details">Add personal details</a>
+            <a class="govuk-link govuk-body govuk-task-list__link" href="mobile" aria-describedby="task-list-bail-status-1-add-personal-details">Add personal details</a>
           </div>
           <div class="govuk-task-list__status" id="task-list-bail-status-1-add-personal-details">Completed</div>
         </li>
