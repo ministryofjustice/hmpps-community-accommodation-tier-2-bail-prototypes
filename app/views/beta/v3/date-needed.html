@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form>
+			 <h1 class="govuk-heading-l">
+    What date is accomodation required from?
+  </h1>
+
+ 
+
+  <!-- Licence end date -->
+   
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="hdc-eligibility-hint">
+  
+
+      <div id="hdc-eligibility-hint" class="govuk-hint">
+        For example, 27 3 2023
+      </div>
+
+      <div class="govuk-date-input" id="hdc-eligibility-date">
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="hdc-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                   id="hdc-day" name="hdc-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="hdc-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                   id="hdc-month" name="hdc-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="hdc-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                   id="hdc-year" name="hdc-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+  
+
+
+			
+
+			 <div class="govuk-button-group govuk-!-margin-top-6">
+				<a class="govuk-button" href="task-list-start.html">Save and continue</a>
+
+			  </div>
+			
+		</form>
+
+  </div>
+</div>
+{% endblock %}
